@@ -8,6 +8,6 @@ public class BuyAllCommand implements Command {
     @Override
     public void doCommand() {
         ShoppingCartImpl shoppingCart = new ShoppingCartImpl();
-        shoppingCart.buyAll();
+        System.out.println(shoppingCart.buyAll());
     }
 }

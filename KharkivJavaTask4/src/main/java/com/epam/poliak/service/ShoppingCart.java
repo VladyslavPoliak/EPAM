@@ -4,7 +4,7 @@ public interface ShoppingCart {
 
     void addItemToShoppingCart(int itemId, int days);
 
-    void  buyAll();
+    long buyAll();
 
     void showCart();
 }
