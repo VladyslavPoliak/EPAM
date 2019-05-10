@@ -10,5 +10,6 @@ public class AllItemCommand implements Command {
     public void doCommand() {
         AllCars allCars = new AllCarsImpl();
         allCars.showListCars();
+        System.out.println();
     }
 }
