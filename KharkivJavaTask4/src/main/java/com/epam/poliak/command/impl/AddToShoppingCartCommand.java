@@ -1,12 +1,14 @@
-package com.epam.poliak.command.commandImpl;
+package com.epam.poliak.command.impl;
 
 import com.epam.poliak.command.Command;
-import com.epam.poliak.service.ShoppingCart;
-import com.epam.poliak.service.impl.ShoppingCartImpl;
+import com.epam.poliak.service.ShoppingCartService;
+import com.epam.poliak.service.impl.ShoppingCartServiceImpl;
 
 import java.util.Scanner;
 
 public class AddToShoppingCartCommand implements Command {
+
+    private ShoppingCartService shoppingCartService = new ShoppingCartServiceImpl();
 
     @Override
     public void doCommand() {
@@ -15,7 +17,6 @@ public class AddToShoppingCartCommand implements Command {
         int idItem = scanner.nextInt();
         System.out.println("Введите оличество дней аренды");
         int days = scanner.nextInt();
-        ShoppingCart shoppingCart = new ShoppingCartImpl();
-        shoppingCart.addItemToShoppingCart(idItem, days);
+        shoppingCartService.addItemToShoppingCart(idItem, days);
     }
 }

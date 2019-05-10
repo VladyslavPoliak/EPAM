@@ -1,14 +1,14 @@
 package com.epam.poliak.command;
 
-import com.epam.poliak.command.commandImpl.AddToShoppingCartCommand;
-import com.epam.poliak.command.commandImpl.AllItemCommand;
-import com.epam.poliak.command.commandImpl.BuyAllCommand;
-import com.epam.poliak.command.commandImpl.ShowCartCommand;
+import com.epam.poliak.command.impl.AddToShoppingCartCommand;
+import com.epam.poliak.command.impl.AllItemCommand;
+import com.epam.poliak.command.impl.BuyAllCommand;
+import com.epam.poliak.command.impl.ShowCartCommand;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class RunCommand {
+public class Controller {
 
     private Map<Integer, Command> allCommandMap = new HashMap<>();
 
@@ -18,6 +18,10 @@ public class RunCommand {
             return;
         }
         fillCommandMap().get(key).doCommand();
+    }
+
+    public Map<Integer, Command> getAllCommandMap() {
+        return allCommandMap;
     }
 
     private Map<Integer, Command> fillCommandMap() {

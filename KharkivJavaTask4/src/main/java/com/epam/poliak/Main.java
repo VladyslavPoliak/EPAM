@@ -1,28 +1,30 @@
 package com.epam.poliak;
 
-import com.epam.poliak.command.RunCommand;
+import com.epam.poliak.command.Controller;
+import com.epam.poliak.utils.Constants;
 import com.epam.poliak.utils.Utils;
 
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
 
-    private static RunCommand runCommand = new RunCommand();
+    private static Controller controller = new Controller();
 
     public static void main(String[] args) {
-        Utils.fillItemList();
-        mainMenu();
-    }
-
-    private static void mainMenu() {
         try (Scanner scanner = new Scanner(System.in)) {
+            String menu;
             while (true) {
                 Utils.printMenu();
-                int menu = scanner.nextInt();
-                if (menu == 6) {
-                    System.exit(0);
+                menu = scanner.nextLine();
+                Pattern pattern = Pattern.compile(Constants.NUMBERS);
+                Matcher matcher = pattern.matcher(menu);
+                if (matcher.find() && controller.getAllCommandMap().containsKey(Integer.parseInt(menu))) {
+                    controller.executeCommand(Integer.parseInt(menu));
+                } else {
+                    System.out.println("Wrong command! Try again.");
                 }
-                runCommand.executeCommand(menu);
             }
         }
     }

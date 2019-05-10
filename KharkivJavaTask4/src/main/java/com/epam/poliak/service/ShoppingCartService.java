@@ -1,6 +1,6 @@
 package com.epam.poliak.service;
 
-public interface ShoppingCart {
+public interface ShoppingCartService {
 
     void addItemToShoppingCart(int itemId, int days);
 
