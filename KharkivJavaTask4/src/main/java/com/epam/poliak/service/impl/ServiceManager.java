@@ -1,16 +1,21 @@
 package com.epam.poliak.service.impl;
 
+import com.epam.poliak.service.AllCarsService;
+import com.epam.poliak.service.OrderService;
+
 public class ServiceManager {
     private static ServiceManager serviceManager;
-    private AllCarsServiceImpl allCarsService;
+    private AllCarsService allCarsService;
     private ShoppingCartServiceImpl shoppingCartService;
+    private OrderService orderService;
 
     private ServiceManager() {
         allCarsService = new AllCarsServiceImpl();
         shoppingCartService = new ShoppingCartServiceImpl();
+        orderService = new OrderServiceImpl();
     }
 
-    public AllCarsServiceImpl getAllCarsService() {
+    public AllCarsService getAllCarsService() {
         return allCarsService;
     }
 
@@ -24,5 +29,9 @@ public class ServiceManager {
             return serviceManager;
         }
         return serviceManager;
+    }
+
+    public OrderService getOrderService() {
+        return orderService;
     }
 }
