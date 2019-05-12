@@ -1,15 +1,18 @@
 package com.epam.poliak.service.impl;
 
-import com.epam.poliak.dao.AllCarsDao;
-import com.epam.poliak.dao.impl.AllCarsDaoImpl;
+import com.epam.poliak.entity.Transport;
 import com.epam.poliak.service.AllCarsService;
+
+import java.util.List;
 
 public class AllCarsServiceImpl implements AllCarsService {
 
-    private AllCarsDao allCarsDao = new AllCarsDaoImpl();
-
     @Override
-    public void showListCars() {
-        allCarsDao.showAllCarsList();
+    public void showListCars(List<Transport> list) {
+        if (!list.isEmpty()) {
+            list.forEach(System.out::println);
+        } else {
+            System.out.println("Sorry, there are no cars at the moment. Try later");
+        }
     }
 }

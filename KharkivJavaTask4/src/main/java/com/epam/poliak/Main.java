@@ -20,7 +20,8 @@ public class Main {
                 menu = scanner.nextLine();
                 Pattern pattern = Pattern.compile(Constants.NUMBERS);
                 Matcher matcher = pattern.matcher(menu);
-                if (matcher.find() && controller.getAllCommandMap().containsKey(Integer.parseInt(menu))) {
+                if (matcher.find() && controller.getAllCommandMap().containsKey(Integer.parseInt(menu))
+                        && Integer.parseInt(menu) <= controller.getAllCommandMap().size()) {
                     controller.executeCommand(Integer.parseInt(menu));
                 } else {
                     System.out.println("Wrong command! Try again.");

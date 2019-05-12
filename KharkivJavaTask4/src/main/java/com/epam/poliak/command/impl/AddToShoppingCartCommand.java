@@ -17,6 +17,9 @@ public class AddToShoppingCartCommand implements Command {
         int idItem = scanner.nextInt();
         System.out.println("Введите оличество дней аренды");
         int days = scanner.nextInt();
+        if (days == 0) {
+            days++;
+        }
         shoppingCartService.addItemToShoppingCart(idItem, days);
     }
 }
