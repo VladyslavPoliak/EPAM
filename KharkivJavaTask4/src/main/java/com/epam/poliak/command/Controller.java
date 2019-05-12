@@ -1,9 +1,6 @@
 package com.epam.poliak.command;
 
-import com.epam.poliak.command.impl.AddToShoppingCartCommand;
-import com.epam.poliak.command.impl.AllItemCommand;
-import com.epam.poliak.command.impl.BuyAllCommand;
-import com.epam.poliak.command.impl.ShowCartCommand;
+import com.epam.poliak.command.impl.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -29,5 +26,6 @@ public class Controller {
         allCommandMap.put(2, new AddToShoppingCartCommand());
         allCommandMap.put(3, new ShowCartCommand());
         allCommandMap.put(4, new BuyAllCommand());
+        allCommandMap.put(5, new ShowLastCarsCommand());
     }
 }

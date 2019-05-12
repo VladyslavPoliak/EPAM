@@ -7,4 +7,6 @@ public interface ShoppingCartService {
     long buyAll();
 
     void showCart();
+
+    void show5LastInCart();
 }

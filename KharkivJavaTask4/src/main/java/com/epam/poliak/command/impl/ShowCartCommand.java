@@ -1,11 +1,12 @@
 package com.epam.poliak.command.impl;
 
 import com.epam.poliak.command.Command;
-import com.epam.poliak.service.impl.ShoppingCartServiceImpl;
+import com.epam.poliak.service.ShoppingCartService;
+import com.epam.poliak.service.impl.ServiceManager;
 
 public class ShowCartCommand implements Command {
 
-    private ShoppingCartServiceImpl shoppingCart = new ShoppingCartServiceImpl();
+    private ShoppingCartService shoppingCart = ServiceManager.getInstance().getShoppingCartService();
 
     @Override
     public void doCommand() {

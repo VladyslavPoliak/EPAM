@@ -2,13 +2,14 @@ package com.epam.poliak.command.impl;
 
 import com.epam.poliak.command.Command;
 import com.epam.poliak.service.ShoppingCartService;
-import com.epam.poliak.service.impl.ShoppingCartServiceImpl;
+import com.epam.poliak.service.impl.ServiceManager;
 
 import java.util.Scanner;
 
 public class AddToShoppingCartCommand implements Command {
 
-    private ShoppingCartService shoppingCartService = new ShoppingCartServiceImpl();
+    private ShoppingCartService shoppingCartService = ServiceManager.getInstance().getShoppingCartService();
+//    private ShoppingCartService shoppingCartService = new ShoppingCartServiceImpl();
 
     @Override
     public void doCommand() {
