@@ -2,11 +2,14 @@ package com.epam.poliak.command.impl;
 
 import com.epam.poliak.command.Command;
 import com.epam.poliak.service.AllCarsService;
-import com.epam.poliak.service.impl.ServiceManager;
 
 public class AllItemCommand implements Command {
 
-    private AllCarsService allCarsService = ServiceManager.getInstance().getAllCarsService();
+    private AllCarsService allCarsService;
+
+    public AllItemCommand(AllCarsService allCarsService) {
+        this.allCarsService = allCarsService;
+    }
 
     @Override
     public void doCommand() {

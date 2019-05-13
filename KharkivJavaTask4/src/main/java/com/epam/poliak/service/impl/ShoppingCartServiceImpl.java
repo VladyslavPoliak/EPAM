@@ -11,7 +11,7 @@ import java.util.Optional;
 
 public class ShoppingCartServiceImpl implements ShoppingCartService {
     private static final int LAST_5_ITEMS = 5;
-    private AllCarsDao allCarsDao = AllCarsDao.getInstance();
+    private AllCarsDao allCarsDao = new AllCarsDao();
     private Hashtable<Transport, Integer> shoppingCart = new Hashtable<>();
     private Map<Transport, Integer> map = new LinkedHashMap<>();
 
@@ -49,10 +49,12 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
 
     @Override
     public void show5LastInCart() {
-        if (map.size() > LAST_5_ITEMS) {
-            map.entrySet().stream().skip(map.size() - LAST_5_ITEMS).forEach(System.out::println);
-        } else {
-            map.forEach((k, v) -> System.out.println(k + " Rental days: " + v));
+        if (!map.isEmpty()) {
+            if (map.size() > LAST_5_ITEMS) {
+                map.entrySet().stream().skip(map.size() - LAST_5_ITEMS).forEach(System.out::println);
+            } else {
+                map.forEach((k, v) -> System.out.println(k + " Rental days: " + v));
+            }
         }
     }
 

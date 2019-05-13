@@ -2,13 +2,17 @@ package com.epam.poliak.command.impl;
 
 import com.epam.poliak.command.Command;
 import com.epam.poliak.service.OrderService;
-import com.epam.poliak.service.impl.ServiceManager;
-import com.epam.poliak.service.impl.ShoppingCartServiceImpl;
+import com.epam.poliak.service.ShoppingCartService;
 
 public class BuyAllCommand implements Command {
 
-    private ShoppingCartServiceImpl shoppingCartService = ServiceManager.getInstance().getShoppingCartService();
-    private OrderService orderService = ServiceManager.getInstance().getOrderService();
+    private ShoppingCartService shoppingCartService;
+    private OrderService orderService;
+
+    public BuyAllCommand(ShoppingCartService shoppingCartService, OrderService orderService) {
+        this.shoppingCartService = shoppingCartService;
+        this.orderService = orderService;
+    }
 
     @Override
     public void doCommand() {
@@ -17,8 +21,6 @@ public class BuyAllCommand implements Command {
         orderService.showAllOrders();
         System.out.println(shoppingCartService.buyAll());
 
-        // TODO: 12.05.2019  
-
-
+        // TODO: 12.05.2019
     }
 }

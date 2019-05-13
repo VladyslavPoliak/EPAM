@@ -8,7 +8,6 @@ import java.util.List;
 
 public class AllCarsDao {
 
-    private static AllCarsDao allCarsDao;
     private List<Transport> allItemList;
 
     public AllCarsDao() {
@@ -39,14 +38,5 @@ public class AllCarsDao {
         allItemList.add(new Car(4, 7000, "Nissan", 140, 2013));
         allItemList.add(new Car(5, 4000, "Nissan", 145, 2014));
         allItemList.add(new Car(6, 2000, "Chevrolet", 100, 2010));
-
-    }
-
-    public static AllCarsDao getInstance() {
-        if (allCarsDao == null) {
-            allCarsDao = new AllCarsDao();
-            return allCarsDao;
-        }
-        return allCarsDao;
     }
 }
