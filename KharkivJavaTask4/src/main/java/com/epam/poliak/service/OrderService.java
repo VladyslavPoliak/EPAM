@@ -6,7 +6,10 @@ import java.util.Map;
 
 public interface OrderService {
 
-    void makeOrder(Map<Transport, Integer> hashMap);
+    boolean makeOrder(Map<Transport, Integer> hashMap);
 
     void showAllOrders();
+
+    void findOrderByDate(String date);
+
 }

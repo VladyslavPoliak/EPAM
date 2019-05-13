@@ -1,12 +1,10 @@
 package com.epam.poliak;
 
-import com.epam.poliak.command.Controller;
+import com.epam.poliak.controller.Controller;
 import com.epam.poliak.utils.Constants;
 import com.epam.poliak.utils.Utils;
 
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Main {
 
@@ -18,9 +16,7 @@ public class Main {
             while (true) {
                 Utils.printMenu();
                 menu = scanner.nextLine();
-                Pattern pattern = Pattern.compile(Constants.NUMBERS);
-                Matcher matcher = pattern.matcher(menu);
-                if (matcher.find() && controller.getAllCommandMap().containsKey(Integer.parseInt(menu))
+                if (Utils.validateEnter(menu, Constants.NUMBERS) && controller.getAllCommandMap().containsKey(Integer.parseInt(menu))
                         && Integer.parseInt(menu) <= controller.getAllCommandMap().size()) {
                     controller.executeCommand(Integer.parseInt(menu));
                 } else {

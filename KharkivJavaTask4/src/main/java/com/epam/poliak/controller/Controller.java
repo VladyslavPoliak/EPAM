@@ -1,5 +1,6 @@
-package com.epam.poliak.command;
+package com.epam.poliak.controller;
 
+import com.epam.poliak.command.Command;
 import com.epam.poliak.command.impl.*;
 import com.epam.poliak.service.AllCarsService;
 import com.epam.poliak.service.OrderService;
@@ -36,5 +37,6 @@ public class Controller {
         allCommandMap.put(3, new ShowCartCommand(shoppingCartService));
         allCommandMap.put(4, new BuyAllCommand(shoppingCartService, orderService));
         allCommandMap.put(5, new ShowLastCarsCommand(shoppingCartService));
+        allCommandMap.put(6, new ViewOrderCommand(orderService));
     }
 }

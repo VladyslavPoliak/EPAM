@@ -16,11 +16,10 @@ public class BuyAllCommand implements Command {
 
     @Override
     public void doCommand() {
-        // FIXME: 12.05.2019 
-        orderService.makeOrder(shoppingCartService.getShoppingCart());
-        orderService.showAllOrders();
-        System.out.println(shoppingCartService.buyAll());
-
-        // TODO: 12.05.2019
+        // FIXME: 12.05.2019
+        if (orderService.makeOrder(shoppingCartService.getShoppingCart())) {
+            //orderService.showAllOrders();
+            System.out.println(shoppingCartService.buyAll());
+        }
     }
 }

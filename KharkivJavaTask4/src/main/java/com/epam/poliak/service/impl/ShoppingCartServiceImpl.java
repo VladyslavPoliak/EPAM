@@ -1,6 +1,6 @@
 package com.epam.poliak.service.impl;
 
-import com.epam.poliak.dao.AllCarsDao;
+import com.epam.poliak.dao.AllTransportDao;
 import com.epam.poliak.dao.ShoppingCartDao;
 import com.epam.poliak.entity.Transport;
 import com.epam.poliak.service.ShoppingCartService;
@@ -11,14 +11,14 @@ import java.util.Optional;
 public class ShoppingCartServiceImpl implements ShoppingCartService {
 
     private static final int LAST_5_ITEMS = 5;
-    private AllCarsDao allCarsDao = new AllCarsDao();
+    private AllTransportDao allTransportDao = new AllTransportDao();
     private ShoppingCartDao shoppingCartDao = new ShoppingCartDao();
     private Map<Transport, Integer> shoppingCart = shoppingCartDao.getShoppingCart();
     private Map<Transport, Integer> map = shoppingCartDao.getLinkedHashMap();
 
     @Override
     public void addItemToShoppingCart(int itemId, int days) {
-        Optional<Transport> transportOptional = allCarsDao.getAllItemList().stream()
+        Optional<Transport> transportOptional = allTransportDao.getAllItemList().stream()
                 .filter(c -> c.getId() == itemId)
                 .findAny();
         if (transportOptional.isPresent()) {

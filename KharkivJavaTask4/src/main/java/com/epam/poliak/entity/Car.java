@@ -1,6 +1,7 @@
 package com.epam.poliak.entity;
 
 public class Car extends Transport {
+
     private int enginePower;
     private int yearOfRelease;
 

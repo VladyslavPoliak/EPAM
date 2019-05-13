@@ -1,6 +1,7 @@
 package com.epam.poliak.entity;
 
 public class Bicycles extends Transport {
+
     private int wheelSize;
     private int numberAbsorber;
 

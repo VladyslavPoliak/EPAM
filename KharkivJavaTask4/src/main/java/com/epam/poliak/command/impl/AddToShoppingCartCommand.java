@@ -2,6 +2,7 @@ package com.epam.poliak.command.impl;
 
 import com.epam.poliak.command.Command;
 import com.epam.poliak.service.ShoppingCartService;
+import com.epam.poliak.utils.Utils;
 
 import java.util.Scanner;
 
@@ -21,9 +22,6 @@ public class AddToShoppingCartCommand implements Command {
         int idItem = scanner.nextInt();
         System.out.println("Введите оличество дней аренды");
         int days = scanner.nextInt();
-        if (days == 0) {
-            days++;
-        }
-        shoppingCartService.addItemToShoppingCart(idItem, days);
+        shoppingCartService.addItemToShoppingCart(idItem, Utils.validateNumber(days));
     }
 }

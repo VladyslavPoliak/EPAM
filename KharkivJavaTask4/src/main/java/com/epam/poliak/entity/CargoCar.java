@@ -1,6 +1,7 @@
 package com.epam.poliak.entity;
 
 public class CargoCar extends Car {
+
     private int maxTransportWeight;
     private int numberOfTrailers;
 

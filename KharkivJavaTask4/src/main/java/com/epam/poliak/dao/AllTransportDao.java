@@ -6,11 +6,11 @@ import com.epam.poliak.entity.Transport;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AllCarsDao {
+public class AllTransportDao {
 
     private List<Transport> allItemList;
 
-    public AllCarsDao() {
+    public AllTransportDao() {
         fillItemList();
     }
 
@@ -20,13 +20,6 @@ public class AllCarsDao {
 
     public void setAllItemList(List<Transport> allItemList) {
         this.allItemList = allItemList;
-    }
-
-    public void updateAllItemList(int index) {
-        allItemList.remove(index);
-        for (int i = 0; i < allItemList.size(); i++) {
-            allItemList.get(i).setId(i);
-        }
     }
 
     private void fillItemList() {

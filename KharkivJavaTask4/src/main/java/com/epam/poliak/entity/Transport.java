@@ -3,6 +3,7 @@ package com.epam.poliak.entity;
 import java.util.Objects;
 
 public class Transport {
+
     private int id;
     private int price;
     private String producer;
