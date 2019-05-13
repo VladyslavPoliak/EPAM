@@ -1,19 +1,20 @@
 package com.epam.poliak.service.impl;
 
 import com.epam.poliak.dao.AllCarsDao;
+import com.epam.poliak.dao.ShoppingCartDao;
 import com.epam.poliak.entity.Transport;
 import com.epam.poliak.service.ShoppingCartService;
 
-import java.util.Hashtable;
-import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Optional;
 
 public class ShoppingCartServiceImpl implements ShoppingCartService {
+
     private static final int LAST_5_ITEMS = 5;
     private AllCarsDao allCarsDao = new AllCarsDao();
-    private Hashtable<Transport, Integer> shoppingCart = new Hashtable<>();
-    private Map<Transport, Integer> map = new LinkedHashMap<>();
+    private ShoppingCartDao shoppingCartDao = new ShoppingCartDao();
+    private Map<Transport, Integer> shoppingCart = shoppingCartDao.getShoppingCart();
+    private Map<Transport, Integer> map = shoppingCartDao.getLinkedHashMap();
 
     @Override
     public void addItemToShoppingCart(int itemId, int days) {
@@ -24,7 +25,6 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
             Transport transport = transportOptional.get();
             shoppingCart.put(transport, days);
             map.put(transport, days);
-            // allCarsDao.updateAllItemList(itemId);
         } else {
             System.out.println("Этот автомобиль отсутствует");
         }
@@ -58,7 +58,7 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
         }
     }
 
-    public Hashtable<Transport, Integer> getShoppingCart() {
+    public Map<Transport, Integer> getShoppingCart() {
         return shoppingCart;
     }
 }

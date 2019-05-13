@@ -4,7 +4,6 @@ import com.epam.poliak.entity.Transport;
 import com.epam.poliak.service.OrderService;
 import com.epam.poliak.utils.Constants;
 
-import java.util.Hashtable;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
@@ -13,16 +12,15 @@ import java.util.regex.Pattern;
 
 public class OrderServiceImpl implements OrderService {
 
-
-    private Map<String, Hashtable> orders = new TreeMap<>();
+    private Map<String, Map> orders = new TreeMap<>();
 
     @Override
-    public void makeOrder(Hashtable<Transport, Integer> hashtable) {
+    public void makeOrder(Map<Transport, Integer> HashMap) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите дату(DD.MM.YYYY)");
         String date = scanner.nextLine();
         if (checkDate(date)) {
-            orders.put(date, hashtable);
+            orders.put(date, HashMap);
         } else {
             System.out.println("Неправильная дата");
         }
@@ -33,12 +31,11 @@ public class OrderServiceImpl implements OrderService {
         if (!orders.isEmpty()) {
             orders.forEach(this::print);
         } else {
-            System.out.println("Корзина пустая");
+            System.out.println("Заказы отсутствуют");
         }
     }
 
-    private void print(String k, Hashtable<Transport, Integer> v) {
-        System.out.println(v.size());
+    private void print(String k, Map<Transport, Integer> v) {
         v.forEach((val, key) -> System.out.println("Date: " + k + val + key));
     }
 

@@ -2,11 +2,11 @@ package com.epam.poliak.service;
 
 import com.epam.poliak.entity.Transport;
 
-import java.util.Hashtable;
+import java.util.Map;
 
 public interface OrderService {
 
-    void makeOrder(Hashtable<Transport, Integer> hashtable);
+    void makeOrder(Map<Transport, Integer> hashMap);
 
     void showAllOrders();
 }

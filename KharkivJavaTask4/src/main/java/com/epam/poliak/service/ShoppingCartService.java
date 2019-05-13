@@ -2,7 +2,7 @@ package com.epam.poliak.service;
 
 import com.epam.poliak.entity.Transport;
 
-import java.util.Hashtable;
+import java.util.Map;
 
 public interface ShoppingCartService {
 
@@ -14,5 +14,5 @@ public interface ShoppingCartService {
 
     void show5LastInCart();
 
-    Hashtable<Transport, Integer> getShoppingCart();
+    Map<Transport, Integer> getShoppingCart();
 }

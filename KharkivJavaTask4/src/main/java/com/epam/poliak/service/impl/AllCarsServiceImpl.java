@@ -5,7 +5,7 @@ import com.epam.poliak.service.AllCarsService;
 
 public class AllCarsServiceImpl implements AllCarsService {
 
-    private AllCarsDao allCarsDao = AllCarsDao.getInstance();
+    private AllCarsDao allCarsDao = new AllCarsDao();
 
     @Override
     public void showListCars() {
