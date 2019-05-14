@@ -22,9 +22,8 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
                 .filter(c -> c.getId() == itemId)
                 .findAny();
         if (transportOptional.isPresent()) {
-            Transport transport = transportOptional.get();
-            shoppingCart.put(transport, days);
-            map.put(transport, days);
+            shoppingCart.put(transportOptional.get(), days);
+            map.put(transportOptional.get(), days);
         } else {
             System.out.println("Этот автомобиль отсутствует");
         }

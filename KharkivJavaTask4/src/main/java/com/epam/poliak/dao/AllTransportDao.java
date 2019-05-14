@@ -18,10 +18,6 @@ public class AllTransportDao {
         return allItemList;
     }
 
-    public void setAllItemList(List<Transport> allItemList) {
-        this.allItemList = allItemList;
-    }
-
     private void fillItemList() {
         allItemList = new ArrayList<>();
         allItemList.add(new Car(0, 5500, "Nissan", 200, 2011));
