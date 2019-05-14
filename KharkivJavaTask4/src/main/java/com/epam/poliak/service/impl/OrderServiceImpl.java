@@ -6,6 +6,7 @@ import com.epam.poliak.utils.Constants;
 import com.epam.poliak.utils.Utils;
 import org.apache.log4j.Logger;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
@@ -19,10 +20,10 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public boolean makeOrder(Map<Transport, Integer> hashMap) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите дату(DD.MM.YYYY)");
+        System.out.println("Введите дату(yyyy.MM.dd hh:mm:ss)");
         String date = scanner.nextLine();
         if (Utils.validateEnter(date, Constants.DATE)) {
-            orders.put(date, hashMap);
+            orders.put(date, new HashMap<>(hashMap));
             return true;
         }
         System.out.println("Неправильная дата");
@@ -40,6 +41,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public void findOrderByDate(String date) {
+
         if (Utils.validateEnter(date, Constants.DATE)) {
             orders = orders.entrySet().stream()
                     .filter(ord -> ord.getKey().equals(date))
@@ -47,10 +49,11 @@ public class OrderServiceImpl implements OrderService {
         } else {
             System.out.println("Неправильная дата");
         }
+        orders.forEach(this::print);
     }
 
     private void print(String k, Map<Transport, Integer> v) {
-        v.forEach((val, key) -> System.out.println("Date: " + k + val + key));
+        v.forEach((val, key) -> System.out.println("Date: " + k + " " + val + key));
     }
 
 }
