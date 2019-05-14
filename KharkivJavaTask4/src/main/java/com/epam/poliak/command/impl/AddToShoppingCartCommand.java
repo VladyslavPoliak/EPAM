@@ -20,7 +20,7 @@ public class AddToShoppingCartCommand implements Command {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите ID машины");
         int idItem = scanner.nextInt();
-        System.out.println("Введите оличество дней аренды");
+        System.out.println("Введите количество дней аренды");
         int days = scanner.nextInt();
         shoppingCartService.addItemToShoppingCart(idItem, Utils.validateNumber(days));
     }

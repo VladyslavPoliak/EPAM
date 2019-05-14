@@ -37,6 +37,7 @@ public class Controller {
         allCommandMap.put(3, new ShowCartCommand(shoppingCartService));
         allCommandMap.put(4, new BuyAllCommand(shoppingCartService, orderService));
         allCommandMap.put(5, new ShowLastCarsCommand(shoppingCartService));
-        allCommandMap.put(6, new ViewOrderCommand(orderService));
+        allCommandMap.put(6, new FindOrderByDateCommand(orderService));
+        allCommandMap.put(7, new SearchForNearestDateCommand(orderService));
     }
 }

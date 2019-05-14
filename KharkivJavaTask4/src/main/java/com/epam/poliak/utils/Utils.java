@@ -1,8 +1,11 @@
 package com.epam.poliak.utils;
 
+import com.epam.poliak.entity.Transport;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -30,13 +33,32 @@ public final class Utils {
     }
 
     public static Date getDate(String date) {
-        SimpleDateFormat format = new SimpleDateFormat("yyyy.MM.dd hh:mm:ss");
+        SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
         try {
             return format.parse(date);
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        System.out.println("ds");
         return new Date();
     }
+
+    public static Date getBeforeDate(Map<Date, Map<Transport, Integer>> map, Date date) {
+        Date before = null;
+        for (Map.Entry<Date, Map<Transport, Integer>> entry : map.entrySet()) {
+            if (entry.getKey().before(date)) {
+                before = entry.getKey();
+            }
+        }
+        return before;
+    }
+
+    public static Date getAfterDate(Map<Date, Map<Transport, Integer>> map, Date date) {
+        for (Map.Entry<Date, Map<Transport, Integer>> entry : map.entrySet()) {
+            if (entry.getKey().after(date)) {
+                return entry.getKey();
+            }
+        }
+        return null;
+    }
+
 }

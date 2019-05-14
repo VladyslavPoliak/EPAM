@@ -17,8 +17,7 @@ public class BuyAllCommand implements Command {
     @Override
     public void doCommand() {
         if (orderService.makeOrder(shoppingCartService.getShoppingCart())) {
-            orderService.showAllOrders();
-            System.out.println(shoppingCartService.buyAll());
+            System.out.println("Total: " + shoppingCartService.buyAll());
         }
     }
 }
