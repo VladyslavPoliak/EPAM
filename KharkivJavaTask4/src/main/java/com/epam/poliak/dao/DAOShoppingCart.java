@@ -1,10 +1,10 @@
-package com.epam.poliak.service;
+package com.epam.poliak.dao;
 
 import com.epam.poliak.entity.Transport;
 
 import java.util.Map;
 
-public interface ShoppingCartService {
+public interface DAOShoppingCart {
 
     void addItemToShoppingCart(Transport transport, int days);
 
@@ -16,4 +16,5 @@ public interface ShoppingCartService {
 
     Map<Transport, Integer> getShoppingCart();
 
+    int getDays(Transport transport);
 }

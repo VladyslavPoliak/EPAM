@@ -1,63 +1,42 @@
 package com.epam.poliak.service.impl;
 
-import com.epam.poliak.dao.AllTransportDao;
-import com.epam.poliak.dao.ShoppingCartDao;
+import com.epam.poliak.dao.DAOShoppingCart;
 import com.epam.poliak.entity.Transport;
 import com.epam.poliak.service.ShoppingCartService;
 
 import java.util.Map;
-import java.util.Optional;
 
 public class ShoppingCartServiceImpl implements ShoppingCartService {
 
-    private static final int LAST_5_ITEMS = 5;
-    private AllTransportDao allTransportDao = new AllTransportDao();
-    private ShoppingCartDao shoppingCartDao = new ShoppingCartDao();
-    private Map<Transport, Integer> shoppingCart = shoppingCartDao.getShoppingCart();
-    private Map<Transport, Integer> map = shoppingCartDao.getLinkedHashMap();
+    private DAOShoppingCart daoShoppingCart;
+
+    public ShoppingCartServiceImpl(DAOShoppingCart daoShoppingCart) {
+        this.daoShoppingCart = daoShoppingCart;
+    }
 
     @Override
-    public void addItemToShoppingCart(int itemId, int days) {
-        Optional<Transport> transportOptional = allTransportDao.getAllItemList().stream()
-                .filter(c -> c.getId() == itemId)
-                .findAny();
-        if (transportOptional.isPresent()) {
-            shoppingCart.put(transportOptional.get(), days);
-            map.put(transportOptional.get(), days);
-        } else {
-            System.out.println("Этот автомобиль отсутствует");
-        }
+    public void addItemToShoppingCart(Transport transport, int days) {
+        int newDays = daoShoppingCart.getDays(transport);
+        daoShoppingCart.addItemToShoppingCart(transport, days + newDays);
     }
 
     @Override
     public long buyAll() {
-        final long[] totalPrice = {0};
-        shoppingCart.forEach((k, v) -> totalPrice[0] += k.getPrice() * v);
-        shoppingCart.clear();
-        return totalPrice[0];
+        return daoShoppingCart.buyAll();
     }
 
     @Override
     public void showCart() {
-        if (!shoppingCart.isEmpty()) {
-            shoppingCart.forEach((k, v) -> System.out.println(k + " Rental days: " + v));
-        } else {
-            System.out.println("Корзина пустая");
-        }
+        daoShoppingCart.showCart();
     }
 
     @Override
     public void show5LastInCart() {
-        if (!map.isEmpty()) {
-            if (map.size() > LAST_5_ITEMS) {
-                map.entrySet().stream().skip(map.size() - LAST_5_ITEMS).forEach(System.out::println);
-            } else {
-                map.forEach((k, v) -> System.out.println(k + " Rental days: " + v));
-            }
-        }
+        daoShoppingCart.show5LastInCart();
     }
 
+    @Override
     public Map<Transport, Integer> getShoppingCart() {
-        return shoppingCart;
+        return daoShoppingCart.getShoppingCart();
     }
 }

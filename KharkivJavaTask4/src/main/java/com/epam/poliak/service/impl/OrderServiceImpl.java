@@ -1,62 +1,41 @@
 package com.epam.poliak.service.impl;
 
+import com.epam.poliak.dao.DAOOrder;
 import com.epam.poliak.entity.Transport;
 import com.epam.poliak.service.OrderService;
-import com.epam.poliak.utils.Constants;
-import com.epam.poliak.utils.Utils;
-import org.apache.log4j.Logger;
 
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.Date;
+import java.util.Map;
 
 public class OrderServiceImpl implements OrderService {
 
-    private static Logger LOG = Logger.getLogger(OrderServiceImpl.class);
-    private Map<Date, Map<Transport, Integer>> orders = new TreeMap<>();
-    private Scanner scanner = new Scanner(System.in);
+    private DAOOrder daoOrder;
+
+    public OrderServiceImpl(DAOOrder daoOrder) {
+        this.daoOrder = daoOrder;
+    }
 
     @Override
     public boolean makeOrder(Map<Transport, Integer> hashMap) {
-        System.out.println("Введите дату(dd.MM.yyyy)");
-        String date = scanner.nextLine();
-        if (Utils.validateEnter(date, Constants.DATE)) {
-            orders.put(Utils.getDate(date), new HashMap<>(hashMap));
-            return true;
-        }
-        System.out.println("Неправильная дата");
-        return false;
+        return daoOrder.makeOrder(hashMap);
     }
 
-    @Override
-    public void showAllOrders() {
-        if (!orders.isEmpty()) {
-            orders.forEach(this::print);
-        } else {
-            System.out.println("Заказы отсутствуют");
-        }
-    }
+//    @Override
+//    public void showAllOrders() {
+//        if (!orders.isEmpty()) {
+//            orders.forEach(this::print);
+//        } else {
+//            System.out.println("Заказы отсутствуют");
+//        }
+//    }
 
     @Override
     public void findOrderByDate(Date date) {
-        orders = orders.entrySet().stream()
-                .filter(ord -> ord.getKey().equals(date))
-                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
-        orders.forEach(this::print);
+        daoOrder.findOrderByDate(date);
     }
 
     @Override
     public void findOrderByNearestDate(Date date) {
-        Map<Date, Map<Transport, Integer>> nearestMap = new HashMap<>();
-        Date before = Utils.getBeforeDate(orders, date);
-        Date after = Utils.getAfterDate(orders, date);
-        nearestMap.put(before, orders.get(before));
-        nearestMap.put(after, orders.get(after));
-
-        nearestMap.forEach(this::print);
+        daoOrder.findOrderByNearestDate(date);
     }
-
-    private void print(Date k, Map<Transport, Integer> v) {
-        v.forEach((val, key) -> System.out.println("Date: " + k + " " + val + " Rental days: " + key));
-    }
-
 }

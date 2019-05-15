@@ -1,11 +1,11 @@
-package com.epam.poliak.service;
+package com.epam.poliak.dao;
 
 import com.epam.poliak.entity.Transport;
 
 import java.util.Date;
 import java.util.Map;
 
-public interface OrderService {
+public interface DAOOrder {
 
     boolean makeOrder(Map<Transport, Integer> hashMap);
 
