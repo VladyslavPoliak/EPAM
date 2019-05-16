@@ -54,7 +54,6 @@ public class DAOOrderImpl implements DAOOrder {
                 .filter((k) -> k.getKey().after(firstDate) && k.getKey().before(secondDate))
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
         intervalMap.forEach(this::print);
-
     }
 
     private void print(Date k, Map<Transport, Integer> v) {

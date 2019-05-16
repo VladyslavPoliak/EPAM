@@ -10,11 +10,9 @@ public interface DAOShoppingCart {
 
     long buyAll();
 
-    void showCart();
-
-    void show5LastInCart();
-
     Map<Transport, Integer> getShoppingCart();
+
+    Map<Transport, Integer> getShoppingCartStorage();
 
     int getDays(Transport transport);
 }

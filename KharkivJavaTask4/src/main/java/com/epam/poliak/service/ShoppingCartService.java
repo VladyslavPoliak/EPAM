@@ -10,10 +10,8 @@ public interface ShoppingCartService {
 
     long buyAll();
 
-    void showCart();
-
-    void show5LastInCart();
-
     Map<Transport, Integer> getShoppingCart();
+
+    Map<Transport, Integer> getShoppingCartStorage();
 
 }

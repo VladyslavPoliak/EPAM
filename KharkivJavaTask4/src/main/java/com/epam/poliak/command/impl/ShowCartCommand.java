@@ -1,7 +1,10 @@
 package com.epam.poliak.command.impl;
 
 import com.epam.poliak.command.Command;
+import com.epam.poliak.entity.Transport;
 import com.epam.poliak.service.ShoppingCartService;
+
+import java.util.Map;
 
 public class ShowCartCommand implements Command {
 
@@ -13,7 +16,12 @@ public class ShowCartCommand implements Command {
 
     @Override
     public void doCommand() {
-        shoppingCart.showCart();
+        Map<Transport, Integer> map = shoppingCart.getShoppingCart();
+        if (!map.isEmpty()) {
+            map.forEach((k, v) -> System.out.println(k + " Rental days: " + v));
+        } else {
+            System.out.println("Корзина пустая");
+        }
     }
 }
 

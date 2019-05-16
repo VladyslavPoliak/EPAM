@@ -10,7 +10,6 @@ import java.util.Objects;
 
 public class DAOShoppingCartImpl implements DAOShoppingCart {
 
-    private static final int LAST_5_ITEMS = 5;
     private Map<Transport, Integer> shoppingCart;
     private Map<Transport, Integer> shoppingCartStorage;
 
@@ -38,26 +37,6 @@ public class DAOShoppingCartImpl implements DAOShoppingCart {
     }
 
     @Override
-    public void showCart() {
-        if (!shoppingCart.isEmpty()) {
-            shoppingCart.forEach((k, v) -> System.out.println(k + " Rental days: " + v));
-        } else {
-            System.out.println("Корзина пустая");
-        }
-    }
-
-    @Override
-    public void show5LastInCart() {
-        if (!shoppingCartStorage.isEmpty()) {
-            if (shoppingCartStorage.size() > LAST_5_ITEMS) {
-                shoppingCartStorage.entrySet().stream().skip(shoppingCartStorage.size() - LAST_5_ITEMS).forEach(System.out::println);
-            } else {
-                shoppingCartStorage.forEach((k, v) -> System.out.println(k + " Rental days: " + v));
-            }
-        }
-    }
-
-    @Override
     public Map<Transport, Integer> getShoppingCart() {
         return shoppingCart;
     }
@@ -68,6 +47,11 @@ public class DAOShoppingCartImpl implements DAOShoppingCart {
             return shoppingCart.get(transport);
         }
         return 0;
+    }
+
+    @Override
+    public Map<Transport, Integer> getShoppingCartStorage() {
+        return shoppingCartStorage;
     }
 }
 

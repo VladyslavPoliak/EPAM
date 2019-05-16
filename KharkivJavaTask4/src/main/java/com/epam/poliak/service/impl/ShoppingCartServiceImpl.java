@@ -25,18 +25,18 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
         return daoShoppingCart.buyAll();
     }
 
-    @Override
-    public void showCart() {
-        daoShoppingCart.showCart();
-    }
-
-    @Override
-    public void show5LastInCart() {
-        daoShoppingCart.show5LastInCart();
-    }
+//    @Override
+//    public void showCart() {
+//        daoShoppingCart.showCart();
+//    }
 
     @Override
     public Map<Transport, Integer> getShoppingCart() {
         return daoShoppingCart.getShoppingCart();
+    }
+
+    @Override
+    public Map<Transport, Integer> getShoppingCartStorage() {
+        return daoShoppingCart.getShoppingCartStorage();
     }
 }
