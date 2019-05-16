@@ -13,4 +13,6 @@ public interface OrderService {
 
     void findOrderByNearestDate(Date date);
 
+    void searchByTimeInterval(Date firstDate, Date secondDate);
+
 }

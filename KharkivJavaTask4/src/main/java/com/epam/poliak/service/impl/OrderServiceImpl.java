@@ -20,15 +20,6 @@ public class OrderServiceImpl implements OrderService {
         return daoOrder.makeOrder(hashMap);
     }
 
-//    @Override
-//    public void showAllOrders() {
-//        if (!orders.isEmpty()) {
-//            orders.forEach(this::print);
-//        } else {
-//            System.out.println("Заказы отсутствуют");
-//        }
-//    }
-
     @Override
     public void findOrderByDate(Date date) {
         daoOrder.findOrderByDate(date);
@@ -37,5 +28,10 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public void findOrderByNearestDate(Date date) {
         daoOrder.findOrderByNearestDate(date);
+    }
+
+    @Override
+    public void searchByTimeInterval(Date firstDate, Date secondDate) {
+        daoOrder.searchByTimeInterval(firstDate, secondDate);
     }
 }

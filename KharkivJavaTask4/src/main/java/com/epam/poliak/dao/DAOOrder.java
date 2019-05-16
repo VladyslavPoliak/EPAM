@@ -13,4 +13,6 @@ public interface DAOOrder {
 
     void findOrderByNearestDate(Date date);
 
+    void searchByTimeInterval(Date firstDate, Date secondDate);
+
 }

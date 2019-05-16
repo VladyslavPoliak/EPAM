@@ -7,11 +7,11 @@ import com.epam.poliak.utils.Utils;
 
 import java.util.Scanner;
 
-public class FindOrderByDateCommand implements Command {
+public class SearchOrderByDateCommand implements Command {
 
     private OrderService orderService;
 
-    public FindOrderByDateCommand(OrderService orderService) {
+    public SearchOrderByDateCommand(OrderService orderService) {
         this.orderService = orderService;
     }
 

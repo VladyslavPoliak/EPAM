@@ -13,7 +13,6 @@ public class DAOOrderImpl implements DAOOrder {
     private Map<Date, Map<Transport, Integer>> orders;
     private Scanner scanner = new Scanner(System.in);
 
-
     public DAOOrderImpl() {
         this.orders = new TreeMap<>();
     }
@@ -47,6 +46,15 @@ public class DAOOrderImpl implements DAOOrder {
         nearestMap.put(after, orders.get(after));
 
         nearestMap.forEach(this::print);
+    }
+
+    @Override
+    public void searchByTimeInterval(Date firstDate, Date secondDate) {
+        Map<Date, Map<Transport, Integer>> intervalMap = orders.entrySet().stream()
+                .filter((k) -> k.getKey().after(firstDate) && k.getKey().before(secondDate))
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+        intervalMap.forEach(this::print);
+
     }
 
     private void print(Date k, Map<Transport, Integer> v) {
