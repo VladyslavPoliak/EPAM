@@ -2,9 +2,11 @@ package com.epam.poliak.service;
 
 import com.epam.poliak.entity.Transport;
 
+import java.util.ArrayList;
+
 public interface TransportService {
 
-    void showListCars();
+    ArrayList<Transport> getAllTransport();
 
     Transport getTransportByID(int id);
 

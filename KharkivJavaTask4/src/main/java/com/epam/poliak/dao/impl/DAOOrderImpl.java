@@ -44,7 +44,6 @@ public class DAOOrderImpl implements DAOOrder {
         Date after = Utils.getAfterDate(orders, date);
         nearestMap.put(before, orders.get(before));
         nearestMap.put(after, orders.get(after));
-
         nearestMap.forEach(this::print);
     }
 

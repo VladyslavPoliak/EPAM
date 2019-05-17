@@ -15,13 +15,8 @@ public class TransportServiceImpl implements TransportService {
     }
 
     @Override
-    public void showListCars() {
-        ArrayList<Transport> transportList = daoTransport.getAllTransport();
-        if (!transportList.isEmpty()) {
-            transportList.forEach(System.out::println);
-        } else {
-            System.out.println("Sorry, there are no cars at the moment. Try later");
-        }
+    public ArrayList<Transport> getAllTransport() {
+        return daoTransport.getAllTransport();
     }
 
     @Override

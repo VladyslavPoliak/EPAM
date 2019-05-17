@@ -25,10 +25,6 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
         return daoShoppingCart.buyAll();
     }
 
-//    @Override
-//    public void showCart() {
-//        daoShoppingCart.showCart();
-//    }
 
     @Override
     public Map<Transport, Integer> getShoppingCart() {
