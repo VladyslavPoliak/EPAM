@@ -1,41 +1,57 @@
 package part1;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.stream.Collectors;
 
-public class ReadFile {
+public class ReadFile implements Iterable {
 
     private String fileName;
-    private List<String> strings;
+    private List<String> lines;
 
     public ReadFile(String fileName) {
         this.fileName = fileName;
-        strings = new ArrayList<>();
-        getStringsFromFile();
     }
 
     public static void main(String[] args) {
-        ReadFile readFile = new ReadFile("test.txt");
+        ReadFile readFile =new ReadFile("test.txt");
         readFile.printText();
     }
 
-    private void getStringsFromFile() {
-        try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
-            String string;
-            while ((string = reader.readLine()) != null) {
-                strings.add(string);
+    @Override
+    public Iterator<String > iterator() {
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(fileName));
+            lines = reader.lines().collect(Collectors.toList());
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return new Iterator<String>() {
+            int index;
+
+            @Override
+            public boolean hasNext() {
+                return index < lines.size();
             }
-        } catch (IOException e) {
-            System.out.println("Невозможно прочитать содержимое файла");
+
+            @Override
+            public String  next() {
+                if (!hasNext()) {
+                    throw new NoSuchElementException();
+                }
+                return lines.get(index++);
+            }
+        };
+    }
+
+    private void printText(){
+        for (Iterator iterator = iterator(); iterator.hasNext();){
+            System.out.println(iterator.next());
         }
     }
 
-    private void printText() {
-        for (String line : strings) {
-            System.out.println(line);
-        }
-    }
 }

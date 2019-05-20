@@ -2,30 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8353d20-0a58-4c52-b176-40e617c56786" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_9_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_9_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_27_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KharkivJavaTask5.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/part1/ReadFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/part2/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/command/impl/AllItemCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/command/impl/AllItemCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/command/impl/AddToShoppingCartCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/command/impl/AddToShoppingCartCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/command/impl/SearchByTimeIntervalCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/command/impl/SearchByTimeIntervalCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/command/impl/SearchForNearestDateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/command/impl/SearchForNearestDateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/command/impl/SearchOrderByDateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/command/impl/SearchOrderByDateCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/dao/impl/DAOOrderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/dao/impl/DAOOrderImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/service/TransportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/service/TransportService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/service/impl/ShoppingCartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/service/impl/ShoppingCartServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/service/impl/TransportServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/service/impl/TransportServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/test/ShoppingCartServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/test/ShoppingCartServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/dao/impl/DAOShoppingCartImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/dao/impl/DAOShoppingCartImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/entity/Transport.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/entity/Transport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/utils/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/dao/impl/DAOOrderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/dao/impl/DAOOrderImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/entity/Transport.class" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/entity/Transport.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/service/impl/TransportServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/service/impl/TransportServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/utils/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/utils/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/target/test-classes/ShoppingCartServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/target/test-classes/ShoppingCartServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/part1/ReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part1/ReadFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/part2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part2/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/part1/ReadFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/part1/ReadFile.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,46 +32,31 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/part1/ReadFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="592">
-              <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+            <state relative-caret-position="1275">
+              <caret line="51" column="33" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#394#395#0" expanded="true" />
+                <element signature="e#434#435#0" expanded="true" />
+                <element signature="e#1018#1019#0" expanded="true" />
+                <element signature="e#1078#1079#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/part2/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="250">
-              <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+              <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -97,8 +78,9 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/test.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/part1/ReadFile.java" />
         <option value="$PROJECT_DIR$/src/main/java/part2/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/part1/ReadFile2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/part1/ReadFile.java" />
       </list>
     </option>
   </component>
@@ -120,7 +102,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -152,12 +133,21 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="part1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KharkivJavaTask5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KharkivJavaTask5" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="part2" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -177,7 +167,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.ReadFile2">
+    <configuration name="ReadFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="part1.ReadFile" />
+      <module name="KharkivJavaTask5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="part1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ReadFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="part1.ReadFile" />
       <module name="KharkivJavaTask5" />
@@ -193,6 +196,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ReadFile2" />
         <item itemvalue="Application.ReadFile" />
       </list>
     </recent_temporary>
@@ -214,47 +218,51 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13006397" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10501066" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.11700975" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33802816" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Codota" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Codota" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/part1.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/part1.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" selection-start-column="18" selection-end-column="18" />
+        <state relative-caret-position="475">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/part1/ReadFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="275">
+          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -265,20 +273,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/part1/ReadFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/part2/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/part1/ReadFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="51" column="33" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#394#395#0" expanded="true" />
+            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#1018#1019#0" expanded="true" />
+            <element signature="e#1078#1079#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

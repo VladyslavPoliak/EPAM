@@ -42,8 +42,12 @@ public class DAOOrderImpl implements DAOOrder {
         Map<Date, Map<Transport, Integer>> nearestMap = new HashMap<>();
         Date before = Utils.getBeforeDate(orders, date);
         Date after = Utils.getAfterDate(orders, date);
-        nearestMap.put(before, orders.get(before));
-        nearestMap.put(after, orders.get(after));
+        if (Objects.nonNull(before)) {
+            nearestMap.put(before, orders.get(before));
+        }
+        if (Objects.nonNull(after)) {
+            nearestMap.put(after, orders.get(after));
+        }
         nearestMap.forEach(this::print);
     }
 

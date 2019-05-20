@@ -71,8 +71,8 @@ public class Transport {
 
     @Override
     public String toString() {
-        return "id = " + id + ", price= " + price +
-                ", producer= " + producer;
+        return "id = " + id + ", price = " + price +
+                ", producer = " + producer;
 
     }
 }

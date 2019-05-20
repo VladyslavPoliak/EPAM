@@ -5,6 +5,7 @@ import com.epam.poliak.service.ShoppingCartService;
 import com.epam.poliak.service.TransportService;
 import com.epam.poliak.utils.Utils;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class AddToShoppingCartCommand implements Command {
@@ -20,10 +21,15 @@ public class AddToShoppingCartCommand implements Command {
     @Override
     public void doCommand() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите ID машины");
-        int idItem = scanner.nextInt();
-        System.out.println("Введите количество дней аренды");
-        int days = scanner.nextInt();
-        shoppingCartService.addItemToShoppingCart(transportService.getTransportByID(idItem), Utils.validateNumber(days));
+        try {
+            System.out.println("Введите ID машины");
+            int idItem = scanner.nextInt();
+            System.out.println("Введите количество дней аренды");
+            int days = scanner.nextInt();
+            shoppingCartService.addItemToShoppingCart(transportService.getTransportByID(idItem), Utils.validateDays(days));
+        } catch (InputMismatchException ex) {
+            System.out.println("Incorrect data");
+            doCommand();
+        }
     }
 }

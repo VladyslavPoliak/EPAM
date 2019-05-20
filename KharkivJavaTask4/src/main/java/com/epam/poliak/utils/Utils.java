@@ -5,6 +5,7 @@ import com.epam.poliak.entity.Transport;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.InputMismatchException;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -22,10 +23,14 @@ public final class Utils {
     public static boolean validateEnter(String s, String patt) {
         Pattern pattern = Pattern.compile(patt);
         Matcher matcher = pattern.matcher(s);
-        return matcher.find();
+        if (matcher.find()) {
+            return true;
+        }
+        throw new InputMismatchException();
+
     }
 
-    public static int validateNumber(int number) {
+    public static int validateDays(int number) {
         if (number <= 0) {
             return 1;
         }
@@ -60,5 +65,4 @@ public final class Utils {
         }
         return null;
     }
-
 }
