@@ -65,4 +65,17 @@ public final class Utils {
         }
         return null;
     }
+
+    public static void getSearchResults(Map<Date, Map<Transport, Integer>> map) {
+        if (map.isEmpty()) {
+            System.out.println("Nothing found");
+        } else {
+            System.out.println(map.size() + " orders found");
+            map.forEach(Utils::printMap);
+        }
+    }
+
+    private static void printMap(Date k, Map<Transport, Integer> v) {
+        v.forEach((val, key) -> System.out.println("Date: " + k + " " + val + " Rental days: " + key));
+    }
 }

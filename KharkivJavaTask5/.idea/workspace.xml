@@ -2,26 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8353d20-0a58-4c52-b176-40e617c56786" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/command/impl/AddToShoppingCartCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/command/impl/AddToShoppingCartCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/command/impl/SearchByTimeIntervalCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/command/impl/SearchByTimeIntervalCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/command/impl/SearchForNearestDateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/command/impl/SearchForNearestDateCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/command/impl/SearchOrderByDateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/command/impl/SearchOrderByDateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/dao/DAOOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/dao/DAOOrder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/dao/impl/DAOOrderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/dao/impl/DAOOrderImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/dao/impl/DAOShoppingCartImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/dao/impl/DAOShoppingCartImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/entity/Transport.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/entity/Transport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/service/impl/OrderServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/utils/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/src/main/java/com/epam/poliak/utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/command/impl/AddToShoppingCartCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/command/impl/AddToShoppingCartCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/command/impl/SearchByTimeIntervalCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/command/impl/SearchByTimeIntervalCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/command/impl/SearchForNearestDateCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/command/impl/SearchForNearestDateCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/command/impl/SearchOrderByDateCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/command/impl/SearchOrderByDateCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/dao/DAOOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/dao/DAOOrder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/dao/impl/DAOOrderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/dao/impl/DAOOrderImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/entity/Transport.class" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/entity/Transport.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/service/impl/TransportServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/service/impl/TransportServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/dao/impl/DAOShoppingCartImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/dao/impl/DAOShoppingCartImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/service/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/service/OrderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/service/impl/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/service/impl/OrderServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/utils/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/utils/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/target/test-classes/ShoppingCartServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/target/test-classes/ShoppingCartServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask4/target/classes/com/epam/poliak/utils/Utils.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/part1/ReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part1/ReadFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/part2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/part1/ReadFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/part1/ReadFile.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,11 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/part1/ReadFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1275">
-              <caret line="51" column="33" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
+            <state relative-caret-position="-262">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#394#395#0" expanded="true" />
@@ -52,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/part2/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+            <state relative-caret-position="125">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -78,9 +82,9 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/test.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/part2/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/part1/ReadFile2.java" />
         <option value="$PROJECT_DIR$/src/main/java/part1/ReadFile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/part2/Main.java" />
       </list>
     </option>
   </component>
@@ -91,7 +95,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -215,10 +219,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10501066" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15405117" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -273,17 +277,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/part2/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/part1/ReadFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="51" column="33" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
+        <state relative-caret-position="-262">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#394#395#0" expanded="true" />
@@ -291,6 +288,13 @@
             <element signature="e#1018#1019#0" expanded="true" />
             <element signature="e#1078#1079#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/part2/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>

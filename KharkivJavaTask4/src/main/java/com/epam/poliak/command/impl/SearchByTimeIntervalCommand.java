@@ -20,12 +20,12 @@ public class SearchByTimeIntervalCommand implements Command {
     public void doCommand() {
         Scanner scanner = new Scanner(System.in);
         try {
-            System.out.println("Введите первую дату(dd.MM.yyyy)");
+            System.out.println("Enter first date(dd.MM.yyyy)");
             String date = scanner.nextLine();
-            System.out.println("Введите вторую дату(dd.MM.yyyy)");
+            System.out.println("Enter second date(dd.MM.yyyy)");
             String date2 = scanner.nextLine();
             if (Utils.validateEnter(date, Constants.DATE) && Utils.validateEnter(date2, Constants.DATE)) {
-                orderService.searchByTimeInterval(Utils.getDate(date), Utils.getDate(date2));
+                Utils.getSearchResults(orderService.searchByTimeInterval(Utils.getDate(date), Utils.getDate(date2)));
             }
         } catch (InputMismatchException ex) {
             System.out.println("Incorrect data");

@@ -10,7 +10,7 @@ public final class Constants {
             + SEPARATOR + "4 - Make order" + SEPARATOR
             + "5 - view information about the last 5 cars," +
             "were added to the cart in all purchase sessions." + SEPARATOR
-            + "6 - view orders" + SEPARATOR + "7 - Search by time interval"
+            + "6 - Search order by date " + SEPARATOR + "7 - Search by time interval"
             + SEPARATOR + "8 - Search for nearest date" + SEPARATOR;
 
     private Constants() {

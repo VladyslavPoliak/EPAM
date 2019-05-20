@@ -1,8 +1,8 @@
 package part1;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -18,16 +18,15 @@ public class ReadFile implements Iterable {
     }
 
     public static void main(String[] args) {
-        ReadFile readFile =new ReadFile("test.txt");
+        ReadFile readFile = new ReadFile("test.txt");
         readFile.printText();
     }
 
     @Override
-    public Iterator<String > iterator() {
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader(fileName));
+    public Iterator<String> iterator() {
+        try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
             lines = reader.lines().collect(Collectors.toList());
-        } catch (FileNotFoundException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return new Iterator<String>() {
@@ -39,7 +38,7 @@ public class ReadFile implements Iterable {
             }
 
             @Override
-            public String  next() {
+            public String next() {
                 if (!hasNext()) {
                     throw new NoSuchElementException();
                 }
@@ -48,8 +47,8 @@ public class ReadFile implements Iterable {
         };
     }
 
-    private void printText(){
-        for (Iterator iterator = iterator(); iterator.hasNext();){
+    private void printText() {
+        for (Iterator iterator = iterator(); iterator.hasNext(); ) {
             System.out.println(iterator.next());
         }
     }

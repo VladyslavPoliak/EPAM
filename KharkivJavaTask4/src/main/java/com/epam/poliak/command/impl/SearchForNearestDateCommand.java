@@ -23,7 +23,7 @@ public class SearchForNearestDateCommand implements Command {
             System.out.println("Введите дату для поиска(dd.MM.yyyy)");
             String date = scanner.nextLine();
             if (Utils.validateEnter(date, Constants.DATE)) {
-                orderService.findOrderByNearestDate(Utils.getDate(date));
+                Utils.getSearchResults(orderService.findOrderByNearestDate(Utils.getDate(date)));
             }
         } catch (InputMismatchException ex) {
             System.out.println("Incorrect data");

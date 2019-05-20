@@ -9,10 +9,10 @@ public interface OrderService {
 
     boolean makeOrder(Map<Transport, Integer> hashMap);
 
-    void findOrderByDate(Date date);
+    Map<Date, Map<Transport, Integer>> findOrderByDate(Date date);
 
-    void findOrderByNearestDate(Date date);
+    Map<Date, Map<Transport, Integer>> findOrderByNearestDate(Date date);
 
-    void searchByTimeInterval(Date firstDate, Date secondDate);
+    Map<Date, Map<Transport, Integer>> searchByTimeInterval(Date firstDate, Date secondDate);
 
 }

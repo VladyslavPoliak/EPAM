@@ -21,17 +21,17 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public void findOrderByDate(Date date) {
-        daoOrder.findOrderByDate(date);
+    public Map<Date, Map<Transport, Integer>> findOrderByDate(Date date) {
+        return daoOrder.findOrderByDate(date);
     }
 
     @Override
-    public void findOrderByNearestDate(Date date) {
-        daoOrder.findOrderByNearestDate(date);
+    public Map<Date, Map<Transport, Integer>> findOrderByNearestDate(Date date) {
+        return daoOrder.findOrderByNearestDate(date);
     }
 
     @Override
-    public void searchByTimeInterval(Date firstDate, Date secondDate) {
-        daoOrder.searchByTimeInterval(firstDate, secondDate);
+    public Map<Date, Map<Transport, Integer>> searchByTimeInterval(Date firstDate, Date secondDate) {
+        return daoOrder.searchByTimeInterval(firstDate, secondDate);
     }
 }
