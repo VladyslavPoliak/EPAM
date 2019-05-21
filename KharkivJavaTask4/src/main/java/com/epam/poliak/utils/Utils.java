@@ -42,7 +42,7 @@ public final class Utils {
         try {
             return format.parse(date);
         } catch (ParseException e) {
-            e.printStackTrace();
+            System.out.println("Incorrect data");
         }
         return new Date();
     }
