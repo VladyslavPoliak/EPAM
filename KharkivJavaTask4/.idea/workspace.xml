@@ -2,43 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="294aaa4f-68cc-4498-8e37-46130eb3c795" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../KharkivJavaTask5/src/main/java/part2/ExtensionFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KharkivJavaTask5/src/main/java/part2/Filter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KharkivJavaTask5/src/main/java/part2/NameFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KharkivJavaTask5/src/main/java/part2/SizeFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/command/Command.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/command/impl/AddToShoppingCartCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/command/impl/AllItemCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/command/impl/BuyAllCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/command/impl/SearchByTimeIntervalCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/command/impl/SearchForNearestDateCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/command/impl/SearchOrderByDateCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/command/impl/ShowCartCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/command/impl/ShowLastCarsCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/controller/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/dao/DAOOrder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/dao/DAOShoppingCart.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/dao/DAOTransport.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/dao/impl/DAOOrderImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/dao/impl/DAOShoppingCartImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/dao/impl/DAOTransportImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/entity/Bicycles.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/entity/Car.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/entity/CargoCar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/entity/Transport.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/service/OrderService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/service/ShoppingCartService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/service/TransportService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/service/impl/OrderServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/service/impl/ShoppingCartServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/service/impl/TransportServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/utils/Constants.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/utils/Utils.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../KharkivJavaTask5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask5/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask5/src/main/java/part2/ExtensionFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask5/src/main/java/part2/ExtensionFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask5/src/main/java/part2/Filter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask5/src/main/java/part2/Filter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KharkivJavaTask5/src/main/java/part2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask5/src/main/java/part2/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask5/src/main/java/part2/NameFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask5/src/main/java/part2/NameFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask5/src/main/java/part2/SizeFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask5/src/main/java/part2/SizeFilter.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -96,7 +65,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/command/impl/AddToShoppingCartCommand.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="725">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
             </state>
           </provider>
         </entry>
@@ -237,8 +206,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -367,6 +334,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -626,9 +595,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26652452" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17857143" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -637,7 +605,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.046587214" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.9674973" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.19393283" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1231,7 +1199,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/command/impl/AddToShoppingCartCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="725">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
     </entry>

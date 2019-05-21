@@ -7,23 +7,16 @@ import java.util.List;
 public abstract class Filter {
 
     private Filter nextFilter;
-    private List<Path> files;
+    private List<Path> files = new ArrayList<>();
 
-    public Filter() {
-        files = new ArrayList<>();
-    }
-
-    public Filter setNextFilter(Filter nextFilter) {
+    public void setNextFilter(Filter nextFilter) {
         this.nextFilter = nextFilter;
-        return nextFilter;
     }
 
-    public List<Path> run(List<Path> list, int menu, String directory) {
-        if (menu == 1) {
-            files = doFilter(list, directory);
-        }
-        if (nextFilter != null && menu == 0) {
-             nextFilter.run(files, menu, directory);
+    public List<Path> run(List<Path> list, String directory) {
+        files = doFilter(list, directory);
+        if (nextFilter != null) {
+            nextFilter.run(files, directory);
         }
         return files;
     }
