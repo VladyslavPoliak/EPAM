@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8353d20-0a58-4c52-b176-40e617c56786" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/part1/ReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part1/ReadFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/part2/ExtensionFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part2/ExtensionFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/part2/Filter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part2/Filter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/part2/LastModifiedFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part2/LastModifiedFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/part2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/part2/NameFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part2/NameFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/part2/SizeFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part2/SizeFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/part2/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part2/Utils.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -42,6 +34,30 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/part2/SizeFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="303">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/part2/ExtensionFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="546">
+              <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/part1/ReadFile.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="416">
@@ -62,11 +78,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/part2/Filter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="44" selection-start-line="44" selection-end-line="44" />
+            <state relative-caret-position="1161">
+              <caret line="47" column="6" lean-forward="true" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/part2/NameFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -93,13 +121,13 @@
         <option value="$PROJECT_DIR$/test.txt" />
         <option value="$PROJECT_DIR$/src/main/java/part1/ReadFile2.java" />
         <option value="$PROJECT_DIR$/src/main/java/part2/LastModifiedFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/part2/ExtensionFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/part2/SizeFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/part2/Utils.java" />
         <option value="$PROJECT_DIR$/src/main/java/part2/NameFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/part2/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/part1/ReadFile.java" />
         <option value="$PROJECT_DIR$/src/main/java/part2/Filter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/part2/ExtensionFilter.java" />
       </list>
     </option>
   </component>
@@ -249,7 +277,7 @@
       <option name="presentableId" value="Default" />
       <updated>1558098446717</updated>
       <workItem from="1558541385368" duration="118000" />
-      <workItem from="1558541533798" duration="8881000" />
+      <workItem from="1558541533798" duration="9128000" />
     </task>
     <task id="LOCAL-00001" summary="task5 part2">
       <created>1558453776950</created>
@@ -272,11 +300,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558554914362</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add JavaDoc task5">
+      <created>1558557982768</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1558557982768</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8999000" />
+    <option name="totallyTimeSpent" value="9246000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -321,7 +356,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="task5 part2" />
     <MESSAGE value="fix task5 part2" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix task5 part2" />
+    <MESSAGE value="add JavaDoc task5" />
+    <option name="LAST_COMMIT_MESSAGE" value="add JavaDoc task5" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/KharkivJavaTask5$Main.ic" NAME="Main Coverage Results" MODIFIED="1558448664081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -400,30 +436,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/part2/ExtensionFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/lang/Iterable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="611">
           <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/part2/SizeFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="15" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -441,23 +457,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/part2/NameFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/part2/LastModifiedFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -486,8 +485,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/part2/Filter.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1161">
+          <caret line="47" column="6" lean-forward="true" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/part2/LastModifiedFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/part2/NameFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/part2/SizeFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/part2/ExtensionFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

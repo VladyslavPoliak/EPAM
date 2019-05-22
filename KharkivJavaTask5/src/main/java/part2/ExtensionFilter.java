@@ -22,6 +22,7 @@ public class ExtensionFilter extends Filter {
             if (!isPastFilterWorked()) {
                 list = Utils.getPath(directory);
             }
+
             System.out.println("enter extension ");
             String extension = scanner.next();
             setPastFilterWorked(true);
