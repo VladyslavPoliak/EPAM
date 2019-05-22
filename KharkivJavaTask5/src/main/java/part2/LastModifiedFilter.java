@@ -6,6 +6,12 @@ import java.util.Scanner;
 
 public class LastModifiedFilter extends Filter {
 
+    /**
+     * if the previous filter was omitted , the method gets a list of paths in the specified directory
+     *
+     * @return list of paths
+     */
+
     @Override
     public List<Path> doFilter(List<Path> list, String directory) {
         Scanner scanner = new Scanner(System.in);

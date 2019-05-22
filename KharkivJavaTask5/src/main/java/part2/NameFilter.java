@@ -11,6 +11,14 @@ import java.util.stream.Stream;
 
 public class NameFilter extends Filter {
 
+    /**
+     * method to filter files by name
+     *
+     * @param list      designed to store filtered paths
+     * @param directory needed to get file paths
+     * @return list of paths
+     */
+
     @Override
     public List<Path> doFilter(List<Path> list, String directory) {
         System.out.println("Search by name? 1/0");
@@ -18,7 +26,7 @@ public class NameFilter extends Filter {
             System.out.println("Enter name");
             String fileName = scanner.next();
             try (Stream<Path> files = Files.walk(Paths.get(directory))) {
-                setPastFilter(true);
+                setPastFilterWorked(true);
                 return files.map(Path::toFile)
                         .filter(File::isFile)
                         .filter(f -> f.getName().startsWith(fileName))
@@ -28,7 +36,7 @@ public class NameFilter extends Filter {
                 System.out.println("Error");
             }
         }
-        setPastFilter(false);
+        setPastFilterWorked(false);
         return list;
     }
 }

@@ -14,6 +14,13 @@ public class Utils {
 
     private static List<Path> list = new ArrayList<>();
 
+    /**
+     * if the previous filter was omitted , the method gets a list of paths in the specified directory
+     *
+     * @param directory needed to get file paths
+     * @return list of paths
+     * @see Files
+     */
     public static List<Path> getPath(String directory) {
         try (Stream<Path> files = Files.walk(Paths.get(directory))) {
             list = files.map(Path::toFile)
