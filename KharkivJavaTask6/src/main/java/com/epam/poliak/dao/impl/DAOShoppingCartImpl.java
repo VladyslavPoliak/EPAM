@@ -21,16 +21,13 @@ public class DAOShoppingCartImpl implements DAOShoppingCart {
             shoppingCart.put(transport, days);
             shoppingCartStorage.put(transport, days);
         } else {
-            throw new InputMismatchException();
+            throw new InputMismatchException("This transport is missing. Try later");
         }
     }
 
     @Override
-    public long buyAll() {
-        final long[] totalPrice = {0};
-        shoppingCart.forEach((k, v) -> totalPrice[0] += k.getPrice() * v);
+    public void clearShoppingCart() {
         shoppingCart.clear();
-        return totalPrice[0];
     }
 
     @Override

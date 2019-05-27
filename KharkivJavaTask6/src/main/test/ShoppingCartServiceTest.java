@@ -3,7 +3,6 @@ import com.epam.poliak.entity.Car;
 import com.epam.poliak.entity.Transport;
 import com.epam.poliak.service.ShoppingCartService;
 import com.epam.poliak.service.impl.ShoppingCartServiceImpl;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,7 +14,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -54,27 +53,28 @@ public class ShoppingCartServiceTest {
     }
 
     @Test
-    public void buyAllTest() {
-        when(dAOShoppingCart.buyAll()).thenReturn(0L);
+    public void buyAll() {
+        when(dAOShoppingCart.getShoppingCart()).thenReturn(shoppingCart);
         shoppingCartService.buyAll();
-        assertEquals(0L, dAOShoppingCart.buyAll());
+        verify(dAOShoppingCart, times(1)).clearShoppingCart();
+        assertEquals(40000, shoppingCartService.buyAll());
     }
 
     @Test
     public void getShoppingCartTest() {
         when(shoppingCartService.getShoppingCart()).thenReturn(shoppingCart);
         Map<Transport, Integer> testMap = shoppingCartService.getShoppingCart();
-        Assert.assertTrue(shoppingCart.containsKey(car) && testMap.containsKey(car));
-        Assert.assertTrue(shoppingCart.containsKey(car2) && testMap.containsKey(car2));
-        Assert.assertFalse(shoppingCart.containsKey(car3) && testMap.containsKey(car3));
+        assertTrue(shoppingCart.containsKey(car) && testMap.containsKey(car));
+        assertTrue(shoppingCart.containsKey(car2) && testMap.containsKey(car2));
+        assertFalse(shoppingCart.containsKey(car3) && testMap.containsKey(car3));
     }
 
     @Test
     public void getShoppingCartStorageTest() {
         when(shoppingCartService.getShoppingCartStorage()).thenReturn(shoppingCartStorage);
         Map<Transport, Integer> testMap = shoppingCartService.getShoppingCartStorage();
-        Assert.assertTrue(shoppingCartStorage.containsKey(car) && testMap.containsKey(car));
-        Assert.assertTrue(shoppingCartStorage.containsKey(car2) && testMap.containsKey(car2));
-        Assert.assertFalse(shoppingCartStorage.containsKey(car3) && testMap.containsKey(car3));
+        assertTrue(shoppingCartStorage.containsKey(car) && testMap.containsKey(car));
+        assertTrue(shoppingCartStorage.containsKey(car2) && testMap.containsKey(car2));
+        assertFalse(shoppingCartStorage.containsKey(car3) && testMap.containsKey(car3));
     }
 }

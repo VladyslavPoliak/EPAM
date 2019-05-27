@@ -22,9 +22,12 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
 
     @Override
     public long buyAll() {
-        return daoShoppingCart.buyAll();
+        Map<Transport, Integer> shoppingCart = daoShoppingCart.getShoppingCart();
+        final long[] totalPrice = {0};
+        shoppingCart.forEach((k, v) -> totalPrice[0] += k.getPrice() * v);
+        daoShoppingCart.clearShoppingCart();
+        return totalPrice[0];
     }
-
 
     @Override
     public Map<Transport, Integer> getShoppingCart() {

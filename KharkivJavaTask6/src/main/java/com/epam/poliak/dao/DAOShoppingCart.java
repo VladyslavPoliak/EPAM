@@ -8,7 +8,7 @@ public interface DAOShoppingCart {
 
     void addItemToShoppingCart(Transport transport, int days);
 
-    long buyAll();
+    void clearShoppingCart();
 
     Map<Transport, Integer> getShoppingCart();
 

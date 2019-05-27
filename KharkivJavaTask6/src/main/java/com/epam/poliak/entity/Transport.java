@@ -1,8 +1,9 @@
 package com.epam.poliak.entity;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Transport {
+public class Transport implements Serializable {
 
     private int id;
     private int price;

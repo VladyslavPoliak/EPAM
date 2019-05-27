@@ -22,9 +22,9 @@ public class AddToShoppingCartCommand implements Command {
     public void doCommand() {
         Scanner scanner = new Scanner(System.in);
         try {
-            System.out.println("Введите ID машины");
+            System.out.println("Enter ID transport");
             int idItem = scanner.nextInt();
-            System.out.println("Введите количество дней аренды");
+            System.out.println("Enter number of rental days");
             int days = scanner.nextInt();
             shoppingCartService.addItemToShoppingCart(transportService.getTransportByID(idItem), Utils.validateDays(days));
         } catch (InputMismatchException ex) {

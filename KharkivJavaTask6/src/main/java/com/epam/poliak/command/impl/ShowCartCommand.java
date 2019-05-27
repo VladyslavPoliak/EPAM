@@ -20,7 +20,7 @@ public class ShowCartCommand implements Command {
         if (!map.isEmpty()) {
             map.forEach((k, v) -> System.out.println(k + " Rental days: " + v));
         } else {
-            System.out.println("Корзина пустая");
+            System.out.println("Empty basket");
         }
     }
 }

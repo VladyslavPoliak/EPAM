@@ -20,10 +20,10 @@ public class SearchOrderByDateCommand implements Command {
     public void doCommand() {
         Scanner scanner = new Scanner(System.in);
         try {
-            System.out.println("Введите дату для поиска(dd.MM.yyyy)");
+            System.out.println("Enter a date to search(dd.MM.yyyy)");
             String date = scanner.nextLine();
             if (Utils.validateEnter(date, Constants.DATE)) {
-                Utils.getSearchResults(orderService.findOrderByDate(Utils.getDate(date)));
+                System.out.println(orderService.findOrderByDate(Utils.getDate(date)));
             }
         } catch (InputMismatchException ex) {
             System.out.println("Incorrect data");
