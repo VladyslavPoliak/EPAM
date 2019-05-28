@@ -32,7 +32,7 @@ public class Utils {
                     .map(File::toPath)
                     .collect(Collectors.toList());
         } catch (IOException e) {
-            System.out.println("Error");
+            LOGGER.error("Error");
         }
         return list;
     }

@@ -30,7 +30,6 @@ public class NameFilter extends Filter {
             System.out.println("Enter name");
             String fileName = scanner.next();
             try (Stream<Path> files = Files.walk(Paths.get(directory))) {
-                setPastFilterWorked(true);
                 return files.map(Path::toFile)
                         .filter(File::isFile)
                         .filter(f -> f.getName().startsWith(fileName))
@@ -41,7 +40,6 @@ public class NameFilter extends Filter {
             }
         }
         LOGGER.info(list.size());
-        setPastFilterWorked(false);
         return list;
     }
 }

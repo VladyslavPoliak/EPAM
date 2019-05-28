@@ -22,22 +22,17 @@ public class ExtensionFilter extends Filter {
     @Override
     public List<Path> doFilter(List<Path> list, String directory) {
         System.out.println("Search by extension? 1/0");
-        LOGGER.info(list.size());
         if (scanner.nextInt() == 1) {
-            if (!isPastFilterWorked()&& list.isEmpty()) {
-                list = Utils.getPath(directory);
-                LOGGER.info("daresfdgh");
-            }
+
             System.out.println("enter extension ");
             String extension = scanner.next();
-            setPastFilterWorked(true);
+
             return list.stream().map(Path::toFile)
                     .filter(File::isFile)
                     .filter(f -> f.getName().endsWith(extension))
                     .map(File::toPath)
                     .collect(Collectors.toList());
         }
-        setPastFilterWorked(false);
         LOGGER.info(list.size());
         return list;
     }

@@ -11,7 +11,6 @@ public abstract class Filter {
     protected final Logger LOGGER=Logger.getLogger(getClass());
     private Filter nextFilter;
     private List<Path> files = new ArrayList<>();
-    private boolean isPastFilterWorked;
     protected Scanner scanner = new Scanner(System.in);
 
 
@@ -40,21 +39,4 @@ public abstract class Filter {
      * @param directory needed to get file paths
      */
     public abstract List<Path> doFilter(List<Path> list, String directory);
-
-    /**
-     * method to check whether the previous filter was run in the chain
-     *
-     * @return {@code true} if the previous filter was started
-     * {@code false} if the previous filter was skipped
-     */
-    public boolean isPastFilterWorked() {
-        return isPastFilterWorked;
-    }
-
-    /**
-     * method for setting the use of past filter in the chain
-     */
-    public void setPastFilterWorked(boolean isPastFilterWorked) {
-        this.isPastFilterWorked = isPastFilterWorked;
-    }
 }

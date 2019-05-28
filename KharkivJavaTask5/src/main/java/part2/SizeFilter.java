@@ -28,10 +28,6 @@ public class SizeFilter extends Filter {
             long minSize = scanner.nextLong();
             System.out.println("enter max size");
             long maxSize = scanner.nextLong();
-            if (!isPastFilterWorked() && list.isEmpty()) {
-                list = Utils.getPath(directory);
-            }
-            setPastFilterWorked(true);
             return list.stream().map(Path::toFile)
                     .filter(File::isFile)
                     .filter(f -> f.length() >= minSize && f.length() <= maxSize)
@@ -39,7 +35,6 @@ public class SizeFilter extends Filter {
                     .collect(Collectors.toList());
         }
         LOGGER.info(list.size());
-        setPastFilterWorked(false);
         return list;
     }
 }
