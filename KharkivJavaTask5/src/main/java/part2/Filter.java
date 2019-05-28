@@ -1,23 +1,21 @@
 package part2;
 
+import org.apache.log4j.Logger;
+
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public abstract class Filter {
-
-    protected Scanner scanner = new Scanner(System.in);
+    protected final Logger LOGGER=Logger.getLogger(getClass());
     private Filter nextFilter;
     private List<Path> files = new ArrayList<>();
     private boolean isPastFilterWorked;
+    protected Scanner scanner = new Scanner(System.in);
 
-    /**
-     * method for setting the next filter in the chain
-     *
-     * @param nextFilter following filter
-     */
-    public void setNextFilter(Filter nextFilter) {
+
+    public Filter(Filter nextFilter){
         this.nextFilter = nextFilter;
     }
 

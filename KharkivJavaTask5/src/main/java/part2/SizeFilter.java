@@ -7,6 +7,10 @@ import java.util.stream.Collectors;
 
 public class SizeFilter extends Filter {
 
+    public SizeFilter(Filter nextFilter) {
+        super(nextFilter);
+    }
+
     /**
      * method to filter files by size in the specified directory
      *
@@ -18,12 +22,13 @@ public class SizeFilter extends Filter {
     @Override
     public List<Path> doFilter(List<Path> list, String directory) {
         System.out.println("Search by size? 1/0");
+        LOGGER.info(list.size());
         if (scanner.nextInt() == 1) {
             System.out.println("enter minimum size");
             long minSize = scanner.nextLong();
             System.out.println("enter max size");
             long maxSize = scanner.nextLong();
-            if (!isPastFilterWorked()) {
+            if (!isPastFilterWorked() && list.isEmpty()) {
                 list = Utils.getPath(directory);
             }
             setPastFilterWorked(true);
@@ -33,6 +38,7 @@ public class SizeFilter extends Filter {
                     .map(File::toPath)
                     .collect(Collectors.toList());
         }
+        LOGGER.info(list.size());
         setPastFilterWorked(false);
         return list;
     }

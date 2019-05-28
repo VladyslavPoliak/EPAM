@@ -28,20 +28,14 @@ public class Main {
             int menu = scanner.nextInt();
             String directory = "C:" + File.separator
                     + "Users" + File.separator
-                    + "vlado" + File.separator
+                    + "Vladyslav_Poliak" + File.separator
                     + "Desktop";
             if (menu == 0) {
                 System.out.println("Enter directory");
                 directory = scanner.next();
             }
-            Filter nameFilter = new NameFilter();
-            Filter sizeFilter = new SizeFilter();
-            Filter extensionFilter = new ExtensionFilter();
-            Filter lastModifiedFilter = new LastModifiedFilter();
+            Filter nameFilter = new NameFilter(new SizeFilter(new ExtensionFilter(null)));
 
-            nameFilter.setNextFilter(sizeFilter);
-            sizeFilter.setNextFilter(extensionFilter);
-            extensionFilter.setNextFilter(lastModifiedFilter);
             list = nameFilter.run(list, directory);
 
             System.out.println("was found: " + list.size());

@@ -11,6 +11,10 @@ import java.util.stream.Stream;
 
 public class NameFilter extends Filter {
 
+    public NameFilter(Filter nextFilter) {
+        super(nextFilter);
+    }
+
     /**
      * method to filter files by name
      *
@@ -36,6 +40,7 @@ public class NameFilter extends Filter {
                 System.out.println("Error");
             }
         }
+        LOGGER.info(list.size());
         setPastFilterWorked(false);
         return list;
     }

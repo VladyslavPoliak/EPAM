@@ -7,6 +7,10 @@ import java.util.stream.Collectors;
 
 public class ExtensionFilter extends Filter {
 
+    public ExtensionFilter(Filter nextFilter) {
+        super(nextFilter);
+    }
+
     /**
      * method to filter files by extension
      *
@@ -18,11 +22,12 @@ public class ExtensionFilter extends Filter {
     @Override
     public List<Path> doFilter(List<Path> list, String directory) {
         System.out.println("Search by extension? 1/0");
+        LOGGER.info(list.size());
         if (scanner.nextInt() == 1) {
-            if (!isPastFilterWorked()) {
+            if (!isPastFilterWorked()&& list.isEmpty()) {
                 list = Utils.getPath(directory);
+                LOGGER.info("daresfdgh");
             }
-
             System.out.println("enter extension ");
             String extension = scanner.next();
             setPastFilterWorked(true);
@@ -33,6 +38,7 @@ public class ExtensionFilter extends Filter {
                     .collect(Collectors.toList());
         }
         setPastFilterWorked(false);
+        LOGGER.info(list.size());
         return list;
     }
 }

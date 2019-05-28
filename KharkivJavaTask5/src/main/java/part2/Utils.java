@@ -1,5 +1,7 @@
 package part2;
 
+import org.apache.log4j.Logger;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -12,7 +14,9 @@ import java.util.stream.Stream;
 
 public class Utils {
 
+    private static final Logger LOGGER = Logger.getLogger(Utils.class);
     private static List<Path> list = new ArrayList<>();
+
 
     /**
      * if the previous filter was omitted , the method gets a list of paths in the specified directory

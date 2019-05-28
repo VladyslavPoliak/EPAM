@@ -1,6 +1,5 @@
 package com.epam.poliak.utils;
 
-import com.epam.poliak.entity.Bicycles;
 import com.epam.poliak.entity.Car;
 import com.epam.poliak.entity.Transport;
 import com.google.gson.Gson;
@@ -98,8 +97,9 @@ public final class Utils {
             for (String line : allLinesFromFile) {
                 builder.append(line);
             }
-            Type targetClassType = new TypeToken<ArrayList<Transport>>() { }.getType();
-            res = new Gson().fromJson( builder.toString(), targetClassType);
+            Type targetClassType = new TypeToken<ArrayList<Transport>>() {
+            }.getType();
+            res = new Gson().fromJson(builder.toString(), targetClassType);
         } catch (IOException e) {
             e.printStackTrace();
         }

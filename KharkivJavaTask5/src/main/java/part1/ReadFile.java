@@ -1,5 +1,7 @@
 package part1;
 
+import org.apache.log4j.Logger;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -10,6 +12,7 @@ import java.util.stream.Collectors;
 
 public class ReadFile implements Iterable {
 
+    private static final Logger LOGGER = Logger.getLogger(ReadFile.class);
     private String fileName;
     private List<String> lines;
 
@@ -38,7 +41,7 @@ public class ReadFile implements Iterable {
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
             lines = reader.lines().collect(Collectors.toList());
         } catch (IOException e) {
-            System.out.println("Error reading file. Try again");
+            LOGGER.error("Error reading file. Try again");
         }
         return new Iterator<String>() {
             int index;
