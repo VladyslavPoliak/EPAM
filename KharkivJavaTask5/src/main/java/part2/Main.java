@@ -45,6 +45,7 @@ public class Main {
             list.forEach(System.out::println);
 
         } catch (InputMismatchException e) {
+
             LOGGER.error("Incorrect data ");
         }
     }
