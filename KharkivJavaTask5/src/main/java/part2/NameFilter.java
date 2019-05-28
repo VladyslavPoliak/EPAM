@@ -1,13 +1,8 @@
 package part2;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class NameFilter extends Filter {
 
@@ -29,15 +24,9 @@ public class NameFilter extends Filter {
         if (scanner.nextInt() == 1) {
             System.out.println("Enter name");
             String fileName = scanner.next();
-            try (Stream<Path> files = Files.walk(Paths.get(directory))) {
-                return files.map(Path::toFile)
-                        .filter(File::isFile)
-                        .filter(f -> f.getName().startsWith(fileName))
-                        .map(File::toPath)
-                        .collect(Collectors.toList());
-            } catch (IOException e) {
-                System.out.println("Error");
-            }
+            return list.stream()
+                    .filter(f -> f.getFileName().toString().startsWith(fileName))
+                    .collect(Collectors.toList());
         }
         LOGGER.info(list.size());
         return list;

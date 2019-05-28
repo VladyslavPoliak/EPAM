@@ -72,7 +72,6 @@ public class ReadFile implements Iterable {
         };
     }
 
-
     /**
      * method for printing a list line by line
      */

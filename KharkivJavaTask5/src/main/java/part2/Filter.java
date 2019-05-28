@@ -8,13 +8,14 @@ import java.util.List;
 import java.util.Scanner;
 
 public abstract class Filter {
-    protected final Logger LOGGER=Logger.getLogger(getClass());
+
+    protected final Logger LOGGER = Logger.getLogger(getClass());
+    protected Scanner scanner = new Scanner(System.in);
     private Filter nextFilter;
     private List<Path> files = new ArrayList<>();
-    protected Scanner scanner = new Scanner(System.in);
 
 
-    public Filter(Filter nextFilter){
+    public Filter(Filter nextFilter) {
         this.nextFilter = nextFilter;
     }
 
