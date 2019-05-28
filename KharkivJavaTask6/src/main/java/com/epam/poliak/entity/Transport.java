@@ -74,6 +74,5 @@ public class Transport implements Serializable {
     public String toString() {
         return "id = " + id + ", price = " + price +
                 ", producer = " + producer;
-
     }
 }

@@ -23,4 +23,9 @@ public class TransportServiceImpl implements TransportService {
     public Transport getTransportByID(int id) {
         return daoTransport.getTransportByID(id);
     }
+
+    @Override
+    public void addNewTransport(int price, String producer) {
+        daoTransport.addNewTransport(daoTransport.getAllTransport().size(), price, producer);
+    }
 }

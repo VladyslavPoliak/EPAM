@@ -1,10 +1,10 @@
 package com.epam.poliak.utils;
 
-import com.epam.poliak.entity.Transport;
 import com.epam.poliak.service.TransportService;
 
-import java.io.*;
-import java.util.ArrayList;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 
 public class SerializableTransportList {
 
@@ -14,28 +14,12 @@ public class SerializableTransportList {
         this.transportService = transportService;
     }
 
-    public SerializableTransportList() {
-    }
-
     public void serializableData(String fileName) {
         try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(fileName))) {
             objectOutputStream.writeObject(transportService.getAllTransport());
-            System.out.println("Успешно сериализация");
+            System.out.println("Successful serialization");
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("error writing data to file");
         }
     }
-
-    public ArrayList<Transport> deserializationData(String fileName) {
-        ArrayList<Transport> list=null;
-        try (ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(fileName))) {
-            list = (ArrayList<Transport>) objectInputStream.readObject();
-            System.out.println("Успешно десериализация");
-        } catch (ClassNotFoundException | IOException e) {
-            System.out.println("Не удалось загрузить данные с файла");
-        }
-        return list;
-
-    }
-
 }

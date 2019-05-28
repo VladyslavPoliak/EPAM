@@ -16,9 +16,7 @@ public class ExitCommand implements Command {
 
     @Override
     public void doCommand() {
-//        Utils.serializableAllTransportList("serialisation.txt");
-        SerializableTransportList serializable = new SerializableTransportList(transportService);
-        serializable.serializableData(fileName);
+        new SerializableTransportList(transportService).serializableData(fileName);
         System.exit(0);
     }
 }

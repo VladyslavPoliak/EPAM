@@ -35,7 +35,7 @@ public class Controller {
     }
 
     private void fillCommandMap() {
-        allCommandMap.put(0, new ExitCommand(transportService,"serialisation2.txt"));
+        allCommandMap.put(0, new ExitCommand(transportService, "serialisation.txt"));
         allCommandMap.put(1, new AllItemCommand(transportService));
         allCommandMap.put(2, new AddToShoppingCartCommand(shoppingCartService, transportService));
         allCommandMap.put(3, new ShowCartCommand(shoppingCartService));
@@ -44,5 +44,6 @@ public class Controller {
         allCommandMap.put(6, new SearchOrderByDateCommand(orderService));
         allCommandMap.put(7, new SearchByTimeIntervalCommand(orderService));
         allCommandMap.put(8, new SearchForNearestDateCommand(orderService));
+        allCommandMap.put(9, new AddNewTransport(transportService));
     }
 }

@@ -12,6 +12,7 @@ public final class Constants {
             "were added to the cart in all purchase sessions." + SEPARATOR
             + "6 - Search order by date " + SEPARATOR + "7 - Search by time interval"
             + SEPARATOR + "8 - Search for nearest date" + SEPARATOR
+            + "9 - Add new Transport" + SEPARATOR
             + "0 - exit " + SEPARATOR;
 
     private Constants() {

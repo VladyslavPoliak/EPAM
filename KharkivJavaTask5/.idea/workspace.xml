@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca231991-1330-4b1c-a8bc-de9a549e77c9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log4j-application.log" beforeDir="false" afterPath="$PROJECT_DIR$/log4j-application.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/part1/ReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part1/ReadFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/part2/ExtensionFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part2/ExtensionFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/part2/Filter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part2/Filter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/part2/LastModifiedFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part2/LastModifiedFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/part2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/part2/NameFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part2/NameFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/part2/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part2/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/part1/ReadFile$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/part1/ReadFile$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/part1/ReadFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/part1/ReadFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/part2/ExtensionFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/part2/ExtensionFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/part2/Filter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/part2/Filter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/part2/LastModifiedFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/part2/LastModifiedFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/part2/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/part2/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/part2/NameFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/part2/NameFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/part2/SizeFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/part2/SizeFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/part2/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/part2/Utils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test.txt" afterDir="false" />
-    </list>
+    <list default="true" id="ca231991-1330-4b1c-a8bc-de9a549e77c9" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,8 +49,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/part2/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="800">
-              <caret line="38" column="109" selection-start-line="38" selection-start-column="109" selection-end-line="38" selection-end-column="109" />
+            <state relative-caret-position="725">
+              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
             </state>
           </provider>
         </entry>
@@ -109,9 +89,9 @@
         <option value="$PROJECT_DIR$/src/main/java/part2/ExtensionFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/part2/SizeFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/part2/Utils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/part2/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/part2/LastModifiedFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/part2/NameFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/part2/Main.java" />
       </list>
     </option>
   </component>
@@ -184,7 +164,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/part2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../KharkivJavaTask6" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
@@ -263,7 +243,28 @@
       <option name="project" value="LOCAL" />
       <updated>1559049530442</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fix task5 part2">
+      <created>1559051871867</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1559051871867</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fix task5 part2">
+      <created>1559051892583</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1559051892583</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fix task5 part2">
+      <created>1559051941447</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1559051941447</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -278,7 +279,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.032502707" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4723727" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -301,6 +302,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix task5 part2" />
     <option name="LAST_COMMIT_MESSAGE" value="fix task5 part2" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -394,8 +398,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/part2/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="38" column="109" selection-start-line="38" selection-start-column="109" selection-end-line="38" selection-end-column="109" />
+        <state relative-caret-position="725">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
         </state>
       </provider>
     </entry>

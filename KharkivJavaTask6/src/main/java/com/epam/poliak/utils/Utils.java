@@ -1,20 +1,12 @@
 package com.epam.poliak.utils;
 
-import com.epam.poliak.entity.Car;
 import com.epam.poliak.entity.Transport;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.lang.reflect.Type;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.Date;
+import java.util.InputMismatchException;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -68,42 +60,6 @@ public final class Utils {
             System.out.println(map.size() + " orders found");
             map.forEach(Utils::printMap);
         }
-    }
-
-    public static void serializableAllTransportList(String fileName) {
-        ArrayList<Transport> transportList = new ArrayList<>();
-        transportList.add(new Car(0, 5500, "Nissan", 200, 2011));
-        transportList.add(new Car(1, 5000, "Nissan", 150, 2010));
-        transportList.add(new Car(2, 6000, "Toyota", 152, 2011));
-        transportList.add(new Car(3, 2000, "Mazda", 155, 2014));
-        transportList.add(new Car(4, 7000, "Nissan", 140, 2013));
-        FileWriter file;
-        try {
-            file = new FileWriter(fileName);
-            String forJson = new GsonBuilder().setPrettyPrinting().create().toJson(transportList);
-            file.write(forJson);
-            file.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static ArrayList<Transport> deserializableAllTransportList(String fileName) {
-        Path path = Paths.get(fileName);
-        ArrayList<Transport> res = null;
-        try {
-            List<String> allLinesFromFile = Files.readAllLines(path);
-            StringBuilder builder = new StringBuilder();
-            for (String line : allLinesFromFile) {
-                builder.append(line);
-            }
-            Type targetClassType = new TypeToken<ArrayList<Transport>>() {
-            }.getType();
-            res = new Gson().fromJson(builder.toString(), targetClassType);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return res;
     }
 
     private static void printMap(Date k, Map<Transport, Integer> v) {
