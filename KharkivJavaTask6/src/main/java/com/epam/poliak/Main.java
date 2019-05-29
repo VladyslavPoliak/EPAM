@@ -1,6 +1,7 @@
 package com.epam.poliak;
 
 import com.epam.poliak.controller.Controller;
+import com.epam.poliak.input.InputStrategy;
 import com.epam.poliak.utils.Constants;
 import com.epam.poliak.utils.Utils;
 

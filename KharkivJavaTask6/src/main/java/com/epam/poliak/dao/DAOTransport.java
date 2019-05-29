@@ -10,5 +10,5 @@ public interface DAOTransport {
 
     Transport getTransportByID(int id);
 
-    void addNewTransport(int id, int price, String producer);
+    void addNewTransport(int id, Transport transport);
 }

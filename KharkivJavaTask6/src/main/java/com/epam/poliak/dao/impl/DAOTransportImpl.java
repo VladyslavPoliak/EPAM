@@ -30,11 +30,8 @@ public class DAOTransportImpl implements DAOTransport {
     }
 
     @Override
-    public void addNewTransport(int id, int price, String producer) {
-        Transport newTransport = new Transport();
-        newTransport.setId(id);
-        newTransport.setPrice(price);
-        newTransport.setProducer(producer);
-        transportList.add(newTransport);
+    public void addNewTransport(int id, Transport transport) {
+        transport.setId(id);
+        transportList.add(transport);
     }
 }

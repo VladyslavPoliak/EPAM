@@ -50,7 +50,7 @@ public class Bicycles extends Transport {
 
     @Override
     public String toString() {
-        return super.toString() + " wheelSize=" + wheelSize +
-                ", numberAbsorber=" + numberAbsorber;
+        return super.toString() + " wheelSize = " + wheelSize +
+                ", numberAbsorber = " + numberAbsorber;
     }
 }

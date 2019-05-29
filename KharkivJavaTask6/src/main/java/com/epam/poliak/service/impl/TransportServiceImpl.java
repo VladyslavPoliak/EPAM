@@ -25,7 +25,7 @@ public class TransportServiceImpl implements TransportService {
     }
 
     @Override
-    public void addNewTransport(int price, String producer) {
-        daoTransport.addNewTransport(daoTransport.getAllTransport().size(), price, producer);
+    public void addNewTransport(Transport transport) {
+        daoTransport.addNewTransport(daoTransport.getAllTransport().size(), transport);
     }
 }

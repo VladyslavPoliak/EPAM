@@ -10,6 +10,6 @@ public interface TransportService {
 
     Transport getTransportByID(int id);
 
-    void addNewTransport(int price, String producer);
+    void addNewTransport(Transport transport);
 
 }
