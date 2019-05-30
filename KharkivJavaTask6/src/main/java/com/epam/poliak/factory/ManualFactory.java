@@ -37,6 +37,10 @@ public class ManualFactory implements FactoryInterface {
     public CargoCar createCargoCar() {
         CargoCar cargoCar = new CargoCar();
         fillTransport(cargoCar);
+        System.out.println("Enter Year Of Release");
+        cargoCar.setYearOfRelease(scanner.nextInt());
+        System.out.println("Enter Engine Power");
+        cargoCar.setEnginePower(scanner.nextInt());
         System.out.println("Enter Max Transport Weight");
         cargoCar.setMaxTransportWeight(scanner.nextInt());
         System.out.println("Enter Number Of Trailers");
@@ -50,8 +54,9 @@ public class ManualFactory implements FactoryInterface {
         fillTransport(transport);
         return transport;
     }
-@Override
-public void fillTransport(Transport transport) {
+
+    @Override
+    public void fillTransport(Transport transport) {
         System.out.println("Enter producer");
         transport.setProducer(scanner.next());
         System.out.println("Enter price");

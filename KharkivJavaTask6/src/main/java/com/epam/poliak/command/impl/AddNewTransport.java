@@ -1,11 +1,13 @@
 package com.epam.poliak.command.impl;
 
 import com.epam.poliak.command.Command;
+import com.epam.poliak.entity.Transport;
 import com.epam.poliak.factory.FactoryInterface;
-import com.epam.poliak.input.InputStrategy;
 import com.epam.poliak.service.TransportService;
 import com.epam.poliak.utils.Constants;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class AddNewTransport implements Command {
@@ -13,9 +15,9 @@ public class AddNewTransport implements Command {
     private TransportService transportService;
     private FactoryInterface factoryInterface;
 
-    public AddNewTransport(TransportService transportService,FactoryInterface factoryInterface) {
+    public AddNewTransport(TransportService transportService, FactoryInterface factoryInterface) {
         this.transportService = transportService;
-        this.factoryInterface=factoryInterface;
+        this.factoryInterface = factoryInterface;
     }
 
     @Override
@@ -24,11 +26,10 @@ public class AddNewTransport implements Command {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Choose Transport");
         int x = scanner.nextInt();
-        if (x == 1) {
-            transportService.addNewTransport(factoryInterface.createCar());
-        }else {
-            transportService.addNewTransport(factoryInterface.createBicycles());
-        }
-
+        Map<Integer, Transport> map = new HashMap<>();
+        map.put(1, factoryInterface.createCar());
+        map.put(2, factoryInterface.createBicycles());
+        map.put(3, factoryInterface.createCargoCar());
+        transportService.addNewTransport(map.get(x));
     }
 }

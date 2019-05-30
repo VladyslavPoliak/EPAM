@@ -23,7 +23,7 @@ public class Controller {
     private ShoppingCartService shoppingCartService = new ShoppingCartServiceImpl(new DAOShoppingCartImpl());
     private TransportService transportService = new TransportServiceImpl(new DAOTransportImpl());
     private OrderService orderService = new OrderServiceImpl(new DAOOrderImpl());
-    private FactoryInterface factoryInterface=new InputStrategy().setInputStrategy();
+    private FactoryInterface factoryInterface = new InputStrategy().setInputStrategy();
 
     public Controller() {
         fillCommandMap();
@@ -47,6 +47,6 @@ public class Controller {
         allCommandMap.put(6, new SearchOrderByDateCommand(orderService));
         allCommandMap.put(7, new SearchByTimeIntervalCommand(orderService));
         allCommandMap.put(8, new SearchForNearestDateCommand(orderService));
-        allCommandMap.put(9, new AddNewTransport(transportService,factoryInterface));
+        allCommandMap.put(9, new AddNewTransport(transportService, factoryInterface));
     }
 }
