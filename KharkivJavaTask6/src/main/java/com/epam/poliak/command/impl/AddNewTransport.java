@@ -27,7 +27,7 @@ public class AddNewTransport implements Command {
         System.out.println("Choose Transport");
         int x = scanner.nextInt();
         Map<Integer, Transport> map = new HashMap<>();
-        map.put(1, factoryInterface.createCar());
+        map.put(1, new  );
         map.put(2, factoryInterface.createBicycles());
         map.put(3, factoryInterface.createCargoCar());
         transportService.addNewTransport(map.get(x));

@@ -1,20 +1,15 @@
 package com.epam.poliak.factory;
 
-import com.epam.poliak.entity.Bicycles;
-import com.epam.poliak.entity.Car;
-import com.epam.poliak.entity.CargoCar;
-import com.epam.poliak.entity.Transport;
+import java.util.Random;
 
-public interface FactoryInterface {
+public interface FactoryInterface<T> {
+     Random random = new Random();
 
-    Bicycles createBicycles();
+    T create();
 
-    Car createCar();
-
-    CargoCar createCargoCar();
-
-    Transport createTransport();
-
-    void fillTransport(Transport transport);
+    default int createRandomNumber(int minNumber, int maxNumber) {
+        int diffYear = maxNumber - minNumber;
+        return random.nextInt(diffYear + 1) + minNumber;
+    }
 
 }
