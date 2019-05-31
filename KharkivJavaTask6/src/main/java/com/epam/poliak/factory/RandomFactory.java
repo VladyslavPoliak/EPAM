@@ -11,7 +11,7 @@ import java.util.Map;
 public class RandomFactory implements Builder {
 
     @Override
-    public FactoryInterface chooseType(String key) {
+    public FactoryInterface chooseTransportType(String key) {
         Map<String, FactoryInterface> map = new HashMap<>();
         map.put("1", new RandomBicycles());
         map.put("2", new RandomCar());
