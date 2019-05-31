@@ -1,65 +1,22 @@
 package com.epam.poliak.factory;
 
-import com.epam.poliak.entity.Bicycles;
-import com.epam.poliak.entity.Car;
-import com.epam.poliak.entity.CargoCar;
-import com.epam.poliak.entity.Transport;
+import com.epam.poliak.factory.manual.ManualBicycles;
+import com.epam.poliak.factory.manual.ManualCar;
+import com.epam.poliak.factory.manual.ManualCargoCar;
+import com.epam.poliak.factory.manual.ManualTransport;
 
-import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
 
-public class ManualFactory {
+public class ManualFactory implements Builder {
 
-    private Scanner scanner = new Scanner(System.in);
-
-//    @Override
-//    public Bicycles createBicycles() {
-//        Bicycles bicycles = new Bicycles();
-//        fillTransport(bicycles);
-//        System.out.println("Enter Number Absorber ");
-//        bicycles.setNumberAbsorber(scanner.nextInt());
-//        System.out.println("Enter Wheel Size");
-//        bicycles.setWheelSize(scanner.nextInt());
-//        return bicycles;
-//    }
-//
-//    @Override
-//    public Car createCar() {
-//        Car car = new Car();
-//        fillTransport(car);
-//        System.out.println("Enter Engine Power");
-//        car.setEnginePower(scanner.nextInt());
-//        System.out.println("Enter Year Of Release");
-//        car.setYearOfRelease(scanner.nextInt());
-//        return car;
-//    }
-//
-//    @Override
-//    public CargoCar createCargoCar() {
-//        CargoCar cargoCar = new CargoCar();
-//        fillTransport(cargoCar);
-//        System.out.println("Enter Year Of Release");
-//        cargoCar.setYearOfRelease(scanner.nextInt());
-//        System.out.println("Enter Engine Power");
-//        cargoCar.setEnginePower(scanner.nextInt());
-//        System.out.println("Enter Max Transport Weight");
-//        cargoCar.setMaxTransportWeight(scanner.nextInt());
-//        System.out.println("Enter Number Of Trailers");
-//        cargoCar.setNumberOfTrailers(scanner.nextInt());
-//        return cargoCar;
-//    }
-//
-//    @Override
-//    public Transport createTransport() {
-//        Transport transport = new Transport();
-//        fillTransport(transport);
-//        return transport;
-//    }
-//
-//    @Override
-//    public void fillTransport(Transport transport) {
-//        System.out.println("Enter producer");
-//        transport.setProducer(scanner.next());
-//        System.out.println("Enter price");
-//        transport.setPrice(scanner.nextInt());
-//    }
+    @Override
+    public FactoryInterface chooseType(String key) {
+        Map<String, FactoryInterface> map = new HashMap<>();
+        map.put("1", new ManualBicycles());
+        map.put("2", new ManualCar());
+        map.put("3", new ManualCargoCar());
+        map.put("4", new ManualTransport());
+        return map.get(key);
+    }
 }

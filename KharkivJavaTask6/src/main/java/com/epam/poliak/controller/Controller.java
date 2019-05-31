@@ -5,7 +5,7 @@ import com.epam.poliak.command.impl.*;
 import com.epam.poliak.dao.impl.DAOOrderImpl;
 import com.epam.poliak.dao.impl.DAOShoppingCartImpl;
 import com.epam.poliak.dao.impl.DAOTransportImpl;
-import com.epam.poliak.factory.FactoryInterface;
+import com.epam.poliak.factory.Builder;
 import com.epam.poliak.input.InputStrategy;
 import com.epam.poliak.service.OrderService;
 import com.epam.poliak.service.ShoppingCartService;
@@ -23,7 +23,7 @@ public class Controller {
     private ShoppingCartService shoppingCartService = new ShoppingCartServiceImpl(new DAOShoppingCartImpl());
     private TransportService transportService = new TransportServiceImpl(new DAOTransportImpl());
     private OrderService orderService = new OrderServiceImpl(new DAOOrderImpl());
-    private FactoryInterface factoryInterface = new InputStrategy().setInputStrategy();
+    private Builder builder = new InputStrategy().setInputStrategy();
 
     public Controller() {
         fillCommandMap();
@@ -47,6 +47,6 @@ public class Controller {
         allCommandMap.put(6, new SearchOrderByDateCommand(orderService));
         allCommandMap.put(7, new SearchByTimeIntervalCommand(orderService));
         allCommandMap.put(8, new SearchForNearestDateCommand(orderService));
-        allCommandMap.put(9, new AddNewTransport(transportService, factoryInterface));
+        allCommandMap.put(9, new AddNewTransport(transportService, builder));
     }
 }

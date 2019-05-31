@@ -5,17 +5,14 @@ import com.epam.poliak.factory.FactoryInterface;
 
 import java.util.Scanner;
 
-public class ManualCar implements FactoryInterface<Car> {
+public class ManualCar implements FactoryInterface {
 
     private Scanner scanner = new Scanner(System.in);
 
     @Override
     public Car create() {
         Car car = new Car();
-        System.out.println("Enter producer");
-        car.setProducer(scanner.next());
-        System.out.println("Enter price");
-        car.setPrice(scanner.nextInt());
+        manualFillCommonData(car);
         System.out.println("Enter Engine Power");
         car.setEnginePower(scanner.nextInt());
         System.out.println("Enter Year Of Release");

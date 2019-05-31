@@ -16,9 +16,10 @@ public final class Constants {
             + SEPARATOR + "8 - Search for nearest date" + SEPARATOR
             + "9 - Add new Transport" + SEPARATOR
             + "0 - exit " + SEPARATOR;
-    public static final String ADD_NEW_TRANSPORT_MENU = "1 - add Car" + SEPARATOR
-            + "2 - add Bicycles" + SEPARATOR
-            + "3 - add Cargo Car";
+    public static final String ADD_NEW_TRANSPORT_MENU = "1 - add Bicycles" + SEPARATOR
+            + "2 - add Car" + SEPARATOR
+            + "3 - add Cargo Car" + SEPARATOR
+            + "4 - add Transport";
 
     private Constants() {
 
