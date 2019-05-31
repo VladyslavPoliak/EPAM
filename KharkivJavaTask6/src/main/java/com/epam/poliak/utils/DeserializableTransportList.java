@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class DeserializableTransportList {
 
     public ArrayList<Transport> deserializationData(String fileName) {
-        ArrayList<Transport> list = null;
+        ArrayList<Transport> list = new ArrayList<>();
         try (ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(fileName))) {
             list = (ArrayList<Transport>) objectInputStream.readObject();
             System.out.println("Successful deserialization");
