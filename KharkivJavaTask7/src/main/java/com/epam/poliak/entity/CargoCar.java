@@ -1,5 +1,8 @@
 package com.epam.poliak.entity;
 
+import com.epam.poliak.annotation.Getter;
+import com.epam.poliak.annotation.Setter;
+
 public class CargoCar extends Car {
 
     private int maxTransportWeight;
@@ -15,18 +18,22 @@ public class CargoCar extends Car {
     public CargoCar() {
     }
 
+    @Getter(name = "GET_MAX_TRANSPORT_WEIGHT")
     public int getMaxTransportWeight() {
         return maxTransportWeight;
     }
 
+    @Setter(name = "SET_MAX_TRANSPORT_WEIGHT")
     public void setMaxTransportWeight(int maxTransportWeight) {
         this.maxTransportWeight = maxTransportWeight;
     }
 
+    @Getter(name = "GET_NUMBER_OF_TRAILERS")
     public int getNumberOfTrailers() {
         return numberOfTrailers;
     }
 
+    @Setter(name = "SET_NUMBER_OF_TRAILERS")
     public void setNumberOfTrailers(int numberOfTrailers) {
         this.numberOfTrailers = numberOfTrailers;
     }

@@ -8,7 +8,7 @@ public interface InputHelper {
     Random random = new Random();
     Scanner scanner = new Scanner(System.in);
 
-    Integer getInteger(String ms);
+    int getInteger(String ms);
 
     String getString(String ms);
 

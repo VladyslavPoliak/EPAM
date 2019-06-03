@@ -48,5 +48,6 @@ public class Controller {
         allCommandMap.put(7, new SearchByTimeIntervalCommand(orderService));
         allCommandMap.put(8, new SearchForNearestDateCommand(orderService));
         allCommandMap.put(9, new AddNewTransport(transportService, helper));
+        allCommandMap.put(10, new AddNewTransportReflection(transportService, helper));
     }
 }

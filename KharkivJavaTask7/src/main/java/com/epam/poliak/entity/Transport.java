@@ -1,5 +1,8 @@
 package com.epam.poliak.entity;
 
+import com.epam.poliak.annotation.Getter;
+import com.epam.poliak.annotation.Setter;
+
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -18,26 +21,32 @@ public class Transport implements Serializable {
     public Transport() {
     }
 
+    @Getter(name = "GET_PRICE")
     public int getPrice() {
         return price;
     }
 
+    @Setter(name = "SET_PRICE")
     public void setPrice(int price) {
         this.price = price;
     }
 
+    @Getter(name = "GET_PRODUCER")
     public String getProducer() {
         return producer;
     }
 
+    @Setter(name = "SET_PRODUCER")
     public void setProducer(String producer) {
         this.producer = producer;
     }
 
+    @Getter(name = "GET_ID")
     public int getId() {
         return id;
     }
 
+    @Setter(name = "SET_ID")
     public void setId(int id) {
         this.id = id;
     }

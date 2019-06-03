@@ -1,5 +1,8 @@
 package com.epam.poliak.entity;
 
+import com.epam.poliak.annotation.Getter;
+import com.epam.poliak.annotation.Setter;
+
 public class Bicycles extends Transport {
 
     private int wheelSize;
@@ -14,18 +17,22 @@ public class Bicycles extends Transport {
     public Bicycles() {
     }
 
+    @Getter(name = "GET_WHEEL_SIZE")
     public int getWheelSize() {
         return wheelSize;
     }
 
+    @Setter(name = "SET_WHEEL_SIZE")
     public void setWheelSize(int wheelSize) {
         this.wheelSize = wheelSize;
     }
 
+    @Getter(name = "GET_NUMBER_ABSORBER")
     public int getNumberAbsorber() {
         return numberAbsorber;
     }
 
+    @Setter(name = "SET_NUMBER_ABSORBER")
     public void setNumberAbsorber(int numberAbsorber) {
         this.numberAbsorber = numberAbsorber;
     }

@@ -5,7 +5,7 @@ import com.epam.poliak.input.InputHelper;
 public class RandomInputHelper implements InputHelper {
 
     @Override
-    public Integer getInteger(String ms) {
+    public int getInteger(String ms) {
         return random.nextInt(500);
     }
 

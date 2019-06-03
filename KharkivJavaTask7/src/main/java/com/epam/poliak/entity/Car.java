@@ -1,5 +1,8 @@
 package com.epam.poliak.entity;
 
+import com.epam.poliak.annotation.Getter;
+import com.epam.poliak.annotation.Setter;
+
 public class Car extends Transport {
 
     private int enginePower;
@@ -14,18 +17,22 @@ public class Car extends Transport {
     public Car() {
     }
 
+    @Getter(name = "GET_ENGINE_POWER")
     public int getEnginePower() {
         return enginePower;
     }
 
+    @Setter(name = "SET_ENGINE_POWER")
     public void setEnginePower(int enginePower) {
         this.enginePower = enginePower;
     }
 
+    @Getter(name = "GET_YEAR_OF_RELEASE")
     public int getYearOfRelease() {
         return yearOfRelease;
     }
 
+    @Setter(name = "SET_YEAR_OF_RELEASE")
     public void setYearOfRelease(int yearOfRelease) {
         this.yearOfRelease = yearOfRelease;
     }

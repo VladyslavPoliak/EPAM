@@ -24,8 +24,7 @@ public class AddNewTransport implements Command {
         System.out.println(Constants.ADD_NEW_TRANSPORT_MENU);
         Scanner scanner = new Scanner(System.in);
         System.out.println("Choose Transport");
-        String choose = scanner.next();
-        transportService.addNewTransport(new ChooseCreator(helper).doCreate(choose));
+        transportService.addNewTransport(new ChooseCreator(helper).doCreate(scanner.next()));
         System.out.println("Successfully added!");
     }
 }
