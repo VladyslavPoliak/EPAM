@@ -2,47 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="169807d1-cbc2-40ca-bd44-04a2a985bcde" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/TransportCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/impl/BicycleCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/impl/CarCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/impl/CargoCarCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/input/impl/ConsoleInputHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/input/impl/RandomInputHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KharkivJavaTask7/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/command/impl/AddNewTransport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/command/impl/AddNewTransport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/Builder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/FactoryInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/input/InputHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/ManualFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/RandomFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/manual/ManualBicycles.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/manual/ManualCar.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/manual/ManualCargoCar.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/manual/ManualTransport.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/random/RamdomCargoCar.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/random/RandomBicycles.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/random/RandomCar.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/random/RandomTransport.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/input/InputStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/input/InputStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/utils/DeserializableTransportList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/utils/DeserializableTransportList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/OrderServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/command/impl/AddNewTransport.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epam/poliak/command/impl/AddNewTransport.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epam/poliak/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/factory/Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/factory/FactoryInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/factory/ManualFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/factory/RandomFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/factory/manual/ManualBicycles.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/factory/manual/ManualCar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/factory/manual/ManualCargoCar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/factory/manual/ManualTransport.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/factory/random/RamdomCargoCar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/factory/random/RandomBicycles.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/factory/random/RandomCar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/factory/random/RandomTransport.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/input/InputStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epam/poliak/input/InputStrategy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/utils/DeserializableTransportList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epam/poliak/utils/DeserializableTransportList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/OrderServiceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/utils/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/utils/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epam/poliak/utils/Constants.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -60,8 +23,42 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/ChooseCreator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="22" column="50" lean-forward="true" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
+            <state relative-caret-position="325">
+              <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/input/impl/RandomInputHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+              <folding>
+                <element signature="e#290#291#0" expanded="true" />
+                <element signature="e#337#338#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/test/SerializableTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="45" column="62" selection-start-line="45" selection-start-column="62" selection-end-line="45" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -70,38 +67,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/input/impl/RandomInputHelper.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/impl/BicycleCreator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-              <folding>
-                <element signature="e#290#291#0" expanded="true" />
-                <element signature="e#346#347#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/input/InputHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/test/SerializableTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="72" column="13" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="100">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -149,7 +118,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/random/RamdomCargoCar.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/manual/ManualTransport.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/random/RandomTransport.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/utils/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/ManualFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/RandomFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/Builder.java" />
@@ -171,8 +139,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/impl/BicycleCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/impl/CarCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/impl/CargoCarCreator.java" />
-        <option value="$PROJECT_DIR$/src/main/test/SerializableTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/input/impl/RandomInputHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/test/SerializableTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/utils/Constants.java" />
       </list>
     </option>
   </component>
@@ -183,7 +152,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -194,6 +163,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -307,20 +278,27 @@
               <item name="KharkivJavaTask6" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="poliak" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KharkivJavaTask6" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KharkivJavaTask6" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/tesrt" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/task_git/preproduction_practice/KharkivJavaTask6" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
@@ -346,7 +324,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SerializableTest.archivedFileShouldBeSmallerThenNonArchived">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.epam.poliak.Main" />
       <module name="KharkivJavaTask6" />
@@ -402,8 +380,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SerializableTest.archivedFileShouldBeSmallerThenNonArchived" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.SerializableTest.archivedFileShouldBeSmallerThenNonArchived" />
         <item itemvalue="JUnit.SerializableTest.shouldReturnEmptyMap_whenFileNotExists" />
         <item itemvalue="JUnit.SerializableTest.shouldReturnDeSerializedList" />
         <item itemvalue="JUnit.SerializableTest.shouldSaveListToFile" />
@@ -453,12 +431,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SerializableTest_shouldReturnEmptyMap_whenFileNotExists - 2019.05.31 at 13h 11m 40s.xml">
-      <configuration name="SerializableTest.shouldReturnEmptyMap_whenFileNotExists" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SerializableTest_archivedFileShouldBeSmallerThenNonArchived - 2019.05.31 at 13h 13m 55s.xml">
-      <configuration name="SerializableTest.archivedFileShouldBeSmallerThenNonArchived" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SerializableTest_archivedFileShouldBeSmallerThenNonArchived - 2019.05.31 at 13h 14m 05s.xml">
       <configuration name="SerializableTest.archivedFileShouldBeSmallerThenNonArchived" configurationId="JUnit" />
     </history-entry>
@@ -483,12 +455,18 @@
     <history-entry file="SerializableTest_archivedFileShouldBeSmallerThenNonArchived - 2019.05.31 at 15h 12m 25s.xml">
       <configuration name="SerializableTest.archivedFileShouldBeSmallerThenNonArchived" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="SerializableTest_archivedFileShouldBeSmallerThenNonArchived - 2019.05.31 at 15h 14m 48s.xml">
+      <configuration name="SerializableTest.archivedFileShouldBeSmallerThenNonArchived" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SerializableTest_archivedFileShouldBeSmallerThenNonArchived - 2019.05.31 at 15h 15m 20s.xml">
+      <configuration name="SerializableTest.archivedFileShouldBeSmallerThenNonArchived" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19349681" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.195629" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -497,7 +475,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.503792" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.78114843" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -607,62 +585,15 @@
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_task6.zip/task6/test/random/RandomCreateFood.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/RandomBuilderGoods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/FillerElements.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/ConsoleCreateFood.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/ConsoleCreatePizza.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/ConsoleCreateProduct.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/ConsoleCreateDrink.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/random/RandomBicycles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/manual/ManualCar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/manual/ManualCargoCar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="17" column="46" lean-forward="true" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/RandomBuilderGoods.java" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/FillerElements.java" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/ConsoleCreateFood.java" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/ConsoleCreatePizza.java" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/ConsoleCreateProduct.java" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/ConsoleCreateDrink.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/random/RandomBicycles.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/manual/ManualCar.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/manual/ManualCargoCar.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/entity/CargoCar.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -670,40 +601,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/random/RamdomCargoCar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/manual/ManualTransport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="11" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/utils/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/OrderServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/random/RamdomCargoCar.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/manual/ManualTransport.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/test/OrderServiceTest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/command/impl/ExitCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -780,63 +680,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/manual/ManualBicycles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/ManualFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/random/RandomCar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/random/RandomTransport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/FactoryInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="21" column="46" lean-forward="true" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/manual/ManualBicycles.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/ManualFactory.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/random/RandomCar.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/random/RandomTransport.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/FactoryInterface.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/entity/Car.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
@@ -844,23 +692,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/RandomFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="18" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/Builder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/RandomFactory.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/factory/Builder.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/controller/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="628">
@@ -875,16 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="423">
           <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/command/impl/AddNewTransport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -925,13 +748,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/impl/BicycleCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/TransportCreator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -942,19 +758,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/ChooseCreator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/utils/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
-          <caret line="22" column="50" lean-forward="true" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
+          <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/ChooseCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/input/impl/RandomInputHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding>
+            <element signature="e#290#291#0" expanded="true" />
+            <element signature="e#337#338#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/input/InputHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
+        <state relative-caret-position="300">
           <caret line="13" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -964,22 +805,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/test/SerializableTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="72" column="13" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
+        <state relative-caret-position="325">
+          <caret line="45" column="62" selection-start-line="45" selection-start-column="62" selection-end-line="45" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/input/impl/RandomInputHelper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/command/impl/AddNewTransport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        <state relative-caret-position="250">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
-            <element signature="e#290#291#0" expanded="true" />
-            <element signature="e#346#347#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/impl/BicycleCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
