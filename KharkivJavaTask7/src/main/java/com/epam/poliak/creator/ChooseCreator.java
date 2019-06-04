@@ -12,12 +12,11 @@ import java.util.Map;
 public class ChooseCreator {
 
     private InputHelper inputHelper;
+    private Map<String, TransportCreator> creatorMap = new HashMap<>();
 
     public ChooseCreator(InputHelper inputHelper) {
         this.inputHelper = inputHelper;
     }
-
-    private Map<String, TransportCreator> creatorMap = new HashMap<>();
 
     public Transport doCreate(String key) {
         creatorMap.put("1", new BicycleCreator());

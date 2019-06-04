@@ -23,31 +23,25 @@ public class AddNewTransportReflection implements Command {
     private TransportService transportService;
     private Map<String, Transport> transportMap = new HashMap<>();
     private Logger logger = Logger.getLogger(AddNewTransportReflection.class);
-    private ResourceBundle bundle = ResourceBundle.getBundle("content");
+    private ResourceBundle bundle ;
 
-    public AddNewTransportReflection(TransportService transportService, InputHelper inputHelper) {
+    public AddNewTransportReflection(TransportService transportService, InputHelper inputHelper,ResourceBundle bundle) {
         this.inputHelper = inputHelper;
         this.transportService = transportService;
-        transportMap.put("Transport", new Transport());
-        transportMap.put("Car", new Car());
-        transportMap.put("Bicycles", new Bicycles());
-        transportMap.put("Cargo Car", new CargoCar());
+        this.bundle=bundle;
+        transportMap.put("1", new Bicycles());
+        transportMap.put("2", new Car());
+        transportMap.put("3", new CargoCar());
+        transportMap.put("4", new Transport());
     }
 
     @Override
     public void doCommand() {
         System.out.println(Constants.ADD_NEW_TRANSPORT_MENU);
         System.out.println("Choose Transport");
-        Transport transport = getBike();
-        transportService.addNewTransport(transport);
-    }
-
-
-    private Transport getBike() {
-        Transport transport;
         Scanner sc = new Scanner(System.in);
-        transport = create(sc.next());
-        return transport;
+        Transport transport =  create(sc.next());
+        transportService.addNewTransport(transport);
     }
 
     private Transport create(String transportType) {
@@ -56,33 +50,32 @@ public class AddNewTransportReflection implements Command {
         for (Method method : transportClass.getMethods()) {
             if (method.isAnnotationPresent(Setter.class)) {
                 String annotationName = method.getAnnotation(Setter.class).name();
-                System.out.println(bundle.getString("Enter") + " " + bundle.getString(annotationName));
-                Class[] c = method.getParameterTypes();
+                System.out.println(bundle.getString(annotationName));
+                Class[] methodParameterTypes = method.getParameterTypes();
                 try {
-                    method.invoke(transport, getValue(c[0]));
+                    method.invoke(transport, getValue(methodParameterTypes[0]));
                 } catch (IllegalAccessException | InvocationTargetException e) {
-                    System.out.println("sdz");
+                    logger.error("Error");
                 }
             }
         }
         return transport;
     }
 
-    private Object getValue(Class aClass) {
-        Object res = null;
-        Class cl = inputHelper.getClass();
-        Method[] methods = cl.getMethods();
-        for (Method m : methods) {
-            Class c = m.getReturnType();
-            if (aClass.equals(c)) {
+    private Object getValue(Class parameterType) {
+        Object resultObject = null;
+        Class inputHelperClass = inputHelper.getClass();
+        Method[] allMethods = inputHelperClass.getMethods();
+        for (Method method : allMethods) {
+            if (parameterType.equals(method.getReturnType())) {
                 try {
-                    res = m.invoke(inputHelper, "szdfgas");
+                    resultObject = method.invoke(inputHelper);
                 } catch (IllegalAccessException | InvocationTargetException e) {
-                    System.out.println("sdz");
+                    logger.error("Error");
                 }
                 break;
             }
         }
-        return res;
+        return resultObject;
     }
 }

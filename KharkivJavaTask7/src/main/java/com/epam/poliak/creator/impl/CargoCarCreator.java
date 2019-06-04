@@ -2,19 +2,18 @@ package com.epam.poliak.creator.impl;
 
 import com.epam.poliak.creator.TransportCreator;
 import com.epam.poliak.entity.CargoCar;
-import com.epam.poliak.entity.Transport;
 import com.epam.poliak.input.InputHelper;
 
 public class CargoCarCreator implements TransportCreator {
 
     @Override
-    public Transport create(InputHelper helper) {
+    public CargoCar create(InputHelper helper) {
         CargoCar cargoCar = new CargoCar();
-        fillCommonData(cargoCar, helper);
-        cargoCar.setYearOfRelease(helper.getInteger("Year Of Release: "));
-        cargoCar.setEnginePower(helper.getInteger("Engine Power: "));
-        cargoCar.setNumberOfTrailers(helper.getInteger("Number Of Trailers: "));
-        cargoCar.setMaxTransportWeight(helper.getInteger("Max Transport Weight: "));
+        fillCar(cargoCar, helper);
+        System.out.println("Number Of Trailers: ");
+        cargoCar.setNumberOfTrailers(helper.getInteger());
+        System.out.println("Max Transport Weight: ");
+        cargoCar.setMaxTransportWeight(helper.getInteger());
         return cargoCar;
     }
 }

@@ -15,7 +15,7 @@ public class AddNewTransport implements Command {
     private TransportService transportService;
 
     public AddNewTransport(TransportService transportService, InputHelper helper) {
-        this.transportService=transportService;
+        this.transportService = transportService;
         this.helper = helper;
     }
 

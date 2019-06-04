@@ -41,12 +41,10 @@ public class Transport implements Serializable {
         this.producer = producer;
     }
 
-    @Getter(name = "GET_ID")
     public int getId() {
         return id;
     }
 
-    @Setter(name = "SET_ID")
     public void setId(int id) {
         this.id = id;
     }

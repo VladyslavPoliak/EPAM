@@ -9,9 +9,7 @@ public class CarCreator implements TransportCreator {
     @Override
     public Car create(InputHelper helper) {
         Car car = new Car();
-        fillCommonData(car, helper);
-        car.setYearOfRelease(helper.getInteger("Year Of Release: "));
-        car.setEnginePower(helper.getInteger("Engine Power: "));
+        fillCar(car, helper);
         return car;
     }
 }

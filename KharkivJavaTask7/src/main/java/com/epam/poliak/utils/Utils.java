@@ -7,6 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.InputMismatchException;
 import java.util.Map;
+import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -60,6 +61,17 @@ public final class Utils {
             System.out.println(map.size() + " orders found");
             map.forEach(Utils::printMap);
         }
+    }
+
+    public static String randomWord(int start, int end) {
+        int wordLength = start + (int) (Math.random() * end);
+        StringBuilder sb = new StringBuilder(wordLength);
+        Random r = new Random();
+        for (int i = 0; i < wordLength; i++) {
+            char tmp = (char) ('a' + r.nextInt('z' - 'a'));
+            sb.append(tmp);
+        }
+        return sb.toString();
     }
 
     private static void printMap(Date k, Map<Transport, Integer> v) {

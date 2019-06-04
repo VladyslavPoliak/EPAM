@@ -6,6 +6,7 @@ import com.epam.poliak.dao.impl.DAOOrderImpl;
 import com.epam.poliak.dao.impl.DAOShoppingCartImpl;
 import com.epam.poliak.dao.impl.DAOTransportImpl;
 import com.epam.poliak.input.InputHelper;
+import com.epam.poliak.input.InputLocale;
 import com.epam.poliak.input.InputStrategy;
 import com.epam.poliak.service.OrderService;
 import com.epam.poliak.service.ShoppingCartService;
@@ -15,17 +16,26 @@ import com.epam.poliak.service.impl.ShoppingCartServiceImpl;
 import com.epam.poliak.service.impl.TransportServiceImpl;
 
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
+import java.util.ResourceBundle;
 
 public class Controller {
 
-    private Map<Integer, Command> allCommandMap = new HashMap<>();
-    private ShoppingCartService shoppingCartService = new ShoppingCartServiceImpl(new DAOShoppingCartImpl());
-    private TransportService transportService = new TransportServiceImpl(new DAOTransportImpl());
-    private OrderService orderService = new OrderServiceImpl(new DAOOrderImpl());
-    private InputHelper helper = new InputStrategy().setInputStrategy();
+    private Map<Integer, Command> allCommandMap;
+    private ShoppingCartService shoppingCartService;
+    private TransportService transportService;
+    private OrderService orderService;
+    private InputHelper helper;
+    private Locale locale;
 
     public Controller() {
+        allCommandMap = new HashMap<>();
+        shoppingCartService = new ShoppingCartServiceImpl(new DAOShoppingCartImpl());
+        transportService = new TransportServiceImpl(new DAOTransportImpl());
+        orderService = new OrderServiceImpl(new DAOOrderImpl());
+        helper = new InputStrategy().setInputStrategy();
+        locale=new InputLocale().setLocale();
         fillCommandMap();
     }
 
@@ -48,6 +58,6 @@ public class Controller {
         allCommandMap.put(7, new SearchByTimeIntervalCommand(orderService));
         allCommandMap.put(8, new SearchForNearestDateCommand(orderService));
         allCommandMap.put(9, new AddNewTransport(transportService, helper));
-        allCommandMap.put(10, new AddNewTransportReflection(transportService, helper));
+        allCommandMap.put(10,new AddNewTransportReflection(transportService,helper,ResourceBundle.getBundle("content",locale)));
     }
 }

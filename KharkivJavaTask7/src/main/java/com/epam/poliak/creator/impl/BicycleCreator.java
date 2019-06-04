@@ -9,9 +9,11 @@ public class BicycleCreator implements TransportCreator {
     @Override
     public Bicycles create(InputHelper helper) {
         Bicycles bicycles = new Bicycles();
-        fillCommonData(bicycles, helper);
-        bicycles.setWheelSize(helper.getInteger("WheelSize: "));
-        bicycles.setNumberAbsorber(helper.getInteger("NumberAbsorber: "));
+        fillTransport(bicycles, helper);
+        System.out.println("WheelSize: ");
+        bicycles.setWheelSize(helper.getInteger());
+        System.out.println("NumberAbsorber: ");
+        bicycles.setNumberAbsorber(helper.getInteger());
         return bicycles;
     }
 }
