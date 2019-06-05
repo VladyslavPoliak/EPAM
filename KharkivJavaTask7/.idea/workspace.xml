@@ -2,41 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6dedac23-8b17-4cc6-aaa6-51c280bf144f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/serialisation.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/input/InputLocale.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/command/impl/AddNewTransport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/command/impl/AddNewTransport.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/command/impl/AddNewTransportReflection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/command/impl/AddNewTransportReflection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/ChooseCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/ChooseCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/TransportCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/TransportCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/impl/BicycleCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/impl/BicycleCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/impl/CarCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/impl/CarCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/impl/CargoCarCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/impl/CargoCarCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/entity/Transport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/entity/Transport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/input/InputHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/input/InputHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/input/impl/ConsoleInputHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/input/impl/ConsoleInputHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/input/impl/RandomInputHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/input/impl/RandomInputHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/utils/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/content.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/content.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/content_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/content_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/content_ru.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/content_ru.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/SerializableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/task6/SerializableTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/ShoppingCartServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/task4/ShoppingCartServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/TransportServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/task4/TransportServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/command/impl/AddNewTransportReflection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epam/poliak/command/impl/AddNewTransportReflection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/creator/ChooseCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epam/poliak/creator/ChooseCreator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/creator/TransportCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epam/poliak/creator/TransportCreator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/creator/impl/BicycleCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epam/poliak/creator/impl/BicycleCreator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/creator/impl/CarCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epam/poliak/creator/impl/CarCreator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/creator/impl/CargoCarCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epam/poliak/creator/impl/CargoCarCreator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/entity/Transport.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epam/poliak/entity/Transport.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/input/InputHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epam/poliak/input/InputHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/input/impl/ConsoleInputHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epam/poliak/input/impl/ConsoleInputHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/input/impl/RandomInputHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epam/poliak/input/impl/RandomInputHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/utils/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epam/poliak/utils/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epam/poliak/utils/Utils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/content.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/content.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/content_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/content_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/content_ru.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/content_ru.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/SerializableTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ShoppingCartServiceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/TransportServiceTest.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -52,10 +27,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/test/task7/ProxyTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/command/impl/AddNewTransportReflection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="71">
-              <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
+            <state relative-caret-position="425">
+              <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -64,44 +51,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/controller/Controller.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/task7_5/MapHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="38" column="25" lean-forward="true" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+            <state relative-caret-position="175">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1393#1394#0" expanded="true" />
-                <element signature="e#1443#1444#0" expanded="true" />
-                <element signature="e#1498#1499#0" expanded="true" />
-                <element signature="e#1534#1535#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/input/InputStrategy.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/task7_5/TransportMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="31" column="5" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="31" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/input/InputLocale.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+            <state relative-caret-position="425">
+              <caret line="17" column="83" selection-start-line="17" selection-start-column="83" selection-end-line="17" selection-end-column="83" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/entity/Car.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/ReflectionCreator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-100">
-              <caret line="25" column="19" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="19" />
+            <state relative-caret-position="595">
+              <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -142,7 +119,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/entity/CargoCar.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/entity/Car.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/utils/Utils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/ChooseCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/impl/BicycleCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/command/impl/AddNewTransport.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/entity/Transport.java" />
@@ -155,7 +131,23 @@
         <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/input/InputLocale.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/controller/Controller.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/input/impl/ConsoleInputHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/task7_3/TransportImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/task7_3/Creator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/task7_3/Transport.java" />
+        <option value="$PROJECT_DIR$/src/main/java/task7_3/exception/UnmodifiableException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/task7_3/TransportCreator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/task7_3and7_4/TransportCreator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/task7_4/Creator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/task7_5/TransportMap.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/task7_5/MapHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/task7_4/TransportCreator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/ChooseCreator.java" />
+        <option value="$PROJECT_DIR$/src/main/test/CreateCarTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/command/impl/AddNewTransportReflection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/ReflectionCreator.java" />
+        <option value="$PROJECT_DIR$/src/main/test/AddNewTransportByReflection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/task7_4/TransportCreator.java" />
+        <option value="$PROJECT_DIR$/src/main/test/task7/ProxyTest.java" />
       </list>
     </option>
   </component>
@@ -167,7 +159,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="953" />
+    <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -177,6 +169,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -217,22 +211,52 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="poliak" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
+              <item name="command" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="KharkivJavaTask7" type="b2602c69:ProjectViewProjectNode" />
               <item name="KharkivJavaTask7" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="poliak" type="462c0819:PsiDirectoryNode" />
+              <item name="command" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="KharkivJavaTask7" type="b2602c69:ProjectViewProjectNode" />
               <item name="KharkivJavaTask7" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="Resource Bundle 'content'" type="a6c14932:ResourceBundleNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="poliak" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KharkivJavaTask7" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KharkivJavaTask7" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="poliak" type="462c0819:PsiDirectoryNode" />
+              <item name="creator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KharkivJavaTask7" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KharkivJavaTask7" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="poliak" type="462c0819:PsiDirectoryNode" />
+              <item name="input" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KharkivJavaTask7" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KharkivJavaTask7" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="task7_5" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="KharkivJavaTask7" type="b2602c69:ProjectViewProjectNode" />
@@ -241,34 +265,55 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="KharkivJavaTask7" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KharkivJavaTask7" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="task6" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KharkivJavaTask7" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KharkivJavaTask7" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="task7" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/test" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Vladyslav_Poliak\IdeaProjects\KharkivJavaTask7\src\main\java\com\epam\poliak\entity" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.epam.poliak.input" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="task7_3.exception" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Vladyslav_Poliak\IdeaProjects\KharkivJavaTask7\src\main\test" />
       <recent name="C:\Users\Vladyslav_Poliak\IdeaProjects\KharkivJavaTask7" />
       <recent name="C:\Users\Vladyslav_Poliak\IdeaProjects\KharkivJavaTask7\src\main\java\com\epam\poliak\creator\impl" />
       <recent name="C:\Users\Vladyslav_Poliak\IdeaProjects\KharkivJavaTask7\src\main\java\com\epam\poliak\creator" />
       <recent name="C:\Users\Vladyslav_Poliak\IdeaProjects\KharkivJavaTask7\src\main\java\com\epam\poliak\input\impl" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.epam.poliak.input" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Vladyslav_Poliak\IdeaProjects\KharkivJavaTask7\src\main\java\com\epam\poliak\entity" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -283,7 +328,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.ProxyTest.ProxyMapTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.epam.poliak.Main" />
       <module name="KharkivJavaTask7" />
@@ -297,9 +342,70 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AddNewTransportByReflection.reflectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="KharkivJavaTask7" />
+      <option name="PACKAGE_NAME" value="task7" />
+      <option name="MAIN_CLASS_NAME" value="task7.AddNewTransportByReflection" />
+      <option name="METHOD_NAME" value="reflectionTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProxyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="KharkivJavaTask7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="task7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="task7" />
+      <option name="MAIN_CLASS_NAME" value="task7.ProxyTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProxyTest.ProxyMapTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="KharkivJavaTask7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="task7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="task7" />
+      <option name="MAIN_CLASS_NAME" value="task7.ProxyTest" />
+      <option name="METHOD_NAME" value="ProxyMapTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProxyTest.shouldThrowException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="KharkivJavaTask7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="task7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="task7" />
+      <option name="MAIN_CLASS_NAME" value="task7.ProxyTest" />
+      <option name="METHOD_NAME" value="shouldThrowException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProxyTest.ProxyMapTest" />
+        <item itemvalue="JUnit.ProxyTest.shouldThrowException" />
+        <item itemvalue="JUnit.ProxyTest" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.AddNewTransportByReflection.reflectionTest" />
       </list>
     </recent_temporary>
   </component>
@@ -324,11 +430,43 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="AddNewTransportByReflection - 2019.06.05 at 15h 46m 49s.xml">
+      <configuration name="AddNewTransportByReflection" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AddNewTransportByReflection_reflectionTest - 2019.06.05 at 15h 53m 06s.xml">
+      <configuration name="AddNewTransportByReflection.reflectionTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AddNewTransportByReflection_reflectionTest - 2019.06.05 at 15h 53m 38s.xml">
+      <configuration name="AddNewTransportByReflection.reflectionTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AddNewTransportByReflection_reflectionTest - 2019.06.05 at 15h 54m 14s.xml">
+      <configuration name="AddNewTransportByReflection.reflectionTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AddNewTransportByReflection_reflectionTest - 2019.06.05 at 15h 55m 42s.xml">
+      <configuration name="AddNewTransportByReflection.reflectionTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AddNewTransportByReflection_reflectionTest - 2019.06.05 at 15h 56m 19s.xml">
+      <configuration name="AddNewTransportByReflection.reflectionTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AddNewTransportByReflection_reflectionTest - 2019.06.05 at 15h 58m 54s.xml">
+      <configuration name="AddNewTransportByReflection.reflectionTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProxyTest - 2019.06.05 at 16h 20m 18s.xml">
+      <configuration name="ProxyTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProxyTest_shouldThrowException - 2019.06.05 at 16h 21m 55s.xml">
+      <configuration name="ProxyTest.shouldThrowException" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProxyTest_ProxyMapTest - 2019.06.05 at 16h 26m 02s.xml">
+      <configuration name="ProxyTest.ProxyMapTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20788912" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13965885" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -337,7 +475,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3716143" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19501625" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3488624" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -376,20 +514,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/annotation/Getter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/annotation/Setter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -404,20 +528,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/TransportCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/ChooseCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/impl/CarCreator.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -425,16 +535,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/command/impl/AddNewTransport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -455,20 +555,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/entity/CargoCar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/entity/Bicycles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/content.properties">
       <provider editor-type-id="ResourceBundle" />
       <provider selected="true" editor-type-id="text-editor">
@@ -477,51 +563,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/entity/Transport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-          <folding>
-            <element signature="method#equals#0;class#Transport#0" />
-            <element signature="method#hashCode#0;class#Transport#0" />
-            <element signature="method#toString#0;class#Transport#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/utils/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="30" lean-forward="true" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/input/InputStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="31" column="5" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="31" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/content_en.properties">
-      <provider editor-type-id="ResourceBundle" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="38" column="25" lean-forward="true" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1393#1394#0" expanded="true" />
-            <element signature="e#1443#1444#0" expanded="true" />
-            <element signature="e#1498#1499#0" expanded="true" />
-            <element signature="e#1534#1535#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -546,35 +591,308 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/content_ru.properties">
-      <provider editor-type-id="ResourceBundle" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/entity/Transport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        <state relative-caret-position="150">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="12" selection-end-column="28" />
+          <folding>
+            <element signature="method#equals#0;class#Transport#0" />
+            <element signature="method#hashCode#0;class#Transport#0" />
+            <element signature="method#toString#0;class#Transport#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/command/impl/AddNewTransportReflection.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/entity/Car.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
+        <state relative-caret-position="150">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/input/InputLocale.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/jre/lib/rt.jar!/sun/reflect/MethodAccessor.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        <state relative-caret-position="175">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/entity/Car.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/lang/reflect/Method.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-100">
-          <caret line="25" column="19" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="19" />
+        <state relative-caret-position="499">
+          <caret line="497" column="21" lean-forward="true" selection-start-line="497" selection-start-column="21" selection-end-line="497" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/annotation/Getter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/content_ru.properties">
+      <provider editor-type-id="ResourceBundle" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/content_en.properties">
+      <provider editor-type-id="ResourceBundle" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/task7_3/Transport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/command/impl/AddNewTransport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="673">
+          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/TransportCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/ChooseCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/entity/CargoCar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="26" column="40" lean-forward="true" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/util/Scanner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="303" column="19" selection-start-line="303" selection-start-column="19" selection-end-line="303" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/entity/Bicycles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/input/InputStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/input/InputLocale.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="e#198#199#0" expanded="true" />
+            <element signature="e#246#247#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/task4/ShoppingCartServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/task4/TransportServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/task6/CreateCarTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/task6/CreateCargoCarTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/task6/CreateBicycleTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/task7/AddNewTransportByReflection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/task6/SerializableTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/task7_3/TransportImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-723">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#238#239#0" expanded="true" />
+            <element signature="e#263#264#0" expanded="true" />
+            <element signature="e#310#311#0" expanded="true" />
+            <element signature="e#338#339#0" expanded="true" />
+            <element signature="e#381#382#0" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
+            <element signature="e#462#463#0" expanded="true" />
+            <element signature="e#496#497#0" expanded="true" />
+            <element signature="e#545#546#0" expanded="true" />
+            <element signature="e#576#577#0" expanded="true" />
+            <element signature="e#638#639#0" expanded="true" />
+            <element signature="e#678#679#0" expanded="true" />
+            <element signature="e#727#728#0" expanded="true" />
+            <element signature="e#761#762#0" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
+            <element signature="e#872#873#0" expanded="true" />
+            <element signature="e#923#924#0" expanded="true" />
+            <element signature="e#959#960#0" expanded="true" />
+            <element signature="e#1028#1029#0" expanded="true" />
+            <element signature="e#1078#1079#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/task7_4/Creator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/task7_4/exception/UnmodifiableException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="34" />
+          <folding>
+            <element signature="e#177#178#0" expanded="true" />
+            <element signature="e#207#208#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/task7_4/TransportCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-55">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/task7_5/TransportMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="17" column="83" selection-start-line="17" selection-start-column="83" selection-end-line="17" selection-end-column="83" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/task7_5/MapHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/task7/ProxyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/command/impl/AddNewTransportReflection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/creator/ReflectionCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

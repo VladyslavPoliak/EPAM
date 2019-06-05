@@ -1,3 +1,5 @@
+package task6;
+
 import com.epam.poliak.dao.DAOTransport;
 import com.epam.poliak.dao.impl.DAOTransportImpl;
 import com.epam.poliak.entity.Transport;

@@ -24,5 +24,4 @@ public class ChooseCreator {
         creatorMap.put("3", new CargoCarCreator());
         return creatorMap.get(key).create(inputHelper);
     }
-
 }
