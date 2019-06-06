@@ -2,6 +2,7 @@ package com.epam.poliak.dao.impl;
 
 import com.epam.poliak.dao.DAOShoppingCart;
 import com.epam.poliak.entity.Transport;
+import com.epam.poliak.utils.Constants;
 
 import java.util.*;
 
@@ -12,7 +13,11 @@ public class DAOShoppingCartImpl implements DAOShoppingCart {
 
     public DAOShoppingCartImpl() {
         shoppingCart = new HashMap<>();
-        shoppingCartStorage = new LinkedHashMap<>();
+        shoppingCartStorage = new LinkedHashMap<Transport, Integer>(5, 1f, true) {
+            protected boolean removeEldestEntry(Map.Entry<Transport, Integer> eldest) {
+                return size() > Constants.MAX_ITEMS_IN_LINKED_MAP;
+            }
+        };
     }
 
     @Override
@@ -20,6 +25,7 @@ public class DAOShoppingCartImpl implements DAOShoppingCart {
         if (Objects.nonNull(transport)) {
             shoppingCart.put(transport, days);
             shoppingCartStorage.put(transport, days);
+
         } else {
             throw new InputMismatchException("This transport is missing. Try later");
         }
