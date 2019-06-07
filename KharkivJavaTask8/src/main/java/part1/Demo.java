@@ -1,6 +1,7 @@
 package part1;
 
 import part1.service.impl.CommonListService;
+import part1.service.impl.SeparateListService;
 
 import java.util.Scanner;
 
@@ -15,8 +16,14 @@ public class Demo {
         System.out.println("Enter number of threads");
         int numberOfThreads = scanner.nextInt();
 
-        CommonListService listService = new CommonListService(start, finish, numberOfThreads);
-        listService.startThread();
+        CommonListService commonListService = new CommonListService(start, finish, numberOfThreads);
+        SeparateListService separateListService = new SeparateListService(start, finish, numberOfThreads);
+
+        commonListService.startThread();
+        separateListService.startThread();
+
+        commonListService.startExecutor();
+
     }
 
 }

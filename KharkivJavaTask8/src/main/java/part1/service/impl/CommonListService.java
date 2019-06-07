@@ -6,15 +6,17 @@ import part1.threads.CommonList;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class CommonListService implements ThreadService {
 
-    private int from;
+    private int start;
     private int finish;
     private int numberOfThreads;
 
-    public CommonListService(int from, int finish, int numberOfThreads) {
-        this.from = from;
+    public CommonListService(int start, int finish, int numberOfThreads) {
+        this.start = start;
         this.finish = finish;
         this.numberOfThreads = numberOfThreads;
     }
@@ -23,30 +25,53 @@ public class CommonListService implements ThreadService {
     public void startThread() {
         List<Thread> threadList = new ArrayList<>();
         List<Integer> result = new ArrayList<>();
-        int numbersPerThread = (finish - from) / numberOfThreads;
+        int numbersPerThread = (finish - start) / numberOfThreads;
 
         for (int i = 0; i < numberOfThreads; i++) {
-            int localStart = from + i * numbersPerThread;
-
+            int localStart = start + i * numbersPerThread;
             Thread thread = new Thread(new CommonList(result, localStart, localStart + numbersPerThread));
             threadList.add(thread);
         }
-        for (Thread thread : threadList) {
-            thread.start();
-        }
-        for (Thread thread : threadList) {
+        long startTime = System.currentTimeMillis();
+        threadList.forEach(Thread::start);
+        threadList.forEach(thread -> {
             try {
                 thread.join();
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                System.out.println("the thread was interrupted");
             }
-        }
+        });
+
+        System.out.println("Result time = " + (System.currentTimeMillis() - startTime) + " ms");
+
         Collections.sort(result);
         result.forEach(System.out::println);
     }
 
     @Override
     public void startExecutor() {
+        ExecutorService executor = Executors.newFixedThreadPool(numberOfThreads);
+        List<Thread> threadList = new ArrayList<>();
+        List<Integer> result = new ArrayList<>();
+        int numbersPerThread = (finish - start) / numberOfThreads;
+        for (int i = 0; i < numberOfThreads; i++) {
+            int localStart = start + i * numbersPerThread;
+            threadList.add(new Thread(new CommonList(result, localStart, localStart + numbersPerThread)));
+        }
 
+        long startTime = System.currentTimeMillis();
+        threadList.forEach(executor::submit);
+
+        executor.shutdown();
+        while (!executor.isTerminated()) {
+            try {
+                Thread.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println("Result time = " + (System.currentTimeMillis() - startTime) + " ms");
+        Collections.sort(result);
+        result.forEach(System.out::println);
     }
 }
