@@ -5,8 +5,7 @@ import part1.threads.SeparateList;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.FutureTask;
+import java.util.concurrent.*;
 
 public class SeparateListService implements ThreadService {
 
@@ -19,7 +18,6 @@ public class SeparateListService implements ThreadService {
         this.finish = finish;
         this.numberOfThreads = numberOfThreads;
     }
-
 
 
     @Override
@@ -45,6 +43,33 @@ public class SeparateListService implements ThreadService {
 
     @Override
     public void startExecutor() {
-
+        ExecutorService executor = Executors.newFixedThreadPool(numberOfThreads);
+        List<Integer> result = new ArrayList<>();
+        List<Future<List<Integer>>> futureList = new ArrayList<>();
+        int numbersPerThread = (finish - start) / numberOfThreads;
+        for (int i = 0; i < numberOfThreads; i++) {
+            int localStart = start + i * numbersPerThread;
+            Future<List<Integer>> futureTask = executor.submit(new SeparateList(localStart, localStart + numbersPerThread));
+            futureList.add(futureTask);
+        }
+        long startTime = System.currentTimeMillis();
+        futureList.forEach(future -> {
+            try {
+                result.addAll(future.get());
+            } catch (InterruptedException | ExecutionException e) {
+                e.printStackTrace();
+            }
+        });
+        executor.shutdown();
+        while (!executor.isTerminated()) {
+            try {
+                Thread.sleep(0, 1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println("Result time = " + (System.currentTimeMillis() - startTime) + " ms");
+        result.forEach(System.out::println);
     }
+
 }

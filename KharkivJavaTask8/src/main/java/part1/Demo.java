@@ -23,7 +23,7 @@ public class Demo {
         separateListService.startThread();
 
         commonListService.startExecutor();
-
+        separateListService.startExecutor();
     }
 
 }
