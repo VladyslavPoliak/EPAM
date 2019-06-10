@@ -42,7 +42,7 @@ public class CommonListService implements ThreadService {
             }
         });
 
-        System.out.println("Result time = " + (System.currentTimeMillis() - startTime) + " ms");
+        System.out.println("Common list. Result time = " + (System.currentTimeMillis() - startTime) + " ms");
 
         Collections.sort(result);
         result.forEach(System.out::println);
@@ -70,7 +70,7 @@ public class CommonListService implements ThreadService {
                 e.printStackTrace();
             }
         }
-        System.out.println("Result time = " + (System.currentTimeMillis() - startTime) + " ms");
+        System.out.println("Common list(Executor). Result time = " + (System.currentTimeMillis() - startTime) + " ms");
         Collections.sort(result);
         result.forEach(System.out::println);
     }
