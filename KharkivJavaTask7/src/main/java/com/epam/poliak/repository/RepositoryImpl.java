@@ -6,11 +6,11 @@ import com.epam.poliak.utils.DeserializableAllTransport;
 import java.util.ArrayList;
 import java.util.Optional;
 
-public class DAOTransportImpl implements DAOTransport {
+public class RepositoryImpl implements Repository {
 
     private ArrayList<Transport> transportList;
 
-    public DAOTransportImpl() {
+    public RepositoryImpl() {
         DeserializableAllTransport deserializableAllTransport = new DeserializableAllTransport();
         transportList = deserializableAllTransport.deserializationData("serialisation.txt");
     }

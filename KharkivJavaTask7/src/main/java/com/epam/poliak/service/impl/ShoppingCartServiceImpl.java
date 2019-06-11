@@ -16,7 +16,7 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
 
     @Override
     public void addItemToShoppingCart(Transport transport, int days) {
-        int newDays = shoppingCart.getDays(transport);
+        int newDays = get(transport);
         shoppingCart.addItemToShoppingCart(transport, days + newDays);
     }
 
@@ -26,5 +26,10 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
         long totalPrice = shoppingCart.entrySet().stream().mapToLong(k -> k.getKey().getPrice() * k.getValue()).sum();
         this.shoppingCart.clearShoppingCart();
         return totalPrice;
+    }
+
+    @Override
+    public int get(Transport transport) {
+        return shoppingCart.getDays(transport);
     }
 }

@@ -1,12 +1,14 @@
 package com.epam.poliak.repository;
 
-import java.util.List;
+import com.epam.poliak.entity.Transport;
 
-public interface Repository<T> {
+import java.util.ArrayList;
 
-    List<T> getAll();
+public interface Repository {
 
-    T get(int id);
+    ArrayList<Transport> getAllTransport();
 
-    void addNew(int id, T transport);
+    Transport getTransportByID(int id);
+
+    void addNewTransport(int id, Transport transport);
 }

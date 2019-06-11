@@ -10,17 +10,14 @@ import java.util.Objects;
 public class ShoppingCart {
 
     private Map<Transport, Integer> shoppingCart;
-    private ShoppingCartStorage storage;
 
-    public ShoppingCart(ShoppingCartStorage storage) {
+    public ShoppingCart() {
         shoppingCart = new HashMap<>();
-        this.storage = storage;
     }
 
     public void addItemToShoppingCart(Transport transport, int days) {
         if (Objects.nonNull(transport)) {
             shoppingCart.put(transport, days);
-            storage.addToCartStorage(transport, days);
         } else {
             throw new InputMismatchException("This transport is missing. Try later");
         }

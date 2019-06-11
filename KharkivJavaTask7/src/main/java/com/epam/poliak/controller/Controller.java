@@ -2,13 +2,13 @@ package com.epam.poliak.controller;
 
 import com.epam.poliak.command.Command;
 import com.epam.poliak.command.impl.*;
-import com.epam.poliak.repository.DAOTransportImpl;
 import com.epam.poliak.input.InputHelper;
 import com.epam.poliak.input.InputLocale;
 import com.epam.poliak.input.InputStrategy;
 import com.epam.poliak.model.Order;
 import com.epam.poliak.model.ShoppingCart;
 import com.epam.poliak.model.ShoppingCartStorage;
+import com.epam.poliak.repository.RepositoryImpl;
 import com.epam.poliak.service.OrderService;
 import com.epam.poliak.service.ShoppingCartService;
 import com.epam.poliak.service.TransportService;
@@ -25,7 +25,6 @@ public class Controller {
 
     private ShoppingCart shoppingCart;
     private ShoppingCartStorage shoppingCartStorage;
-    private Order order;
     private Map<Integer, Command> allCommandMap;
     private ShoppingCartService shoppingCartService;
     private TransportService transportService;
@@ -36,11 +35,10 @@ public class Controller {
     public Controller() {
         allCommandMap = new HashMap<>();
         shoppingCartStorage = new ShoppingCartStorage();
-        shoppingCart = new ShoppingCart(shoppingCartStorage);
-        order = new Order();
+        shoppingCart = new ShoppingCart();
         shoppingCartService = new ShoppingCartServiceImpl(shoppingCart);
-        transportService = new TransportServiceImpl(new DAOTransportImpl());
-        orderService = new OrderServiceImpl(order);
+        transportService = new TransportServiceImpl(new RepositoryImpl());
+        orderService = new OrderServiceImpl(new Order());
         helper = new InputStrategy().setInputStrategy();
         locale = new InputLocale().setLocale();
         fillCommandMap();
@@ -57,7 +55,7 @@ public class Controller {
     private void fillCommandMap() {
         allCommandMap.put(0, new ExitCommand(transportService, "serialisation.txt"));
         allCommandMap.put(1, new AllItemCommand(transportService));
-        allCommandMap.put(2, new AddToShoppingCartCommand(shoppingCartService, transportService));
+        allCommandMap.put(2, new AddToShoppingCartCommand(shoppingCartService, transportService, shoppingCartStorage));
         allCommandMap.put(3, new ShowCartCommand(shoppingCart));
         allCommandMap.put(4, new BuyAllCommand(shoppingCartService, orderService, shoppingCart));
         allCommandMap.put(5, new ShowLastCarsCommand(shoppingCartStorage));

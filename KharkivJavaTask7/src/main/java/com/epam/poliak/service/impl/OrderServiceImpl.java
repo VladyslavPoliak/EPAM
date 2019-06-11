@@ -22,7 +22,7 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public void makeOrder(Map<Transport, Integer> hashMap, String date) {
         if (!hashMap.isEmpty()) {
-            order.makeOrder(hashMap, date);
+            order.addOrder(hashMap, date);
         } else {
             System.out.println("Empty basket");
         }

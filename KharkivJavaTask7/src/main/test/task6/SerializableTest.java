@@ -1,7 +1,7 @@
 package task6;
 
-import com.epam.poliak.repository.DAOTransport;
-import com.epam.poliak.repository.DAOTransportImpl;
+import com.epam.poliak.repository.Repository;
+import com.epam.poliak.repository.RepositoryImpl;
 import com.epam.poliak.entity.Transport;
 import com.epam.poliak.service.TransportService;
 import com.epam.poliak.service.impl.TransportServiceImpl;
@@ -31,8 +31,8 @@ public class SerializableTest {
     private SerializableAllTransport serializeService;
     private DeserializableAllTransport deserializableService;
     private ArrayList<Transport> transports;
-    private DAOTransport daoTransport = new DAOTransportImpl();
-    private TransportService transportService = new TransportServiceImpl(daoTransport);
+    private Repository repository = new RepositoryImpl();
+    private TransportService transportService = new TransportServiceImpl(repository);
 
     @Before
     public void init() throws IOException {
@@ -40,7 +40,7 @@ public class SerializableTest {
         testGzip = folder.newFile("testGzip.bin");
         serializeService = new SerializableAllTransport(transportService);
         deserializableService = new DeserializableAllTransport();
-        transports = daoTransport.getAllTransport();
+        transports = repository.getAllTransport();
     }
 
     @Test

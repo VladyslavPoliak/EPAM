@@ -9,7 +9,7 @@ public class Order {
 
     private NavigableMap<Date, Map<Transport, Integer>> orders = new TreeMap<>();
 
-    public void makeOrder(Map<Transport, Integer> hashMap, String date) {
+    public void addOrder(Map<Transport, Integer> hashMap, String date) {
         orders.put(DateUtils.getDate(date), new HashMap<>(hashMap));
     }
 

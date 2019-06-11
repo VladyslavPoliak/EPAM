@@ -1,6 +1,6 @@
 package task4;
 
-import com.epam.poliak.repository.DAOTransport;
+import com.epam.poliak.repository.Repository;
 import com.epam.poliak.entity.Car;
 import com.epam.poliak.entity.Transport;
 import com.epam.poliak.service.TransportService;
@@ -21,10 +21,10 @@ import static org.mockito.Mockito.*;
 public class TransportServiceTest {
 
     @Mock
-    DAOTransport daoTransport;
+    Repository repository;
 
     @InjectMocks
-    TransportService transportService = new TransportServiceImpl(daoTransport);
+    TransportService transportService = new TransportServiceImpl(repository);
 
     private ArrayList<Transport> testTransportList;
     private Car car;
@@ -45,9 +45,9 @@ public class TransportServiceTest {
 
     @Test
     public void getAllTransportTest() {
-        when(daoTransport.getAllTransport()).thenReturn(testTransportList);
+        when(repository.getAllTransport()).thenReturn(testTransportList);
         ArrayList<Transport> transportList = transportService.getAllTransport();
-        verify(daoTransport, times(1)).getAllTransport();
+        verify(repository, times(1)).getAllTransport();
         assertEquals(car, transportList.get(0));
         assertEquals(car2, transportList.get(1));
         assertEquals(car3, transportList.get(2));
@@ -55,9 +55,9 @@ public class TransportServiceTest {
 
     @Test
     public void getTransportByIDTest() {
-        when(daoTransport.getTransportByID(0)).thenReturn(car3);
+        when(repository.getTransportByID(0)).thenReturn(car3);
         Transport testCar = transportService.getTransportByID(0);
-        verify(daoTransport, times(1)).getTransportByID(0);
+        verify(repository, times(1)).getTransportByID(0);
         assertEquals(car3, testCar);
     }
 

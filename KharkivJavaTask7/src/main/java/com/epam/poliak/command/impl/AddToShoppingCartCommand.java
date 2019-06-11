@@ -1,6 +1,7 @@
 package com.epam.poliak.command.impl;
 
 import com.epam.poliak.command.Command;
+import com.epam.poliak.model.ShoppingCartStorage;
 import com.epam.poliak.service.ShoppingCartService;
 import com.epam.poliak.service.TransportService;
 import com.epam.poliak.utils.ValidateUtils;
@@ -12,10 +13,12 @@ public class AddToShoppingCartCommand implements Command {
 
     private TransportService transportService;
     private ShoppingCartService shoppingCartService;
+    private ShoppingCartStorage shoppingCartStorage;
 
-    public AddToShoppingCartCommand(ShoppingCartService shoppingCartService, TransportService transportService) {
+    public AddToShoppingCartCommand(ShoppingCartService shoppingCartService, TransportService transportService, ShoppingCartStorage shoppingCartStorage) {
         this.shoppingCartService = shoppingCartService;
         this.transportService = transportService;
+        this.shoppingCartStorage = shoppingCartStorage;
     }
 
     @Override
@@ -27,6 +30,7 @@ public class AddToShoppingCartCommand implements Command {
             System.out.println("Enter number of rental days");
             int days = scanner.nextInt();
             shoppingCartService.addItemToShoppingCart(transportService.getTransportByID(idItem), ValidateUtils.validateDays(days));
+            shoppingCartStorage.addToCartStorage(transportService.getTransportByID(idItem), ValidateUtils.validateDays(days));
         } catch (InputMismatchException ex) {
             System.out.println("Incorrect data");
             doCommand();
