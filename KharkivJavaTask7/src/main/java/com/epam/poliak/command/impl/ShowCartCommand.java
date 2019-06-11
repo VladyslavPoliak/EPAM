@@ -2,15 +2,16 @@ package com.epam.poliak.command.impl;
 
 import com.epam.poliak.command.Command;
 import com.epam.poliak.entity.Transport;
+import com.epam.poliak.model.ShoppingCart;
 import com.epam.poliak.service.ShoppingCartService;
 
 import java.util.Map;
 
 public class ShowCartCommand implements Command {
 
-    private ShoppingCartService shoppingCart;
+    private ShoppingCart shoppingCart;
 
-    public ShowCartCommand(ShoppingCartService shoppingCart) {
+    public ShowCartCommand(ShoppingCart shoppingCart) {
         this.shoppingCart = shoppingCart;
     }
 

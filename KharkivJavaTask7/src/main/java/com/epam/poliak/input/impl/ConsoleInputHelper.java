@@ -2,7 +2,7 @@ package com.epam.poliak.input.impl;
 
 import com.epam.poliak.input.InputHelper;
 import com.epam.poliak.utils.Constants;
-import com.epam.poliak.utils.Utils;
+import com.epam.poliak.utils.ValidateUtils;
 
 import java.util.InputMismatchException;
 
@@ -14,7 +14,7 @@ public class ConsoleInputHelper implements InputHelper {
         try {
             while (true) {
                 input = scanner.next();
-                if (Utils.validateEnter(input, Constants.NUMBERS)) {
+                if (ValidateUtils.validateEnter(input, Constants.NUMBERS)) {
                     return Integer.valueOf(input);
                 }
             }

@@ -20,13 +20,11 @@ import static org.mockito.Mockito.*;
 @RunWith(MockitoJUnitRunner.class)
 public class AddNewTransportByReflection {
 
-    private ResourceBundle bundle = ResourceBundle.getBundle("content", Locale.getDefault());
-
     @Mock
     TransportService transportService;
-
     @Mock
     InputHelper inputHelper;
+    private ResourceBundle bundle = ResourceBundle.getBundle("content", Locale.getDefault());
 
     @After
     public void after() {

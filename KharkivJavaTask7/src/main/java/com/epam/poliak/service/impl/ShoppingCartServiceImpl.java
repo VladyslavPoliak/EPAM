@@ -1,41 +1,30 @@
 package com.epam.poliak.service.impl;
 
-import com.epam.poliak.dao.DAOShoppingCart;
 import com.epam.poliak.entity.Transport;
+import com.epam.poliak.model.ShoppingCart;
 import com.epam.poliak.service.ShoppingCartService;
 
 import java.util.Map;
 
 public class ShoppingCartServiceImpl implements ShoppingCartService {
 
-    private DAOShoppingCart daoShoppingCart;
+    private ShoppingCart shoppingCart;
 
-    public ShoppingCartServiceImpl(DAOShoppingCart daoShoppingCart) {
-        this.daoShoppingCart = daoShoppingCart;
+    public ShoppingCartServiceImpl(ShoppingCart shoppingCart) {
+        this.shoppingCart = shoppingCart;
     }
 
     @Override
     public void addItemToShoppingCart(Transport transport, int days) {
-        int newDays = daoShoppingCart.getDays(transport);
-        daoShoppingCart.addItemToShoppingCart(transport, days + newDays);
+        int newDays = shoppingCart.getDays(transport);
+        shoppingCart.addItemToShoppingCart(transport, days + newDays);
     }
 
     @Override
     public long buyAll() {
-        Map<Transport, Integer> shoppingCart = daoShoppingCart.getShoppingCart();
-        final long[] totalPrice = {0};
-        shoppingCart.forEach((k, v) -> totalPrice[0] += k.getPrice() * v);
-        daoShoppingCart.clearShoppingCart();
-        return totalPrice[0];
-    }
-
-    @Override
-    public Map<Transport, Integer> getShoppingCart() {
-        return daoShoppingCart.getShoppingCart();
-    }
-
-    @Override
-    public Map<Transport, Integer> getShoppingCartStorage() {
-        return daoShoppingCart.getShoppingCartStorage();
+        Map<Transport, Integer> shoppingCart = this.shoppingCart.getShoppingCart();
+        long totalPrice = shoppingCart.entrySet().stream().mapToLong(k -> k.getKey().getPrice() * k.getValue()).sum();
+        this.shoppingCart.clearShoppingCart();
+        return totalPrice;
     }
 }

@@ -1,12 +1,12 @@
 package task6;
 
-import com.epam.poliak.dao.DAOTransport;
-import com.epam.poliak.dao.impl.DAOTransportImpl;
+import com.epam.poliak.repository.DAOTransport;
+import com.epam.poliak.repository.DAOTransportImpl;
 import com.epam.poliak.entity.Transport;
 import com.epam.poliak.service.TransportService;
 import com.epam.poliak.service.impl.TransportServiceImpl;
-import com.epam.poliak.utils.DeserializableTransportList;
-import com.epam.poliak.utils.SerializableTransportList;
+import com.epam.poliak.utils.DeserializableAllTransport;
+import com.epam.poliak.utils.SerializableAllTransport;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -28,8 +28,8 @@ public class SerializableTest {
     public TemporaryFolder folder = new TemporaryFolder();
     private File testFile;
     private File testGzip;
-    private SerializableTransportList serializeService;
-    private DeserializableTransportList deserializableService;
+    private SerializableAllTransport serializeService;
+    private DeserializableAllTransport deserializableService;
     private ArrayList<Transport> transports;
     private DAOTransport daoTransport = new DAOTransportImpl();
     private TransportService transportService = new TransportServiceImpl(daoTransport);
@@ -38,8 +38,8 @@ public class SerializableTest {
     public void init() throws IOException {
         testFile = folder.newFile("testSave.bin");
         testGzip = folder.newFile("testGzip.bin");
-        serializeService = new SerializableTransportList(transportService);
-        deserializableService = new DeserializableTransportList();
+        serializeService = new SerializableAllTransport(transportService);
+        deserializableService = new DeserializableAllTransport();
         transports = daoTransport.getAllTransport();
     }
 

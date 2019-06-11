@@ -2,7 +2,7 @@ package com.epam.poliak.command.impl;
 
 import com.epam.poliak.command.Command;
 import com.epam.poliak.service.TransportService;
-import com.epam.poliak.utils.SerializableTransportList;
+import com.epam.poliak.utils.SerializableAllTransport;
 
 public class ExitCommand implements Command {
 
@@ -16,7 +16,7 @@ public class ExitCommand implements Command {
 
     @Override
     public void doCommand() {
-        new SerializableTransportList(transportService).serializableData(fileName);
+        new SerializableAllTransport(transportService).serializableData(fileName);
         System.exit(0);
     }
 }

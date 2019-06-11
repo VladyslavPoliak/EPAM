@@ -1,6 +1,6 @@
 package task7_3;
 
-public class TransportImpl implements Transport{
+public class TransportImpl implements Transport {
 
     private int id;
     private int price;

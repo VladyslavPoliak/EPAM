@@ -15,11 +15,13 @@ public class AddNewTransportReflection implements Command {
     private InputHelper inputHelper;
     private TransportService transportService;
     private ResourceBundle bundle;
+    private ReflectionCreator creator;
 
     public AddNewTransportReflection(TransportService transportService, InputHelper inputHelper, ResourceBundle bundle) {
         this.inputHelper = inputHelper;
         this.transportService = transportService;
         this.bundle = bundle;
+        creator = new ReflectionCreator();
     }
 
     @Override
@@ -27,7 +29,7 @@ public class AddNewTransportReflection implements Command {
         System.out.println(Constants.ADD_NEW_TRANSPORT_MENU);
         System.out.println("Choose Transport");
         Scanner sc = new Scanner(System.in);
-        Transport transport = new ReflectionCreator().create(sc.next(), bundle, inputHelper);
+        Transport transport = creator.create(sc.next(), bundle, inputHelper);
         transportService.addNewTransport(transport);
     }
 }

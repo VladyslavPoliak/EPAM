@@ -28,6 +28,7 @@ public class InputStrategy {
         } catch (InputMismatchException ex) {
             System.out.println("Incorrect data");
         }
+        System.out.println("Incorrect data entered. The default input method is selected");
         return inputTypes.get("1");
     }
 

@@ -79,7 +79,7 @@ public class Transport implements Serializable {
 
     @Override
     public String toString() {
-        return "id = " + id + ", price = " + price +
+        return "id = " + id + ", price per day = " + price +
                 ", producer = " + producer;
     }
 }

@@ -1,9 +1,9 @@
 package com.epam.poliak.service.impl;
 
-import com.epam.poliak.dao.DAOOrder;
 import com.epam.poliak.entity.Transport;
+import com.epam.poliak.model.Order;
 import com.epam.poliak.service.OrderService;
-import com.epam.poliak.utils.Utils;
+import com.epam.poliak.utils.DateUtils;
 
 import java.util.Date;
 import java.util.Map;
@@ -11,18 +11,18 @@ import java.util.NavigableMap;
 
 public class OrderServiceImpl implements OrderService {
 
-    private DAOOrder daoOrder;
-    private NavigableMap<Date, Map<Transport, Integer>> orders;
+    private Order order;
+    private NavigableMap<Date, Map<Transport, Integer>> allOrders;
 
-    public OrderServiceImpl(DAOOrder daoOrder) {
-        this.daoOrder = daoOrder;
-        orders = daoOrder.getAllOrders();
+    public OrderServiceImpl(Order order) {
+        this.order = order;
+        allOrders = order.getAllOrders();
     }
 
     @Override
     public void makeOrder(Map<Transport, Integer> hashMap, String date) {
         if (!hashMap.isEmpty()) {
-            daoOrder.makeOrder(hashMap, date);
+            order.makeOrder(hashMap, date);
         } else {
             System.out.println("Empty basket");
         }
@@ -30,17 +30,17 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public NavigableMap<Date, Map<Transport, Integer>> findOrderByDate(Date date) {
-        return orders.subMap(date, true, date, true);
+        return allOrders.subMap(date, true, date, true);
     }
 
     @Override
     public NavigableMap<Date, Map<Transport, Integer>> findOrderByNearestDate(Date date) {
-        Date nearestDate = Utils.determineNearestDate(date, orders.floorKey(date), orders.ceilingKey(date));
-        return orders.subMap(nearestDate, true, nearestDate, true);
+        Date nearestDate = DateUtils.determineNearestDate(date, allOrders.floorKey(date), allOrders.ceilingKey(date));
+        return allOrders.subMap(nearestDate, true, nearestDate, true);
     }
 
     @Override
     public NavigableMap<Date, Map<Transport, Integer>> searchByTimeInterval(Date firstDate, Date secondDate) {
-        return orders.subMap(firstDate, true, secondDate, true);
+        return allOrders.subMap(firstDate, true, secondDate, true);
     }
 }

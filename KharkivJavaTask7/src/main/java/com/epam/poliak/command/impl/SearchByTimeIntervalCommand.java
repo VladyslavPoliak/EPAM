@@ -3,7 +3,9 @@ package com.epam.poliak.command.impl;
 import com.epam.poliak.command.Command;
 import com.epam.poliak.service.OrderService;
 import com.epam.poliak.utils.Constants;
-import com.epam.poliak.utils.Utils;
+import com.epam.poliak.utils.DateUtils;
+import com.epam.poliak.utils.PrintUtils;
+import com.epam.poliak.utils.ValidateUtils;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -24,8 +26,8 @@ public class SearchByTimeIntervalCommand implements Command {
             String date = scanner.nextLine();
             System.out.println("Enter second date(dd.MM.yyyy)");
             String date2 = scanner.nextLine();
-            if (Utils.validateEnter(date, Constants.DATE) && Utils.validateEnter(date2, Constants.DATE)) {
-                Utils.getSearchResults(orderService.searchByTimeInterval(Utils.getDate(date), Utils.getDate(date2)));
+            if (ValidateUtils.validateEnter(date, Constants.DATE) && ValidateUtils.validateEnter(date2, Constants.DATE)) {
+                PrintUtils.getSearchResults(orderService.searchByTimeInterval(DateUtils.getDate(date), DateUtils.getDate(date2)));
             }
         } catch (InputMismatchException ex) {
             System.out.println("Incorrect data");

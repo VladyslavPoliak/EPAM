@@ -1,6 +1,6 @@
 package task4;
 
-import com.epam.poliak.dao.DAOTransport;
+import com.epam.poliak.repository.DAOTransport;
 import com.epam.poliak.entity.Car;
 import com.epam.poliak.entity.Transport;
 import com.epam.poliak.service.TransportService;
