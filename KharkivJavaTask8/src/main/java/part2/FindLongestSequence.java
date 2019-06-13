@@ -3,28 +3,29 @@ package part2;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.concurrent.Exchanger;
 
 public class FindLongestSequence implements Runnable {
 
     private byte[] allBytes;
-    private int firstIndex = 0;
-    private int lastIndex = 0;
-    private volatile int maxLength = 1;
+    private int firstIndex;
+    private int lastIndex;
+    private int maxLength;
+    private Exchanger<String> exchanger;
 
-    @Override
-    public synchronized void run() {
-        while (!Thread.currentThread().isInterrupted()) {
-            try {
-                wait();
-            } catch (InterruptedException e) {
-                System.out.println("Error");
-            }
-            findSequence();
-        }
+    public FindLongestSequence(Exchanger<String> exchanger) {
+        this.exchanger = exchanger;
     }
 
-    public synchronized void startSearch() {
-        notify();
+    @Override
+    public void run() {
+        try {
+            readAllBytes(exchanger.exchange(null));
+            findSequence();
+            exchanger.exchange("Result of search: " + getResult());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public synchronized void readAllBytes(String fileName) {
@@ -35,7 +36,7 @@ public class FindLongestSequence implements Runnable {
         }
     }
 
-    private void findSequence() {
+    private void findSequence() throws InterruptedException {
         int[][] result = new int[allBytes.length][allBytes.length];
         for (int i = 0; i < allBytes.length; i++) {
             for (int j = 0; j < allBytes.length; j++) {
@@ -52,18 +53,15 @@ public class FindLongestSequence implements Runnable {
                     }
                 }
             }
+            exchanger.exchange("Current max Length = " + maxLength);
         }
-        System.out.println(getFirstIndex());
-        System.out.println(getLastIndex());
-        System.out.println(maxLength);
     }
 
-    int getFirstIndex() {
-        return firstIndex - maxLength + 1;
-    }
+    private String getResult() {
+        return " First Index= " + (firstIndex - maxLength + 1) +
+                " Last Index= " + (lastIndex - maxLength + 1) +
+                " Max Length= " + maxLength;
 
-    int getLastIndex() {
-        return lastIndex -maxLength + 1;
     }
 }
 

@@ -20,10 +20,10 @@ public class Demo {
         SeparateListService separateListService = new SeparateListService(start, finish, numberOfThreads);
 
         commonListService.startThread();
-        separateListService.startThread();
+//        separateListService.startThread();
 
         commonListService.startExecutor();
-        separateListService.startExecutor();
+//        separateListService.startExecutor();
     }
 
 }

@@ -4,7 +4,6 @@ import part1.service.ThreadService;
 import part1.threads.CommonList;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -32,8 +31,9 @@ public class CommonListService implements ThreadService {
             Thread thread = new Thread(new CommonList(result, localStart, localStart + numbersPerThread));
             threadList.add(thread);
         }
-        long startTime = System.currentTimeMillis();
+
         threadList.forEach(Thread::start);
+        long startTime = System.currentTimeMillis();
         threadList.forEach(thread -> {
             try {
                 thread.join();
@@ -44,8 +44,8 @@ public class CommonListService implements ThreadService {
 
         System.out.println("Common list. Result time = " + (System.currentTimeMillis() - startTime) + " ms");
 
-        Collections.sort(result);
-        result.forEach(System.out::println);
+//        Collections.sort(result);
+//        result.forEach(System.out::println);
     }
 
     @Override
@@ -71,7 +71,7 @@ public class CommonListService implements ThreadService {
             }
         }
         System.out.println("Common list(Executor). Result time = " + (System.currentTimeMillis() - startTime) + " ms");
-        Collections.sort(result);
-        result.forEach(System.out::println);
+//        Collections.sort(result);
+//        result.forEach(System.out::println);
     }
 }

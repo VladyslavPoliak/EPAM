@@ -1,30 +1,38 @@
 package part2;
 
 import java.util.Scanner;
+import java.util.concurrent.Exchanger;
 
 public class Main {
 
-    private FindLongestSequence findLongestSequence;
-    private Thread thread;
+    private Exchanger<String> exchanger = new Exchanger<>();
 
     public Main() {
-        findLongestSequence = new FindLongestSequence();
-        this.thread = new Thread(findLongestSequence);
+        FindLongestSequence findLongestSequence = new FindLongestSequence(exchanger);
+       new Thread(findLongestSequence).start();
     }
 
-    public void startSearch() {
-        thread.start();
-        String fileName;
+    public static void main(String[] args) throws InterruptedException {
+        Main main = new Main();
+        main.startSearch();
+    }
+
+    public void startSearch() throws InterruptedException {
+
         try (Scanner scanner = new Scanner(System.in)) {
-            while (!(fileName = scanner.nextLine()).equals("exit")) {
-                findLongestSequence.readAllBytes(fileName);
-                findLongestSequence.startSearch();
+            System.out.println("Enter File name:");
+            String name=scanner.nextLine();
+            System.out.println("-----------"+name);
+           exchanger.exchange(name);
+            while (true) {
+                String infoFromOtherThread = exchanger.exchange(null);
+                if (infoFromOtherThread.startsWith("Current")) {
+                    System.out.println(infoFromOtherThread);
+                } else {
+                    System.out.println(infoFromOtherThread);
+                    startSearch();
+                }
             }
         }
-    }
-
-    public static void main(String[] args) {
-        Main main=new Main();
-        main.startSearch();
     }
 }
