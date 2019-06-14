@@ -1,4 +1,4 @@
-package part1.service;
+package part1_and_part2.service;
 
 public interface ThreadService {
 

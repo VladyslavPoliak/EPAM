@@ -1,6 +1,6 @@
-package part1.threads;
+package part1_and_part2.threads;
 
-import part1.Utils;
+import util.Utils;
 
 import java.util.List;
 

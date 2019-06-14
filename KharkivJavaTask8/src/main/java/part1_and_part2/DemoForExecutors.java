@@ -1,11 +1,11 @@
-package part1;
+package part1_and_part2;
 
-import part1.service.impl.CommonListService;
-import part1.service.impl.SeparateListService;
+import part1_and_part2.service.impl.CommonListService;
+import part1_and_part2.service.impl.SeparateListService;
 
 import java.util.Scanner;
 
-public class Demo {
+public class DemoForExecutors {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -19,11 +19,8 @@ public class Demo {
         CommonListService commonListService = new CommonListService(start, finish, numberOfThreads);
         SeparateListService separateListService = new SeparateListService(start, finish, numberOfThreads);
 
-        commonListService.startThread();
-//        separateListService.startThread();
-
         commonListService.startExecutor();
-//        separateListService.startExecutor();
+        separateListService.startExecutor();
     }
 
 }

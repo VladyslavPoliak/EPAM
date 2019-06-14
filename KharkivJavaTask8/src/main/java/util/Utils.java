@@ -1,4 +1,4 @@
-package part1;
+package util;
 
 public class Utils {
 
