@@ -1,29 +1,23 @@
 package com.epam.poliak.command.impl;
 
 import com.epam.poliak.command.Command;
-import com.epam.poliak.utils.Constants;
+import com.epam.poliak.io.Writer;
 import task9.server.Server;
 import task9.wedCommand.WebCommandManager;
-
-import java.io.IOException;
-import java.net.ServerSocket;
-import java.net.Socket;
 
 public class StartTCPServerCommand implements Command {
 
     private WebCommandManager commandManager;
+    private Writer writer;
 
-    public StartTCPServerCommand(WebCommandManager commandManager) {
+    public StartTCPServerCommand(Writer writer, WebCommandManager commandManager) {
+        this.writer = writer;
         this.commandManager = commandManager;
     }
 
     @Override
     public void doCommand() {
-        try (ServerSocket serverSocket = new ServerSocket(Constants.PORT)) {
-            Socket socket = serverSocket.accept();
-            new Thread(new Server(socket, commandManager)).start();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        System.out.println("waiting for connection... ");
+        new Thread(new Server(commandManager)).start();
     }
 }

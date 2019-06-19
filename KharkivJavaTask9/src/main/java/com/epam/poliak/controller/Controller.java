@@ -77,6 +77,6 @@ public class Controller {
         allCommandMap.put(8, new SearchForNearestDateCommand(reader, writer, orderService));
         allCommandMap.put(9, new AddNewTransport(reader, writer, transportService, helper));
         allCommandMap.put(10, new AddNewTransportReflection(reader, writer, transportService, helper, ResourceBundle.getBundle("content", locale)));
-        allCommandMap.put(11, new StartTCPServerCommand(new WebCommandManager(transportService)));
+        allCommandMap.put(11, new StartTCPServerCommand(writer,new WebCommandManager(transportService)));
     }
 }

@@ -1,34 +1,38 @@
 package task9.server;
 
 
+import com.epam.poliak.utils.Constants;
+import task9.wedCommand.RunCommandThread;
 import task9.wedCommand.WebCommandManager;
 
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.InputStreamReader;
+import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Scanner;
 
 public class Server implements Runnable {
 
-    private Socket socket;
     private WebCommandManager commandManager;
     private String command;
     private String parameter;
 
-    public Server(Socket socket, WebCommandManager commandManager) {
-        this.socket = socket;
+    public Server(WebCommandManager commandManager) {
         this.commandManager = commandManager;
     }
 
     @Override
     public void run() {
-        try (Scanner reader = new Scanner(socket.getInputStream());
-             PrintWriter out = new PrintWriter(socket.getOutputStream(), true)) {
-            String request;
-            while (!(request = reader.nextLine()).equals("exit")) {
+        try {
+            ServerSocket serverSocket = new ServerSocket(Constants.PORT);
+            while (true) {
+                Socket socket = serverSocket.accept();
+                BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                String request;
+                request = br.readLine();
                 System.out.println("Client: " + request);
                 processRequest(request);
-                out.println(commandManager.getCommand(command).doCommand(parameter));
+                new Thread(new RunCommandThread(commandManager.getCommand(command), socket, parameter)).start();
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -42,6 +46,4 @@ public class Server implements Runnable {
             parameter = splitRequest[1];
         }
     }
-
-
 }
