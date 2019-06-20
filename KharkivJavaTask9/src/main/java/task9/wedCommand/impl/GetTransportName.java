@@ -1,7 +1,8 @@
-package task9.wedCommand;
+package task9.wedCommand.impl;
 
 import com.epam.poliak.entity.Transport;
 import com.epam.poliak.service.TransportService;
+import task9.wedCommand.WebCommand;
 
 public class GetTransportName implements WebCommand {
 

@@ -39,6 +39,7 @@ public class Controller {
     private OrderService orderService;
     private InputHelper helper;
     private Locale locale;
+    private WebCommandManager webCommandManager;
 
 
     public Controller(Reader reader, Writer writer) {
@@ -53,9 +54,9 @@ public class Controller {
         orderService = new OrderServiceImpl(writer, new Order());
         helper = new InputStrategy(reader, writer).setInputStrategy();
         locale = new InputLocale(reader, writer).setLocale();
+        webCommandManager = new WebCommandManager(transportService);
         fillCommandMap();
     }
-
 
     public void executeCommand(int key) {
         allCommandMap.get(key).doCommand();
@@ -77,6 +78,7 @@ public class Controller {
         allCommandMap.put(8, new SearchForNearestDateCommand(reader, writer, orderService));
         allCommandMap.put(9, new AddNewTransport(reader, writer, transportService, helper));
         allCommandMap.put(10, new AddNewTransportReflection(reader, writer, transportService, helper, ResourceBundle.getBundle("content", locale)));
-        allCommandMap.put(11, new StartTCPServerCommand(writer,new WebCommandManager(transportService)));
+        allCommandMap.put(11, new StartTCPServerCommand(writer, webCommandManager));
+        allCommandMap.put(12, new StartHttpServer(writer, webCommandManager));
     }
 }

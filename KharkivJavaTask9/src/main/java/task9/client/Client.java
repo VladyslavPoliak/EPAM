@@ -20,7 +20,7 @@ public class Client {
     }
 
     public static void main(String[] args) {
-        Client client = new Client(Constants.HOST, Constants.PORT);
+        Client client = new Client(Constants.HOST, Constants.PORT_FOR_TCP);
         client.connectToServer();
     }
 
@@ -36,7 +36,7 @@ public class Client {
                 System.out.println(Constants.CLIENT_MENU);
                 request = console.nextLine();
                 out.println(request);
-                System.out.println("Response from server: " + br.readLine()+System.lineSeparator());
+                System.out.println("Response from server: " + br.readLine() + System.lineSeparator());
             }
         } catch (IOException e) {
             System.out.println(Constants.CONNECT_ERROR);

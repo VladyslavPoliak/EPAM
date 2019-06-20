@@ -2,6 +2,7 @@ package com.epam.poliak.utils;
 
 public final class Constants {
 
+    public static final String GET_ITEM_REQUEST_REGEXP = ".*get_info=(\\d{1,5}).*";
     private static final String SEPARATOR = System.lineSeparator();
     public static final int MAX_ITEMS_IN_LINKED_MAP = 5;
     public static final String EXIT_COMMAND = "0";
@@ -26,7 +27,8 @@ public final class Constants {
             + "get transport=(id)" + SEPARATOR;
     public static final String CONNECT_ERROR = "Error connecting to server";
     public static final String HOST = "localhost";
-    public static final int PORT = 3000;
+    public static final int PORT_FOR_TCP = 3000;
+    public static final int PORT_FOR_HTTP = 8080;
 
 
     private Constants() {
