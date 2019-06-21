@@ -27,19 +27,20 @@ public class TCPServer implements Runnable {
             ServerSocket serverSocket = new ServerSocket(Constants.PORT_FOR_TCP);
             while (true) {
                 Socket socket = serverSocket.accept();
+                socket.setTcpNoDelay(true);
                 BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                String request;
-                request = br.readLine();
+                String request = br.readLine();
                 System.out.println("Client: " + request);
-                processRequest(request);
-                new Thread(new RunCommandThread(commandManager.getCommand(command), socket, parameter)).start();
+                setParametersFromRequest(request);
+                new Thread(new RunCommandThread(commandManager.getCommandFromMap(command)
+                        , socket, parameter, this)).start();
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    private void processRequest(String request) {
+    private void setParametersFromRequest(String request) {
         String[] splitRequest = request.split("=");
         command = splitRequest[0];
         if (splitRequest.length > 1) {

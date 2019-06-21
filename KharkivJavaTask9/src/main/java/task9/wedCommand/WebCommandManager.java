@@ -10,7 +10,7 @@ import java.util.Optional;
 
 public class WebCommandManager {
 
-    private Map<String, WebCommand> commandMap = new HashMap<>();
+    private Map<String, WebCommand> webCommandMap = new HashMap<>();
     private TransportService transportService;
 
     public WebCommandManager(TransportService transportService) {
@@ -18,23 +18,17 @@ public class WebCommandManager {
         fillMap();
     }
 
-    public WebCommand getCommand(String key) {
-        System.out.println(key);
-        System.out.println(commandMap.containsKey(key));
-        return commandMap.get(key);
-    }
-
     private void fillMap() {
-        commandMap.put(".+get count.+", new GetCountOfTransport(transportService));
-        commandMap.put(".+get transport.+", new GetTransportName(transportService));
-        commandMap.put("^GET /shop/count HTTP/1\\.1$", new GetCountOfTransport(transportService));
-        commandMap.put(".+/item\\?get_info=.+", new GetTransportName(transportService));
+        webCommandMap.put("get count", new GetCountOfTransport(transportService));
+        webCommandMap.put("get transport", new GetTransportName(transportService));
+        webCommandMap.put("GET /shop/count HTTP/1\\.1", new GetCountOfTransport(transportService));
+        webCommandMap.put(".+/item\\?get_info=.+", new GetTransportName(transportService));
     }
 
-    public WebCommand processRequest(String key) {
-        Optional<String> optional = commandMap.keySet().stream()
+    public WebCommand getCommandFromMap(String key) {
+        Optional<String> optional = webCommandMap.keySet().stream()
                 .filter(key::matches)
                 .findFirst();
-        return commandMap.get(optional.orElse(null));
+        return webCommandMap.get(optional.orElse(null));
     }
 }

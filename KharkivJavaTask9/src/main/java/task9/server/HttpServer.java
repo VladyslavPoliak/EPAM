@@ -20,7 +20,6 @@ public class HttpServer implements Runnable {
         this.commandManager = commandManager;
     }
 
-
     @Override
     public void run() {
         try {
@@ -28,18 +27,24 @@ public class HttpServer implements Runnable {
             while (true) {
                 Socket socket = serverSocket.accept();
                 BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                String request;
-                request = br.readLine();
-                System.out.println("Client: " + request);
-                new Thread(new RunCommandThread(commandManager.processRequest(request), socket,
-                        String.valueOf(processRequest(request)))).start();
+                startProcessRequest(br.readLine(), socket);
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    private int processRequest(String request) {
+    private void startProcessRequest(String request, Socket socket) {
+        if (request.startsWith(Constants.START_REQUEST)) {
+            System.out.println("Client: " + request);
+            new Thread(new RunCommandThread(commandManager.getCommandFromMap(request), socket,
+                    String.valueOf(getParametersFromRequest(request)), this)).start();
+        } else {
+            System.out.println("Wrong command");
+        }
+    }
+
+    private int getParametersFromRequest(String request) {
         Matcher matcher = Pattern.compile(Constants.GET_ITEM_REQUEST_REGEXP).matcher(request);
         if (matcher.find()) {
             return Integer.parseInt(matcher.group(1));
