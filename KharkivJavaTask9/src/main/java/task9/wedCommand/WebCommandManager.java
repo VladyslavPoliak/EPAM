@@ -21,7 +21,7 @@ public class WebCommandManager {
     private void fillMap() {
         webCommandMap.put("get count", new GetCountOfTransport(transportService));
         webCommandMap.put("get transport", new GetTransportName(transportService));
-        webCommandMap.put("GET /shop/count HTTP/1\\.1", new GetCountOfTransport(transportService));
+        webCommandMap.put(".+/shop/count HTTP/1\\.1", new GetCountOfTransport(transportService));
         webCommandMap.put(".+/item\\?get_info=.+", new GetTransportName(transportService));
     }
 

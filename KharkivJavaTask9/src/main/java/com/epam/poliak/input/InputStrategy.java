@@ -4,6 +4,7 @@ import com.epam.poliak.input.impl.ConsoleInputHelper;
 import com.epam.poliak.input.impl.RandomInputHelper;
 import com.epam.poliak.io.Reader;
 import com.epam.poliak.io.Writer;
+import com.epam.poliak.utils.Constants;
 
 import java.util.HashMap;
 import java.util.InputMismatchException;
@@ -21,7 +22,7 @@ public class InputStrategy {
     }
 
     public InputHelper setInputStrategy() {
-        writer.writeLine("Choice input type" + System.lineSeparator()
+        writer.writeLine("Choice input type" + Constants.SEPARATOR
                 + "0 - MANUAL   1 - RANDOM  ");
         inputTypes.put("0", new ConsoleInputHelper(reader, writer));
         inputTypes.put("1", new RandomInputHelper());

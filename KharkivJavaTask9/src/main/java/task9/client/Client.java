@@ -36,7 +36,7 @@ public class Client {
                 System.out.println(Constants.CLIENT_MENU);
                 request = console.nextLine();
                 out.println(request);
-                System.out.println("Response from server: " + br.readLine() + System.lineSeparator());
+                System.out.println("Response from server: " + br.readLine() + Constants.SEPARATOR);
             }
         } catch (IOException e) {
             System.out.println(Constants.CONNECT_ERROR);

@@ -26,8 +26,8 @@ public class HttpServer implements Runnable {
             ServerSocket serverSocket = new ServerSocket(Constants.PORT_FOR_HTTP);
             while (true) {
                 Socket socket = serverSocket.accept();
-                BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                startProcessRequest(br.readLine(), socket);
+                BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                startProcessRequest(reader.readLine(), socket);
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -35,6 +35,7 @@ public class HttpServer implements Runnable {
     }
 
     private void startProcessRequest(String request, Socket socket) {
+        System.out.println(request);
         if (request.startsWith(Constants.START_REQUEST)) {
             System.out.println("Client: " + request);
             new Thread(new RunCommandThread(commandManager.getCommandFromMap(request), socket,

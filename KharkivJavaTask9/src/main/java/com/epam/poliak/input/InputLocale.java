@@ -2,6 +2,7 @@ package com.epam.poliak.input;
 
 import com.epam.poliak.io.Reader;
 import com.epam.poliak.io.Writer;
+import com.epam.poliak.utils.Constants;
 
 import java.util.HashMap;
 import java.util.InputMismatchException;
@@ -20,7 +21,7 @@ public class InputLocale {
     }
 
     public Locale setLocale() {
-        writer.writeLine("Choice locale" + System.lineSeparator()
+        writer.writeLine("Choice locale" + Constants.SEPARATOR
                 + "0 - English   1 - Russia  ");
         inputTypes.put("0", new Locale("en", "US"));
         inputTypes.put("1", new Locale("ru"));
