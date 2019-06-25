@@ -2,11 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e954457-0d3c-4d90-971b-1df5f95f7906" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/task9/WebCommandManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/command/impl/StartHttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/command/impl/StartHttpServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/command/impl/StartTCPServerCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/command/impl/StartTCPServerCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/poliak/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/poliak/utils/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/task9/server/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/task9/server/http/HttpServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/task9/server/TCPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/task9/server/tcp/TCPServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/task9/wedCommand/RunCommandThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/task9/wedCommand/WebCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/task9/wedCommand/WebCommandManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/task9/wedCommand/impl/GetCountOfTransport.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/task9/wedCommand/impl/GetTransportName.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test9/Http.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test9/Tcp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test9/factory/Factory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test9/forTcp/TcpCommands.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/command/impl/StartHttpServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epam/poliak/command/impl/StartHttpServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/command/impl/StartTCPServerCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epam/poliak/command/impl/StartTCPServerCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epam/poliak/controller/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/input/InputLocale.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epam/poliak/input/InputLocale.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/input/InputStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epam/poliak/input/InputStrategy.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/epam/poliak/utils/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epam/poliak/utils/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/task9/server/HttpServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/task9/server/HttpServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/task9/wedCommand/WebCommandManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/task9/wedCommand/WebCommandManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/task9/wedCommand/impl/GetCountOfTransport.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/task9/wedCommand/impl/GetCountOfTransport.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/task9/client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/task9/client/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/task9/server/HttpServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/task9/server/TCPServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/task9/wedCommand/RunCommandThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/task9/wedCommand/WebCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/task9/wedCommand/WebCommandManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/task9/wedCommand/impl/GetCountOfTransport.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/task9/wedCommand/impl/GetTransportName.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -22,112 +48,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/command/impl/StartTCPServerCommand.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/task9/server/http/HttpServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+            <state relative-caret-position="373">
+              <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/task9/wedCommand/impl/GetTransportName.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#454#455#0" expanded="true" />
-                <element signature="e#510#511#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/test9/forTcp/TcpCommands.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/utils/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#206#207#0" expanded="true" />
-                <element signature="e#262#263#0" expanded="true" />
-                <element signature="e#341#342#0" expanded="true" />
-                <element signature="e#368#369#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/task9/wedCommand/impl/GetCountOfTransport.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding>
-                <element signature="e#419#420#0" expanded="true" />
-                <element signature="e#475#476#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/test9/Http.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/test9/Tcp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/test9/factory/Factory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/command/impl/StartHttpServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/task9/server/TCPServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
-              <caret line="28" column="18" lean-forward="true" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#504#505#0" expanded="true" />
-                <element signature="e#556#557#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-225">
+              <caret line="15" column="65" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -156,37 +92,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/wedCommand/WebCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/wedCommand/GetCountOfTransport.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/wedCommand/GetTransportName.java" />
-        <option value="$PROJECT_DIR$/src/main/java/task9/GetCountOfTransport.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/controller/Tes.java" />
-        <option value="$PROJECT_DIR$/src/main/java/task9/wedCommand/GetCountOfTransport.java" />
-        <option value="$PROJECT_DIR$/src/main/java/task9/wedCommand/GetTransportName.java" />
-        <option value="$PROJECT_DIR$/src/main/java/task9/wedCommand/TestThread.java" />
-        <option value="$PROJECT_DIR$/src/main/java/task9/server/Server.java" />
-        <option value="$PROJECT_DIR$/src/main/java/task9/server/HttoServer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/command/impl/StartTCPServerCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/command/impl/StartHttpServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/controller/Controller.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/task9/server/TCPServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/task9/wedCommand/WebCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/task9/wedCommand/RunCommandThread.java" />
         <option value="$PROJECT_DIR$/src/main/java/task9/wedCommand/impl/GetTransportName.java" />
         <option value="$PROJECT_DIR$/src/main/java/task9/wedCommand/impl/GetCountOfTransport.java" />
-        <option value="$PROJECT_DIR$/src/main/java/task9/server/HttpServer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/utils/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/input/InputLocale.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/input/InputStrategy.java" />
         <option value="$PROJECT_DIR$/src/main/java/task9/client/Client.java" />
-        <option value="$PROJECT_DIR$/src/main/java/task9/wedCommand/WebCommandManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/test9/Http.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/test9/Tcp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/test9/factory/Factory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/test9/Http.java" />
         <option value="$PROJECT_DIR$/src/main/java/test9/Tcp.java" />
         <option value="$PROJECT_DIR$/src/main/java/test9/forTcp/TcpCommands.java" />
+        <option value="$PROJECT_DIR$/src/main/java/test9/Http.java" />
+        <option value="$PROJECT_DIR$/src/main/java/test9/forHttp/HttpCommands.java" />
+        <option value="$PROJECT_DIR$/src/main/java/test9/CreateCommands.java" />
+        <option value="$PROJECT_DIR$/src/main/java/test9/Commands.java" />
+        <option value="$PROJECT_DIR$/src/main/java/test9/GetCount.java" />
+        <option value="$PROJECT_DIR$/src/main/java/test9/GetName.java" />
+        <option value="$PROJECT_DIR$/src/main/java/test9/factory/Factory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/test9/forHttp/CommandsCommands.java" />
+        <option value="$PROJECT_DIR$/src/main/java/test9/forHttp/GetCountHttp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/test9/forHttp/GetNameHttp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/test9/forHttp/CreateHttpCommands.java" />
+        <option value="$PROJECT_DIR$/src/main/java/test9/forTcp/GetNameTcp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/test9/forTcp/GetCountTcp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/test9/forTcp/CreateTcpCommands.java" />
+        <option value="$PROJECT_DIR$/src/main/java/test9/WebCommandManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/task9/wedCommand/RunCommandThread.java" />
+        <option value="$PROJECT_DIR$/src/main/java/test9/RunCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/zcxvbnszfdxgcvasedfghqWSEDFG/factory/Factory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/zcxvbnszfdxgcvasedfghqWSEDFG/tcp/impl/TcpImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/zcxvbnszfdxgcvasedfghqWSEDFG/tcp/impl/CountTcp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/zcxvbnszfdxgcvasedfghqWSEDFG/handler/HandlerTcp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/zcxvbnszfdxgcvasedfghqWSEDFG/handler/impl/CountHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/zcxvbnszfdxgcvasedfghqWSEDFG/tcp/AbstractTcp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/zcxvbnszfdxgcvasedfghqWSEDFG/handler/Handler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/zcxvbnszfdxgcvasedfghqWSEDFG/RunCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/zcxvbnszfdxgcvasedfghqWSEDFG/tcp/impl/GetCountTcp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/zcxvbnszfdxgcvasedfghqWSEDFG/tcp/impl/GetNameTcp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/zcxvbnszfdxgcvasedfghqWSEDFG/http/AbstractHttp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/zcxvbnszfdxgcvasedfghqWSEDFG/http/impl/GetCountHttp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/zcxvbnszfdxgcvasedfghqWSEDFG/http/impl/GetNameHttp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/zcxvbnszfdxgcvasedfghqWSEDFG/factory/impl/CreateTcpCommands.java" />
+        <option value="$PROJECT_DIR$/src/main/java/zcxvbnszfdxgcvasedfghqWSEDFG/factory/impl/CreateHttpCommands.java" />
+        <option value="$PROJECT_DIR$/src/main/java/zcxvbnszfdxgcvasedfghqWSEDFG/handler/impl/GetCountHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/zcxvbnszfdxgcvasedfghqWSEDFG/handler/impl/GetNameHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/task9/server/HttpServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/task9/server/TCPServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/task9/wedCommand/WebCommandManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/task9/server/http/HttpServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/poliak/utils/Constants.java" />
       </list>
     </option>
   </component>
@@ -197,8 +153,8 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -248,7 +204,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="task9" type="462c0819:PsiDirectoryNode" />
-              <item name="wedCommand" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="KharkivJavaTask9" type="b2602c69:ProjectViewProjectNode" />
@@ -257,16 +213,8 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="task9" type="462c0819:PsiDirectoryNode" />
-              <item name="wedCommand" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KharkivJavaTask9" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KharkivJavaTask9" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="test9" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="http" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="KharkivJavaTask9" type="b2602c69:ProjectViewProjectNode" />
@@ -292,12 +240,19 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="deletionFromPopupRequiresConfirmation" value="false" />
     <property name="last.edited.regexp" value="GET /shop/item?get_info=5 HTTP/1.1" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="task9" />
       <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="zcxvbnszfdxgcvasedfghqWSEDFG.factory.impl" />
+      <recent name="zcxvbnszfdxgcvasedfghqWSEDFG.factory" />
+      <recent name="test9" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -312,26 +267,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Client">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="task9.client.Client" />
       <module name="KharkivJavaTask9" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="task9.client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HttpServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="task9.server.HttpServer" />
-      <module name="KharkivJavaTask9" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="task9.server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -352,25 +294,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.epam.poliak.controller.Tes" />
-      <module name="KharkivJavaTask9" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.epam.poliak.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Client" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.HttpServer" />
-        <item itemvalue="Application.Tes" />
+        <item itemvalue="Application.Client" />
       </list>
     </recent_temporary>
   </component>
@@ -403,9 +330,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.14223194" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.392779" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -413,8 +341,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.26218852" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32932165" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.3716143" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -434,84 +362,12 @@
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="9" side_tool="true" weight="0.32995737" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26226014" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Codota" order="4" />
-      <window_info anchor="right" id="Maven" order="5" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-    </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="task9" />
     <option name="LAST_COMMIT_MESSAGE" value="task9" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/task4/ShoppingCartServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/model/ShoppingCart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/utils/ValidateUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/command/impl/BuyAllCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-200">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/command/impl/ExitCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/controller/Tes.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/command/impl/ShowLastCarsCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
@@ -544,13 +400,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
@@ -572,27 +421,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/task9/client/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/controller/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
           <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/task9/wedCommand/WebCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -603,19 +435,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/task9/server/TCPServer.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/lang/Override.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="28" column="18" lean-forward="true" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#504#505#0" expanded="true" />
-            <element signature="e#556#557#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="675">
+          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/command/impl/StartHttpServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/test9/Tcp.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/test9/CreateCommands.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/test9/Commands.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/test9/forHttp/CommandsCommands.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/test9/forTcp/TcpCommands.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/test9/GetName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/task9/wedCommand/impl/GetTransportName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#454#455#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/test9/forHttp/CreateHttpCommands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#522#523#0" expanded="true" />
+            <element signature="e#579#580#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/test9/GetCount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/zcxvbnszfdxgcvasedfghqWSEDFG/factory/impl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/test9/forTcp/GetCountTcp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="15" column="72" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/test9/WebCommandManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/test9/forTcp/CreateTcpCommands.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
@@ -625,57 +523,138 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/task9/wedCommand/RunCommandThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/task9/server/HttpServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/test9/factory/Factory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        <state relative-caret-position="125">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test9/Http.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/task9/handler/Handler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="21" />
+        <state relative-caret-position="125">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/task9/wedCommand/WebCommandManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/test9/forTcp/GetNameTcp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
-          <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/utils/Constants.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/test9/forHttp/GetCountHttp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+        <state relative-caret-position="200">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="19" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#281#282#0" expanded="true" />
+            <element signature="e#337#338#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/task9/server/tcp/AbstractTcp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/task9/server/http/impl/GetCountHttp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#398#399#0" expanded="true" />
+            <element signature="e#437#438#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/task9/server/tcp/impl/GetCountTcp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/test9/forHttp/GetNameHttp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#318#319#0" expanded="true" />
+            <element signature="e#374#375#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/task9/factory/impl/CreateHttpCommands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/task9/factory/impl/CreateTcpCommands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/task9/handler/impl/GetNameHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#249#250#0" expanded="true" />
+            <element signature="e#279#280#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/task9/handler/impl/GetCountHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/task9/factory/Factory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -689,17 +668,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/lang/Override.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
+        <state relative-caret-position="350">
+          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/task9/client/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/task9/wedCommand/impl/GetCountOfTransport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="98">
+          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
           <folding>
             <element signature="e#419#420#0" expanded="true" />
             <element signature="e#475#476#0" expanded="true" />
@@ -707,36 +696,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/task9/wedCommand/impl/GetTransportName.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/task9/server/http/impl/GetNameHttp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="425">
+          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
-            <element signature="e#510#511#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test9/Tcp.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/task9/server/tcp/impl/GetNameTcp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="15" column="68" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/task9/wedCommand/WebCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test9/forTcp/TcpCommands.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/task9/wedCommand/RunCommandThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="100">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#206#207#0" expanded="true" />
-            <element signature="e#262#263#0" expanded="true" />
-            <element signature="e#341#342#0" expanded="true" />
-            <element signature="e#368#369#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/task9/server/http/AbstractHttp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="60" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#328#329#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/task9/WebCommandManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/task9/server/tcp/TCPServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/task9/RunCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/task9/server/http/HttpServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/poliak/utils/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-225">
+          <caret line="15" column="65" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
         </state>
       </provider>
     </entry>

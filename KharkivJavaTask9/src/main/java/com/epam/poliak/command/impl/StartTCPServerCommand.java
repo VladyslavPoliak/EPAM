@@ -2,8 +2,8 @@ package com.epam.poliak.command.impl;
 
 import com.epam.poliak.command.Command;
 import com.epam.poliak.io.Writer;
-import task9.server.TCPServer;
-import task9.wedCommand.WebCommandManager;
+import task9.WebCommandManager;
+import task9.server.tcp.TCPServer;
 
 public class StartTCPServerCommand implements Command {
 

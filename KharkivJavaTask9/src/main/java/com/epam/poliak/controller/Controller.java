@@ -19,7 +19,7 @@ import com.epam.poliak.service.impl.OrderServiceImpl;
 import com.epam.poliak.service.impl.ShoppingCartServiceImpl;
 import com.epam.poliak.service.impl.ShoppingCartStorageImpl;
 import com.epam.poliak.service.impl.TransportServiceImpl;
-import task9.wedCommand.WebCommandManager;
+import task9.WebCommandManager;
 
 import java.util.HashMap;
 import java.util.Locale;

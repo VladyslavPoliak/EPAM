@@ -14,6 +14,16 @@ public final class Constants {
     public static final int PORT_FOR_TCP = 3000;
     public static final int PORT_FOR_HTTP = 8080;
     public static final String SEPARATOR = System.lineSeparator();
+    public static final String ADD_NEW_TRANSPORT_MENU = "1 - add Bicycles" + SEPARATOR
+            + "2 - add Car" + SEPARATOR
+            + "3 - add Cargo Car" + SEPARATOR
+            + "4 - add Transport" + SEPARATOR;
+    public static final String CLIENT_MENU = "Enter request " + SEPARATOR
+            + "get count" + SEPARATOR
+            + "get transport=(id)" + SEPARATOR;
+    public static final String RESPONSE_HEADER = "HTTP/1.1 200 OK" + SEPARATOR +
+            "Content-Type: text/html" + SEPARATOR +
+            "Connection: close" + SEPARATOR + SEPARATOR;
     static final String MENU = "1 - display the list of cars" + SEPARATOR
             + "2 - add car to cart" + SEPARATOR + "3 - view the contents of the basket"
             + SEPARATOR + "4 - Make order" + SEPARATOR
@@ -24,15 +34,8 @@ public final class Constants {
             + "9 - Add new Transport" + SEPARATOR
             + "10 - Add new Transport by Reflection" + SEPARATOR
             + "11 - Start TCP Server" + SEPARATOR
-            + "12 - Start HTTP Server"+SEPARATOR
+            + "12 - Start HTTP Server" + SEPARATOR
             + "0 - exit " + SEPARATOR;
-    public static final String ADD_NEW_TRANSPORT_MENU = "1 - add Bicycles" + SEPARATOR
-            + "2 - add Car" + SEPARATOR
-            + "3 - add Cargo Car" + SEPARATOR
-            + "4 - add Transport" + SEPARATOR;
-    public static final String CLIENT_MENU = "Enter request " + SEPARATOR
-            + "get count" + SEPARATOR
-            + "get transport=(id)" + SEPARATOR;
 
     private Constants() {
 
