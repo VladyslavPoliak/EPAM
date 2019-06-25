@@ -1,10 +1,10 @@
-package task9.server.http.impl;
+package task9.server.http.command;
 
 import com.epam.poliak.service.TransportService;
 import org.json.JSONObject;
-import task9.server.http.AbstractHttp;
+import task9.server.AbstractServer;
 
-public class GetCountHttp extends AbstractHttp {
+public class GetCountHttp extends AbstractServer {
 
     public GetCountHttp(TransportService transportService) {
         super(transportService);

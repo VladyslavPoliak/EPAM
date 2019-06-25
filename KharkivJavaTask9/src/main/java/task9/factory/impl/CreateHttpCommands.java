@@ -3,8 +3,8 @@ package task9.factory.impl;
 import com.epam.poliak.service.TransportService;
 import task9.RunCommand;
 import task9.factory.Factory;
-import task9.server.http.impl.GetCountHttp;
-import task9.server.http.impl.GetNameHttp;
+import task9.server.http.command.GetCountHttp;
+import task9.server.http.command.GetNameHttp;
 
 public class CreateHttpCommands extends Factory {
 

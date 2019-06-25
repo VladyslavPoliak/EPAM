@@ -3,8 +3,8 @@ package task9.factory.impl;
 import com.epam.poliak.service.TransportService;
 import task9.RunCommand;
 import task9.factory.Factory;
-import task9.server.tcp.impl.GetCountTcp;
-import task9.server.tcp.impl.GetNameTcp;
+import task9.server.tcp.command.GetCountTcp;
+import task9.server.tcp.command.GetNameTcp;
 
 public class CreateTcpCommands extends Factory {
 

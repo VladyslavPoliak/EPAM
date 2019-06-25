@@ -1,10 +1,10 @@
-package task9.server.tcp.impl;
+package task9.server.tcp.command;
 
 import com.epam.poliak.entity.Transport;
 import com.epam.poliak.service.TransportService;
-import task9.server.tcp.AbstractTcp;
+import task9.server.AbstractServer;
 
-public class GetNameTcp extends AbstractTcp {
+public class GetNameTcp extends AbstractServer {
 
     public GetNameTcp(TransportService transportService) {
         super(transportService);
