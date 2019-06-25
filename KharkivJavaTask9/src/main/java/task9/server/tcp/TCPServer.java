@@ -1,6 +1,5 @@
 package task9.server.tcp;
 
-
 import com.epam.poliak.utils.Constants;
 import task9.WebCommandManager;
 
@@ -36,7 +35,7 @@ public class TCPServer implements Runnable {
                 printWriter.println(commandManager.getCommandFromMap(command).doCommand(parameter));
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Something is wrong");
         }
     }
 

@@ -31,7 +31,7 @@ public class HttpServer implements Runnable {
                 startProcessRequest(reader.readLine(), writer);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Something is wrong");
         }
     }
 
