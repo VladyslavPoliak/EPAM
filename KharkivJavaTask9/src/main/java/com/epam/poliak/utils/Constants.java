@@ -33,8 +33,6 @@ public final class Constants {
             + SEPARATOR + "8 - Search for nearest date" + SEPARATOR
             + "9 - Add new Transport" + SEPARATOR
             + "10 - Add new Transport by Reflection" + SEPARATOR
-            + "11 - Start TCP Server" + SEPARATOR
-            + "12 - Start HTTP Server" + SEPARATOR
             + "0 - exit " + SEPARATOR;
 
     private Constants() {
