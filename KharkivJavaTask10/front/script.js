@@ -36,7 +36,7 @@ function validateUserPassword(userPasswordInput) {
 }
 
 function validateUserConfirmationPassword(userPasswordConfirmationInput, userPasswordInput) {
-  addValidationClasses(userPasswordConfirmationInput, userPasswordConfirmationInput.value == userPasswordInput.value &&checkers.validateStringLength(userSurnameInput.value));
+  addValidationClasses(userPasswordConfirmationInput, userPasswordConfirmationInput.value == userPasswordInput.value);
 }
 
 function validateSelectGender(selectGender) {
@@ -90,7 +90,7 @@ function handleUserPasswordBlur(event) {
 }
 
 function handleUserPasswordConfirmation(event) {
-  validateUserConfirmationPassword(event.target, userPasswordInput);
+  validateUserConfirmationPassword(event.target, registrationForm.elements.userPassword);
   console.log(event.target.password + ':' + event.target.value);
 }
 
