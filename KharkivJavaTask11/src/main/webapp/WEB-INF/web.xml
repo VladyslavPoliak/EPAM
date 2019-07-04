@@ -8,7 +8,7 @@
     <display-name>Task1</display-name>
 
     <welcome-file-list>
-        <welcome-file>main.jsp</welcome-file>
+        <welcome-file>/WEB-INF/jsp/main.jsp</welcome-file>
     </welcome-file-list>
 
 </web-app>

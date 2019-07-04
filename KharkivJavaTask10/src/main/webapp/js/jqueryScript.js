@@ -1,4 +1,5 @@
-const EMAIL_REG_EXP = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const email_regexp = /^[0-9a-zа-я_A-ZА-Я]+@[0-9a-zа-я_A-ZА-Я^.]+\.[a-zа-яА-ЯA-Z]{2,4}$/;
+const names_regexp = /^[a-zа-я_A-ZА-Я]+(\s[a-zа-я_A-ZА-Я]+)*$/;
 
 function addValidationClasses(field, isValid) {
   $(field).toggleClass('is-valid', isValid);
@@ -13,15 +14,15 @@ const checkers = {
 };
 
 function validateUserName(userNameInput) {
-  addValidationClasses(userNameInput, checkers.validateStringLength($(userNameInput).val()));
+  addValidationClasses(userNameInput, checkers.validateByRegExp(names_regexp,$(userNameInput).val()));
 }
 
 function validateUserEmail(userEmailInput) {
-  addValidationClasses(userEmailInput, checkers.validateByRegExp(EMAIL_REG_EXP, $(userEmailInput).val()));
+  addValidationClasses(userEmailInput, checkers.validateByRegExp(email_regexp, $(userEmailInput).val()));
 }
 
 function validateUserSurname(userSurnameInput) {
-  addValidationClasses(userSurnameInput, checkers.validateStringLength($(userSurnameInput).val()));
+  addValidationClasses(userSurnameInput, checkers.validateByRegExp(names_regexp,$(userSurnameInput).val()));
 }
 
 function validateUserPassword(userPasswordInput) {

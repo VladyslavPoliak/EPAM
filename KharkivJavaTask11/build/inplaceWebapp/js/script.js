@@ -32,10 +32,6 @@ function validateUserConfirmationPassword(userPasswordConfirmationInput, userPas
   addValidationClasses(userPasswordConfirmationInput, userPasswordConfirmationInput.value == userPasswordInput.value);
 }
 
-function validateSelectGender(selectGender) {
-  addValidationClasses(selectGender, selectGender.value.length > 1);
-}
-
 function validateRegistrationForm(registrationForm) {
   const registrationFormInputs = registrationForm.querySelectorAll(':scope input');
   const registrationFormInputsArray = Array.prototype.slice.call(registrationFormInputs);
@@ -45,14 +41,11 @@ function validateRegistrationForm(registrationForm) {
   const userPasswordInput = registrationForm.elements.userPassword;
   const userPasswordConfirmationInput = registrationForm.elements.confirmationPassword;
 
-  const selectGender = registrationForm.elements.selectGender;
-
   validateUserName(userNameInput);
   validateUserEmail(userEmailInput);
   validateUserSurname(userSurnameInput);
   validateUserPassword(userPasswordInput);
   validateUserConfirmationPassword(userPasswordConfirmationInput, userPasswordInput);
-  validateSelectGender(selectGender);
 
   return !registrationFormInputsArray.some(input => input.classList.contains('is-invalid'));
 }
@@ -84,9 +77,6 @@ function handleUserPasswordConfirmation(event) {
   console.log(event.target.password + ':' + event.target.value);
 }
 
-function handleUserGender(event) {
-  validateSelectGender(event.target);
-}
 
 function handleRegistrationFormSubmit(event) {
   const isValid = validateRegistrationForm(event.target);
@@ -105,16 +95,12 @@ function initializeRegistrationFormValidation(registrationForm) {
   const userPasswordInput = registrationForm.elements.userPassword;
   const userPasswordConfirmationInput = registrationForm.elements.confirmationPassword;
 
-  const selectGender = registrationForm.elements.selectGender;
-
   registrationForm.addEventListener('submit', handleRegistrationFormSubmit);
   userEmailInput.addEventListener('input', handleUserEmailInput);
   userNameInput.addEventListener('input', handleUserNameBlur);
   userSurnameInput.addEventListener('input', handleUserSurnameBlur);
   userPasswordInput.addEventListener('input', handleUserPasswordBlur);
   userPasswordConfirmationInput.addEventListener('input', handleUserPasswordConfirmation);
-
-  selectGender.addEventListener('input', handleUserGender);
 
 }
 
