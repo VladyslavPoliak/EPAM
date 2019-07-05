@@ -1,4 +1,5 @@
-const EMAIL_REG_EXP = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const email_regexp = /^[0-9a-zа-я_A-ZА-Я]+(\.[0-9a-zа-я_A-ZА-Я]+)*@[0-9a-zа-я_A-ZА-Я^.]+\.[a-zа-яА-ЯA-Z]{2,4}$/;
+const names_regexp = /^[a-zа-я_A-ZА-Я]+(\s[a-zа-я_A-ZА-Я]+)*$/;
 
 function addValidationClasses(field, isValid) {
   field.classList.toggle('is-valid', isValid);
@@ -13,23 +14,27 @@ const checkers = {
 };
 
 function validateUserName(userNameInput) {
-  addValidationClasses(userNameInput, checkers.validateStringLength(userNameInput.value));
+  addValidationClasses(userNameInput, checkers.validateByRegExp(names_regexp, userNameInput.value));
 }
 
 function validateUserEmail(userEmailInput) {
-  addValidationClasses(userEmailInput, checkers.validateByRegExp(EMAIL_REG_EXP, userEmailInput.value));
+  addValidationClasses(userEmailInput, checkers.validateByRegExp(email_regexp, userEmailInput.value));
 }
 
 function validateUserSurname(userSurnameInput) {
-  addValidationClasses(userSurnameInput, checkers.validateStringLength(userSurnameInput.value));
+  addValidationClasses(userSurnameInput, checkers.validateByRegExp(names_regexp,userSurnameInput.value));
 }
 
 function validateUserPassword(userPasswordInput) {
-  addValidationClasses(userPasswordInput, userPasswordInput.value.length > 4);
+  addValidationClasses(userPasswordInput, userPasswordInput.value.length > 5);
 }
 
 function validateUserConfirmationPassword(userPasswordConfirmationInput, userPasswordInput) {
   addValidationClasses(userPasswordConfirmationInput, userPasswordConfirmationInput.value == userPasswordInput.value);
+}
+
+function validateSelectGender(selectGender) {
+  addValidationClasses(selectGender, selectGender.value.length > 1);
 }
 
 function validateRegistrationForm(registrationForm) {
@@ -41,11 +46,14 @@ function validateRegistrationForm(registrationForm) {
   const userPasswordInput = registrationForm.elements.userPassword;
   const userPasswordConfirmationInput = registrationForm.elements.confirmationPassword;
 
+  const selectGender = registrationForm.elements.selectGender;
+
   validateUserName(userNameInput);
   validateUserEmail(userEmailInput);
   validateUserSurname(userSurnameInput);
   validateUserPassword(userPasswordInput);
   validateUserConfirmationPassword(userPasswordConfirmationInput, userPasswordInput);
+  validateSelectGender(selectGender);
 
   return !registrationFormInputsArray.some(input => input.classList.contains('is-invalid'));
 }
@@ -77,6 +85,9 @@ function handleUserPasswordConfirmation(event) {
   console.log(event.target.password + ':' + event.target.value);
 }
 
+function handleUserGender(event) {
+  validateSelectGender(event.target);
+}
 
 function handleRegistrationFormSubmit(event) {
   const isValid = validateRegistrationForm(event.target);
@@ -95,12 +106,16 @@ function initializeRegistrationFormValidation(registrationForm) {
   const userPasswordInput = registrationForm.elements.userPassword;
   const userPasswordConfirmationInput = registrationForm.elements.confirmationPassword;
 
+  const selectGender = registrationForm.elements.selectGender;
+
   registrationForm.addEventListener('submit', handleRegistrationFormSubmit);
   userEmailInput.addEventListener('input', handleUserEmailInput);
   userNameInput.addEventListener('input', handleUserNameBlur);
   userSurnameInput.addEventListener('input', handleUserSurnameBlur);
   userPasswordInput.addEventListener('input', handleUserPasswordBlur);
   userPasswordConfirmationInput.addEventListener('input', handleUserPasswordConfirmation);
+
+  selectGender.addEventListener('input', handleUserGender);
 
 }
 

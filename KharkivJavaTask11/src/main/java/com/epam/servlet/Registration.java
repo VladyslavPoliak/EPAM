@@ -1,7 +1,7 @@
 package com.epam.servlet;
 
-import com.epam.Constants;
 import com.epam.service.UserService;
+import com.epam.utils.Constants;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
@@ -39,9 +39,9 @@ public class Registration extends HttpServlet {
         }
     }
 
-    private void saveInfo(HttpServletRequest req){
-        req.setAttribute("name",req.getParameter("userName"));
-        req.setAttribute("surName",req.getParameter("userSurname"));
-        req.setAttribute("login",req.getParameter("userEmail"));
+    private void saveInfo(HttpServletRequest req) {
+        req.setAttribute("name", req.getParameter("userName"));
+        req.setAttribute("surName", req.getParameter("userSurname"));
+        req.setAttribute("login", req.getParameter("userEmail"));
     }
 }

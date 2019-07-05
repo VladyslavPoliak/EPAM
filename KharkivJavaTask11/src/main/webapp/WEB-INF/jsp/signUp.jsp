@@ -1,89 +1,96 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 pageEncoding="ISO-8859-1"%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib tagdir="/WEB-INF/tags" prefix="info" %>
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
     <title>Sign Up</title>
 </head>
 <html>
 <body>
 <div class="container">
     <h1 class="text-center display-4">SIGN UP</h1>
-    <form id="registration-form" action="/registration" method="post">
+    <form action="/registration" id="registration-form" method="post">
         <div class="form-group">
             <label for="user-name">First Name</label>
-            <input type="text" class="form-control" id="user-name" value="${name}" name="userName" placeholder="First Name">
+            <input class="form-control" id="user-name" name="userName" placeholder="First Name" type="text"
+                   value="${name}">
             <div class="valid-feedback">
                 Looks good!
             </div>
             <div class="invalid-feedback">
-                Looks bad!
+                The name must consist of letters only.
             </div>
         </div>
 
         <div class="form-group">
             <label for="user-surname">Second Name</label>
-            <input type="text" class="form-control" id="user-surname" value="${surName}" name="userSurname" placeholder="Second Name">
+            <input class="form-control" id="user-surname" name="userSurname" placeholder="Second Name" type="text"
+                   value="${surName}">
             <div class="valid-feedback">
                 Looks good!
             </div>
             <div class="invalid-feedback">
-                Looks bad!
+                The surname must consist of letters only.
             </div>
         </div>
 
 
         <div class="form-group">
             <label for="user-email">Email address</label>
-            <input type="email" class="form-control" id="user-email" value="${login}" name="userEmail"
-                   placeholder="Please, enter your email">
+            <input class="form-control" id="user-email" name="userEmail" placeholder="Please, enter your email"
+                   type="email"
+                   value="${login}">
             <div class="valid-feedback">
                 Looks good!
             </div>
             <div class="invalid-feedback">
-                Looks bad!
+                Invalid email
             </div>
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+            <small class="form-text text-muted" id="emailHelp">We'll never share your email with anyone
                 else.
             </small>
         </div>
 
         <div class="form-group">
             <label for="user-pass">Password</label>
-            <input type="password" class="form-control" id="user-pass" name="userPassword"
-                   placeholder="Please, enter your password">
+            <input class="form-control" id="user-pass" name="userPassword" placeholder="Please, enter your password"
+                   type="password">
             <div class="valid-feedback">
-                Looks good!
+                Good password
             </div>
             <div class="invalid-feedback">
-                Looks bad!
+                The password is too short
             </div>
         </div>
 
         <div class="form-group">
             <label for="confirmation-pass">Confirm your password</label>
-            <input type="password" class="form-control" id="confirmation-pass" name="confirmationPassword"
-                   placeholder="Please, confirm your password">
+            <input class="form-control" id="confirmation-pass" name="confirmationPassword"
+                   placeholder="Please, confirm your password"
+                   type="password">
             <div class="valid-feedback">
-                Looks good!
+                Passwords match
             </div>
             <div class="invalid-feedback">
-                Passwords do not match
+                Passwords do not match(need more than 5 characters)
             </div>
         </div>
 
         <div>
-            <img src="http://localhost:8080/CaptchaServlet">
+            <img src="registerCaptcha.jpeg">
         </div>
 
-        <button type="submit" class="btn btn-primary ">Submit</button>
+        <button class="btn btn-primary " type="submit">Submit</button>
     </form>
 </div>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
 <!--    <script src="js/script.js"> </script>-->
 <script src="js/jqueryScript.js"></script>
 </body>

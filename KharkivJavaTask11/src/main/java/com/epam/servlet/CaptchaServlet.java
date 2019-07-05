@@ -1,66 +1,79 @@
 package com.epam.servlet;
 
-import javax.imageio.ImageIO;
+import com.epam.captcha.CaptchaHandler;
+import com.epam.entity.Captcha;
+import com.epam.sender.CaptchaSender;
+import com.epam.service.CaptchaService;
+import com.epam.utils.Constants;
+
+import javax.naming.directory.NoSuchAttributeException;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.awt.*;
-import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.io.OutputStream;
-import java.util.List;
-import java.util.*;
 
 @WebServlet("/CaptchaServlet")
 public class CaptchaServlet extends HttpServlet {
 
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int width = 300;
-        int height = 80;
-        List<Character> arrayList = new ArrayList<>();
-        String capcode = "0123456789";
-        for (int i = 1; i < capcode.length(); i++) {
-            arrayList.add(capcode.charAt(i));
-        }
-        Collections.shuffle(arrayList);
-        StringBuilder s2 = new StringBuilder();
+    private CaptchaService captchaService;
+    private CaptchaHandler captchaHandler;
 
-        arrayList.forEach(s2::append);
-
-        String s1 = s2.substring(0, 6);
-        char[] s3 = s1.toCharArray();
-        BufferedImage bufferedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
-        Graphics2D g2d = bufferedImage.createGraphics();
-        g2d.setFont(new Font("Georgia", Font.BOLD, 35));
-        g2d.fillRect(0, 0, width, height);
-        g2d.setColor(new Color(20, 183, 2));
-        Random r = new Random();
-        String captcha = String.copyValueOf(s3);
-        request.getSession().setAttribute("captcha", captcha);
-        int x = 0;
-        int y;
-        for (int i = 0; i < s3.length; i++) {
-            x += 20 + (Math.abs(r.nextInt()) % 15);
-            y = 40 + Math.abs(r.nextInt()) % 20;
-            g2d.drawChars(s3, i, 1, x, y);
-        }
-        g2d.dispose();
-        response.setContentType("image/png");
-
-        OutputStream os = response.getOutputStream();
-        ImageIO.write(bufferedImage, "png", os);
-        os.flush();
-        os.close();
-
+    @Override
+    public void init(ServletConfig config) throws ServletException {
+        ServletContext context = config.getServletContext();
+        captchaService = (CaptchaService) context.getAttribute(Constants.CAPTCHA_SERVICE);
+        captchaHandler = (CaptchaHandler) context.getAttribute(Constants.CAPTCHA_HANDLER);
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        processRequest(request, response);
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        //  captchaService.removeOldCaptcha();
+        getSenderWithNewCaptcha(req, resp);
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        processRequest(request, response);
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        captchaService.removeOldCaptcha();
+        getSenderWithNewCaptcha(req, resp);
+        if (captchaService.checkValid(req, captchaHandler)) {
+            GoToMainPage(req, resp);
+        } else {
+            returnToRegistrationByInvalidCaptcha(req, resp);
+        }
+    }
+
+    private void GoToMainPage(HttpServletRequest req, HttpServletResponse resp) {
+        try {
+            req.getRequestDispatcher(Constants.PAGE_FOLDER + Constants.MAIN_JSP).forward(req, resp);
+        } catch (ServletException | IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void returnToRegistrationByInvalidCaptcha(HttpServletRequest request, HttpServletResponse response) {
+        getSenderWithNewCaptcha(request, response)
+                .setCaptcha(Boolean.TRUE)
+                .send();
+        try {
+            request.getRequestDispatcher(Constants.PAGE_FOLDER + Constants.REGISTRATION_JSP).forward(request, response);
+        } catch (ServletException | IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private CaptchaSender getSenderWithNewCaptcha(HttpServletRequest request, HttpServletResponse response) {
+        CaptchaSender sender = new CaptchaSender(request, response);
+        try {
+            Captcha captcha = captchaService.create();
+            captchaHandler.addCaptcha(request, response, captcha);
+            sender.setCaptchaId(captcha.getId());
+        } catch (NoSuchAttributeException e) {
+            e.printStackTrace();
+        }
+        return sender;
     }
 }

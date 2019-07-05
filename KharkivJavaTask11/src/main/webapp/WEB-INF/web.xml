@@ -11,4 +11,11 @@
         <welcome-file>/WEB-INF/jsp/main.jsp</welcome-file>
     </welcome-file-list>
 
+    <context-param>
+        <param-name>captchaHandler</param-name>
+        <!--<param-value>hiddenFieldCaptchaHandler</param-value>-->
+        <!--<param-value>cookieCaptchaHandler</param-value>-->
+        <param-value>sessionCaptchaHandler</param-value>
+    </context-param>
+
 </web-app>
