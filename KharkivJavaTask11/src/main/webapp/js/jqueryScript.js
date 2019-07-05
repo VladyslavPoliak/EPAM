@@ -33,10 +33,6 @@ function validateUserConfirmPassword(userConfirmPasswordInput, userPasswordInput
   addValidationClasses(userConfirmPasswordInput, $(userPasswordInput).val() == $(userConfirmPasswordInput).val() && $(userConfirmPasswordInput).val().length != 0);
 }
 
-function validateSelectGender(selectGender) {
-  addValidationClasses(selectGender, $(selectGender).val().length > 1);
-}
-
 function validateRegistrationForm(registrationForm) {
   const registrationFormInputs = $(registrationForm).find('input');
   const userNameInput = $(registrationForm).find('[name="userName"]');
@@ -45,14 +41,11 @@ function validateRegistrationForm(registrationForm) {
   const userPasswordInput = $(registrationForm).find('[name="userPassword"]');
   const userConfirmPasswordInput = $(registrationForm).find('[name="confirmationPassword"]');
 
-  const selectGender = $(registrationForm).find('[name="selectGender"]');
-
   validateUserName(userNameInput);
   validateUserEmail(userEmailInput);
   validateUserSurname(userSurnameInput);
   validateUserPassword(userPasswordInput);
   validateUserConfirmPassword(userConfirmPasswordInput, userPasswordInput);
-  validateSelectGender(selectGender);
 
   return !registrationFormInputs.hasClass('is-invalid');
 }
@@ -85,11 +78,6 @@ function handleUserConfirmPasswordBlur(event) {
   validateUserConfirmPassword(event.target, userPasswordInput);
 }
 
-function handleUserGender(event) {
-  validateSelectGender(event.target);
-}
-
-
 function handleRegistrationFormSubmit(event) {
   const isValid = validateRegistrationForm(event.target);
 
@@ -107,15 +95,12 @@ function initializeRegistrationFormValidation(registrationForm) {
   const userPasswordInput = $(registrationForm).find('[name="userPassword"]');
   const userConfirmPasswordInput = $(registrationForm).find('[name="confirmationPassword"]');
 
-  const selectGender = $(registrationForm).find('[name="selectGender"]');
-
   $(registrationForm).submit(handleRegistrationFormSubmit);
   $(userEmailInput).on('input', handleUserEmailInput);
   $(userNameInput).on('input', handleUserNameBlur);
   $(userSurnameInput).on('input', handleUserSurnameBlur);
   $(userPasswordInput).on('input', handleUserPasswordBlur);
   $(userConfirmPasswordInput).on('input', handleUserConfirmPasswordBlur);
-  $(selectGender).on('input', handleUserGender)
 }
 
 initializeRegistrationFormValidation(registrationForm);

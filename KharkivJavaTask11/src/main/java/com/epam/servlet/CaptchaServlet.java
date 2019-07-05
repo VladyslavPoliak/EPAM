@@ -40,7 +40,6 @@ public class CaptchaServlet extends HttpServlet {
         req.getRequestDispatcher("src/main/webapp/WEB-INF/jsp/signUp.jsp").forward(req, resp);
     }
 
-
     private CaptchaSender getSenderWithNewCaptcha(HttpServletRequest request, HttpServletResponse response) {
         CaptchaSender sender = new CaptchaSender(request, response);
         try {
