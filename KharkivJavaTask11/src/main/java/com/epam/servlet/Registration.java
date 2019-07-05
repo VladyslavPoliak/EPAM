@@ -1,5 +1,7 @@
 package com.epam.servlet;
 
+import com.epam.captcha.CaptchaHandler;
+import com.epam.service.CaptchaService;
 import com.epam.service.UserService;
 import com.epam.utils.Constants;
 
@@ -16,11 +18,15 @@ import java.io.IOException;
 public class Registration extends HttpServlet {
 
     private UserService userService;
+    private CaptchaService captchaService;
+    private CaptchaHandler captchaHandler;
 
     @Override
     public void init(ServletConfig config) throws ServletException {
         ServletContext servletContext = config.getServletContext();
         userService = (UserService) servletContext.getAttribute(Constants.USER_SERVICE);
+        captchaService = (CaptchaService) servletContext.getAttribute(Constants.CAPTCHA_SERVICE);
+        captchaHandler = (CaptchaHandler) config.getServletContext().getAttribute(Constants.CAPTCHA_PRESERVER);
     }
 
     @Override
@@ -31,7 +37,7 @@ public class Registration extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String login = req.getParameter("userEmail");
-        if (userService.isUserPresent(login)) {
+        if (userService.isUserPresent(login)|| !captchaService.checkValid(req, captchaHandler)) {
             saveInfo(req);
             req.getRequestDispatcher("/WEB-INF/jsp/signUp.jsp").forward(req, resp);
         } else {

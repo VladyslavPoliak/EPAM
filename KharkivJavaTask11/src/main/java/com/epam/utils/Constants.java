@@ -20,6 +20,7 @@ public final class Constants {
     public static final String CAPTCHA = "captcha";
     public static final String CAPTCHA_INVALID_BY_TIME = "Captcha isn't valid by time";
     public static final String CAPTCHA_FILE_NOT_CREATED = "Captcha file doesn't created";
+
     private Constants() {
     }
 }

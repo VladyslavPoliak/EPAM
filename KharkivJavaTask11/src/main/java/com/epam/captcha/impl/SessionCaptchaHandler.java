@@ -16,15 +16,16 @@ public class SessionCaptchaHandler extends AbstractCaptchaHandler {
 
     @Override
     public void addCaptcha(HttpServletRequest request, HttpServletResponse response, Captcha captcha) {
-        captches.put(captcha.getId(), captcha);
-        request.getSession().setAttribute(CAPTCHA_ID, captcha.getId());
+        int captchaID = captcha.getId();
+        captches.put(captchaID, captcha);
+        request.getSession().setAttribute(CAPTCHA_ID, captchaID);
     }
 
     @Override
     public Captcha getCaptcha(HttpServletRequest request) throws SessionTimeOutException {
         int captchaId = (int) request.getSession().getAttribute(CAPTCHA_ID);
         Captcha captcha = captches.get(captchaId);
-        if (captcha.isValid()) {
+        if (captcha.isValid()){
             return captcha;
         }
         throw new SessionTimeOutException();

@@ -1,8 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-pageEncoding="ISO-8859-1"%>
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib tagdir="/WEB-INF/tags" prefix="info" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <head>
     <meta charset="UTF-8">
@@ -83,9 +81,8 @@ pageEncoding="ISO-8859-1"%>
             </div>
         </div>
 
-        <div>
-            <img src="registerCaptcha.jpeg">
-        </div>
+        <info:captcha captchaId="${captchaId}" image="${pageContext.request.contextPath}/registerCaptcha.jpeg"/>
+        <input type="text" id="captcha" name="captcha" placeholder="Numbers from picture">
 
         <button class="btn btn-primary " type="submit">Submit</button>
     </form>
