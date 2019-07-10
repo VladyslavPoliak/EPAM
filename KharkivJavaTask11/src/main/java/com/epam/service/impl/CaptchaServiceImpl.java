@@ -28,7 +28,6 @@ public class CaptchaServiceImpl implements CaptchaService {
                 .setSymbolCount(ConstantsForCaptcha.SYMBOL_COUNT);
     }
 
-
     @Override
     public BufferedImage bufferedImage(CaptchaCreator captchaCreator) throws NoSuchAttributeException {
         return captchaCreator.createImage();

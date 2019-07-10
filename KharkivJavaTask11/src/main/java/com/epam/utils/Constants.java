@@ -14,12 +14,9 @@ public final class Constants {
     public static final String REGISTRATION_JSP = "signUp.jsp";
     public static final String USER_LOGIN = "userLogin";
     public static final String USER_NAME = "userName";
-    public static final String LOGIN_JSP = "login.jsp";
-    public static final String MAIN_JSP = "main.jsp";
+    public static final String MAIN_PAGE = "index.html";
     public static final String PAGE_FOLDER = "WEB-INF/jsp/";
-    public static final String CAPTCHA = "captcha";
-    public static final String CAPTCHA_INVALID_BY_TIME = "Captcha isn't valid by time";
-    public static final String CAPTCHA_FILE_NOT_CREATED = "Captcha file doesn't created";
+    public static final int RANDOM_NUMBERS = 9;
 
     private Constants() {
     }

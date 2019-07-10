@@ -3,15 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6e89880a-2e0b-4671-8ca1-799aa0e0ba9a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask9/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask9/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask9/src/main/java/com/epam/poliak/command/impl/StartTCPServerCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask9/src/main/java/com/epam/poliak/command/impl/StartTCPServerCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask9/src/main/java/com/epam/poliak/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask9/src/main/java/com/epam/poliak/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask9/src/main/java/task9/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask9/src/main/java/task9/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask9/src/main/java/task9/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask9/src/main/java/task9/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask9/target/classes/com/epam/poliak/command/impl/StartTCPServerCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask9/target/classes/com/epam/poliak/command/impl/StartTCPServerCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask9/target/classes/com/epam/poliak/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask9/target/classes/com/epam/poliak/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask9/target/classes/task9/client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask9/target/classes/task9/client/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask9/target/classes/task9/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask9/target/classes/task9/server/Server.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -27,21 +18,9 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/part3/Searcher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/part1_and_part2/threads/CommonList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
+            <state relative-caret-position="182">
               <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -53,7 +32,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/part1_and_part2/threads/SeparateList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
+            <state relative-caret-position="234">
               <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -65,7 +44,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
+            <state relative-caret-position="364">
               <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
             </state>
           </provider>
@@ -74,14 +53,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/part1_and_part2/service/impl/SeparateListService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
+            <state relative-caret-position="1222">
               <caret line="59" column="30" selection-start-line="59" selection-start-column="30" selection-end-line="59" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#startExecutor#0;class#SeparateListService#0" />
                 <element signature="method#addAllToResultList#0;class#SeparateListService#0" />
                 <element signature="method#initFutureList#0;class#SeparateListService#0" />
-                <marker date="1560514584210" expanded="true" signature="848:1115" ph="..." />
               </folding>
             </state>
           </provider>
@@ -90,7 +68,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/part1_and_part2/DemoForExecutors.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
+            <state relative-caret-position="572">
               <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -102,7 +80,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/part1_and_part2/DemoForThreads.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
+            <state relative-caret-position="416">
               <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="106" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -114,8 +92,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/part1_and_part2/service/impl/CommonListService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="33" column="117" lean-forward="true" selection-start-line="33" selection-start-column="117" selection-end-line="33" selection-end-column="117" />
+            <state relative-caret-position="676">
+              <caret line="33" column="117" selection-start-line="33" selection-start-column="117" selection-end-line="33" selection-end-column="117" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -184,78 +162,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="KharkivJavaTask8" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KharkivJavaTask8" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KharkivJavaTask8" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KharkivJavaTask8" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KharkivJavaTask8" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KharkivJavaTask8" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KharkivJavaTask8" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KharkivJavaTask8" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KharkivJavaTask8" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KharkivJavaTask8" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="part1_and_part2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KharkivJavaTask8" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KharkivJavaTask8" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="part1_and_part2" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KharkivJavaTask8" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KharkivJavaTask8" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="part1_and_part2" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KharkivJavaTask8" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KharkivJavaTask8" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="part1_and_part2" type="462c0819:PsiDirectoryNode" />
-              <item name="threads" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../KharkivJavaTask11" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -344,6 +261,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1559815429454</updated>
+      <workItem from="1562749476697" duration="52000" />
     </task>
     <task id="LOCAL-00001" summary="task8">
       <created>1560442309182</created>
@@ -362,17 +280,20 @@
     <option name="localTasksCounter" value="3" />
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="52000" />
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19669509" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20095949" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.56663054" />
@@ -384,6 +305,7 @@
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50053304" side_tool="true" weight="0.16684724" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32936078" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -394,7 +316,11 @@
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="9" side_tool="true" weight="0.33479214" />
+      <window_info anchor="right" id="Database" order="10" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="task8" />
@@ -409,37 +335,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="29" selection-start-column="29" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/part3/FindLongestSequence.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test.txt" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/util/Utils.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/util/Constants.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/part3/FindLongestSequence.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/util/concurrent/FutureTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="281">
@@ -461,26 +360,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/part3/Demo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/part3/Searcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/part3/Demo.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/part3/Searcher.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/part1_and_part2/threads/CommonList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="182">
           <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -490,7 +374,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/part1_and_part2/threads/SeparateList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
+        <state relative-caret-position="234">
           <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -500,28 +384,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
+        <state relative-caret-position="364">
           <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/part1_and_part2/service/impl/SeparateListService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
+        <state relative-caret-position="1222">
           <caret line="59" column="30" selection-start-line="59" selection-start-column="30" selection-end-line="59" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#startExecutor#0;class#SeparateListService#0" />
             <element signature="method#addAllToResultList#0;class#SeparateListService#0" />
             <element signature="method#initFutureList#0;class#SeparateListService#0" />
-            <marker date="1560514584210" expanded="true" signature="848:1115" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/part1_and_part2/DemoForExecutors.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
+        <state relative-caret-position="572">
           <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -531,7 +414,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/part1_and_part2/DemoForThreads.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
+        <state relative-caret-position="416">
           <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="106" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -541,8 +424,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/part1_and_part2/service/impl/CommonListService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="33" column="117" lean-forward="true" selection-start-line="33" selection-start-column="117" selection-end-line="33" selection-end-column="117" />
+        <state relative-caret-position="676">
+          <caret line="33" column="117" selection-start-line="33" selection-start-column="117" selection-end-line="33" selection-end-column="117" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -30,18 +30,13 @@ public class Registration extends HttpServlet {
     }
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/WEB-INF/jsp/signUp.jsp").forward(req, resp);
-    }
-
-    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String login = req.getParameter("userEmail");
-        if (userService.isUserPresent(login)|| !captchaService.checkValid(req, captchaHandler)) {
+        if (userService.isUserPresent(login) || !captchaService.checkValid(req, captchaHandler)) {
             saveInfo(req);
-            req.getRequestDispatcher("/WEB-INF/jsp/signUp.jsp").forward(req, resp);
+            req.getRequestDispatcher(Constants.REGISTRATION_JSP).forward(req, resp);
         } else {
-            resp.sendRedirect("/main");
+            req.getRequestDispatcher(Constants.MAIN_PAGE).forward(req, resp);
         }
     }
 

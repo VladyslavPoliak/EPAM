@@ -1,20 +1,23 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib tagdir="/WEB-INF/tags" prefix="info" %>
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+<head xmlns:c="http://www.w3.org/1999/XSL/Transform">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+
+    <!-- Bootstrap CSS -->
     <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+
     <title>Sign Up</title>
 </head>
 <html>
 <body>
 <div class="container">
     <h1 class="text-center display-4">SIGN UP</h1>
-    <form action="/registration" id="registration-form" method="post">
+    <form action="${pageContext.request.contextPath}/registration" id="registration-form" method="post">
         <div class="form-group">
             <label for="user-name">First Name</label>
             <input class="form-control" id="user-name" name="userName" placeholder="First Name" type="text"
@@ -81,8 +84,8 @@
             </div>
         </div>
 
-        <info:captcha captchaId="${captchaId}" image="${pageContext.request.contextPath}/registerCaptcha.jpeg"/>
-        <input type="text" id="captcha" name="captcha" placeholder="Numbers from picture">
+        <info:captcha captchaId="${captchaId}"/>
+        <label for="captcha"> </label><input type="text" id="captcha" name="captcha" placeholder="Numbers from picture">
 
         <button class="btn btn-primary " type="submit">Submit</button>
     </form>
