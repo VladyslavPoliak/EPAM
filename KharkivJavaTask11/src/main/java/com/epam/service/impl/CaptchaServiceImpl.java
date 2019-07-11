@@ -46,7 +46,6 @@ public class CaptchaServiceImpl implements CaptchaService {
     public boolean checkValid(HttpServletRequest request, CaptchaHandler handler) {
         try {
             Captcha captcha = handler.getCaptcha(request);
-            System.out.println(request.getParameter(ConstantsForCaptcha.CAPTCHA));
             return captcha.getNumbers().equals(request.getParameter(ConstantsForCaptcha.CAPTCHA));
         } catch (SessionTimeOutException e) {
             e.printStackTrace();

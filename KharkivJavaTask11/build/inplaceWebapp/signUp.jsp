@@ -2,7 +2,7 @@
 <%@ taglib tagdir="/WEB-INF/tags" prefix="info" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
-<head>
+<head xmlns:c="http://www.w3.org/1999/XSL/Transform">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
@@ -85,14 +85,14 @@
         </div>
 
         <info:captcha captchaId="${captchaId}"/>
-        <label for="captcha"> </label><input id="captcha" name="captcha" placeholder="Numbers from picture" type="text">
+        <label for="captcha"> </label><input type="text" id="captcha" name="captcha" placeholder="Numbers from picture">
 
         <button class="btn btn-primary " type="submit">Submit</button>
     </form>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
-    <script src="js/script.js"> </script>
-<!--<script src="src/main/webapp/js/jqueryScript.js"></script>-->
+<!--    <script src="js/script.js"> </script>-->
+<script src="js/jqueryScript.js"></script>
 </body>
 
 </html>

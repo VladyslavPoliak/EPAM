@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet("/registration")
-public class RegistrationController extends HttpServlet {
+public class Registration extends HttpServlet {
 
     private UserService userService;
     private CaptchaService captchaService;

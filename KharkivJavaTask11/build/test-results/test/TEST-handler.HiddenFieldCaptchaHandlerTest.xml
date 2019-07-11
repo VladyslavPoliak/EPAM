@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="handler.HiddenFieldCaptchaHandlerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-07-11T12:34:01" hostname="EPUAKHAW1858" time="0.001">
+<testsuite name="handler.HiddenFieldCaptchaHandlerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-07-11T18:49:58" hostname="DESKTOP-D16C456" time="0.014">
   <properties/>
-  <testcase name="getCaptchaByIdInHiddenFieldWhenCallGetCaptcha" classname="handler.HiddenFieldCaptchaHandlerTest" time="0.001"/>
-  <testcase name="throwExceptionGetCaptchaByIdInHiddenFieldButTimeOut" classname="handler.HiddenFieldCaptchaHandlerTest" time="0.0"/>
+  <testcase name="getCaptchaByIdInHiddenFieldWhenCallGetCaptcha" classname="handler.HiddenFieldCaptchaHandlerTest" time="0.009"/>
+  <testcase name="throwExceptionGetCaptchaByIdInHiddenFieldButTimeOut" classname="handler.HiddenFieldCaptchaHandlerTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

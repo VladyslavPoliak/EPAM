@@ -23,7 +23,6 @@ public class ApplicationListener implements ServletContextListener {
 
     @Override
     public void contextInitialized(ServletContextEvent sce) {
-        ServletContext context = sce.getServletContext();
         UserContainer container = new UserContainer();
 
         UserDao userDao = new UserDaoImpl(container.getUserList());
@@ -32,10 +31,10 @@ public class ApplicationListener implements ServletContextListener {
         CaptchaDao captchaDao = new CaptchaDaoImpl();
         CaptchaService captchaService = new CaptchaServiceImpl(captchaDao);
 
-        context.setAttribute(Constants.USER_SERVICE, userService);
-        context.setAttribute(Constants.CAPTCHA_SERVICE, captchaService);
+        sce.getServletContext().setAttribute(Constants.USER_SERVICE, userService);
+        sce.getServletContext().setAttribute(Constants.CAPTCHA_SERVICE, captchaService);
 
-
+        ServletContext context = sce.getServletContext();
 
         String handlerName = context.getInitParameter(Constants.CAPTCHA_HANDLER);
         CaptchaHandler handler = new CaptchaHandlerContainer().getCaptchaHandler(handlerName);

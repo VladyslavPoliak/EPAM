@@ -29,4 +29,5 @@ public class HiddenFieldCaptchaHandler extends AbstractCaptchaHandler {
         }
         throw new SessionTimeOutException();
     }
+
 }

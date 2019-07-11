@@ -3,7 +3,7 @@ package controller;
 import com.epam.captcha.CaptchaHandler;
 import com.epam.service.CaptchaService;
 import com.epam.service.UserService;
-import com.epam.servlet.RegistrationController;
+import com.epam.servlet.Registration;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -46,7 +46,7 @@ public class RegistrationControllerTest {
     private RequestDispatcher dispatcher;
 
     @InjectMocks
-    private RegistrationController controller;
+    private Registration controller;
 
     @Before
     public void setUp() {
