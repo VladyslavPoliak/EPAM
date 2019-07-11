@@ -7,6 +7,7 @@ import com.epam.dao.CaptchaDao;
 import com.epam.dao.UserDao;
 import com.epam.dao.impl.CaptchaDaoImpl;
 import com.epam.dao.impl.UserDaoImpl;
+import com.epam.database.DataBaseManager;
 import com.epam.service.CaptchaService;
 import com.epam.service.UserService;
 import com.epam.service.impl.CaptchaServiceImpl;
@@ -21,6 +22,7 @@ import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.SQLException;
 import java.util.Properties;
 
 @WebListener
@@ -28,6 +30,8 @@ public class ApplicationListener implements ServletContextListener {
     private static final Logger LOGGER = Logger.getLogger(ApplicationListener.class);
     private final Properties applicationProperties = new Properties();
     private BasicDataSource dataSource;
+
+    private DataBaseManager dataBaseManager;
 
     private UserContainer container = new UserContainer();
 
@@ -42,6 +46,8 @@ public class ApplicationListener implements ServletContextListener {
         loadApplicationProperties();
         initDao();
         initServices();
+        initDataBaseManager();
+
         ServletContext context = sce.getServletContext();
 
         String handlerName = context.getInitParameter(Constants.CAPTCHA_HANDLER);
@@ -50,6 +56,20 @@ public class ApplicationListener implements ServletContextListener {
 
         dataSource = initDataSource();
 
+    }
+
+    @Override
+    public void contextDestroyed(ServletContextEvent sce) {
+        try {
+            dataSource.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        LOGGER.info("Web application destroyed");
+    }
+
+    private void initDataBaseManager() {
+        dataBaseManager=new DataBaseManager(dataSource);
     }
 
     private BasicDataSource initDataSource() {
@@ -66,6 +86,7 @@ public class ApplicationListener implements ServletContextListener {
         return dataSource;
     }
 
+
     private String getApplicationProperty(String key) {
         return applicationProperties.getProperty(key);
     }
@@ -77,7 +98,7 @@ public class ApplicationListener implements ServletContextListener {
     }
 
     private void initServices() {
-        userService = new UserServiceImpl(userDao);
+        userService = new UserServiceImpl(userDao,dataBaseManager);
         captchaService = new CaptchaServiceImpl(captchaDao);
     }
 
@@ -94,4 +115,6 @@ public class ApplicationListener implements ServletContextListener {
             throw new RuntimeException(e);
         }
     }
+
+
 }

@@ -1,6 +1,7 @@
 package com.epam.service.impl;
 
 import com.epam.dao.UserDao;
+import com.epam.database.DataBaseManager;
 import com.epam.entity.User;
 import com.epam.service.UserService;
 
@@ -10,9 +11,11 @@ import java.util.Optional;
 public class UserServiceImpl implements UserService {
 
     private UserDao userDao;
+    private DataBaseManager dataBaseManager;
 
-    public UserServiceImpl(UserDao userDao) {
+    public UserServiceImpl(UserDao userDao, DataBaseManager dataBaseManager) {
         this.userDao = userDao;
+        this.dataBaseManager = dataBaseManager;
     }
 
     @Override
