@@ -2,42 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45d1a05b-f84e-4878-8d18-b7b10e843c93" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask11/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask11/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask11/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask11/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask11/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask11/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask11/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/build/inplaceWebapp/WEB-INF/tags/captcha.tag" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/build/inplaceWebapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/build/inplaceWebapp/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/build/inplaceWebapp/js/jqueryScript.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/build/inplaceWebapp/js/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/build/inplaceWebapp/signUp.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/build/libs/webapp.war" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask11/build/libs/webapp.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/build/reports/tests/test/classes/controller.RegistrationControllerTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask11/build/reports/tests/test/classes/controller.RegistrationControllerTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/build/reports/tests/test/classes/handler.CookieCaptchaHandlerTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/build/reports/tests/test/classes/handler.HiddenFieldCaptchaHandlerTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/build/reports/tests/test/classes/handler.SessionCaptchaHandlerTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/build/reports/tests/test/classes/service.CaptchaServiceTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask11/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/build/reports/tests/test/packages/controller.html" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask11/build/reports/tests/test/packages/controller.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/build/reports/tests/test/packages/handler.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/build/reports/tests/test/packages/service.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/build/serverBaseDir_tomcat9/work/Tomcat/localhost/ROOT/SESSIONS.ser" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/build/serverBaseDir_tomcat9/work/Tomcat/localhost/ROOT/org/apache/jsp/signUp_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/build/serverBaseDir_tomcat9/work/Tomcat/localhost/ROOT/org/apache/jsp/signUp_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/build/serverBaseDir_tomcat9/work/Tomcat/localhost/ROOT/org/apache/jsp/tag/web/captcha_tag.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/build/serverBaseDir_tomcat9/work/Tomcat/localhost/ROOT/org/apache/jsp/tag/web/captcha_tag.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/build/test-results/test/TEST-controller.RegistrationControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask11/build/test-results/test/TEST-controller.RegistrationControllerTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/build/test-results/test/TEST-handler.CookieCaptchaHandlerTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/build/test-results/test/TEST-handler.HiddenFieldCaptchaHandlerTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/build/test-results/test/TEST-handler.SessionCaptchaHandlerTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/build/test-results/test/TEST-service.CaptchaServiceTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask11/build/test-results/test/binary/output.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask11/build/test-results/test/binary/output.bin.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KharkivJavaTask11/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../KharkivJavaTask11/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/epam/listener/ApplicationListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/gretty_ports.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/gretty_ports.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/listener/ApplicationListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/listener/ApplicationListener.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -105,8 +81,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+            <state relative-caret-position="373">
+              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
             </state>
           </provider>
         </entry>
@@ -123,16 +99,61 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/listener/ApplicationListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="26" column="61" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
+            <state relative-caret-position="-354">
+              <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2447#2448#0" expanded="true" />
+                <element signature="e#2474#2475#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/servlet/CaptchaServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/servlet/Registration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="178">
+              <caret line="34" column="64" selection-start-line="34" selection-start-column="64" selection-end-line="34" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/service/impl/CaptchaServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="178">
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/database/DataBaseManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -140,24 +161,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/database/DataBaseManager.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/listener/ApplicationListener.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/compiler.xml" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="651" />
-    <option name="y" value="39" />
-    <option name="width" value="1382" />
-    <option name="height" value="735" />
+    <option name="x" value="852" />
+    <option name="width" value="1075" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -200,6 +213,30 @@
               <item name="java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="epam" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Task12" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KharkivJavaTask12" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="epam" type="462c0819:PsiDirectoryNode" />
+              <item name="listener" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Task12" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KharkivJavaTask12" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="Task12" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KharkivJavaTask12" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Resource Bundle 'content'" type="a6c14932:ResourceBundleNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -207,9 +244,10 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Telegram Desktop/FinalTask" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -250,6 +288,25 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="KharkivJavaTask12 [appStop]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="appStop" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="KharkivJavaTask12 [clean build war]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -274,6 +331,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.KharkivJavaTask12 [appStart]" />
+        <item itemvalue="Gradle.KharkivJavaTask12 [appStop]" />
         <item itemvalue="Gradle.KharkivJavaTask12 [clean build war]" />
       </list>
     </recent_temporary>
@@ -288,15 +346,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1562874504535</updated>
-      <workItem from="1562874507493" duration="828000" />
+      <workItem from="1562874507493" duration="2872000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="828000" />
+    <option name="totallyTimeSpent" value="2872000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Image Layers" />
@@ -304,18 +363,19 @@
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Capture Tool" />
       <window_info id="Web" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14285715" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13272922" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Build" weight="0.08450704" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Java Enterprise" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.17226435" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.22318527" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -324,7 +384,7 @@
       <window_info anchor="right" id="Palette" />
       <window_info anchor="right" id="Codota" />
       <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Gradle" weight="0.32995737" />
+      <window_info anchor="right" id="Gradle" weight="0.37089714" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Palette&#9;" />
       <window_info anchor="right" id="Theme Preview" />
@@ -341,13 +401,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/dao/impl/UserDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -355,12 +408,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/servlet/Registration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="34" column="64" selection-start-line="34" selection-start-column="64" selection-end-line="34" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/service/impl/CaptchaServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/servlet/CaptchaServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/database/DataBaseManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/content_en.properties">
+      <provider editor-type-id="ResourceBundle" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/listener/ApplicationListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="26" column="61" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
+        <state relative-caret-position="-354">
+          <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2447#2448#0" expanded="true" />
+            <element signature="e#2474#2475#0" expanded="true" />
           </folding>
         </state>
       </provider>
