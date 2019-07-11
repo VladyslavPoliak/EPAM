@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet("/registration")
-public class Registration extends HttpServlet {
+public class RegistrationController extends HttpServlet {
 
     private UserService userService;
     private CaptchaService captchaService;
@@ -30,7 +30,7 @@ public class Registration extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String login = req.getParameter("userEmail");
         if (userService.isUserPresent(login) || !captchaService.checkValid(req, captchaHandler)) {
             saveInfo(req);

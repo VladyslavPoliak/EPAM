@@ -20,8 +20,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
-@WebServlet("/CaptchaServlet")
-public class CaptchaServlet extends HttpServlet {
+@WebServlet("/captchaController")
+public class CaptchaController extends HttpServlet {
 
     private CaptchaService captchaService;
     private CaptchaHandler captchaHandler;
