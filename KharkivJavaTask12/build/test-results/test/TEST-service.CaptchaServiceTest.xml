@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="service.CaptchaServiceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-07-11T19:50:44" hostname="DESKTOP-D16C456" time="0.028">
+  <properties/>
+  <testcase name="createCaptcha" classname="service.CaptchaServiceTest" time="0.021"/>
+  <testcase name="checkCaptchaOnValidAndReturnFalseWhenCaptchaIsNotValid" classname="service.CaptchaServiceTest" time="0.004"/>
+  <testcase name="checkCaptchaOnValidAndReturnTrueWhenCaptchaIsValid" classname="service.CaptchaServiceTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[com.epam.exception.SessionTimeOutException
+]]></system-err>
+</testsuite>
