@@ -43,12 +43,13 @@ public class CaptchaController extends HttpServlet {
         CaptchaSender sender = new CaptchaSender(request, response);
         try {
             CaptchaCreator captchaCreator = captchaService.create();
+            Captcha captcha = captchaService.createCaptcha(captchaCreator.getCaptchaNumbers());
+            captchaHandler.addCaptcha(request, response, captcha);
             BufferedImage bufferedImage = captchaService.bufferedImage(captchaCreator);
             ServletOutputStream stream = response.getOutputStream();
             ImageIO.write(bufferedImage, "jpg", stream);
+            request.setAttribute("captcha", bufferedImage);
             stream.close();
-            Captcha captcha = captchaService.createCaptcha(captchaCreator.getCaptchaNumbers());
-            captchaHandler.addCaptcha(request, response, captcha);
             sender.setCaptchaId(captcha.getId());
         } catch (NoSuchAttributeException | IOException e) {
             e.printStackTrace();

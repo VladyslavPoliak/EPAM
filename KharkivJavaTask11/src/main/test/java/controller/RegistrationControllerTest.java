@@ -1,3 +1,5 @@
+package controller;
+
 import com.epam.captcha.CaptchaHandler;
 import com.epam.service.CaptchaService;
 import com.epam.service.UserService;
@@ -15,6 +17,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
 public class RegistrationControllerTest {
@@ -45,22 +50,22 @@ public class RegistrationControllerTest {
 
     @Before
     public void setUp() {
-        Mockito.when(request.getRequestDispatcher(Mockito.anyString())).thenReturn(dispatcher);
-        Mockito.when(request.getParameter(Mockito.anyString())).thenReturn(LOGIN);
+        when(request.getRequestDispatcher(Mockito.anyString())).thenReturn(dispatcher);
+        when(request.getParameter(Mockito.anyString())).thenReturn(LOGIN);
     }
 
     @Test
     public void goToRegistrationPageIfUserExist() throws ServletException, IOException {
-        Mockito.when(userService.isUserPresent(LOGIN)).thenReturn(true);
+        when(userService.isUserPresent(LOGIN)).thenReturn(true);
         controller.doPost(request, response);
-        Mockito.verify(dispatcher, Mockito.times(ONE_TIME)).forward(request, response);
+        verify(dispatcher, Mockito.times(ONE_TIME)).forward(request, response);
     }
 
     @Test
     public void goToMainPageIfUserNoExist() throws ServletException, IOException {
-        Mockito.when(userService.isUserPresent(LOGIN)).thenReturn(false);
-        Mockito.when(captchaService.checkValid(request, captchaHandler)).thenReturn(true);
+        when(userService.isUserPresent(LOGIN)).thenReturn(false);
+        when(captchaService.checkValid(request, captchaHandler)).thenReturn(true);
         controller.doPost(request, response);
-        Mockito.verify(dispatcher, Mockito.times(ONE_TIME)).forward(request, response);
+        verify(dispatcher, Mockito.times(ONE_TIME)).forward(request, response);
     }
 }

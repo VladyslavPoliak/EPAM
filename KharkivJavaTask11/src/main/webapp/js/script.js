@@ -6,18 +6,13 @@ function addValidationClasses(field, isValid) {
     field.classList.toggle('is-invalid', !isValid);
 }
 
-const validateAfter3Chars = handler =
->
-value =
->
-value.length >= 3 && handler();
+const validateAfter3Chars = handler =>value =>value.length >= 3 && handler();
 
 const checkers = {
-        validateStringLength: string = > Boolean(string.length),
+        validateStringLength: string => Boolean(string.length),
     validateByRegExp
 :
-(regExp, value) =
->
+(regExp, value) =>
 regExp.test(value)
 }
 ;
@@ -57,7 +52,7 @@ function validateRegistrationForm(registrationForm) {
     validateUserPassword(userPasswordInput);
     validateUserConfirmationPassword(userPasswordConfirmationInput, userPasswordInput);
 
-    return !registrationFormInputsArray.some(input = > input.classList.contains('is-invalid')
+    return !registrationFormInputsArray.some(input => input.classList.contains('is-invalid')
 )
     ;
 }
@@ -73,7 +68,7 @@ function handleUserSurnameBlur(event) {
 }
 
 function handleUserEmailInput(event) {
-    const validateUserEmailAfter3Chars = validateAfter3Chars(() = > {
+    const validateUserEmailAfter3Chars = validateAfter3Chars(() => {
         validateUserEmail(event.target
 )
     ;

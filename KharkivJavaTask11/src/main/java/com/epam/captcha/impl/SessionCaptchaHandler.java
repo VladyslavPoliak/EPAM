@@ -19,10 +19,12 @@ public class SessionCaptchaHandler extends AbstractCaptchaHandler {
         int captchaID = captcha.getId();
         captches.put(captchaID, captcha);
         request.getSession().setAttribute(CAPTCHA_ID, captchaID);
+        System.out.println(captchaID);
     }
 
     @Override
     public Captcha getCaptcha(HttpServletRequest request) throws SessionTimeOutException {
+        System.out.println(request.getSession().getAttribute(CAPTCHA_ID) == null);
         int captchaId = (int) request.getSession().getAttribute(CAPTCHA_ID);
         Captcha captcha = captches.get(captchaId);
         if (captcha.isValid()) {

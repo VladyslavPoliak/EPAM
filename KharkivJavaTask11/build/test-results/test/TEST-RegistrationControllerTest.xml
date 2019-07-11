@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="RegistrationControllerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-07-11T11:30:13" hostname="EPUAKHAW1858" time="0.421">
-  <properties/>
-  <testcase name="goToRegistrationPageIfUserExist" classname="RegistrationControllerTest" time="0.419"/>
-  <testcase name="goToMainPageIfUserNoExist" classname="RegistrationControllerTest" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
