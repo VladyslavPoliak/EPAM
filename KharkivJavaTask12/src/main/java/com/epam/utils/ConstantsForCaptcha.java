@@ -6,6 +6,8 @@ public class ConstantsForCaptcha {
     public static final int CAPTCHA_HEIGHT = 50;
     public static final int SYMBOL_COUNT = 1;
 
+    public static final int RANDOM_NUMBERS = 9;
+
     public static final int FONT_SIZE = 40;
     public static final String FONT_NAME = "Arial";
     public static final int DEFAULT_X = 25;

@@ -1,6 +1,5 @@
 package com.epam.creator;
 
-import com.epam.utils.Constants;
 import com.epam.utils.ConstantsForCaptcha;
 
 import javax.naming.directory.NoSuchAttributeException;
@@ -27,7 +26,7 @@ public class CaptchaCreator {
     private void createCaptchaNumbers() {
         StringBuilder builder = new StringBuilder();
         for (int i = 0; i < symbolCount; i++) {
-            builder.append(random.nextInt(Constants.RANDOM_NUMBERS));
+            builder.append(random.nextInt(ConstantsForCaptcha.RANDOM_NUMBERS));
         }
         captchaNumbers = builder.toString();
     }

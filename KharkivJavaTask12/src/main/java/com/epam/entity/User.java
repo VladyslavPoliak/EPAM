@@ -2,16 +2,22 @@ package com.epam.entity;
 
 public class User {
 
+    private int id;
     private String name;
     private String surname;
     private String email;
     private String password;
 
     private User(UserBuilder builder) {
+        this.id = builder.id;
         this.name = builder.name;
         this.surname = builder.surname;
         this.password = builder.password;
         this.email = builder.email;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getName() {
@@ -32,10 +38,16 @@ public class User {
 
     public static class UserBuilder {
 
+        private int id;
         private String name;
         private String surname;
         private String password;
         private String email;
+
+        public UserBuilder setId(int id) {
+            this.id = id;
+            return this;
+        }
 
         public UserBuilder setName(String name) {
             this.name = name;

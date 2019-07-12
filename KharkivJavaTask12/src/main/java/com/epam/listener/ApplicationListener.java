@@ -2,7 +2,6 @@ package com.epam.listener;
 
 import com.epam.captcha.CaptchaHandler;
 import com.epam.container.CaptchaHandlerContainer;
-import com.epam.container.UserContainer;
 import com.epam.dao.CaptchaDao;
 import com.epam.dao.UserDao;
 import com.epam.dao.impl.CaptchaDaoImpl;
@@ -27,13 +26,11 @@ import java.util.Properties;
 
 @WebListener
 public class ApplicationListener implements ServletContextListener {
+
     private static final Logger LOGGER = Logger.getLogger(ApplicationListener.class);
     private final Properties applicationProperties = new Properties();
     private BasicDataSource dataSource;
-
     private DataBaseManager dataBaseManager;
-
-    private UserContainer container = new UserContainer();
 
     private UserDao userDao;
     private CaptchaDao captchaDao;
@@ -44,17 +41,16 @@ public class ApplicationListener implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent sce) {
         loadApplicationProperties();
+        dataSource = initDataSource();
+        initDataBaseManager();
         initDao();
         initServices();
-        initDataBaseManager();
 
         ServletContext context = sce.getServletContext();
 
         String handlerName = context.getInitParameter(Constants.CAPTCHA_HANDLER);
         handler = new CaptchaHandlerContainer().getCaptchaHandler(handlerName);
         setAttributeInServletContext(context);
-
-        dataSource = initDataSource();
 
     }
 
@@ -63,13 +59,17 @@ public class ApplicationListener implements ServletContextListener {
         try {
             dataSource.close();
         } catch (SQLException e) {
-            e.printStackTrace();
+            LOGGER.info("Data Source not closed");
         }
         LOGGER.info("Web application destroyed");
     }
 
     private void initDataBaseManager() {
-        dataBaseManager=new DataBaseManager(dataSource);
+        try {
+            dataBaseManager = new DataBaseManager(dataSource.getConnection());
+        } catch (SQLException e) {
+            LOGGER.info("Connection was not open");
+        }
     }
 
     private BasicDataSource initDataSource() {
@@ -86,7 +86,6 @@ public class ApplicationListener implements ServletContextListener {
         return dataSource;
     }
 
-
     private String getApplicationProperty(String key) {
         return applicationProperties.getProperty(key);
     }
@@ -98,23 +97,21 @@ public class ApplicationListener implements ServletContextListener {
     }
 
     private void initServices() {
-        userService = new UserServiceImpl(userDao,dataBaseManager);
+        userService = new UserServiceImpl(userDao);
         captchaService = new CaptchaServiceImpl(captchaDao);
     }
 
     private void initDao() {
-        userDao = new UserDaoImpl(container.getUserList());
+        userDao = new UserDaoImpl(dataBaseManager);
         captchaDao = new CaptchaDaoImpl();
     }
 
     private void loadApplicationProperties() {
         try (InputStream in = ApplicationListener.class.getClassLoader().
-                getResourceAsStream("application.properties")) {
+                getResourceAsStream(Constants.APPLICATION_PROPERTIES)) {
             applicationProperties.load(in);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
-
-
 }

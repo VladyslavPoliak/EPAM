@@ -1,15 +1,46 @@
 package com.epam.database;
 
-import org.apache.commons.dbcp2.BasicDataSource;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class DataBaseManager {
-    private BasicDataSource dataSource;
 
-    public DataBaseManager(BasicDataSource dataSource) {
-        this.dataSource = dataSource;
+    private Connection connection;
+
+    public DataBaseManager(Connection connection) {
+        this.connection = connection;
     }
 
-    public <T> T doOperation(DbOperation<T> operation){
-return null;
+    public <T> T select(String sql, ResultSetHandler<T> resultSetHandler, Object... parameters) throws SQLException {
+        try (PreparedStatement ps = connection.prepareStatement(sql)) {
+            populatePreparedStatement(ps, parameters);
+            ResultSet rs = ps.executeQuery();
+            return resultSetHandler.handle(rs);
+        }
+    }
+
+    public <T> T insert(String sql, ResultSetHandler<T> resultSetHandler, Object... parameters) throws SQLException {
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS)) {
+            populatePreparedStatement(preparedStatement, parameters);
+            int result = preparedStatement.executeUpdate();
+            if (result != 1) {
+                connection.rollback();
+                throw new SQLException("Can't insert row to database. Result=" + result);
+            }
+            ResultSet resultSet = preparedStatement.getGeneratedKeys();
+            connection.commit();
+            return resultSetHandler.handle(resultSet);
+        }
+    }
+
+
+    private void populatePreparedStatement(PreparedStatement ps, Object... parameters) throws SQLException {
+        if (parameters != null) {
+            for (int i = 0; i < parameters.length; i++) {
+                ps.setObject(i + 1, parameters[i]);
+            }
+        }
     }
 }

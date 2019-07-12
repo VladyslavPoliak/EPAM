@@ -1,6 +1,7 @@
 package com.epam.servlet;
 
 import com.epam.captcha.CaptchaHandler;
+import com.epam.entity.User;
 import com.epam.service.CaptchaService;
 import com.epam.service.UserService;
 import com.epam.utils.Constants;
@@ -12,7 +13,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.Optional;
 
 @WebServlet("/registration")
 public class Registration extends HttpServlet {
@@ -32,17 +35,28 @@ public class Registration extends HttpServlet {
     @Override
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String login = req.getParameter("userEmail");
+        saveInfo(req);
+        createUser(req);
         if (userService.isUserPresent(login) || !captchaService.checkValid(req, captchaHandler)) {
             saveInfo(req);
             req.getRequestDispatcher(Constants.REGISTRATION_JSP).forward(req, resp);
         } else {
+            saveInfo(req);
+            createUser(req);
             req.getRequestDispatcher(Constants.MAIN_PAGE).forward(req, resp);
         }
+    }
+
+    private void createUser(HttpServletRequest req) {
+        Optional<User> user = userService.addNewUser(req);
+        HttpSession session = req.getSession();
+        user.ifPresent(value -> session.setAttribute("user", value));
     }
 
     private void saveInfo(HttpServletRequest req) {
         req.setAttribute("name", req.getParameter("userName"));
         req.setAttribute("surName", req.getParameter("userSurname"));
         req.setAttribute("login", req.getParameter("userEmail"));
+        req.setAttribute("password", req.getParameter("userPassword"));
     }
 }

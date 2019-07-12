@@ -1,21 +1,20 @@
 package com.epam.service.impl;
 
 import com.epam.dao.UserDao;
-import com.epam.database.DataBaseManager;
 import com.epam.entity.User;
+import com.epam.form.RegistrationForm;
 import com.epam.service.UserService;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Optional;
 
 public class UserServiceImpl implements UserService {
 
     private UserDao userDao;
-    private DataBaseManager dataBaseManager;
 
-    public UserServiceImpl(UserDao userDao, DataBaseManager dataBaseManager) {
+    public UserServiceImpl(UserDao userDao) {
         this.userDao = userDao;
-        this.dataBaseManager = dataBaseManager;
     }
 
     @Override
@@ -25,5 +24,12 @@ public class UserServiceImpl implements UserService {
                 .filter(user -> user.getEmail().equals(login))
                 .findFirst();
         return userOptional.isPresent();
+    }
+
+    @Override
+    public Optional<User> addNewUser(HttpServletRequest request) {
+        User user = new RegistrationForm().createUserByRequest(request);
+        userDao.addNewUser(user);
+        return Optional.of(user);
     }
 }
