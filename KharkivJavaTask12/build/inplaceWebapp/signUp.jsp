@@ -17,7 +17,8 @@
 <body>
 <div class="container">
     <h1 class="text-center display-4">SIGN UP</h1>
-    <form action="${pageContext.request.contextPath}/registration" id="registration-form" method="post">
+    <form action="${pageContext.request.contextPath}/registration" id="registration-form" method="post"
+          enctype="multipart/form-data">
         <div class="form-group">
             <label for="user-name">First Name</label>
             <input class="form-control" id="user-name" name="userName" placeholder="First Name" type="text"
@@ -82,6 +83,13 @@
             <div class="invalid-feedback">
                 Passwords do not match(need more than 5 characters)
             </div>
+        </div>
+
+        <div class="form-group">
+            <label for="file">Set your avatar (optional)</label>
+            <input class="form-control" id="file" name="file"
+                   type="file" accept="image/x-png,image/gif,image/jpeg">
+
         </div>
 
         <info:captcha captchaId="${captchaId}"/>

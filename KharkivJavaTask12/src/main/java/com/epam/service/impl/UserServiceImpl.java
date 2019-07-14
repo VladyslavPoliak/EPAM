@@ -32,4 +32,10 @@ public class UserServiceImpl implements UserService {
         userDao.addNewUser(user);
         return Optional.of(user);
     }
+
+    @Override
+    public Optional<User> getUserByEmailAndPass(String login, String pass) {
+        User user=userDao.getUserByEmailAndPass(login, pass);
+        return Optional.of(user);
+    }
 }

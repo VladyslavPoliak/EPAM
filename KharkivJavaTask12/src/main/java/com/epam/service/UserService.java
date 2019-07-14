@@ -11,4 +11,5 @@ public interface UserService {
 
      Optional<User> addNewUser(HttpServletRequest request);
 
+    Optional<User> getUserByEmailAndPass(String login, String pass);
 }

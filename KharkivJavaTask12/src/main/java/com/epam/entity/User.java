@@ -1,6 +1,8 @@
 package com.epam.entity;
 
-public class User {
+import com.epam.model.CurrentAccount;
+
+public class User implements CurrentAccount {
 
     private int id;
     private String name;
@@ -16,8 +18,14 @@ public class User {
         this.email = builder.email;
     }
 
+    @Override
     public int getId() {
         return id;
+    }
+
+    @Override
+    public String getDescription() {
+        return name + " (" + email + ")";
     }
 
     public String getName() {

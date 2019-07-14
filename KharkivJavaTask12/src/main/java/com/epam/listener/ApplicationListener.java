@@ -2,6 +2,7 @@ package com.epam.listener;
 
 import com.epam.captcha.CaptchaHandler;
 import com.epam.container.CaptchaHandlerContainer;
+import com.epam.creator.ImageCreator;
 import com.epam.dao.CaptchaDao;
 import com.epam.dao.UserDao;
 import com.epam.dao.impl.CaptchaDaoImpl;
@@ -37,6 +38,7 @@ public class ApplicationListener implements ServletContextListener {
     private UserService userService;
     private CaptchaService captchaService;
     private CaptchaHandler handler;
+    private ImageCreator imageCreator;
 
     @Override
     public void contextInitialized(ServletContextEvent sce) {
@@ -45,6 +47,8 @@ public class ApplicationListener implements ServletContextListener {
         initDataBaseManager();
         initDao();
         initServices();
+
+        imageCreator=new ImageCreator();
 
         ServletContext context = sce.getServletContext();
 
@@ -59,7 +63,7 @@ public class ApplicationListener implements ServletContextListener {
         try {
             dataSource.close();
         } catch (SQLException e) {
-            LOGGER.info("Data Source not closed");
+            LOGGER.error("Data Source not closed");
         }
         LOGGER.info("Web application destroyed");
     }
@@ -68,7 +72,7 @@ public class ApplicationListener implements ServletContextListener {
         try {
             dataBaseManager = new DataBaseManager(dataSource.getConnection());
         } catch (SQLException e) {
-            LOGGER.info("Connection was not open");
+            LOGGER.error("Connection was not open " + e);
         }
     }
 
@@ -94,6 +98,7 @@ public class ApplicationListener implements ServletContextListener {
         context.setAttribute(Constants.USER_SERVICE, userService);
         context.setAttribute(Constants.CAPTCHA_SERVICE, captchaService);
         context.setAttribute(Constants.CAPTCHA_PRESERVER, handler);
+        context.setAttribute(Constants.IMAGE_CREATOR, imageCreator);
     }
 
     private void initServices() {
@@ -111,7 +116,7 @@ public class ApplicationListener implements ServletContextListener {
                 getResourceAsStream(Constants.APPLICATION_PROPERTIES)) {
             applicationProperties.load(in);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            LOGGER.error("properties was not load " + e);
         }
     }
 }

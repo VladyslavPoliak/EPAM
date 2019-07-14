@@ -21,7 +21,7 @@ public class DataBaseManager {
         }
     }
 
-    public <T> T insert(String sql, ResultSetHandler<T> resultSetHandler, Object... parameters) throws SQLException {
+    public boolean insert(String sql, Object... parameters) throws SQLException {
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS)) {
             populatePreparedStatement(preparedStatement, parameters);
             int result = preparedStatement.executeUpdate();
@@ -29,9 +29,8 @@ public class DataBaseManager {
                 connection.rollback();
                 throw new SQLException("Can't insert row to database. Result=" + result);
             }
-            ResultSet resultSet = preparedStatement.getGeneratedKeys();
             connection.commit();
-            return resultSetHandler.handle(resultSet);
+            return true;
         }
     }
 
