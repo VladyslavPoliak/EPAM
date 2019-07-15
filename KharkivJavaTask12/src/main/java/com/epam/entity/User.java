@@ -10,12 +10,19 @@ public class User implements CurrentAccount {
     private String email;
     private String password;
 
+    private String imageUrl;
+
     private User(UserBuilder builder) {
         this.id = builder.id;
         this.name = builder.name;
         this.surname = builder.surname;
         this.password = builder.password;
         this.email = builder.email;
+        this.imageUrl = builder.imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     @Override
@@ -44,6 +51,10 @@ public class User implements CurrentAccount {
         return email;
     }
 
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
     public static class UserBuilder {
 
         private int id;
@@ -51,6 +62,8 @@ public class User implements CurrentAccount {
         private String surname;
         private String password;
         private String email;
+
+        private String imageUrl;
 
         public UserBuilder setId(int id) {
             this.id = id;
@@ -74,6 +87,11 @@ public class User implements CurrentAccount {
 
         public UserBuilder setEmail(String email) {
             this.email = email;
+            return this;
+        }
+
+        public UserBuilder setImageUrl(String imageUrl) {
+            this.imageUrl = imageUrl;
             return this;
         }
 

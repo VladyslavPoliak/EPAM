@@ -4,14 +4,19 @@ import com.epam.utils.Constants;
 
 import javax.servlet.http.Part;
 import java.io.*;
+import java.util.Objects;
 
 public class ImageCreator {
-    public void loadAndSaveImage(Part filePart) throws IOException {
-        final String fileName = getFileName(filePart);
-        System.out.println(fileName);
+
+    private String fileNameForSpecificUser;
+
+    public void loadAndSaveImage(Part filePart, String userName) throws IOException {
+        String fileName = getFileName(filePart);
+        fileNameForSpecificUser = setNewFileName(fileName, userName);
+
         try (OutputStream out = new FileOutputStream(new File(Constants.STORAGE_FOLDER_PATH + File.separator
-                + fileName));
-             InputStream fileContent = filePart.getInputStream()) {
+                + fileNameForSpecificUser));
+             InputStream fileContent = setAvatar(fileName, filePart)) {
             int read;
             int bufferSize = 1024;
             final byte[] bytes = new byte[bufferSize];
@@ -19,6 +24,10 @@ public class ImageCreator {
                 out.write(bytes, 0, read);
             }
         }
+    }
+
+    public String getFileNameForSpecificUser() {
+        return fileNameForSpecificUser;
     }
 
     private String getFileName(final Part part) {
@@ -29,5 +38,24 @@ public class ImageCreator {
             }
         }
         return null;
+    }
+
+    private InputStream setAvatar(String fileName, Part filePart) throws IOException {
+        if (isUserNoSetAvatar(fileName)) {
+            File file = new File(Constants.DEFAULT_AVATAR);
+            return new FileInputStream(file);
+        }
+        return filePart.getInputStream();
+    }
+
+    private String setNewFileName(String fileName, String userName) {
+        if (isUserNoSetAvatar(fileName)) {
+            return userName + Constants.DEFAULT_AVATAR.substring(Constants.DEFAULT_AVATAR.lastIndexOf("."));
+        }
+        return userName + Objects.requireNonNull(fileName).substring(fileName.lastIndexOf("."));
+    }
+
+    private boolean isUserNoSetAvatar(String fileName) {
+        return fileName.equals("");
     }
 }

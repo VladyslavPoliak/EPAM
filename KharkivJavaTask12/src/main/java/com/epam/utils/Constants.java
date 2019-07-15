@@ -18,8 +18,9 @@ public final class Constants {
     public static final String CURRENT_ACCOUNT = "CURRENT_ACCOUNT";
 
     public static final String IMAGE_PARAMETER_NAME = "file";
-    public static final String STORAGE_FOLDER_PATH = "D:\\GitHub\\KharkivJavaTask12\\src\\main\\webapp\\img";
+    public static final String STORAGE_FOLDER_PATH = "C:\\Users\\Vladyslav_Poliak\\IdeaProjects\\KharkivJavaTask12\\src\\main\\webapp\\img";
     public static final String IMAGE_CREATOR = "IMAGE_CREATOR";
+    public static final String DEFAULT_AVATAR = "C:\\Users\\Vladyslav_Poliak\\IdeaProjects\\KharkivJavaTask12\\src\\main\\resources\\default.jpg";
 
     private Constants() {
     }

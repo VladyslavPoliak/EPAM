@@ -11,4 +11,5 @@ public interface UserDao {
     void addNewUser(User user);
 
     User getUserByEmailAndPass(String login, String pass);
+
 }

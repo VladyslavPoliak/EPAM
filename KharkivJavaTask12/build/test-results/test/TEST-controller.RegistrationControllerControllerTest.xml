@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="controller.RegistrationControllerControllerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-07-13T11:59:30" hostname="DESKTOP-OAS52UQ" time="1.987">
+<testsuite name="controller.RegistrationControllerControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-07-15T13:46:52" hostname="EPUAKHAW1858" time="0.436">
   <properties/>
-  <testcase name="goToRegistrationPageIfUserExist" classname="controller.RegistrationControllerControllerTest" time="1.973"/>
-  <testcase name="goToMainPageIfUserNoExist" classname="controller.RegistrationControllerControllerTest" time="0.01"/>
+  <testcase name="goToRegistrationPageIfUserExist" classname="controller.RegistrationControllerControllerTest" time="0.436"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

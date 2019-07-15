@@ -9,7 +9,8 @@ public interface UserService {
 
     boolean isUserPresent(String login);
 
-     Optional<User> addNewUser(HttpServletRequest request);
+     void addNewUser(User user);
 
     Optional<User> getUserByEmailAndPass(String login, String pass);
+
 }

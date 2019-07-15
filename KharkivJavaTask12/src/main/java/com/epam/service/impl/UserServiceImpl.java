@@ -27,10 +27,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Optional<User> addNewUser(HttpServletRequest request) {
-        User user = new RegistrationForm().createUserByRequest(request);
+    public void addNewUser(User user) {
         userDao.addNewUser(user);
-        return Optional.of(user);
     }
 
     @Override
@@ -38,4 +36,5 @@ public class UserServiceImpl implements UserService {
         User user=userDao.getUserByEmailAndPass(login, pass);
         return Optional.of(user);
     }
+
 }

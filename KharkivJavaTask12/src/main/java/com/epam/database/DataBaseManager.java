@@ -34,6 +34,17 @@ public class DataBaseManager {
         }
     }
 
+//    public void update(String sql, Object... parameters) throws SQLException {
+//        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+//            populatePreparedStatement(preparedStatement, parameters);
+//            int result = preparedStatement.executeUpdate();
+//            if (result != 1) {
+//                connection.rollback();
+//                throw new SQLException("Can't update row to database. Result=" + result);
+//            }
+//            connection.commit();
+//        }
+//    }
 
     private void populatePreparedStatement(PreparedStatement ps, Object... parameters) throws SQLException {
         if (parameters != null) {

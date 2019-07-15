@@ -7,9 +7,7 @@ import com.epam.database.ResultSetHandlerFactory;
 import com.epam.entity.User;
 import com.epam.exception.InternalServerErrorException;
 import com.epam.utils.AllRequestDB;
-import org.apache.log4j.Logger;
 
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -28,6 +26,7 @@ public class UserDaoImpl implements UserDao {
             .setSurname(rs.getString("sur_name"))
             .setEmail(rs.getString("login"))
             .setPassword(rs.getString("password"))
+            .setImageUrl(rs.getString("image_url"))
             .build();
 
     @Override
@@ -44,7 +43,7 @@ public class UserDaoImpl implements UserDao {
     public void addNewUser(User user) {
         try {
             dataBaseManager.insert(AllRequestDB.INSERT_NEW_USER,
-                    user.getName(), user.getSurname(), user.getEmail(), user.getPassword());
+                    user.getName(), user.getSurname(), user.getEmail(), user.getPassword(),user.getImageUrl());
         } catch (SQLException e) {
             throw new InternalServerErrorException("Cant't execute SQL query: " + e.getMessage(), e);
         }
@@ -59,4 +58,16 @@ public class UserDaoImpl implements UserDao {
             throw new InternalServerErrorException("Cant't execute SQL query: " + e.getMessage(), e);
         }
     }
+
+//    @Override
+//    public void setImageUrl(String fileNameForSpecificUser, String  login) {
+//        try {
+//            System.out.println(fileNameForSpecificUser);
+//            System.out.println(login);
+//            dataBaseManager.update(AllRequestDB.UPDATE_USER_IMAGE_URL,
+//                    ResultSetHandlerFactory.getSingleResultSetHandler(USER_RESULT_SET_HANDLER),fileNameForSpecificUser,login);
+//        } catch (SQLException e) {
+//            throw new InternalServerErrorException("Cant't execute SQL query: " + e.getMessage(), e);
+//        }
+//    }
 }
