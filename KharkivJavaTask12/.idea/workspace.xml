@@ -5,84 +5,29 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/epam/creator/ImageCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/epam/creator/ImageCreator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/epam/dao/impl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/epam/dao/impl/UserDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/epam/database/DataBaseManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/epam/database/DataBaseManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/epam/entity/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/epam/entity/User$UserBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/epam/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/epam/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/epam/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/epam/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/epam/service/impl/CaptchaServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/epam/service/impl/CaptchaServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/epam/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/epam/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/epam/servlet/AbstractController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/epam/servlet/AbstractController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/epam/servlet/CaptchaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/epam/servlet/CaptchaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/epam/servlet/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/epam/servlet/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/epam/servlet/AvatarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/epam/servlet/AvatarController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/epam/servlet/RegistrationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/epam/servlet/RegistrationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/epam/servlet/SignOutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/epam/servlet/SignOutController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/epam/utils/AllRequestDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/epam/utils/AllRequestDB.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/epam/utils/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/epam/utils/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/epam/utils/ConstantsForCaptcha.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/epam/utils/ConstantsForCaptcha.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/controller/RegistrationControllerControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/controller/RegistrationControllerControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/inplaceWebapp/img/ava.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/inplaceWebapp/img/ava2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/inplaceWebapp/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/webapp.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/webapp.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/controller.RegistrationControllerControllerTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/controller.RegistrationControllerControllerTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/handler.CookieCaptchaHandlerTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/handler.CookieCaptchaHandlerTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/handler.HiddenFieldCaptchaHandlerTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/handler.HiddenFieldCaptchaHandlerTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/handler.SessionCaptchaHandlerTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/handler.SessionCaptchaHandlerTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/service.CaptchaServiceTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/service.CaptchaServiceTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/base-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/css/base-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/js/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/js/report.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/controller.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/controller.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/handler.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/handler.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/service.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/service.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/inplaceWebapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/build/inplaceWebapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/serverBaseDir_tomcat9/work/Tomcat/localhost/ROOT/org/apache/jsp/index_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/serverBaseDir_tomcat9/work/Tomcat/localhost/ROOT/org/apache/jsp/index_jsp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/serverBaseDir_tomcat9/work/Tomcat/localhost/ROOT/org/apache/jsp/index_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/serverBaseDir_tomcat9/work/Tomcat/localhost/ROOT/org/apache/jsp/index_jsp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/serverBaseDir_tomcat9/work/Tomcat/localhost/ROOT/org/apache/jsp/login_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/serverBaseDir_tomcat9/work/Tomcat/localhost/ROOT/org/apache/jsp/login_jsp.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/serverBaseDir_tomcat9/work/Tomcat/localhost/ROOT/org/apache/jsp/signUp_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/serverBaseDir_tomcat9/work/Tomcat/localhost/ROOT/org/apache/jsp/signUp_jsp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/serverBaseDir_tomcat9/work/Tomcat/localhost/ROOT/org/apache/jsp/signUp_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/serverBaseDir_tomcat9/work/Tomcat/localhost/ROOT/org/apache/jsp/signUp_jsp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/serverBaseDir_tomcat9/work/Tomcat/localhost/ROOT/org/apache/jsp/tag/web/captcha_tag.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/serverBaseDir_tomcat9/work/Tomcat/localhost/ROOT/org/apache/jsp/tag/web/captcha_tag.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/serverBaseDir_tomcat9/work/Tomcat/localhost/ROOT/org/apache/jsp/tag/web/captcha_tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/serverBaseDir_tomcat9/work/Tomcat/localhost/ROOT/org/apache/jsp/tag/web/captcha_tag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/serverBaseDir_tomcat9/work/Tomcat/localhost/ROOT/org/apache/jsp/tag/web/login_tag.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/serverBaseDir_tomcat9/work/Tomcat/localhost/ROOT/org/apache/jsp/tag/web/login_tag.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/serverBaseDir_tomcat9/work/Tomcat/localhost/ROOT/org/apache/jsp/tag/web/login_tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/serverBaseDir_tomcat9/work/Tomcat/localhost/ROOT/org/apache/jsp/tag/web/login_tag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-controller.RegistrationControllerControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-controller.RegistrationControllerControllerTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-handler.CookieCaptchaHandlerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-handler.CookieCaptchaHandlerTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-handler.HiddenFieldCaptchaHandlerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-handler.HiddenFieldCaptchaHandlerTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-handler.SessionCaptchaHandlerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-handler.SessionCaptchaHandlerTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-service.CaptchaServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-service.CaptchaServiceTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/creator/ImageCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/creator/ImageCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/dao/impl/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/database/DataBaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/database/DataBaseManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/servlet/AbstractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/servlet/AbstractController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/servlet/CaptchaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/servlet/CaptchaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/servlet/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/servlet/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/servlet/AvatarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/servlet/AvatarController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/servlet/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/servlet/RegistrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/servlet/SignOutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/servlet/SignOutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/utils/AllRequestDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/utils/AllRequestDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/utils/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/utils/ConstantsForCaptcha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/utils/ConstantsForCaptcha.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/java/controller/RegistrationControllerControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/java/controller/RegistrationControllerControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/ava.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/default.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/ava2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/login.tag" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/login.tag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/fgadhsdsd@dfs.com.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/fgwewh@dfs.com.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/tesssssssst@google.com.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/tesssssst@google.com.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -147,11 +92,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/creator/ImageCreator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+            <state relative-caret-position="175">
+              <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
               <folding>
                 <element signature="e#938#939#0" expanded="true" />
                 <element signature="e#984#985#0" expanded="true" />
@@ -160,11 +105,50 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/utils/Constants.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/servlet/AvatarController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="22" column="140" selection-start-line="22" selection-start-column="140" selection-end-line="22" selection-end-column="140" />
+            <state relative-caret-position="375">
+              <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/login.tag">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/icon.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/dao/impl/UserDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/service/CaptchaService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -172,8 +156,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/servlet/RegistrationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="33" column="51" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="51" />
+            <state relative-caret-position="144">
+              <caret line="26" column="51" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -214,8 +198,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/epam/servlet/SignInController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/login.tag" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/service/impl/CaptchaServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/signUp.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/listener/ApplicationListener.java" />
@@ -224,7 +206,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/epam/servlet/LoginController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/servlet/AbstractController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/servlet/SignOutController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/servlet/AvatarController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/servlet/CaptchaController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/dao/UserDao.java" />
@@ -233,11 +214,16 @@
         <option value="$PROJECT_DIR$/src/main/java/com/epam/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/utils/Constants.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/dao/impl/UserDaoImpl.java" />
         <option value="$PROJECT_DIR$/build/reports/tests/test/index.html" />
         <option value="$PROJECT_DIR$/src/main/test/java/controller/RegistrationControllerControllerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/servlet/RegistrationController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/creator/ImageCreator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/servlet/AvatarController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/avatar.tag" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/login.tag" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/icon.css" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/servlet/RegistrationController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/dao/impl/UserDaoImpl.java" />
       </list>
     </option>
   </component>
@@ -253,9 +239,8 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -334,13 +319,6 @@
               <item name="KharkivJavaTask12" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Task12" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KharkivJavaTask12" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -349,7 +327,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Task12" type="b2602c69:ProjectViewProjectNode" />
@@ -358,6 +336,23 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Task12" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KharkivJavaTask12" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Task12" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KharkivJavaTask12" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="tags" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -376,7 +371,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -576,7 +571,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49891067" visible="true" weight="0.195629" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49891067" visible="true" weight="0.23987207" />
       <window_info id="Structure" order="1" sideWeight="0.50108933" side_tool="true" weight="0.18844984" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -586,7 +581,7 @@
       <window_info id="Web" order="7" sideWeight="0.50108933" side_tool="true" weight="0.18844984" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32827735" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.1332611" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.1191766" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5796316" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -658,17 +653,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/content_en.properties">
-      <provider editor-type-id="ResourceBundle" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/database/ResultSetHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/container/UserContainer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
@@ -728,27 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/captcha.tag">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="58" column="44" lean-forward="true" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/login.tag">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="22" column="80" lean-forward="true" selection-start-line="22" selection-start-column="80" selection-end-line="22" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/database/ResultSetHandlerFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
@@ -756,31 +719,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/service/impl/CaptchaServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="49" column="37" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/service/CaptchaService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/utils/ConstantsForCaptcha.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/signUp.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -805,13 +747,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/creator/CaptchaCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -875,23 +810,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/img/fgasdadh@dfs.com.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/servlet/CaptchaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="34" column="12" lean-forward="true" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/servlet/AvatarController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/default.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -940,13 +858,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/dao/impl/UserDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
@@ -982,20 +893,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/servlet/RegistrationController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/signUp.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="33" column="51" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="51" />
+        <state relative-caret-position="-90">
+          <caret line="72" column="14" lean-forward="true" selection-start-line="72" selection-start-column="14" selection-end-line="72" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/creator/CaptchaCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/service/impl/CaptchaServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/servlet/CaptchaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="31" column="25" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/service/CaptchaService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/avatar.tag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/creator/ImageCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+        <state relative-caret-position="175">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
           <folding>
             <element signature="e#938#939#0" expanded="true" />
             <element signature="e#984#985#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/servlet/RegistrationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="26" column="51" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/dao/impl/UserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/icon.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/login.tag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/captcha.tag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/servlet/AvatarController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

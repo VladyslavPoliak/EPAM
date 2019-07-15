@@ -16,6 +16,11 @@
 
     <c:otherwise>
         <ul class="nav navbar-nav navbar-right">
+
+            <li class="nav-item">
+                <img  class="user-icon ml-2" src="avatar-image" >
+            </li>
+
             <li class="nav-item">
                 <a class="nav-link">  Welcome ${ CURRENT_ACCOUNT.description } </a>
             </li>
@@ -23,14 +28,7 @@
                 <a class="nav-link" href="${pageContext.request.contextPath}/sign-out">Log out</a>
             </li>
         </ul>
-        <%--<li class="nav-item">--%>
-        <%--<div class="d-flex align-items-center">--%>
-        <%--<img class="user-icon ml-2" src="img?image=${sessionScope.user.image}">--%>
-        <%--<p class="text-light bg-dark">--%>
-        <%--<c:out value="${sessionScope.user.name}"/>--%>
-        <%--</p>--%>
-        <%--</div>--%>
-        <%--</li>--%>
+
     </c:otherwise>
     </c:choose>
 </div>
