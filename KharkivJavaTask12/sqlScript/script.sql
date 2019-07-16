@@ -8,16 +8,16 @@ CREATE TABLE user (
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(25)  NOT NULL,
     sur_name VARCHAR(25)  NOT NULL,
-    login VARCHAR(25) UNIQUE NOT NULL,
-    password VARCHAR(45) NOT NULL
-
+    login VARCHAR(45) UNIQUE NOT NULL,
+    password VARCHAR(45) NOT NULL,
+    image_url VARCHAR(45) UNIQUE
 );
 
 INSERT INTO user
-VALUES (default, "admin", "admin","admin@gmail.com","123123123");
+VALUES (default, "admin", "admin","admin@gmail.com","123123123","");
 INSERT INTO user
-VALUES (default, "user2", "user2", "user2@gmail.com","123123123");
+VALUES (default, "user2", "user2", "user2@gmail.com","123123123","s");
 INSERT INTO user
-VALUES (default, "user1","user1", "user1@gmail.com","123123123" );
+VALUES (default, "user1","user1", "user1@gmail.com","123123123","a" );
 
 SELECT * FROM user;

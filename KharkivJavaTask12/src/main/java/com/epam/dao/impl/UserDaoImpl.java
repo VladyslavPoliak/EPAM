@@ -14,12 +14,6 @@ import java.util.List;
 public class UserDaoImpl implements UserDao {
 
 
-    private DataBaseManager dataBaseManager;
-
-    public UserDaoImpl(DataBaseManager dataBaseManager) {
-        this.dataBaseManager = dataBaseManager;
-    }
-
     private final ResultSetHandler<User> USER_RESULT_SET_HANDLER = rs -> new User.UserBuilder()
             .setId(rs.getInt("id"))
             .setName(rs.getString("name"))
@@ -28,6 +22,11 @@ public class UserDaoImpl implements UserDao {
             .setPassword(rs.getString("password"))
             .setImageUrl(rs.getString("image_url"))
             .build();
+    private DataBaseManager dataBaseManager;
+
+    public UserDaoImpl(DataBaseManager dataBaseManager) {
+        this.dataBaseManager = dataBaseManager;
+    }
 
     @Override
     public List<User> getAllUsers() {
@@ -43,7 +42,7 @@ public class UserDaoImpl implements UserDao {
     public void addNewUser(User user) {
         try {
             dataBaseManager.insert(AllRequestDB.INSERT_NEW_USER,
-                    user.getName(), user.getSurname(), user.getEmail(), user.getPassword(),user.getImageUrl());
+                    user.getName(), user.getSurname(), user.getEmail(), user.getPassword(), user.getImageUrl());
         } catch (SQLException e) {
             throw new InternalServerErrorException("Cant't execute SQL query: " + e.getMessage(), e);
         }
@@ -53,7 +52,7 @@ public class UserDaoImpl implements UserDao {
     public User getUserByEmailAndPass(String login, String pass) {
         try {
             return dataBaseManager.select(AllRequestDB.SELECT_USER_BY_EMAIL_AND_PASS,
-                    ResultSetHandlerFactory.getSingleResultSetHandler(USER_RESULT_SET_HANDLER),login,pass);
+                    ResultSetHandlerFactory.getSingleResultSetHandler(USER_RESULT_SET_HANDLER), login, pass);
         } catch (SQLException e) {
             throw new InternalServerErrorException("Cant't execute SQL query: " + e.getMessage(), e);
         }

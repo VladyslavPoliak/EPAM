@@ -2,7 +2,6 @@ package com.epam.servlet;
 
 import com.epam.entity.User;
 import com.epam.utils.Constants;
-import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,8 +13,6 @@ import java.util.Optional;
 @WebServlet("/login")
 public class LoginController extends AbstractController {
 
-    private final Logger LOGGER = Logger.getLogger(LoginController.class);
-
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String login = req.getParameter("email-login");
@@ -23,7 +20,7 @@ public class LoginController extends AbstractController {
         Optional<User> optionalUser = getUserService().getUserByEmailAndPass(login, pass);
         if (optionalUser.isPresent()) {
             LOGGER.info("user " + optionalUser.get().getDescription() + " logged in");
-            req.getSession().setAttribute(Constants.CURRENT_ACCOUNT, optionalUser.get());
+            getServletContext().setAttribute(Constants.CURRENT_ACCOUNT, optionalUser.get());
             resp.sendRedirect(Constants.MAIN_PAGE);
         } else {
             req.getRequestDispatcher(Constants.REGISTRATION_JSP).forward(req, resp);

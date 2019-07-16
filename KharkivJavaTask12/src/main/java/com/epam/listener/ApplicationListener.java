@@ -48,7 +48,7 @@ public class ApplicationListener implements ServletContextListener {
         initDao();
         initServices();
 
-        imageCreator=new ImageCreator();
+        imageCreator = new ImageCreator();
 
         ServletContext context = sce.getServletContext();
 

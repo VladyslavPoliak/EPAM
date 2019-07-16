@@ -1,8 +1,6 @@
 package com.epam.entity;
 
-import com.epam.model.CurrentAccount;
-
-public class User implements CurrentAccount {
+public class User {
 
     private int id;
     private String name;
@@ -21,16 +19,10 @@ public class User implements CurrentAccount {
         this.imageUrl = builder.imageUrl;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-    }
-
-    @Override
     public int getId() {
         return id;
     }
 
-    @Override
     public String getDescription() {
         return name + " (" + email + ")";
     }
@@ -53,6 +45,10 @@ public class User implements CurrentAccount {
 
     public String getImageUrl() {
         return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public static class UserBuilder {

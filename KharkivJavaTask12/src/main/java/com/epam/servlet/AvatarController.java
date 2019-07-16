@@ -19,7 +19,6 @@ public class AvatarController extends AbstractController {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         User user = (User) getServletContext().getAttribute(Constants.CURRENT_ACCOUNT);
-
         resp.setContentType("image/jpeg");
 
         File f = new File(Constants.STORAGE_FOLDER_PATH + File.separator

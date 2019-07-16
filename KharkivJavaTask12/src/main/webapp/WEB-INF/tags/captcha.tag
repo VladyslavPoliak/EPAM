@@ -5,7 +5,7 @@
 
 <div>
     <c:if test="${initParam.captchaHandler == 'hiddenFieldCaptchaHandler'}">
-        <input type="hidden" name="CaptchaId" value="${CaptchaId}">
+        <input name="CaptchaId" type="hidden" value="${CaptchaId}">
     </c:if>
     <img src="captchaController">
 </div>

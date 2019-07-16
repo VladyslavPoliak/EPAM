@@ -23,7 +23,8 @@
 
         <div class="form-group">
             <label for="user-pass-login">Password</label>
-            <input class="form-control" id="user-pass-login" name="password-login" placeholder="Please, enter your password"
+            <input class="form-control" id="user-pass-login" name="password-login"
+                   placeholder="Please, enter your password"
                    type="password">
         </div>
 

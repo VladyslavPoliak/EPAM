@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="service.CaptchaServiceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-07-15T13:46:53" hostname="EPUAKHAW1858" time="0.01">
+<testsuite name="service.CaptchaServiceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-07-16T11:33:14" hostname="EPUAKHAW1858" time="0.01">
   <properties/>
   <testcase name="createCaptcha" classname="service.CaptchaServiceTest" time="0.006"/>
   <testcase name="checkCaptchaOnValidAndReturnFalseWhenCaptchaIsNotValid" classname="service.CaptchaServiceTest" time="0.003"/>

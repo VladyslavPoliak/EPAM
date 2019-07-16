@@ -2,10 +2,8 @@ package com.epam.service.impl;
 
 import com.epam.dao.UserDao;
 import com.epam.entity.User;
-import com.epam.form.RegistrationForm;
 import com.epam.service.UserService;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Optional;
 
@@ -33,7 +31,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Optional<User> getUserByEmailAndPass(String login, String pass) {
-        User user=userDao.getUserByEmailAndPass(login, pass);
+        User user = userDao.getUserByEmailAndPass(login, pass);
         return Optional.of(user);
     }
 

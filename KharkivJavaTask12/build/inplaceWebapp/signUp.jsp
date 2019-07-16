@@ -2,7 +2,7 @@
 <%@ taglib tagdir="/WEB-INF/tags" prefix="info" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
-<head xmlns:c="http://www.w3.org/1999/XSL/Transform">
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
@@ -17,8 +17,8 @@
 <body>
 <div class="container">
     <h1 class="text-center display-4">SIGN UP</h1>
-    <form action="${pageContext.request.contextPath}/registration" id="registration-form" method="post"
-          enctype="multipart/form-data">
+    <form action="${pageContext.request.contextPath}/registration" enctype="multipart/form-data" id="registration-form"
+          method="post">
         <div class="form-group">
             <label for="user-name">First Name</label>
             <input class="form-control" id="user-name" name="userName" placeholder="First Name" type="text"
@@ -87,13 +87,13 @@
 
         <div class="form-group">
             <label for="file">Set your avatar (optional)</label>
-            <input class="form-control" id="file" name="file"
-                   type="file" accept="image/x-png,image/gif,image/jpeg">
+            <input accept="image/x-png,image/gif,image/jpeg" class="form-control" id="file"
+                   name="file" type="file">
 
         </div>
 
         <info:captcha captchaId="${captchaId}"/>
-        <label for="captcha"> </label><input type="text" id="captcha" name="captcha" placeholder="Numbers from picture">
+        <label for="captcha"> </label><input id="captcha" name="captcha" placeholder="Numbers from picture" type="text">
 
         <button class="btn btn-primary " type="submit">Submit</button>
     </form>
