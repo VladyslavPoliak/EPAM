@@ -1,8 +1,7 @@
 package service;
 
 import com.epam.captcha.CaptchaHandler;
-import com.epam.dao.CaptchaDao;
-import com.epam.dao.impl.CaptchaDaoImpl;
+import com.epam.container.CaptchaContainer;
 import com.epam.entity.Captcha;
 import com.epam.exception.SessionTimeOutException;
 import com.epam.service.impl.CaptchaServiceImpl;
@@ -25,7 +24,7 @@ import static org.mockito.Mockito.when;
 public class CaptchaServiceTest {
 
     private static final String CAPTCHA_NUMBERS = "666";
-    private CaptchaDao dao = new CaptchaDaoImpl();
+    private CaptchaContainer captchaContainer = new CaptchaContainer();
 
     @Mock
     private HttpServletRequest request;
@@ -41,7 +40,7 @@ public class CaptchaServiceTest {
 
     @Before
     public void setUp() {
-        captchaService = new CaptchaServiceImpl(dao);
+        captchaService = new CaptchaServiceImpl(captchaContainer);
     }
 
     @Test

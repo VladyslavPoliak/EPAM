@@ -1,19 +1,20 @@
-package com.epam.dao.impl;
+package com.epam.repository.impl;
 
-import com.epam.dao.UserDao;
 import com.epam.database.DataBaseManager;
 import com.epam.database.ResultSetHandler;
 import com.epam.database.ResultSetHandlerFactory;
 import com.epam.entity.User;
 import com.epam.exception.InternalServerErrorException;
+import com.epam.repository.UserRepository;
 import com.epam.utils.AllRequestDB;
 import com.epam.utils.HashPassword;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
-public class UserDaoImpl implements UserDao {
-
+public class UserRepositoryImpl implements UserRepository {
 
     private final ResultSetHandler<User> USER_RESULT_SET_HANDLER = rs -> new User.UserBuilder()
             .setId(rs.getInt("id"))
@@ -25,7 +26,7 @@ public class UserDaoImpl implements UserDao {
             .build();
     private DataBaseManager dataBaseManager;
 
-    public UserDaoImpl(DataBaseManager dataBaseManager) {
+    public UserRepositoryImpl(DataBaseManager dataBaseManager) {
         this.dataBaseManager = dataBaseManager;
     }
 
@@ -58,4 +59,6 @@ public class UserDaoImpl implements UserDao {
             throw new InternalServerErrorException("Cant't execute SQL query: " + e.getMessage(), e);
         }
     }
+
 }
+

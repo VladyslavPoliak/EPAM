@@ -1,13 +1,12 @@
 package com.epam.listener;
 
 import com.epam.captcha.CaptchaHandler;
+import com.epam.container.CaptchaContainer;
 import com.epam.container.CaptchaHandlerContainer;
 import com.epam.creator.ImageCreator;
-import com.epam.dao.CaptchaDao;
-import com.epam.dao.UserDao;
-import com.epam.dao.impl.CaptchaDaoImpl;
-import com.epam.dao.impl.UserDaoImpl;
 import com.epam.database.DataBaseManager;
+import com.epam.repository.UserRepository;
+import com.epam.repository.impl.UserRepositoryImpl;
 import com.epam.service.CaptchaService;
 import com.epam.service.UserService;
 import com.epam.service.impl.CaptchaServiceImpl;
@@ -33,8 +32,9 @@ public class ApplicationListener implements ServletContextListener {
     private BasicDataSource dataSource;
     private DataBaseManager dataBaseManager;
 
-    private UserDao userDao;
-    private CaptchaDao captchaDao;
+    private CaptchaContainer captchaContainer;
+    private UserRepository userRepository;
+
     private UserService userService;
     private CaptchaService captchaService;
     private CaptchaHandler handler;
@@ -49,21 +49,17 @@ public class ApplicationListener implements ServletContextListener {
         loadApplicationProperties();
         dataSource = initDataSource();
         initDataBaseManager();
-        initDao();
+        initRepositories();
+        initContainer();
+
         initServices();
         ServletContext context = sce.getServletContext();
 
         getInitOptions(context);
-        imageCreator = new ImageCreator(storageFolderPath,defaultAvatarPath);
+        imageCreator = new ImageCreator(storageFolderPath, defaultAvatarPath);
 
         handler = new CaptchaHandlerContainer().getCaptchaHandler(handlerName);
         setAttributeInServletContext(context);
-    }
-
-    private void getInitOptions(ServletContext context) {
-        handlerName = context.getInitParameter(Constants.CAPTCHA_HANDLER);
-        storageFolderPath = context.getInitParameter(Constants.STORAGE_FOLDER_PATH);
-        defaultAvatarPath = context.getInitParameter(Constants.DEFAULT_AVATAR);
     }
 
     @Override
@@ -74,6 +70,21 @@ public class ApplicationListener implements ServletContextListener {
             LOGGER.error("Data Source not closed");
         }
         LOGGER.info("Web application destroyed");
+    }
+
+    private void initContainer() {
+        captchaContainer = new CaptchaContainer();
+    }
+
+
+    private void getInitOptions(ServletContext context) {
+        handlerName = context.getInitParameter(Constants.CAPTCHA_HANDLER);
+        storageFolderPath = context.getInitParameter(Constants.STORAGE_FOLDER_PATH);
+        defaultAvatarPath = context.getInitParameter(Constants.DEFAULT_AVATAR);
+    }
+
+    private void initRepositories() {
+        userRepository = new UserRepositoryImpl(dataBaseManager);
     }
 
     private void initDataBaseManager() {
@@ -107,18 +118,13 @@ public class ApplicationListener implements ServletContextListener {
         context.setAttribute(Constants.CAPTCHA_SERVICE, captchaService);
         context.setAttribute(Constants.CAPTCHA_PRESERVER, handler);
         context.setAttribute(Constants.IMAGE_CREATOR, imageCreator);
-        context.setAttribute(Constants.DEFAULT_AVATAR,defaultAvatarPath);
-        context.setAttribute(Constants.STORAGE_FOLDER_PATH,storageFolderPath);
+        context.setAttribute(Constants.DEFAULT_AVATAR, defaultAvatarPath);
+        context.setAttribute(Constants.STORAGE_FOLDER_PATH, storageFolderPath);
     }
 
     private void initServices() {
-        userService = new UserServiceImpl(userDao);
-        captchaService = new CaptchaServiceImpl(captchaDao);
-    }
-
-    private void initDao() {
-        userDao = new UserDaoImpl(dataBaseManager);
-        captchaDao = new CaptchaDaoImpl();
+        userService = new UserServiceImpl(userRepository);
+        captchaService = new CaptchaServiceImpl(captchaContainer);
     }
 
     private void loadApplicationProperties() {

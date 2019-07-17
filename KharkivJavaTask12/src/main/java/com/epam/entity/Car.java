@@ -9,7 +9,7 @@ public class Car {
     private int cost;
     private String imageURL;
 
-    public Car(CarBuilder builder) {
+    private Car(CarBuilder builder) {
         this.id = builder.id;
         this.name = builder.name;
         this.mark = builder.mark;

@@ -1,8 +1,8 @@
 package com.epam.service.impl;
 
 import com.epam.captcha.CaptchaHandler;
+import com.epam.container.CaptchaContainer;
 import com.epam.creator.CaptchaCreator;
-import com.epam.dao.CaptchaDao;
 import com.epam.entity.Captcha;
 import com.epam.exception.SessionTimeOutException;
 import com.epam.service.CaptchaService;
@@ -15,10 +15,10 @@ import java.util.Date;
 
 public class CaptchaServiceImpl implements CaptchaService {
 
-    private CaptchaDao captchaDao;
+    private CaptchaContainer captchaContainer;
 
-    public CaptchaServiceImpl(CaptchaDao captchaDao) {
-        this.captchaDao = captchaDao;
+    public CaptchaServiceImpl(CaptchaContainer captchaContainer) {
+        this.captchaContainer = captchaContainer;
     }
 
     @Override
@@ -35,9 +35,9 @@ public class CaptchaServiceImpl implements CaptchaService {
 
     @Override
     public void removeExpiredCaptcha() {
-        captchaDao.getAllCaptches().forEach((key, value) -> {
+        captchaContainer.getAllCaptches().forEach((key, value) -> {
             if (value.isExpiredValid()) {
-                captchaDao.removeCaptcha(key);
+                captchaContainer.removeCaptcha(key);
             }
         });
     }

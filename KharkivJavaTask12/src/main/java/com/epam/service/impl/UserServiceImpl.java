@@ -1,7 +1,7 @@
 package com.epam.service.impl;
 
-import com.epam.dao.UserDao;
 import com.epam.entity.User;
+import com.epam.repository.UserRepository;
 import com.epam.service.UserService;
 
 import java.util.List;
@@ -9,15 +9,15 @@ import java.util.Optional;
 
 public class UserServiceImpl implements UserService {
 
-    private UserDao userDao;
+    private UserRepository userRepository;
 
-    public UserServiceImpl(UserDao userDao) {
-        this.userDao = userDao;
+    public UserServiceImpl(UserRepository userRepository) {
+        this.userRepository = userRepository;
     }
 
     @Override
     public boolean isUserExists(String login) {
-        List<User> users = userDao.getAllUsers();
+        List<User> users = userRepository.getAllUsers();
         Optional<User> userOptional = users.stream()
                 .filter(user -> user.getEmail().equals(login))
                 .findFirst();
@@ -26,12 +26,12 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void addNewUser(User user) {
-        userDao.addNewUser(user);
+        userRepository.addNewUser(user);
     }
 
     @Override
     public Optional<User> getUserByEmailAndPass(String login, String pass) {
-        User user = userDao.getUserByEmailAndPass(login, pass);
+        User user = userRepository.getUserByEmailAndPass(login, pass);
         return Optional.of(user);
     }
 

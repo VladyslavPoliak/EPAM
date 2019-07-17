@@ -14,7 +14,7 @@
 
     <context-param>
         <param-name>storageFolderPath</param-name>
-        <param-value>C:\Users\Vladyslav_Poliak\IdeaProjects\KharkivJavaTask12\src\main\webapp\img\avatars</param-value>
+        <param-value>C:\Users\Vladyslav_Poliak\IdeaProjects\KharkivJavaTask12\src\main\webapp\img</param-value>
     </context-param>
 
     <context-param>
