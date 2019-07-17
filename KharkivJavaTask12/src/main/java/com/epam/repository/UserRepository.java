@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface UserRepository {
 
-     void addNewUser(User user);
+    void addNewUser(User user);
 
     User getUserByEmailAndPass(String login, String pass);
 

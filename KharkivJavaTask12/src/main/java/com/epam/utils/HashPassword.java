@@ -6,8 +6,7 @@ import java.security.NoSuchAlgorithmException;
 
 public class HashPassword {
 
-    public static String hashMd5(String input)
-    {
+    public static String hashMd5(String input) {
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
             byte[] messageDigest = md.digest(input.getBytes());
@@ -18,8 +17,7 @@ public class HashPassword {
                 hashText.insert(0, "0");
             }
             return hashText.toString();
-        }
-        catch (NoSuchAlgorithmException e) {
+        } catch (NoSuchAlgorithmException e) {
             throw new RuntimeException(e);
         }
     }

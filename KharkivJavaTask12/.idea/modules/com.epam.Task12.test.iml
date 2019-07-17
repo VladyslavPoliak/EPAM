@@ -9,7 +9,7 @@
     <content url="file://$MODULE_DIR$/../../src/test" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="Task12.main" />
+    <orderEntry type="module" module-name="com.epam.Task12.main" />
     <orderEntry type="library" name="Gradle: javax.servlet:jstl:1.2" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.commons:commons-dbcp2:2.6.0" level="project" />
     <orderEntry type="library" name="Gradle: log4j:log4j:1.2.17" level="project" />
@@ -25,5 +25,5 @@
     <orderEntry type="library" name="Gradle: net.bytebuddy:byte-buddy-agent:1.9.10" level="project" />
     <orderEntry type="library" name="Gradle: org.objenesis:objenesis:2.6" level="project" />
   </component>
-  <component name="TestModuleProperties" production-module="Task12.main" />
+  <component name="TestModuleProperties" production-module="com.epam.Task12.main" />
 </module>

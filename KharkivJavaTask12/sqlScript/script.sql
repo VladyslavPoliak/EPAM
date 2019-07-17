@@ -13,11 +13,18 @@ CREATE TABLE user (
     image_url VARCHAR(45) UNIQUE
 );
 
+CREATE TABLE car (
+    id_car INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(25) NOT NULL,
+    mark VARCHAR(25) NOT NULL,
+    class VARCHAR(10) NOT NULL,
+    cost INTEGER(11) NOT NULL,
+    image VARCHAR(50) NOT NULL
+);
+
 INSERT INTO user
 VALUES (default, "admin", "admin","admin@gmail.com","123123123","");
-INSERT INTO user
-VALUES (default, "user2", "user2", "user2@gmail.com","123123123","s");
-INSERT INTO user
-VALUES (default, "user1","user1", "user1@gmail.com","123123123","a" );
-
-SELECT * FROM user;
+insert into car
+values (default, 'Santa Fe Special', 'HYUNDAI', 'J', 700,  '/media/1.jpg');
+ insert into car
+values (default, 'Sonata', 'HYUNDAI', 'E', 1100, '/media/2.jpg');

@@ -10,13 +10,9 @@ import com.epam.utils.AllRequestDB;
 import com.epam.utils.HashPassword;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public class UserRepositoryImpl implements UserRepository {
-
-    private DataBaseManager dataBaseManager;
 
     private final ResultSetHandler<User> USER_RESULT_SET_HANDLER = rs -> new User.UserBuilder()
             .setId(rs.getInt("id"))
@@ -26,6 +22,7 @@ public class UserRepositoryImpl implements UserRepository {
             .setPassword(rs.getString("password"))
             .setImageUrl(rs.getString("image_url"))
             .build();
+    private DataBaseManager dataBaseManager;
 
     public UserRepositoryImpl(DataBaseManager dataBaseManager) {
         this.dataBaseManager = dataBaseManager;

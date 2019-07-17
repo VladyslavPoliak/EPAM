@@ -93,7 +93,7 @@ public class ApplicationListener implements ServletContextListener {
 
     private void initRepositories() {
         userRepository = new UserRepositoryImpl(dataBaseManager);
-        carRepository=new CarRepositoryImpl(dataBaseManager);
+        carRepository = new CarRepositoryImpl(dataBaseManager);
     }
 
     private void initDataBaseManager() {
@@ -125,7 +125,7 @@ public class ApplicationListener implements ServletContextListener {
     private void setAttributeInServletContext(ServletContext context) {
         context.setAttribute(Constants.USER_SERVICE, userService);
         context.setAttribute(Constants.CAPTCHA_SERVICE, captchaService);
-        context.setAttribute(Constants.CAR_SERVICE,carService);
+        context.setAttribute(Constants.CAR_SERVICE, carService);
         context.setAttribute(Constants.CAPTCHA_PRESERVER, handler);
         context.setAttribute(Constants.IMAGE_CREATOR, imageCreator);
         context.setAttribute(Constants.DEFAULT_AVATAR, defaultAvatarPath);
@@ -135,7 +135,7 @@ public class ApplicationListener implements ServletContextListener {
     private void initServices() {
         userService = new UserServiceImpl(userRepository);
         captchaService = new CaptchaServiceImpl(captchaContainer);
-        carService=new CarServiceImpl(carRepository);
+        carService = new CarServiceImpl(carRepository);
     }
 
     private void loadApplicationProperties() {

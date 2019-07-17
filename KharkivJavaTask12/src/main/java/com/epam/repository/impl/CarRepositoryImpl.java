@@ -13,8 +13,6 @@ import java.util.List;
 
 public class CarRepositoryImpl implements CarRepository {
 
-    private DataBaseManager dataBaseManager;
-
     private final ResultSetHandler<Car> CAR_RESULT_SET_HANDLER = rs -> new Car.CarBuilder()
             .setId(rs.getInt("id_car"))
             .setName(rs.getString("name"))
@@ -23,6 +21,7 @@ public class CarRepositoryImpl implements CarRepository {
             .setCost(rs.getInt("cost"))
             .setImageURL(rs.getString("image"))
             .build();
+    private DataBaseManager dataBaseManager;
 
     public CarRepositoryImpl(DataBaseManager dataBaseManager) {
         this.dataBaseManager = dataBaseManager;
