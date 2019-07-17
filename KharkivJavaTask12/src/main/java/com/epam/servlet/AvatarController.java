@@ -21,7 +21,7 @@ public class AvatarController extends AbstractController {
         User user = (User) getServletContext().getAttribute(Constants.CURRENT_ACCOUNT);
         resp.setContentType("image/jpeg");
 
-        File f = new File(Constants.STORAGE_FOLDER_PATH + File.separator
+        File f = new File(getServletContext().getAttribute(Constants.STORAGE_FOLDER_PATH) + File.separator
                 + user.getImageUrl());
         BufferedImage bi = ImageIO.read(f);
         OutputStream out = resp.getOutputStream();

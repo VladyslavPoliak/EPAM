@@ -18,7 +18,6 @@ public class RegistrationController extends AbstractController {
     @Override
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String login = req.getParameter("userEmail");
-        // TODO: 7/15/2019 || !captchaService.checkValid(req, captchaHandler)
         if (getUserService().isUserPresent(login) || !getCaptchaService().checkValid(req, getCaptchaHandler())) {
             saveInfo(req);
             req.getRequestDispatcher(Constants.REGISTRATION_JSP).forward(req, resp);

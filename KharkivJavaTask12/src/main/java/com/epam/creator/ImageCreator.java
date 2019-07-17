@@ -1,7 +1,5 @@
 package com.epam.creator;
 
-import com.epam.utils.Constants;
-
 import javax.servlet.http.Part;
 import java.io.*;
 import java.util.Objects;
@@ -9,12 +7,19 @@ import java.util.Objects;
 public class ImageCreator {
 
     private String fileNameForSpecificUser;
+    private String storageFolderPath;
+    private String defaultAvatarPath;
+
+    public ImageCreator(String storageFolderPath, String defaultAvatarPath) {
+        this.storageFolderPath = storageFolderPath;
+        this.defaultAvatarPath = defaultAvatarPath;
+    }
 
     public void loadAndSaveImage(Part filePart, String userName) throws IOException {
         String fileName = getFileName(filePart);
         fileNameForSpecificUser = setNewFileName(fileName, userName);
 
-        try (OutputStream out = new FileOutputStream(new File(Constants.STORAGE_FOLDER_PATH + File.separator
+        try (OutputStream out = new FileOutputStream(new File(storageFolderPath + File.separator
                 + fileNameForSpecificUser));
              InputStream fileContent = setAvatar(fileName, filePart)) {
             int read;
@@ -42,7 +47,7 @@ public class ImageCreator {
 
     private InputStream setAvatar(String fileName, Part filePart) throws IOException {
         if (isUserNoSetAvatar(fileName)) {
-            File file = new File(Constants.DEFAULT_AVATAR);
+            File file = new File(defaultAvatarPath);
             return new FileInputStream(file);
         }
         return filePart.getInputStream();
@@ -50,7 +55,7 @@ public class ImageCreator {
 
     private String setNewFileName(String fileName, String userName) {
         if (isUserNoSetAvatar(fileName)) {
-            return userName + Constants.DEFAULT_AVATAR.substring(Constants.DEFAULT_AVATAR.lastIndexOf("."));
+            return userName + defaultAvatarPath.substring(defaultAvatarPath.lastIndexOf("."));
         }
         return userName + Objects.requireNonNull(fileName).substring(fileName.lastIndexOf("."));
     }

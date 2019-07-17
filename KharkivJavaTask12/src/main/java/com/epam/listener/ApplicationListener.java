@@ -38,7 +38,11 @@ public class ApplicationListener implements ServletContextListener {
     private UserService userService;
     private CaptchaService captchaService;
     private CaptchaHandler handler;
+    private String handlerName;
     private ImageCreator imageCreator;
+
+    private String storageFolderPath;
+    private String defaultAvatarPath;
 
     @Override
     public void contextInitialized(ServletContextEvent sce) {
@@ -47,15 +51,19 @@ public class ApplicationListener implements ServletContextListener {
         initDataBaseManager();
         initDao();
         initServices();
-
-        imageCreator = new ImageCreator();
-
         ServletContext context = sce.getServletContext();
 
-        String handlerName = context.getInitParameter(Constants.CAPTCHA_HANDLER);
+        getInitOptions(context);
+        imageCreator = new ImageCreator(storageFolderPath,defaultAvatarPath);
+
         handler = new CaptchaHandlerContainer().getCaptchaHandler(handlerName);
         setAttributeInServletContext(context);
+    }
 
+    private void getInitOptions(ServletContext context) {
+        handlerName = context.getInitParameter(Constants.CAPTCHA_HANDLER);
+        storageFolderPath = context.getInitParameter(Constants.STORAGE_FOLDER_PATH);
+        defaultAvatarPath = context.getInitParameter(Constants.DEFAULT_AVATAR);
     }
 
     @Override
@@ -99,6 +107,8 @@ public class ApplicationListener implements ServletContextListener {
         context.setAttribute(Constants.CAPTCHA_SERVICE, captchaService);
         context.setAttribute(Constants.CAPTCHA_PRESERVER, handler);
         context.setAttribute(Constants.IMAGE_CREATOR, imageCreator);
+        context.setAttribute(Constants.DEFAULT_AVATAR,defaultAvatarPath);
+        context.setAttribute(Constants.STORAGE_FOLDER_PATH,storageFolderPath);
     }
 
     private void initServices() {

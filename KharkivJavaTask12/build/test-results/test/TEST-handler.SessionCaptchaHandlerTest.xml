@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="handler.SessionCaptchaHandlerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-07-16T11:33:14" hostname="EPUAKHAW1858" time="0.009">
-  <properties/>
-  <testcase name="throwExceptionWhenFindCaptchaByIdInSessionBUtTimeOut" classname="handler.SessionCaptchaHandlerTest" time="0.009"/>
-  <testcase name="getCaptchaByIdInSessionWhenCallGetCaptcha" classname="handler.SessionCaptchaHandlerTest" time="0.0"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
