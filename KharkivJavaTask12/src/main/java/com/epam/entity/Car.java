@@ -42,7 +42,7 @@ public class Car {
         return imageURL;
     }
 
-    private static class CarBuilder {
+    public static class CarBuilder {
 
         private int id;
         private String name;

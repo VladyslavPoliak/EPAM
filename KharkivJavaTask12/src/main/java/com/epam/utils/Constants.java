@@ -4,6 +4,7 @@ public final class Constants {
 
     public static final String USER_SERVICE = "USER_SERVICE";
     public static final String CAPTCHA_SERVICE = "captchaService";
+    public static final String CAR_SERVICE = "CAR_SERVICE";
     public static final String CAPTCHA_PRESERVER = "captchaPreserver";
     public static final String CAPTCHA_HANDLER = "captchaHandler";
     public static final String HIDDEN_FIELD_CAPTCHA_HANDLER = "hiddenFieldCaptchaHandler";

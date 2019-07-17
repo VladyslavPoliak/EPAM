@@ -5,11 +5,15 @@ import com.epam.container.CaptchaContainer;
 import com.epam.container.CaptchaHandlerContainer;
 import com.epam.creator.ImageCreator;
 import com.epam.database.DataBaseManager;
+import com.epam.repository.CarRepository;
 import com.epam.repository.UserRepository;
+import com.epam.repository.impl.CarRepositoryImpl;
 import com.epam.repository.impl.UserRepositoryImpl;
 import com.epam.service.CaptchaService;
+import com.epam.service.CarService;
 import com.epam.service.UserService;
 import com.epam.service.impl.CaptchaServiceImpl;
+import com.epam.service.impl.CarServiceImpl;
 import com.epam.service.impl.UserServiceImpl;
 import com.epam.utils.Constants;
 import org.apache.commons.dbcp2.BasicDataSource;
@@ -33,10 +37,14 @@ public class ApplicationListener implements ServletContextListener {
     private DataBaseManager dataBaseManager;
 
     private CaptchaContainer captchaContainer;
+
     private UserRepository userRepository;
+    private CarRepository carRepository;
 
     private UserService userService;
     private CaptchaService captchaService;
+    private CarService carService;
+
     private CaptchaHandler handler;
     private String handlerName;
     private ImageCreator imageCreator;
@@ -85,6 +93,7 @@ public class ApplicationListener implements ServletContextListener {
 
     private void initRepositories() {
         userRepository = new UserRepositoryImpl(dataBaseManager);
+        carRepository=new CarRepositoryImpl(dataBaseManager);
     }
 
     private void initDataBaseManager() {
@@ -116,6 +125,7 @@ public class ApplicationListener implements ServletContextListener {
     private void setAttributeInServletContext(ServletContext context) {
         context.setAttribute(Constants.USER_SERVICE, userService);
         context.setAttribute(Constants.CAPTCHA_SERVICE, captchaService);
+        context.setAttribute(Constants.CAR_SERVICE,carService);
         context.setAttribute(Constants.CAPTCHA_PRESERVER, handler);
         context.setAttribute(Constants.IMAGE_CREATOR, imageCreator);
         context.setAttribute(Constants.DEFAULT_AVATAR, defaultAvatarPath);
@@ -125,6 +135,7 @@ public class ApplicationListener implements ServletContextListener {
     private void initServices() {
         userService = new UserServiceImpl(userRepository);
         captchaService = new CaptchaServiceImpl(captchaContainer);
+        carService=new CarServiceImpl(carRepository);
     }
 
     private void loadApplicationProperties() {

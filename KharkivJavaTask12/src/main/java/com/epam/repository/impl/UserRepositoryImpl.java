@@ -16,6 +16,8 @@ import java.util.Optional;
 
 public class UserRepositoryImpl implements UserRepository {
 
+    private DataBaseManager dataBaseManager;
+
     private final ResultSetHandler<User> USER_RESULT_SET_HANDLER = rs -> new User.UserBuilder()
             .setId(rs.getInt("id"))
             .setName(rs.getString("name"))
@@ -24,7 +26,6 @@ public class UserRepositoryImpl implements UserRepository {
             .setPassword(rs.getString("password"))
             .setImageUrl(rs.getString("image_url"))
             .build();
-    private DataBaseManager dataBaseManager;
 
     public UserRepositoryImpl(DataBaseManager dataBaseManager) {
         this.dataBaseManager = dataBaseManager;
