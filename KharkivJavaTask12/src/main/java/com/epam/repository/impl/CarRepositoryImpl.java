@@ -6,7 +6,7 @@ import com.epam.database.ResultSetHandlerFactory;
 import com.epam.entity.Car;
 import com.epam.exception.InternalServerErrorException;
 import com.epam.repository.CarRepository;
-import com.epam.utils.AllRequestDB;
+import com.epam.constans.AllRequestDB;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -30,7 +30,7 @@ public class CarRepositoryImpl implements CarRepository {
     @Override
     public List<Car> getAllCars() {
         try {
-            return dataBaseManager.select(AllRequestDB.SELECT_ALL_USERS,
+            return dataBaseManager.select(AllRequestDB.SELECT_ALL_CARS,
                     ResultSetHandlerFactory.getListResultSetHandler(CAR_RESULT_SET_HANDLER));
         } catch (SQLException e) {
             throw new InternalServerErrorException("Cant't execute SQL query: " + e.getMessage(), e);

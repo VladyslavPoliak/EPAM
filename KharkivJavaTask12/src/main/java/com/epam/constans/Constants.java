@@ -1,4 +1,4 @@
-package com.epam.utils;
+package com.epam.constans;
 
 public final class Constants {
 

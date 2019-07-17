@@ -1,6 +1,6 @@
 package com.epam.entity;
 
-import com.epam.utils.CaptchaConstants;
+import com.epam.constans.CaptchaConstants;
 import com.epam.utils.IdGenerator;
 
 import java.util.Objects;

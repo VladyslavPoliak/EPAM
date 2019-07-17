@@ -6,7 +6,7 @@ import com.epam.creator.CaptchaCreator;
 import com.epam.entity.Captcha;
 import com.epam.exception.SessionTimeOutException;
 import com.epam.service.CaptchaService;
-import com.epam.utils.CaptchaConstants;
+import com.epam.constans.CaptchaConstants;
 
 import javax.naming.directory.NoSuchAttributeException;
 import javax.servlet.http.HttpServletRequest;

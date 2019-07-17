@@ -24,7 +24,19 @@ CREATE TABLE car (
 
 INSERT INTO user
 VALUES (default, "admin", "admin","admin@gmail.com","123123123","");
+
 insert into car
-values (default, 'Santa Fe Special', 'HYUNDAI', 'J', 700,  '/media/1.jpg');
+values (default, 'Santa Fe Special', 'HYUNDAI', 'J', 700, '/img/cars/1.jpg');
+insert into car
+values (default, 'Sonata', 'HYUNDAI', 'E', 1100, '/img/cars/2.jpg');
  insert into car
-values (default, 'Sonata', 'HYUNDAI', 'E', 1100, '/media/2.jpg');
+values (default, 'Elantra Comfort', 'HYUNDAI', 'C', 900, '/img/cars/3.jpg');
+ insert into car
+values (default, 'Passat', 'VOLKSWAGEN', 'C', 1000, '/img/cars/4.jpg');
+ insert into car
+values (default, 'Spark', 'CHEVROLET', 'A', 500, '/img/cars/5.jpg');
+ insert into car
+ values (default, 'Espace', 'RENAULT', 'C', 1050, '/img/cars/6.jpg');
+
+
+

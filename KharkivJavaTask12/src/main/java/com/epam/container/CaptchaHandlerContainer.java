@@ -5,7 +5,7 @@ import com.epam.captcha.impl.CookieCaptchaHandler;
 import com.epam.captcha.impl.HiddenFieldCaptchaHandler;
 import com.epam.captcha.impl.SessionCaptchaHandler;
 import com.epam.entity.Captcha;
-import com.epam.utils.Constants;
+import com.epam.constans.Constants;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;

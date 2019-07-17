@@ -6,7 +6,7 @@ import com.epam.database.ResultSetHandlerFactory;
 import com.epam.entity.User;
 import com.epam.exception.InternalServerErrorException;
 import com.epam.repository.UserRepository;
-import com.epam.utils.AllRequestDB;
+import com.epam.constans.AllRequestDB;
 import com.epam.utils.HashPassword;
 
 import java.sql.SQLException;

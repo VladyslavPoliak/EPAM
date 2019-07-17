@@ -1,6 +1,6 @@
 package com.epam.servlet;
 
-import com.epam.utils.Constants;
+import com.epam.constans.Constants;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

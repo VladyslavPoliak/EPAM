@@ -3,7 +3,7 @@ package com.epam.captcha.impl;
 import com.epam.captcha.AbstractCaptchaHandler;
 import com.epam.entity.Captcha;
 import com.epam.exception.SessionTimeOutException;
-import com.epam.utils.CaptchaConstants;
+import com.epam.constans.CaptchaConstants;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;

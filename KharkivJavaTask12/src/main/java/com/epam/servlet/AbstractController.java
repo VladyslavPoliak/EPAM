@@ -1,10 +1,11 @@
 package com.epam.servlet;
 
 import com.epam.captcha.CaptchaHandler;
+import com.epam.constans.Constants;
 import com.epam.creator.ImageCreator;
 import com.epam.service.CaptchaService;
+import com.epam.service.CarService;
 import com.epam.service.UserService;
-import com.epam.utils.Constants;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletContext;
@@ -16,6 +17,8 @@ public abstract class AbstractController extends HttpServlet {
     protected final Logger LOGGER = Logger.getLogger(getClass());
     private UserService userService;
     private CaptchaService captchaService;
+    private CarService carService;
+
     private CaptchaHandler captchaHandler;
 
     private ImageCreator imageCreator;
@@ -25,6 +28,7 @@ public abstract class AbstractController extends HttpServlet {
         ServletContext servletContext = getServletContext();
         userService = (UserService) servletContext.getAttribute(Constants.USER_SERVICE);
         captchaService = (CaptchaService) servletContext.getAttribute(Constants.CAPTCHA_SERVICE);
+        carService = (CarService) servletContext.getAttribute(Constants.CAR_SERVICE);
         captchaHandler = (CaptchaHandler) servletContext.getAttribute(Constants.CAPTCHA_PRESERVER);
         imageCreator = (ImageCreator) servletContext.getAttribute(Constants.IMAGE_CREATOR);
     }
@@ -43,5 +47,9 @@ public abstract class AbstractController extends HttpServlet {
 
     protected ImageCreator getImageCreator() {
         return imageCreator;
+    }
+
+    protected CarService getCarService() {
+        return carService;
     }
 }

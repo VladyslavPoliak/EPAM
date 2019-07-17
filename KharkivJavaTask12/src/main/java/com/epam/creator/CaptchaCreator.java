@@ -1,6 +1,6 @@
 package com.epam.creator;
 
-import com.epam.utils.CaptchaConstants;
+import com.epam.constans.CaptchaConstants;
 
 import javax.naming.directory.NoSuchAttributeException;
 import java.awt.*;

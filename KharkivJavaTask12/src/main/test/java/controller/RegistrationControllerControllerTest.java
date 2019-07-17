@@ -5,7 +5,7 @@ import com.epam.creator.ImageCreator;
 import com.epam.service.CaptchaService;
 import com.epam.service.UserService;
 import com.epam.servlet.RegistrationController;
-import com.epam.utils.Constants;
+import com.epam.constans.Constants;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

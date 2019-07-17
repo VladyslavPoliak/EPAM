@@ -2,7 +2,7 @@ package com.epam.servlet;
 
 import com.epam.entity.User;
 import com.epam.form.RegistrationForm;
-import com.epam.utils.Constants;
+import com.epam.constans.Constants;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
