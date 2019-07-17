@@ -60,14 +60,14 @@ public class RegistrationControllerControllerTest {
 
     @Test
     public void goToRegistrationPageIfUserExist() throws ServletException, IOException {
-        when(userService.isUserPresent(LOGIN)).thenReturn(true);
+        when(userService.isUserExists(LOGIN)).thenReturn(true);
         controller.doPost(request, response);
         verify(dispatcher, Mockito.times(ONE_TIME)).forward(request, response);
     }
 
     @Test
     public void goToMainPageIfUserNoExist() throws ServletException, IOException {
-        when(userService.isUserPresent(LOGIN)).thenReturn(false);
+        when(userService.isUserExists(LOGIN)).thenReturn(false);
         when(captchaService.checkValid(request, captchaHandler)).thenReturn(true);
         when(creator.getFileNameForSpecificUser()).thenReturn("sds");
         controller.doPost(request, response);

@@ -1,6 +1,6 @@
 package com.epam.entity;
 
-import com.epam.utils.ConstantsForCaptcha;
+import com.epam.utils.CaptchaConstants;
 import com.epam.utils.IdGenerator;
 
 import java.util.Objects;
@@ -17,9 +17,9 @@ public class Captcha {
         this.expirationTime = builder.expirationTime;
     }
 
-    public boolean isValid() {
+    public boolean isExpiredValid() {
         return System.currentTimeMillis() - expirationTime <=
-                ConstantsForCaptcha.CAPTCHA_LIVE_TIME;
+                CaptchaConstants.CAPTCHA_LIVE_TIME;
     }
 
     public int getId() {

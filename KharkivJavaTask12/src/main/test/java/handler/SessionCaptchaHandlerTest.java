@@ -47,13 +47,13 @@ public class SessionCaptchaHandlerTest {
 
     @Test
     public void getCaptchaByIdInSessionWhenCallGetCaptcha() throws SessionTimeOutException {
-        Mockito.when(captcha.isValid()).thenReturn(true);
+        Mockito.when(captcha.isExpiredValid()).thenReturn(true);
         Assert.assertEquals(captcha, handler.getCaptcha(request));
     }
 
     @Test(expected = SessionTimeOutException.class)
     public void throwExceptionWhenFindCaptchaByIdInSessionBUtTimeOut() throws SessionTimeOutException {
-        Mockito.when(captcha.isValid()).thenReturn(false);
+        Mockito.when(captcha.isExpiredValid()).thenReturn(false);
         handler.getCaptcha(request);
     }
 }

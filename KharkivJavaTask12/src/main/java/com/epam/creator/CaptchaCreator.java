@@ -1,6 +1,7 @@
 package com.epam.creator;
 
-import com.epam.utils.ConstantsForCaptcha;
+import com.epam.utils.CaptchaConstants;
+import com.epam.utils.Constants;
 
 import javax.naming.directory.NoSuchAttributeException;
 import java.awt.*;
@@ -9,8 +10,8 @@ import java.util.Random;
 
 public class CaptchaCreator {
 
-    private static final Font font = new Font(ConstantsForCaptcha.FONT_NAME, Font.BOLD,
-            ConstantsForCaptcha.FONT_SIZE);
+    private static final Font font = new Font(CaptchaConstants.FONT_NAME, Font.BOLD,
+            CaptchaConstants.FONT_SIZE);
     private static final Random random = new Random();
     private String captchaNumbers;
     private int width;
@@ -26,7 +27,7 @@ public class CaptchaCreator {
     private void createCaptchaNumbers() {
         StringBuilder builder = new StringBuilder();
         for (int i = 0; i < symbolCount; i++) {
-            builder.append(random.nextInt(ConstantsForCaptcha.RANDOM_NUMBERS));
+            builder.append(random.nextInt(CaptchaConstants.RANDOM_NUMBERS));
         }
         captchaNumbers = builder.toString();
     }
@@ -35,9 +36,9 @@ public class CaptchaCreator {
         checkForAllAttributes();
         BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
         Graphics2D graphics = (Graphics2D) image.getGraphics();
-        graphics.setColor(new Color(random.nextInt(ConstantsForCaptcha.BLACK_COLOR),
-                random.nextInt(ConstantsForCaptcha.BLACK_COLOR),
-                random.nextInt(ConstantsForCaptcha.BLACK_COLOR)));
+        graphics.setColor(new Color(random.nextInt(CaptchaConstants.BLACK_COLOR),
+                random.nextInt(CaptchaConstants.BLACK_COLOR),
+                random.nextInt(CaptchaConstants.BLACK_COLOR)));
         return image;
     }
 
@@ -57,16 +58,19 @@ public class CaptchaCreator {
     private void addNumberInImage(Graphics2D graphics) {
         for (int i = 0; i < symbolCount; i++) {
             if (i % 2 == 0) {
-                graphics.drawString(captchaNumbers.substring(i, i + 1),
-                        ConstantsForCaptcha.DEFAULT_X * i,
-                        ConstantsForCaptcha.UP_Y);
+                drawString(graphics, i, CaptchaConstants.UP_Y);
             } else {
-                graphics.drawString(captchaNumbers.substring(i, i + 1),
-                        ConstantsForCaptcha.DEFAULT_X * i,
-                        ConstantsForCaptcha.DOWN_Y);
+                drawString(graphics, i, CaptchaConstants.DOWN_Y);
             }
         }
     }
+
+    private void drawString(Graphics2D graphics, int i, int coordinate) {
+        graphics.drawString(captchaNumbers.substring(i, i + 1),
+                CaptchaConstants.DEFAULT_X * i,
+                coordinate);
+    }
+
 
     public String getCaptchaNumbers() {
         return captchaNumbers;

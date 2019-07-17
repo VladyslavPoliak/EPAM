@@ -6,7 +6,7 @@ import java.util.Optional;
 
 public interface UserService {
 
-    boolean isUserPresent(String login);
+    boolean isUserExists(String login);
 
     void addNewUser(User user);
 

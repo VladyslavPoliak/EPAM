@@ -6,7 +6,7 @@ import com.epam.dao.CaptchaDao;
 import com.epam.entity.Captcha;
 import com.epam.exception.SessionTimeOutException;
 import com.epam.service.CaptchaService;
-import com.epam.utils.ConstantsForCaptcha;
+import com.epam.utils.CaptchaConstants;
 
 import javax.naming.directory.NoSuchAttributeException;
 import javax.servlet.http.HttpServletRequest;
@@ -23,20 +23,20 @@ public class CaptchaServiceImpl implements CaptchaService {
 
     @Override
     public CaptchaCreator create() {
-        return new CaptchaCreator().setHeight(ConstantsForCaptcha.CAPTCHA_HEIGHT)
-                .setWidth(ConstantsForCaptcha.CAPTCHA_WIDTH)
-                .setSymbolCount(ConstantsForCaptcha.SYMBOL_COUNT);
+        return new CaptchaCreator().setHeight(CaptchaConstants.CAPTCHA_HEIGHT)
+                .setWidth(CaptchaConstants.CAPTCHA_WIDTH)
+                .setSymbolCount(CaptchaConstants.SYMBOL_COUNT);
     }
 
     @Override
-    public BufferedImage bufferedImage(CaptchaCreator captchaCreator) throws NoSuchAttributeException {
+    public BufferedImage getBufferedImage(CaptchaCreator captchaCreator) throws NoSuchAttributeException {
         return captchaCreator.createImage();
     }
 
     @Override
-    public void removeOldCaptcha() {
+    public void removeExpiredCaptcha() {
         captchaDao.getAllCaptches().forEach((key, value) -> {
-            if (value.isValid()) {
+            if (value.isExpiredValid()) {
                 captchaDao.removeCaptcha(key);
             }
         });
@@ -46,7 +46,7 @@ public class CaptchaServiceImpl implements CaptchaService {
     public boolean checkValid(HttpServletRequest request, CaptchaHandler handler) {
         try {
             Captcha captcha = handler.getCaptcha(request);
-            return captcha.getNumbers().equals(request.getParameter(ConstantsForCaptcha.CAPTCHA));
+            return captcha.getNumbers().equals(request.getParameter(CaptchaConstants.CAPTCHA));
         } catch (SessionTimeOutException e) {
             e.printStackTrace();
             return false;

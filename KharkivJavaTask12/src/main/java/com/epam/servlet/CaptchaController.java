@@ -15,21 +15,21 @@ import javax.servlet.http.HttpServletResponse;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
-@WebServlet("/captchaController")
+@WebServlet("/captcha")
 public class CaptchaController extends AbstractController {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         CaptchaService captchaService = getCaptchaService();
-        captchaService.removeOldCaptcha();
+        captchaService.removeExpiredCaptcha();
         getSenderWithNewCaptcha(req, resp, captchaService).send();
     }
 
     private CaptchaSender getSenderWithNewCaptcha(HttpServletRequest request, HttpServletResponse response, CaptchaService captchaService) {
-        CaptchaSender sender = new CaptchaSender(request, response);
+        CaptchaSender sender = new CaptchaSender(request);
         try {
             CaptchaCreator captchaCreator = captchaService.create();
-            BufferedImage bufferedImage = captchaService.bufferedImage(captchaCreator);
+            BufferedImage bufferedImage = captchaService.getBufferedImage(captchaCreator);
             ServletOutputStream stream = response.getOutputStream();
             ImageIO.write(bufferedImage, "jpg", stream);
             stream.close();

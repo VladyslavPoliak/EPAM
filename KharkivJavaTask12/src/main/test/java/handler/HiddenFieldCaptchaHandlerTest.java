@@ -42,13 +42,13 @@ public class HiddenFieldCaptchaHandlerTest {
 
     @Test
     public void getCaptchaByIdInHiddenFieldWhenCallGetCaptcha() throws SessionTimeOutException {
-        when(captcha.isValid()).thenReturn(true);
+        when(captcha.isExpiredValid()).thenReturn(true);
         assertEquals(captcha, handler.getCaptcha(request));
     }
 
     @Test(expected = SessionTimeOutException.class)
     public void throwExceptionGetCaptchaByIdInHiddenFieldButTimeOut() throws SessionTimeOutException {
-        when(captcha.isValid()).thenReturn(false);
+        when(captcha.isExpiredValid()).thenReturn(false);
         handler.getCaptcha(request);
     }
 

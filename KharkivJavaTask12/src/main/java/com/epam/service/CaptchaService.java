@@ -12,11 +12,11 @@ public interface CaptchaService {
 
     CaptchaCreator create();
 
-    BufferedImage bufferedImage(CaptchaCreator captchaCreator) throws NoSuchAttributeException;
+    BufferedImage getBufferedImage(CaptchaCreator captchaCreator) throws NoSuchAttributeException;
 
     Captcha createCaptcha(String captchaNumbers);
 
-    void removeOldCaptcha();
+    void removeExpiredCaptcha();
 
     boolean checkValid(HttpServletRequest request, CaptchaHandler handler);
 

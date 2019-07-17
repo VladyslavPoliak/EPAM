@@ -1,6 +1,6 @@
 package com.epam.utils;
 
-public class ConstantsForCaptcha {
+public class CaptchaConstants {
 
     public static final int CAPTCHA_WIDTH = 200;
     public static final int CAPTCHA_HEIGHT = 50;

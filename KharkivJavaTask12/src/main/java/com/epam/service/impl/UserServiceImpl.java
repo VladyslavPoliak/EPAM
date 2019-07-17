@@ -16,7 +16,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean isUserPresent(String login) {
+    public boolean isUserExists(String login) {
         List<User> users = userDao.getAllUsers();
         Optional<User> userOptional = users.stream()
                 .filter(user -> user.getEmail().equals(login))

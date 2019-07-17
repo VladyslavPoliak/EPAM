@@ -56,13 +56,13 @@ public class CookieCaptchaHandlerTest {
 
     @Test
     public void getCaptchaByOldestCookieValueWhenCallGetCaptcha() throws SessionTimeOutException {
-        when(captcha.isValid()).thenReturn(true);
+        when(captcha.isExpiredValid()).thenReturn(true);
         assertEquals(captcha, captchaHandler.getCaptcha(request));
     }
 
     @Test(expected = SessionTimeOutException.class)
     public void getExceptionWhenFindCaptchaButTimedOut() throws SessionTimeOutException {
-        when(captcha.isValid()).thenReturn(false);
+        when(captcha.isExpiredValid()).thenReturn(false);
         captchaHandler.getCaptcha(request);
     }
 }

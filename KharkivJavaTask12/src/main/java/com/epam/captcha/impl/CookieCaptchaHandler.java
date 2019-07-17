@@ -3,7 +3,7 @@ package com.epam.captcha.impl;
 import com.epam.captcha.AbstractCaptchaHandler;
 import com.epam.entity.Captcha;
 import com.epam.exception.SessionTimeOutException;
-import com.epam.utils.ConstantsForCaptcha;
+import com.epam.utils.CaptchaConstants;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -22,7 +22,7 @@ public class CookieCaptchaHandler extends AbstractCaptchaHandler {
     @Override
     public void addCaptcha(HttpServletRequest request, HttpServletResponse response, Captcha captcha) {
         captches.put(captcha.getId(), captcha);
-        response.addCookie(new Cookie(ConstantsForCaptcha.CAPTCHA +
+        response.addCookie(new Cookie(CaptchaConstants.CAPTCHA +
                 captcha.getId(), "" + captcha.getId()));
     }
 
@@ -30,7 +30,7 @@ public class CookieCaptchaHandler extends AbstractCaptchaHandler {
     public Captcha getCaptcha(HttpServletRequest request) throws SessionTimeOutException {
         int cookieId = getOldestCaptchaIdByCookie(request);
         Captcha captcha = captches.get(cookieId);
-        if (captcha.isValid()) {
+        if (captcha.isExpiredValid()) {
             return captcha;
         }
         throw new SessionTimeOutException();
@@ -38,7 +38,7 @@ public class CookieCaptchaHandler extends AbstractCaptchaHandler {
 
     private int getOldestCaptchaIdByCookie(HttpServletRequest request) {
         for (Cookie cookie : request.getCookies()) {
-            if (cookie.getName().startsWith(ConstantsForCaptcha.CAPTCHA)) {
+            if (cookie.getName().startsWith(CaptchaConstants.CAPTCHA)) {
                 findValidCookie(cookie);
             }
         }
@@ -56,12 +56,12 @@ public class CookieCaptchaHandler extends AbstractCaptchaHandler {
     private void firstCookie(Cookie cookie) {
         oldestCookie = cookie;
         oldestCookieId = Integer.parseInt(cookie.getName()
-                .replace(ConstantsForCaptcha.CAPTCHA, ""));
+                .replace(CaptchaConstants.CAPTCHA, ""));
     }
 
     private void findOlderCookie(Cookie cookie) {
         int idCaptcha = Integer.parseInt(cookie.getName()
-                .replace(ConstantsForCaptcha.CAPTCHA, ""));
+                .replace(CaptchaConstants.CAPTCHA, ""));
         if (idCaptcha >= oldestCookieId) {
             oldestCookie = cookie;
             oldestCookieId = idCaptcha;

@@ -1,20 +1,16 @@
 package com.epam.sender;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 public class CaptchaSender {
 
     private HttpServletRequest request;
-    private HttpServletResponse response;
     private Integer captchaId = 0;
-    private boolean isCaptcha = false;
+    private boolean isExpiredValid = false;
 
-    public CaptchaSender(HttpServletRequest request, HttpServletResponse response) {
+    public CaptchaSender(HttpServletRequest request) {
         this.request = request;
-        this.response = response;
     }
-
 
     public HttpServletRequest getRequest() {
         return request;
@@ -22,15 +18,6 @@ public class CaptchaSender {
 
     public CaptchaSender setRequest(HttpServletRequest request) {
         this.request = request;
-        return this;
-    }
-
-    public HttpServletResponse getResponse() {
-        return response;
-    }
-
-    public CaptchaSender setResponse(HttpServletResponse response) {
-        this.response = response;
         return this;
     }
 
@@ -43,19 +30,19 @@ public class CaptchaSender {
         return this;
     }
 
-    public boolean isCaptcha() {
-        return isCaptcha;
+    public boolean isExpiredValid() {
+        return isExpiredValid;
     }
 
-    public CaptchaSender setCaptcha(boolean captcha) {
-        isCaptcha = captcha;
+    public CaptchaSender setExpiredValid(boolean expiredValid) {
+        isExpiredValid = expiredValid;
         return this;
     }
 
     public void send() {
         request.getSession().setAttribute("sessionCaptchaId", captchaId);
         request.setAttribute("requestCaptchaId", captchaId);
-        request.setAttribute("isCaptcha", isCaptcha);
+        request.setAttribute("isExpiredValid", isExpiredValid);
         request.getSession().setAttribute("hiddenCaptcha", captchaId);
     }
 }
