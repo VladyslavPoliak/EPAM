@@ -20,6 +20,8 @@ public final class Constants {
     public static final String STORAGE_FOLDER_PATH = "storageFolderPath";
     public static final String IMAGE_CREATOR = "IMAGE_CREATOR";
     public static final String DEFAULT_AVATAR = "defaultAvatarPath";
+    public static final String CLASSES_LIST = "CLASSES_LIST";
+    public static final String MARKS_LIST = "MARKS_LIST";
 
     private Constants() {
     }

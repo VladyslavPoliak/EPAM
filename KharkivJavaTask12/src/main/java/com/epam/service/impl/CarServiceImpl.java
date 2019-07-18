@@ -18,4 +18,14 @@ public class CarServiceImpl implements CarService {
     public List<Car> getAllCars() {
         return carRepository.getAllCars();
     }
+
+    @Override
+    public List<Car> getAllClasses() {
+        return carRepository.getAllClasses();
+    }
+
+    @Override
+    public List<Car> getAllMarks() {
+        return carRepository.getAllMarks();
+    }
 }

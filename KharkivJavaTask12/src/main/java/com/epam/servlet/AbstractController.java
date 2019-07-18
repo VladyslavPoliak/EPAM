@@ -3,6 +3,7 @@ package com.epam.servlet;
 import com.epam.captcha.CaptchaHandler;
 import com.epam.constans.Constants;
 import com.epam.creator.ImageCreator;
+import com.epam.form.SearchForm;
 import com.epam.service.CaptchaService;
 import com.epam.service.CarService;
 import com.epam.service.UserService;
@@ -11,6 +12,7 @@ import org.apache.log4j.Logger;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
 
 public abstract class AbstractController extends HttpServlet {
 
@@ -52,4 +54,6 @@ public abstract class AbstractController extends HttpServlet {
     protected CarService getCarService() {
         return carService;
     }
+
+
 }

@@ -8,4 +8,8 @@ public interface CarService {
 
     List<Car> getAllCars();
 
+    List<Car> getAllClasses();
+
+    List<Car> getAllMarks();
+
 }

@@ -130,6 +130,9 @@ public class ApplicationListener implements ServletContextListener {
         context.setAttribute(Constants.IMAGE_CREATOR, imageCreator);
         context.setAttribute(Constants.DEFAULT_AVATAR, defaultAvatarPath);
         context.setAttribute(Constants.STORAGE_FOLDER_PATH, storageFolderPath);
+
+        context.setAttribute(Constants.CLASSES_LIST, carService.getAllClasses());
+        context.setAttribute(Constants.MARKS_LIST, carService.getAllMarks());
     }
 
     private void initServices() {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
-    <link href="css/icon.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
     <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">
 
@@ -15,7 +15,7 @@
 <header>
     <jsp:include page="/header.jsp" />
 </header>
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <aside class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
             <jsp:include page="/aside.jsp" />
