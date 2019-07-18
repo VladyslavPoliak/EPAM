@@ -6,6 +6,7 @@ import com.epam.database.ResultSetHandler;
 import com.epam.database.ResultSetHandlerFactory;
 import com.epam.entity.Car;
 import com.epam.exception.InternalServerErrorException;
+import com.epam.form.SearchForm;
 import com.epam.repository.CarRepository;
 
 import java.sql.SQLException;
@@ -58,6 +59,19 @@ public class CarRepositoryImpl implements CarRepository {
         try {
             return dataBaseManager.select(AllRequestDB.SELECT_ALL_MARKS,
                     ResultSetHandlerFactory.getListResultSetHandler(MARKS_RESULT_SET_HANDLER));
+        } catch (SQLException e) {
+            throw new InternalServerErrorException("Cant't execute SQL query: " + e.getMessage(), e);
+        }
+    }
+
+    @Override
+    public List<Car> listCarsBySearchForm(SearchForm searchForm) {
+        System.out.println("SELECT * FROM car WHERE name like '%" + searchForm.getQuery()
+                + "%' or mark like '%" + searchForm.getQuery() + "%'" );
+        try {
+            return dataBaseManager.select("SELECT * FROM car WHERE name like '%" + searchForm.getQuery()
+                            + "%' or mark like '%" + searchForm.getQuery() + "%' ",
+                    ResultSetHandlerFactory.getListResultSetHandler(CAR_RESULT_SET_HANDLER));
         } catch (SQLException e) {
             throw new InternalServerErrorException("Cant't execute SQL query: " + e.getMessage(), e);
         }

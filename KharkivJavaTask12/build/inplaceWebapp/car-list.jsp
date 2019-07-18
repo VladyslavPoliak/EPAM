@@ -8,8 +8,8 @@
              class="card-img-top"
              src="${c.imageURL}">
         <div class="card-body">
-            <h5 class="card-title text-truncate" data-placement="top" data-toggle="tooltip"
-                title=" Seat Ibiza "></h5>
+            <h5 class="card-title text-truncate" data-placement="top" data-toggle="tooltip">
+                    ${c.name} ${c.mark}</h5>
             <p class="card-text">Class: ${c.classCar}</p>
             <h5>Price: ${c.cost}</h5>
             <a class="btn btn-primary" href="#">Rent</a>

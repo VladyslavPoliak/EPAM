@@ -7,7 +7,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12 col-md-3 ">
-            <form class="sticky-top p-2" action="main" method="GET">
+            <form class="sticky-top p-2" action="${pageContext.request.contextPath}/search" >
                 <h3>Producers</h3>
                 <tag:tagForCarProduсers producers="${MARKS_LIST}"/>
 
