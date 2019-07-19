@@ -1,12 +1,12 @@
 package com.epam.service.impl;
 
 import com.epam.captcha.CaptchaHandler;
+import com.epam.constans.CaptchaConstants;
 import com.epam.container.CaptchaContainer;
 import com.epam.creator.CaptchaCreator;
 import com.epam.entity.Captcha;
 import com.epam.exception.SessionTimeOutException;
 import com.epam.service.CaptchaService;
-import com.epam.constans.CaptchaConstants;
 
 import javax.naming.directory.NoSuchAttributeException;
 import javax.servlet.http.HttpServletRequest;

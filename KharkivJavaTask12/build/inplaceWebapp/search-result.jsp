@@ -6,7 +6,7 @@
 <fmt:setBundle basename="messages"/>
 
 <div class="alert alert-info">
-  <p>Find: <strong>100</strong> cars</p>
+  <p>Find: <strong>${carCount}</strong> cars</p>
 </div>
 
 <jsp:include page="cars.jsp" />

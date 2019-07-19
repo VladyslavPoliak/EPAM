@@ -1,6 +1,7 @@
 package com.epam.listener;
 
 import com.epam.captcha.CaptchaHandler;
+import com.epam.constans.Constants;
 import com.epam.container.CaptchaContainer;
 import com.epam.container.CaptchaHandlerContainer;
 import com.epam.creator.ImageCreator;
@@ -15,7 +16,6 @@ import com.epam.service.UserService;
 import com.epam.service.impl.CaptchaServiceImpl;
 import com.epam.service.impl.CarServiceImpl;
 import com.epam.service.impl.UserServiceImpl;
-import com.epam.constans.Constants;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.apache.log4j.Logger;
 

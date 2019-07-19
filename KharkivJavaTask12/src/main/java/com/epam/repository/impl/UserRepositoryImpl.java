@@ -1,12 +1,12 @@
 package com.epam.repository.impl;
 
+import com.epam.constans.AllRequestDB;
 import com.epam.database.DataBaseManager;
 import com.epam.database.ResultSetHandler;
 import com.epam.database.ResultSetHandlerFactory;
 import com.epam.entity.User;
 import com.epam.exception.InternalServerErrorException;
 import com.epam.repository.UserRepository;
-import com.epam.constans.AllRequestDB;
 import com.epam.utils.HashPassword;
 
 import java.sql.SQLException;

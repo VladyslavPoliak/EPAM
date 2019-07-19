@@ -1,7 +1,7 @@
 package com.epam.servlet;
 
-import com.epam.entity.User;
 import com.epam.constans.Constants;
+import com.epam.entity.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

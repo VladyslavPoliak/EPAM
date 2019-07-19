@@ -1,8 +1,8 @@
 package com.epam.servlet;
 
+import com.epam.constans.Constants;
 import com.epam.entity.User;
 import com.epam.form.RegistrationForm;
-import com.epam.constans.Constants;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -19,7 +19,7 @@ public class RegistrationController extends AbstractController {
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String login = req.getParameter("userEmail");
         // TODO: 7/18/2019 || !getCaptchaService().checkValid(req, getCaptchaHandler())
-        if (getUserService().isUserExists(login) ) {
+        if (getUserService().isUserExists(login)) {
             saveInfo(req);
             req.getRequestDispatcher(Constants.REGISTRATION_JSP).forward(req, resp);
         } else {

@@ -23,10 +23,10 @@
 
                 <div class="form-group">
                     <label for="exampleInputPassword1">Search for name</label>
-                    <input type="text" class="input-number2" name="searchByName" id="exampleInputPassword12">
+                    <input type="text" class="input-number2" name="searchByName" id="exampleInputPassword12" value="${searchForm.query}">
                 </div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Search</button>
             </form>
 
             <div class="dropdown show">

@@ -14,7 +14,6 @@ import java.util.List;
 
 public class CarRepositoryImpl implements CarRepository {
 
-    private DataBaseManager dataBaseManager;
     private final ResultSetHandler<Car> CAR_RESULT_SET_HANDLER = rs -> new Car.CarBuilder()
             .setId(rs.getInt("id_car"))
             .setName(rs.getString("name"))
@@ -29,6 +28,7 @@ public class CarRepositoryImpl implements CarRepository {
     private final ResultSetHandler<Car> MARKS_RESULT_SET_HANDLER = rs -> new Car.CarBuilder()
             .setMark(rs.getString("mark"))
             .build();
+    private DataBaseManager dataBaseManager;
 
     public CarRepositoryImpl(DataBaseManager dataBaseManager) {
         this.dataBaseManager = dataBaseManager;
@@ -66,12 +66,21 @@ public class CarRepositoryImpl implements CarRepository {
 
     @Override
     public List<Car> listCarsBySearchForm(SearchForm searchForm) {
-        System.out.println("SELECT * FROM car WHERE name like '%" + searchForm.getQuery()
-                + "%' or mark like '%" + searchForm.getQuery() + "%'" );
         try {
             return dataBaseManager.select("SELECT * FROM car WHERE name like '%" + searchForm.getQuery()
                             + "%' or mark like '%" + searchForm.getQuery() + "%' ",
                     ResultSetHandlerFactory.getListResultSetHandler(CAR_RESULT_SET_HANDLER));
+        } catch (SQLException e) {
+            throw new InternalServerErrorException("Cant't execute SQL query: " + e.getMessage(), e);
+        }
+    }
+
+    @Override
+    public int countCarsBySearchForm(SearchForm searchForm) {
+        try {
+            return dataBaseManager.select("SELECT count(*) FROM car WHERE name like '%" + searchForm.getQuery()
+                            + "%' or mark like '%" + searchForm.getQuery() + "%' ",
+                    ResultSetHandlerFactory.getCountResultSetHandler());
         } catch (SQLException e) {
             throw new InternalServerErrorException("Cant't execute SQL query: " + e.getMessage(), e);
         }

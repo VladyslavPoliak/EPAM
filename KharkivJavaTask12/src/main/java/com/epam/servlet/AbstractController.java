@@ -55,9 +55,9 @@ public abstract class AbstractController extends HttpServlet {
         return carService;
     }
 
-    public final SearchForm createSearchForm(HttpServletRequest request) {
-        return new SearchForm(request.getParameter("query"),request.getParameterValues("producers")
-                        ,request.getParameter("minPrice"),request.getParameter("maxPrice")
+    protected final SearchForm createSearchForm(HttpServletRequest request) {
+        return new SearchForm(request.getParameter("searchByName"), request.getParameterValues("producers")
+                , request.getParameter("minPrice"), request.getParameter("maxPrice")
         );
     }
 

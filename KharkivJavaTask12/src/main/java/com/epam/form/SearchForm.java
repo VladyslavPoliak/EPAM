@@ -1,6 +1,5 @@
 package com.epam.form;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -19,10 +18,11 @@ public class SearchForm {
     }
 
     private List<String> convert(String[] producers) {
-        if (producers.length > 0) {
+        if (producers == null) {
+            return null;
+        } else {
             return Arrays.asList(producers);
         }
-        return new ArrayList<>();
     }
 
     public List<String> getProducers() {
