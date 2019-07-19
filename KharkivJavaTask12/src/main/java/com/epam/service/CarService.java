@@ -15,6 +15,4 @@ public interface CarService {
 
     List<Car> listCarsBySearchForm(SearchForm searchForm);
 
-    int countCarsBySearchForm(SearchForm searchForm);
-
 }

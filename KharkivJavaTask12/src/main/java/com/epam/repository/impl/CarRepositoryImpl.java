@@ -4,12 +4,14 @@ import com.epam.constans.AllRequestDB;
 import com.epam.database.DataBaseManager;
 import com.epam.database.ResultSetHandler;
 import com.epam.database.ResultSetHandlerFactory;
+import com.epam.database.SearchQuery;
 import com.epam.entity.Car;
 import com.epam.exception.InternalServerErrorException;
 import com.epam.form.SearchForm;
 import com.epam.repository.CarRepository;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class CarRepositoryImpl implements CarRepository {
@@ -67,22 +69,21 @@ public class CarRepositoryImpl implements CarRepository {
     @Override
     public List<Car> listCarsBySearchForm(SearchForm searchForm) {
         try {
-            return dataBaseManager.select("SELECT * FROM car WHERE name like '%" + searchForm.getQuery()
-                            + "%' or mark like '%" + searchForm.getQuery() + "%' ",
-                    ResultSetHandlerFactory.getListResultSetHandler(CAR_RESULT_SET_HANDLER));
+            SearchQuery sq = buildSearchQuery(searchForm);
+            return dataBaseManager.select(sq.getSql().toString(), ResultSetHandlerFactory.getListResultSetHandler(CAR_RESULT_SET_HANDLER), sq.getParams().toArray());
         } catch (SQLException e) {
-            throw new InternalServerErrorException("Cant't execute SQL query: " + e.getMessage(), e);
+            throw new InternalServerErrorException("Can't execute SQL request: " + e.getMessage(), e);
         }
     }
 
-    @Override
-    public int countCarsBySearchForm(SearchForm searchForm) {
-        try {
-            return dataBaseManager.select("SELECT count(*) FROM car WHERE name like '%" + searchForm.getQuery()
-                            + "%' or mark like '%" + searchForm.getQuery() + "%' ",
-                    ResultSetHandlerFactory.getCountResultSetHandler());
-        } catch (SQLException e) {
-            throw new InternalServerErrorException("Cant't execute SQL query: " + e.getMessage(), e);
-        }
+
+    private SearchQuery buildSearchQuery(SearchForm form) {
+        List<Object> params = new ArrayList<>();
+        StringBuilder sql = new StringBuilder("select ");
+        sql.append(" * ").append(" from car where (name like ? or mark like ?)");
+        params.add("%" + form.getQuery() + "%");
+        params.add("%" + form.getQuery() + "%");
+        dataBaseManager.populateSqlAndParams(sql, params, form.getProducers(), form.getMinPrice(), form.getMaxPrice());
+        return new SearchQuery(sql, params);
     }
 }

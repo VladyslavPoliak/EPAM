@@ -19,7 +19,7 @@ public class SearchController extends AbstractController {
 
         List<Car> carList = getCarService().listCarsBySearchForm(searchForm);
         request.setAttribute("carList", carList);
-        request.setAttribute("carCount", getCarService().countCarsBySearchForm(searchForm));
+        request.setAttribute("carCount", carList.size());
         request.setAttribute("searchForm", searchForm);
 
 

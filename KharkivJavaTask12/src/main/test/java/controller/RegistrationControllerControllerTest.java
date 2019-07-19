@@ -68,7 +68,7 @@ public class RegistrationControllerControllerTest {
     @Test
     public void goToMainPageIfUserNoExist() throws ServletException, IOException {
         when(userService.isUserExists(LOGIN)).thenReturn(false);
-        when(captchaService.checkValid(request, captchaHandler)).thenReturn(true);
+        //when(captchaService.checkValid(request, captchaHandler)).thenReturn(true);
         when(creator.getFileNameForSpecificUser()).thenReturn("sds");
         controller.doPost(request, response);
         verify(response, Mockito.times(ONE_TIME)).sendRedirect(Constants.MAIN_PAGE);
