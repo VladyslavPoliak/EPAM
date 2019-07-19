@@ -76,6 +76,15 @@ public class CarRepositoryImpl implements CarRepository {
         }
     }
 
+    @Override
+    public List<Car> listCarsByClass(String className) {
+        try {
+            return dataBaseManager.select(AllRequestDB.SELECT_CARS_BY_CLASS,
+                    ResultSetHandlerFactory.getListResultSetHandler(CLASSES_RESULT_SET_HANDLER), className);
+        } catch (SQLException e) {
+            throw new InternalServerErrorException("Cant't execute SQL query: " + e.getMessage(), e);
+        }
+    }
 
     private SearchQuery buildSearchQuery(SearchForm form) {
         List<Object> params = new ArrayList<>();
@@ -83,7 +92,7 @@ public class CarRepositoryImpl implements CarRepository {
         sql.append(" * ").append(" from car where (name like ? or mark like ?)");
         params.add("%" + form.getQuery() + "%");
         params.add("%" + form.getQuery() + "%");
-        dataBaseManager.populateSqlAndParams(sql, params, form.getProducers(), form.getMinPrice(), form.getMaxPrice());
+        dataBaseManager.populateSqlAndParams(sql, params, form.getProducers(), form.getCarClasses(), form.getMinPrice(), form.getMaxPrice());
         return new SearchQuery(sql, params);
     }
 }

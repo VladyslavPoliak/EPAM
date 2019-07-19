@@ -15,4 +15,6 @@ public interface CarRepository {
 
     List<Car> listCarsBySearchForm(SearchForm searchForm);
 
+    List<Car> listCarsByClass(String className);
+
 }

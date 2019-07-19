@@ -8,6 +8,7 @@ public final class AllRequestDB {
     public static final String SELECT_ALL_CARS = "SELECT * FROM car";
     public static final String SELECT_ALL_CLASSES = "select distinct class from car order by class";
     public static final String SELECT_ALL_MARKS = "select distinct mark from car order by mark";
+    public static final String SELECT_CARS_BY_CLASS = "SELECT * FROM car WHERE class=?";
 
     private AllRequestDB() {
     }

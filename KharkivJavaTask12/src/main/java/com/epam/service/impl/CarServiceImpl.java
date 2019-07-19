@@ -35,4 +35,9 @@ public class CarServiceImpl implements CarService {
         return carRepository.listCarsBySearchForm(searchForm);
     }
 
+    @Override
+    public List<Car> listCarsByClass(String className) {
+        return carRepository.listCarsByClass(className);
+    }
+
 }

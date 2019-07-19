@@ -7,21 +7,23 @@ public class SearchForm {
 
     private String query;
     private List<String> producers;
+    private List<String > carClasses;
     private String minPrice;
     private String maxPrice;
 
-    public SearchForm(String query, String[] producers, String minPrice, String maxPrice) {
+    public SearchForm(String query, String[] producers,String[] carClasses, String minPrice, String maxPrice) {
         this.query = query;
         this.producers = convert(producers);
+        this.carClasses=convert(carClasses);
         this.minPrice = minPrice;
         this.maxPrice = maxPrice;
     }
 
-    private List<String> convert(String[] producers) {
-        if (producers == null) {
+    private List<String> convert(String[] arrayOfParameters) {
+        if (arrayOfParameters == null) {
             return null;
         } else {
-            return Arrays.asList(producers);
+            return Arrays.asList(arrayOfParameters);
         }
     }
 
@@ -29,31 +31,20 @@ public class SearchForm {
         return producers;
     }
 
-    public void setProducers(List<String> producers) {
-        this.producers = producers;
-    }
-
     public String getQuery() {
         return query;
-    }
-
-    public void setQuery(String query) {
-        this.query = query;
     }
 
     public String getMinPrice() {
         return minPrice;
     }
 
-    public void setMinPrice(String minPrice) {
-        this.minPrice = minPrice;
-    }
-
     public String getMaxPrice() {
         return maxPrice;
     }
 
-    public void setMaxPrice(String maxPrice) {
-        this.maxPrice = maxPrice;
+    public List<String> getCarClasses() {
+        return carClasses;
     }
+
 }

@@ -43,11 +43,25 @@ public class DataBaseManager {
         }
     }
 
-    public void populateSqlAndParams(StringBuilder sql, List<Object> params, List<String> producers, String minPrice, String maxPrice) {
+    public void populateSqlAndParams(StringBuilder sql, List<Object> params, List<String> producers, List<String> carClasses, String minPrice, String maxPrice) {
         if (producers != null && !producers.isEmpty()) {
-            setParamsToName(sql, params, producers);
+            setNameParam(sql, params, producers);
+        }
+        if (carClasses != null && !carClasses.isEmpty()) {
+            setClassParam(sql, params, carClasses);
         }
         setPriceParam(sql, params, minPrice, maxPrice);
+    }
+
+    private void setClassParam(StringBuilder sql, List<Object> params, List<String> carClasses) {
+        sql.append(" and (class=?");
+        for (int i = 0; i < carClasses.size(); i++) {
+            params.add(carClasses.get(i));
+            if (i != carClasses.size() - 1) {
+                sql.append(" or class=?");
+            }
+        }
+        sql.append(")");
     }
 
     private void setPriceParam(StringBuilder sql, List<Object> params, String minPrice, String maxPrice) {
@@ -61,7 +75,7 @@ public class DataBaseManager {
         }
     }
 
-    private void setParamsToName(StringBuilder sql, List<Object> params, List<String> producers) {
+    private void setNameParam(StringBuilder sql, List<Object> params, List<String> producers) {
         sql.append(" and (mark=?");
         for (int i = 0; i < producers.size(); i++) {
             params.add(producers.get(i));
