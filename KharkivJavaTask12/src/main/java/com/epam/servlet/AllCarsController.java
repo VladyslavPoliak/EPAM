@@ -14,8 +14,11 @@ import java.util.List;
 public class AllCarsController extends AbstractController {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Car> carList = getCarService().getAllCars();
+        String countDisplay = getNumberOfDisplayedCars(request);
+        List<Car> carList = getCarService().getAllCars(countDisplay);
         request.setAttribute("carList", carList);
+        request.setAttribute("countCars", carList);
+
         RoutingUtils.forwardToPage("cars.jsp", request, response);
     }
 }

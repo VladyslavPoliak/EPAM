@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface CarService {
 
-    List<Car> getAllCars();
+    List<Car> getAllCars(String countDisplay);
 
     List<Car> getAllClasses();
 

@@ -1,7 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" trimDirectiveWhitespaces="true" %>
 <%@ taglib prefix="pref" tagdir="/WEB-INF/tags" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <button aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation"
@@ -19,6 +18,10 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Car</a>
             </li>
+            <li class="nav-item">
+                <pref:numberOfDisplayedCars/>
+            </li>
+
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <pref:login/>

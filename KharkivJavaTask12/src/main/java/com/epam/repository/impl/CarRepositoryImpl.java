@@ -37,10 +37,10 @@ public class CarRepositoryImpl implements CarRepository {
     }
 
     @Override
-    public List<Car> getAllCars() {
+    public List<Car> getAllCars(String countDisplay) {
         try {
             return dataBaseManager.select(AllRequestDB.SELECT_ALL_CARS,
-                    ResultSetHandlerFactory.getListResultSetHandler(CAR_RESULT_SET_HANDLER));
+                    ResultSetHandlerFactory.getListResultSetHandler(CAR_RESULT_SET_HANDLER),Integer.parseInt(countDisplay));
         } catch (SQLException e) {
             throw new InternalServerErrorException("Cant't execute SQL query: " + e.getMessage(), e);
         }

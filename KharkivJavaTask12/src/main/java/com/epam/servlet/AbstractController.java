@@ -13,10 +13,12 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
+import java.util.Optional;
 
 public abstract class AbstractController extends HttpServlet {
 
     protected final Logger LOGGER = Logger.getLogger(getClass());
+    private final String DEFAULT_COUNT = "6";
     private UserService userService;
     private CaptchaService captchaService;
     private CarService carService;
@@ -62,5 +64,13 @@ public abstract class AbstractController extends HttpServlet {
                 request.getParameter("minPrice"),
                 request.getParameter("maxPrice")
         );
+    }
+
+    protected String getNumberOfDisplayedCars(HttpServletRequest request) {
+        String count = request.getParameter("count-cars");
+        if (count == null) {
+            return DEFAULT_COUNT;
+        }
+        return count;
     }
 }
