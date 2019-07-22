@@ -2,7 +2,6 @@ package com.epam.servlet;
 
 import com.epam.entity.Car;
 import com.epam.form.SearchForm;
-import com.epam.utils.RoutingUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,7 +21,6 @@ public class SearchController extends AbstractController {
         request.setAttribute("carCount", carList.size());
         request.setAttribute("searchForm", searchForm);
 
-
-        RoutingUtils.forwardToPage("search-result.jsp", request, response);
+        forwardToPage("search-result.jsp", request, response);
     }
 }

@@ -1,12 +1,37 @@
 <%@ page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" trimDirectiveWhitespaces="true" %>
+<%@ taglib prefix="tag" tagdir="/WEB-INF/tags"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<nav aria-label="Page navigation example">
-    <ul class="pagination justify-content-center">
-        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-        <li class="page-item"><a class="page-link" href="${pageContext.request.contextPath}/cars">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+
+<c:if test="${pagination != null}">
+    <ul class="pagination justify-content-center "  >
+        <li class="pagination-previous${pagination.previous ? '' : ' disabled' }">
+            <c:choose>
+                <c:when test="${pagination.previous}"><a class="page-link" href="${pagination.previousUrl}">
+                    Previous</a> </c:when>
+                <c:otherwise> Previous</c:otherwise>
+            </c:choose>
+        </li>
+        <c:forEach var="page" items="${pagination.pages }">
+            <c:choose>
+                <c:when test="${page.current }">
+                    <li class="current">${page.caption }</li>
+                </c:when>
+                <c:when test="${page.ellipsis }">
+                    <li class="ellipsis"></li>
+                </c:when>
+                <c:otherwise>
+                    <li><a class="page-link" href="${page.url }" >${page.caption}</a></li>
+                </c:otherwise>
+            </c:choose>
+        </c:forEach>
+        <li class="pagination-next${pagination.next ? '' : ' disabled' }">
+            <c:choose>
+                <c:when test="${pagination.next}"><a class="page-link" href="${pagination.nextUrl}" >Next</a>
+                </c:when>
+                <c:otherwise> Next</c:otherwise>
+            </c:choose>
+        </li>
     </ul>
-</nav>
+</c:if>
 

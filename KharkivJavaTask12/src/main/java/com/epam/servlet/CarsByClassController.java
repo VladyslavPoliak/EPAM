@@ -1,7 +1,6 @@
 package com.epam.servlet;
 
 import com.epam.entity.Car;
-import com.epam.utils.RoutingUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,6 +21,6 @@ public class CarsByClassController extends AbstractController {
         List<Car> carList = getCarService().listCarsByClass(classUrl);
         req.setAttribute("carList", carList);
 
-        RoutingUtils.forwardToPage("cars.jsp", req, resp);
+        forwardToPage("cars.jsp", req, resp);
     }
 }

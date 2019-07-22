@@ -16,8 +16,13 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-    public List<Car> getAllCars(String countDisplay) {
-        return carRepository.getAllCars(countDisplay);
+    public List<Car> getAllCars(int offset, int limit) {
+        return carRepository.getAllCars(offset, limit);
+    }
+
+    @Override
+    public int countAllCars() {
+        return carRepository.countAllCars();
     }
 
     @Override

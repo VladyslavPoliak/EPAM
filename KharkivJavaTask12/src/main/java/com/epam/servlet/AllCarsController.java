@@ -1,7 +1,7 @@
 package com.epam.servlet;
 
 import com.epam.entity.Car;
-import com.epam.utils.RoutingUtils;
+import com.epam.model.Pagination;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,11 +14,16 @@ import java.util.List;
 public class AllCarsController extends AbstractController {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String countDisplay = getNumberOfDisplayedCars(request);
-        List<Car> carList = getCarService().getAllCars(countDisplay);
-        request.setAttribute("carList", carList);
-        request.setAttribute("countCars", carList);
+        int offset = getOffset(request);
+        int limitPerPage = getNumberOfDisplayedCars(request);
+        int count=getCarService().countAllCars();
 
-        RoutingUtils.forwardToPage("cars.jsp", request, response);
+        List<Car> carList = getCarService().getAllCars(offset, limitPerPage);
+        request.setAttribute("carList", carList);
+
+        Pagination pagination = new Pagination.Builder(request.getRequestURI() + "?", offset, count).withLimit(limitPerPage).build();
+        request.setAttribute("pagination", pagination);
+
+        forwardToPage("cars.jsp", request, response);
     }
 }

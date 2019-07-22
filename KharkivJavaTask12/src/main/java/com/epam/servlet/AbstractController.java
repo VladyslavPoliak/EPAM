@@ -13,12 +13,13 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
-import java.util.Optional;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 public abstract class AbstractController extends HttpServlet {
 
     protected final Logger LOGGER = Logger.getLogger(getClass());
-    private final String DEFAULT_COUNT = "6";
+    private final int DEFAULT_COUNT = 6;
     private UserService userService;
     private CaptchaService captchaService;
     private CarService carService;
@@ -35,6 +36,25 @@ public abstract class AbstractController extends HttpServlet {
         carService = (CarService) servletContext.getAttribute(Constants.CAR_SERVICE);
         captchaHandler = (CaptchaHandler) servletContext.getAttribute(Constants.CAPTCHA_PRESERVER);
         imageCreator = (ImageCreator) servletContext.getAttribute(Constants.IMAGE_CREATOR);
+    }
+
+    public final int getOffset(HttpServletRequest req) {
+        int limit= getNumberOfDisplayedCars(req);
+        String val = req.getParameter("page");
+        if (val != null) {
+            int page = Integer.parseInt(val);
+            return (page - 1) * limit;
+        } else {
+            return 0;
+        }
+    }
+
+    protected int getNumberOfDisplayedCars(HttpServletRequest request) {
+        String count = request.getParameter("count-cars");
+        if (count == null) {
+            return DEFAULT_COUNT;
+        }
+        return Integer.parseInt(count);
     }
 
     protected UserService getUserService() {
@@ -66,11 +86,17 @@ public abstract class AbstractController extends HttpServlet {
         );
     }
 
-    protected String getNumberOfDisplayedCars(HttpServletRequest request) {
-        String count = request.getParameter("count-cars");
-        if (count == null) {
-            return DEFAULT_COUNT;
-        }
-        return count;
+    public static void forwardToFragment(String jspFragment, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.getRequestDispatcher("/WEB-INF/JSP/fragment/" + jspFragment).forward(req, resp);
+    }
+
+    public static void forwardToPage(String jspPage, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.setAttribute("currentPage", jspPage);
+        req.setAttribute("currentServlet", req.getRequestURI());
+        req.getRequestDispatcher("page-template.jsp").forward(req, resp);
+    }
+
+    public static void redirect(String url, HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        resp.sendRedirect(url);
     }
 }
