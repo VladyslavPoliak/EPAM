@@ -39,47 +39,47 @@ values (default, 'Spark', 'CHEVROLET', 'A', 500, '/img/cars/5.jpg');
  values (default, 'Espace', 'RENAULT', 'C', 1050, '/img/cars/6.jpg');
  
   insert into car
- values (default, 'Espace', 'RENAULT', 'C', 1050, '/media/6.jpg');
+ values (default, 'Espace', 'RENAULT', 'C', 1050, '/img/cars/6.jpg');
  insert into car
- values (default, 'Prius', 'TOYOTA', 'E', 1500, '/media/1.jpg');
+ values (default, 'Prius', 'TOYOTA', 'E', 1500, '/img/cars/1.jpg');
  insert into car
- values (default, 'Prado', 'TOYOTA', 'J', 1400, '/media/2.jpg');
+ values (default, 'Prado', 'TOYOTA', 'J', 1400, '/img/cars/2.jpg');
  insert into car
- values (default, 'Venza', 'TOYOTA', 'E', 1200, '/media/3.jpg');
+ values (default, 'Venza', 'TOYOTA', 'E', 1200, '/img/cars/3.jpg');
  insert into car
- values (default, 'Auris', 'TOYOTA', 'E', 1300, '/media/4.jpg');
+ values (default, 'Auris', 'TOYOTA', 'E', 1300, '/img/cars/4.jpg');
  insert into car
- values (default, 'RAV4', 'TOYOTA', 'J', 1300, '/media/5.jpg');
+ values (default, 'RAV4', 'TOYOTA', 'J', 1300, '/img/cars/5.jpg');
  insert into car
- values (default, 'Camry', 'TOYOTA', 'J', 1700, '/media/6.jpg');
+ values (default, 'Camry', 'TOYOTA', 'J', 1700, '/img/cars/6.jpg');
  insert into car
- values (default, 'GLE 43 AMG 4MATIC Coupe', 'MERCEDES', 'J', 1670, '/media/2.jpg');
+ values (default, 'GLE 43 AMG 4MATIC Coupe', 'MERCEDES', 'J', 1670, '/img/cars/2.jpg');
  insert into car
- values (default, '5-series X-Drive', 'BMW', 'E', 1550, '/media/1.jpg');
+ values (default, '5-series X-Drive', 'BMW', 'E', 1550, '/img/cars/1.jpg');
  insert into car
- values (default, 'Captiva', 'CHEVROLET', 'J', 1050, '/media/1.jpg');
+ values (default, 'Captiva', 'CHEVROLET', 'J', 1050, '/img/cars/1.jpg');
  insert into car
- values (default, 'X5 F15 xDrive 25d', 'BMW', 'J', 1350, '/media/2.jpg');
+ values (default, 'X5 F15 xDrive 25d', 'BMW', 'J', 1350, '/img/cars/2.jpg');
  insert into car
- values (default, 'E-Class', 'MERCEDES', 'E', 1630, '/media/3.jpg');
+ values (default, 'E-Class', 'MERCEDES', 'E', 1630, '/img/cars/3.jpg');
  insert into car
- values (default, 'CX-7', 'MAZDA', 'C', 870, '/media/3.jpg');
+ values (default, 'CX-7', 'MAZDA', 'C', 870, '/img/cars/3.jpg');
  insert into car
- values (default, '3-series 318D F31', 'BMW', 'E', 1650, '/media/3.jpg');
+ values (default, '3-series 318D F31', 'BMW', 'E', 1650, '/img/cars/3.jpg');
  insert into car
- values (default, '6', 'MAZDA', 'C', 1070, '/media/3.jpg');
+ values (default, '6', 'MAZDA', 'C', 1070, '/img/cars/3.jpg');
  insert into car
- values (default, 'Lacetti', 'CHEVROLET', 'C', 870, '/media/3.jpg');
+ values (default, 'Lacetti', 'CHEVROLET', 'C', 870, '/img/cars/3.jpg');
  insert into car
- values (default, '5', 'MAZDA', 'C', 1070, '/media/3.jpg');
+ values (default, '5', 'MAZDA', 'C', 1070, '/img/cars/3.jpg');
  insert into car
- values (default, 'Aveo', 'CHEVROLET', 'C', 880, '/media/3.jpg');
+ values (default, 'Aveo', 'CHEVROLET', 'C', 880, '/img/cars/3.jpg');
  insert into car
- values (default, '3', 'MAZDA', 'E', 1470, '/media/3.jpg');
+ values (default, '3', 'MAZDA', 'E', 1470, '/img/cars/3.jpg');
  insert into car
- values (default, 'CX-7', 'MAZDA', 'C', 870, '/media/3.jpg');
+ values (default, 'CX-7', 'MAZDA', 'C', 870, '/img/cars/3.jpg');
  insert into car
- values (default, 'CX-7', 'FORD', 'C', 870, '/media/3.jpg');
+ values (default, 'CX-7', 'FORD', 'C', 870, '/img/cars/3.jpg');
 
 
 

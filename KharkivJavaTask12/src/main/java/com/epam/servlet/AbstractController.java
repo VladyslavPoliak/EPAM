@@ -18,8 +18,8 @@ import java.io.IOException;
 
 public abstract class AbstractController extends HttpServlet {
 
-    protected final Logger LOGGER = Logger.getLogger(getClass());
-    private final int DEFAULT_COUNT = 6;
+    final Logger LOGGER = Logger.getLogger(getClass());
+    final int DEFAULT_CAR_PER_PAGE = 6;
     private UserService userService;
     private CaptchaService captchaService;
     private CarService carService;
@@ -38,46 +38,27 @@ public abstract class AbstractController extends HttpServlet {
         imageCreator = (ImageCreator) servletContext.getAttribute(Constants.IMAGE_CREATOR);
     }
 
-    public final int getOffset(HttpServletRequest req) {
-        int limit= getNumberOfDisplayedCars(req);
-        String val = req.getParameter("page");
-        if (val != null) {
-            int page = Integer.parseInt(val);
-            return (page - 1) * limit;
-        } else {
-            return 0;
-        }
-    }
-
-    protected int getNumberOfDisplayedCars(HttpServletRequest request) {
-        String count = request.getParameter("count-cars");
-        if (count == null) {
-            return DEFAULT_COUNT;
-        }
-        return Integer.parseInt(count);
-    }
-
-    protected UserService getUserService() {
+    UserService getUserService() {
         return userService;
     }
 
-    protected CaptchaService getCaptchaService() {
+    CaptchaService getCaptchaService() {
         return captchaService;
     }
 
-    protected CaptchaHandler getCaptchaHandler() {
+    CaptchaHandler getCaptchaHandler() {
         return captchaHandler;
     }
 
-    protected ImageCreator getImageCreator() {
+    ImageCreator getImageCreator() {
         return imageCreator;
     }
 
-    protected CarService getCarService() {
+    CarService getCarService() {
         return carService;
     }
 
-    protected final SearchForm createSearchForm(HttpServletRequest request) {
+    final SearchForm createSearchForm(HttpServletRequest request) {
         return new SearchForm(request.getParameter("searchByName"),
                 request.getParameterValues("producers"),
                 request.getParameterValues("classes"),
@@ -90,13 +71,30 @@ public abstract class AbstractController extends HttpServlet {
         req.getRequestDispatcher("/WEB-INF/JSP/fragment/" + jspFragment).forward(req, resp);
     }
 
-    public static void forwardToPage(String jspPage, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    static void forwardToPage(String jspPage, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute("currentPage", jspPage);
-        req.setAttribute("currentServlet", req.getRequestURI());
         req.getRequestDispatcher("page-template.jsp").forward(req, resp);
     }
 
     public static void redirect(String url, HttpServletRequest req, HttpServletResponse resp) throws IOException {
         resp.sendRedirect(url);
+    }
+
+    final int getOffset(HttpServletRequest req) {
+        String val = req.getParameter("page");
+        if (val != null) {
+            int page = Integer.parseInt(val);
+            return (page - 1) * getCountPerPage(req);
+        } else {
+            return 0;
+        }
+    }
+
+    int getCountPerPage(HttpServletRequest request){
+        String count=request.getParameter("count");
+        if (count==null){
+            return DEFAULT_CAR_PER_PAGE;
+        }
+        return Integer.parseInt(count);
     }
 }

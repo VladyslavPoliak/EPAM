@@ -77,16 +77,6 @@ public class CarRepositoryImpl implements CarRepository {
     }
 
     @Override
-    public List<Car> listCarsBySearchForm(SearchForm searchForm) {
-        try {
-            SearchQuery sq = buildSearchQuery(searchForm);
-            return dataBaseManager.select(sq.getSql().toString(), ResultSetHandlerFactory.getListResultSetHandler(CAR_RESULT_SET_HANDLER), sq.getParams().toArray());
-        } catch (SQLException e) {
-            throw new InternalServerErrorException("Can't execute SQL request: " + e.getMessage(), e);
-        }
-    }
-
-    @Override
     public List<Car> listCarsByClass(String className) {
         try {
             return dataBaseManager.select(AllRequestDB.SELECT_CARS_BY_CLASS,
@@ -96,13 +86,40 @@ public class CarRepositoryImpl implements CarRepository {
         }
     }
 
-    private SearchQuery buildSearchQuery(SearchForm form) {
+    @Override
+    public List<Car> listCarsBySearchForm(SearchForm searchForm, int limit, int offset) {
+        try {
+            SearchQuery sq = buildSearchQuery(searchForm, "SELECT * ");
+            return dataBaseManager.select(getSqlQuery(sq.getSql(), limit, offset), ResultSetHandlerFactory.getListResultSetHandler(CAR_RESULT_SET_HANDLER),
+                    sq.getParams().toArray());
+        } catch (SQLException e) {
+            throw new InternalServerErrorException("Can't execute SQL request: " + e.getMessage(), e);
+        }
+    }
+
+    @Override
+    public int countCarsBySearchForm(SearchForm searchForm) {
+        try {
+            SearchQuery sq = buildSearchQuery(searchForm, " SELECT COUNT(*) ");
+            return dataBaseManager.select(sq.getSql().toString(), ResultSetHandlerFactory.getCountResultSetHandler(), sq.getParams().toArray());
+        } catch (SQLException e) {
+            throw new InternalServerErrorException("Can't execute SQL request: " + e.getMessage(), e);
+        }
+    }
+
+    private SearchQuery buildSearchQuery(SearchForm form, String command) {
         List<Object> params = new ArrayList<>();
-        StringBuilder sql = new StringBuilder("select ");
-        sql.append(" * ").append(" from car where (name like ? or mark like ?)");
+        StringBuilder sql = new StringBuilder(command);
+        sql.append(" from car where (name like ? or mark like ?)");
         params.add("%" + form.getQuery() + "%");
         params.add("%" + form.getQuery() + "%");
         dataBaseManager.populateSqlAndParams(sql, params, form.getProducers(), form.getCarClasses(), form.getMinPrice(), form.getMaxPrice());
         return new SearchQuery(sql, params);
+    }
+
+    private String getSqlQuery(StringBuilder stringBuilder, int limit, int offset) {
+        stringBuilder.append(" limit ").append(limit)
+                .append(" offset ").append(offset);
+        return stringBuilder.toString();
     }
 }

@@ -15,8 +15,10 @@ public interface CarRepository {
 
     List<Car> getAllMarks();
 
-    List<Car> listCarsBySearchForm(SearchForm searchForm);
+    List<Car> listCarsBySearchForm(SearchForm searchForm, int limit, int offset);
 
     List<Car> listCarsByClass(String className);
+
+    int countCarsBySearchForm(SearchForm searchForm);
 
 }

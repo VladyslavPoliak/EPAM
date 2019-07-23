@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Pagination {
+
     private final String previousUrl;
     private final String nextUrl;
     private final List<PageItem> pages;
@@ -35,7 +36,8 @@ public class Pagination {
         return nextUrl;
     }
 
-    public static final class PageItem  {
+    public static final class PageItem {
+
         private final String url;
         private final String caption;
 
@@ -78,7 +80,8 @@ public class Pagination {
         }
     }
 
-    public static class Builder  {
+    public static class Builder {
+
         private static final int DEFAULT_MAX_PAGINATION_BUTTONS_PER_PAGE = 9;
         private static final int DEFAULT_LIMIT_ITEMS_PER_PAGE = 10;
         private String baseUrl;
@@ -120,7 +123,8 @@ public class Pagination {
 
         private String createUrlForPage(int page) {
             if (page > 1) {
-                return baseUrl + "page=" + page;
+                baseUrl = baseUrl.replaceAll("&page=" + (page - 1), "");
+                return baseUrl + "&page=" + page;
             } else {
                 return baseUrl.substring(0, baseUrl.length() - 1);
             }
@@ -128,6 +132,7 @@ public class Pagination {
 
         private String getPreviousUrl(int currentPage) {
             if (currentPage > 1) {
+                baseUrl = baseUrl.replaceAll("page=" + (currentPage), "");
                 return baseUrl + "page=" + (currentPage - 1);
             } else {
                 return null;
@@ -136,7 +141,8 @@ public class Pagination {
 
         private String getNextUrl(int currentPage) {
             if (offset + limit < count) {
-                return baseUrl + "page=" + (currentPage + 1);
+                baseUrl = baseUrl.replaceAll("&page=" + (currentPage), "");
+                return baseUrl + "&page=" + (currentPage + 1);
             } else {
                 return null;
             }

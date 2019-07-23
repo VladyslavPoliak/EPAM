@@ -36,8 +36,13 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-    public List<Car> listCarsBySearchForm(SearchForm searchForm) {
-        return carRepository.listCarsBySearchForm(searchForm);
+    public List<Car> listCarsBySearchForm(SearchForm searchForm, int limit, int offset) {
+        return carRepository.listCarsBySearchForm(searchForm,limit,offset);
+    }
+
+    @Override
+    public int countCarsBySearchForm(SearchForm searchForm) {
+        return carRepository.countCarsBySearchForm(searchForm);
     }
 
     @Override

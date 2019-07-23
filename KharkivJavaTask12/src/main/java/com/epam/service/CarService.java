@@ -15,7 +15,9 @@ public interface CarService {
 
     List<Car> getAllMarks();
 
-    List<Car> listCarsBySearchForm(SearchForm searchForm);
+    List<Car> listCarsBySearchForm(SearchForm searchForm, int limit, int offset);
+
+    int countCarsBySearchForm(SearchForm searchForm);
 
     List<Car> listCarsByClass(String className);
 

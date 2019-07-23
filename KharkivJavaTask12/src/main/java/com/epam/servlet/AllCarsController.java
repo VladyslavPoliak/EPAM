@@ -15,13 +15,12 @@ public class AllCarsController extends AbstractController {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int offset = getOffset(request);
-        int limitPerPage = getNumberOfDisplayedCars(request);
-        int count=getCarService().countAllCars();
 
-        List<Car> carList = getCarService().getAllCars(offset, limitPerPage);
+        List<Car> carList = getCarService().getAllCars(offset, getCountPerPage(request));
+        int countAllCars = getCarService().countAllCars();
         request.setAttribute("carList", carList);
 
-        Pagination pagination = new Pagination.Builder(request.getRequestURI() + "?", offset, count).withLimit(limitPerPage).build();
+        Pagination pagination = new Pagination.Builder(request.getRequestURI() + "?", offset, countAllCars).withLimit(DEFAULT_CAR_PER_PAGE).build();
         request.setAttribute("pagination", pagination);
 
         forwardToPage("cars.jsp", request, response);

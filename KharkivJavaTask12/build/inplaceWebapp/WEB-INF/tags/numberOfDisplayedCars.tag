@@ -1,19 +1,20 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ tag language="java" pageEncoding="UTF-8" %>
 
-<div class="dropdown show">
-    <form action="${pageContext.request.contextPath}${currentServlet}">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-           aria-haspopup="true" aria-expanded="false">
-            Display
-        </a>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <button class="dropdown-item btn btn-primary"
-                    type="submit" value="9" name="count-cars">9</button>
-            <button class="dropdown-item btn btn-primary"
-                    type="submit" value="12" name="count-cars">12</button>
-            <button class="dropdown-item btn btn-primary"
-                    type="submit" value="15" name="count-cars">15</button>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="button-group">
+                <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"> <span
+                        class="glyphicon glyphicon-cog"> Display</span></button>
+                <ul class="dropdown-menu">
+                    <li><input type="radio" value="6" name="count" checked/>6 cars</li>
+                    <li><input type="radio" value="9" name="count"/>9 cars</li>
+                    <li><input type="radio" value="12" name="count"/>12 cars</li>
+                    <li><input type="radio" value="15" name="count"/>15 cars</li>
+                </ul>
+            </div>
         </div>
-    </form>
+    </div>
 </div>
+<br/><br/>
