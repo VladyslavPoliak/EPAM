@@ -47,6 +47,18 @@ public class Pagination {
             this.caption = caption;
         }
 
+        private static PageItem createCurrent(String caption) {
+            return new PageItem(null, caption);
+        }
+
+        private static PageItem createEllipsis() {
+            return new PageItem(null, null);
+        }
+
+        private static PageItem createPageItems(String url, String caption) {
+            return new PageItem(url, caption);
+        }
+
         public String getUrl() {
             return url;
         }
@@ -65,18 +77,6 @@ public class Pagination {
 
         public boolean isPageItem() {
             return url != null && caption != null;
-        }
-
-        private static PageItem createCurrent(String caption) {
-            return new PageItem(null, caption);
-        }
-
-        private static PageItem createEllipsis() {
-            return new PageItem(null, null);
-        }
-
-        private static PageItem createPageItems(String url, String caption) {
-            return new PageItem(url, caption);
         }
     }
 

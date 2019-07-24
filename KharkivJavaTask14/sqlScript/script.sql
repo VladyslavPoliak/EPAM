@@ -22,6 +22,25 @@ CREATE TABLE car (
     image VARCHAR(50) NOT NULL
 );
 
+create table `order` (
+  id         bigint                     NOT NULL AUTO_INCREMENT primary key,
+  id_account integer                    NOT NULL references users (id_user)
+    ON UPDATE RESTRICT
+    ON DELETE CASCADE,
+  created    timestamp(0) default now() NOT NULL
+);
+
+create table order_item (
+  id       bigint  NOT NULL AUTO_INCREMENT primary key,
+  id_order bigint  NOT NULL references `order` (id)
+    ON UPDATE RESTRICT
+    ON DELETE CASCADE,
+  id_car   int(11) references car (id_car)
+    ON UPDATE RESTRICT
+    ON DELETE CASCADE,
+  days     integer not null
+);
+
 INSERT INTO user
 VALUES (default, "admin", "admin","admin@gmail.com","123123123","");
 

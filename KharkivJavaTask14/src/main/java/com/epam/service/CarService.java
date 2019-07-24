@@ -11,6 +11,8 @@ public interface CarService {
 
     int countAllCars();
 
+    Car getCarById(int id);
+
     List<Car> getAllClasses();
 
     List<Car> getAllMarks();

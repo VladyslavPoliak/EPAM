@@ -57,6 +57,16 @@ public class CarRepositoryImpl implements CarRepository {
     }
 
     @Override
+    public Car getCarById(int id) {
+        try {
+            return dataBaseManager.select(AllRequestDB.SELECT_CAR_BY_ID,
+                    ResultSetHandlerFactory.getSingleResultSetHandler(CAR_RESULT_SET_HANDLER), id);
+        } catch (SQLException e) {
+            throw new InternalServerErrorException("Cant't execute SQL query: " + e.getMessage(), e);
+        }
+    }
+
+    @Override
     public List<Car> getAllClasses() {
         try {
             return dataBaseManager.select(AllRequestDB.SELECT_ALL_CLASSES,

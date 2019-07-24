@@ -10,6 +10,7 @@ public final class AllRequestDB {
     public static final String SELECT_ALL_MARKS = "SELECT DISTINCT mark from car ORDER BY mark";
     public static final String SELECT_CARS_BY_CLASS = "SELECT * FROM car WHERE class=?";
     public static final String SELECT_ALL_CARS_COUNT = "SELECT COUNT(*) FROM car";
+    public static final String SELECT_CAR_BY_ID = "SELECT * FROM car WHERE id_car=?";
 
     private AllRequestDB() {
     }

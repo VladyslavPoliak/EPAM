@@ -7,6 +7,8 @@ import java.util.List;
 
 public interface CarRepository {
 
+    Car getCarById(int id);
+
     List<Car> getAllCars(int offset, int limit);
 
     int countAllCars();

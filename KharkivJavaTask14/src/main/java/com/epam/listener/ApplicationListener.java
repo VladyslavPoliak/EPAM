@@ -7,14 +7,18 @@ import com.epam.container.CaptchaHandlerContainer;
 import com.epam.creator.ImageCreator;
 import com.epam.database.DataBaseManager;
 import com.epam.repository.CarRepository;
+import com.epam.repository.OrderRepository;
 import com.epam.repository.UserRepository;
 import com.epam.repository.impl.CarRepositoryImpl;
+import com.epam.repository.impl.OrderRepositoryImpl;
 import com.epam.repository.impl.UserRepositoryImpl;
 import com.epam.service.CaptchaService;
 import com.epam.service.CarService;
+import com.epam.service.OrderService;
 import com.epam.service.UserService;
 import com.epam.service.impl.CaptchaServiceImpl;
 import com.epam.service.impl.CarServiceImpl;
+import com.epam.service.impl.OrderServiceImpl;
 import com.epam.service.impl.UserServiceImpl;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.apache.log4j.Logger;
@@ -40,10 +44,12 @@ public class ApplicationListener implements ServletContextListener {
 
     private UserRepository userRepository;
     private CarRepository carRepository;
+    private OrderRepository orderRepository;
 
     private UserService userService;
     private CaptchaService captchaService;
     private CarService carService;
+    private OrderService orderService;
 
     private CaptchaHandler handler;
     private String handlerName;
@@ -94,6 +100,7 @@ public class ApplicationListener implements ServletContextListener {
     private void initRepositories() {
         userRepository = new UserRepositoryImpl(dataBaseManager);
         carRepository = new CarRepositoryImpl(dataBaseManager);
+        orderRepository=new OrderRepositoryImpl(dataBaseManager);
     }
 
     private void initDataBaseManager() {
@@ -126,6 +133,8 @@ public class ApplicationListener implements ServletContextListener {
         context.setAttribute(Constants.USER_SERVICE, userService);
         context.setAttribute(Constants.CAPTCHA_SERVICE, captchaService);
         context.setAttribute(Constants.CAR_SERVICE, carService);
+        context.setAttribute(Constants.ORDER_SERVICE,orderService);
+
         context.setAttribute(Constants.CAPTCHA_PRESERVER, handler);
         context.setAttribute(Constants.IMAGE_CREATOR, imageCreator);
         context.setAttribute(Constants.DEFAULT_AVATAR, defaultAvatarPath);
@@ -139,6 +148,7 @@ public class ApplicationListener implements ServletContextListener {
         userService = new UserServiceImpl(userRepository);
         captchaService = new CaptchaServiceImpl(captchaContainer);
         carService = new CarServiceImpl(carRepository);
+        orderService=new OrderServiceImpl(orderRepository);
     }
 
     private void loadApplicationProperties() {

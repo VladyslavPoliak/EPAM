@@ -26,6 +26,11 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
+    public Car getCarById(int id) {
+        return carRepository.getCarById(id);
+    }
+
+    @Override
     public List<Car> getAllClasses() {
         return carRepository.getAllClasses();
     }
@@ -37,7 +42,7 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public List<Car> listCarsBySearchForm(SearchForm searchForm, int limit, int offset) {
-        return carRepository.listCarsBySearchForm(searchForm,limit,offset);
+        return carRepository.listCarsBySearchForm(searchForm, limit, offset);
     }
 
     @Override

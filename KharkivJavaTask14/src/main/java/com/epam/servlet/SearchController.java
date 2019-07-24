@@ -27,7 +27,7 @@ public class SearchController extends AbstractController {
         System.out.println(countBySearch);
         System.out.println(carList.size());
 
-        Pagination pagination = new Pagination.Builder(req.getRequestURI()+"?"+req.getQueryString() , offset, countBySearch).build();
+        Pagination pagination = new Pagination.Builder(req.getRequestURI() + "?" + req.getQueryString(), offset, countBySearch).build();
         req.setAttribute("pagination", pagination);
 
         req.setAttribute("carCount", countBySearch);
