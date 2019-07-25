@@ -21,6 +21,4 @@ public interface CarService {
 
     int countCarsBySearchForm(SearchForm searchForm);
 
-    List<Car> listCarsByClass(String className);
-
 }

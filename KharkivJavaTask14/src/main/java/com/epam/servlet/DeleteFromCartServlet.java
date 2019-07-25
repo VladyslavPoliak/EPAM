@@ -23,5 +23,7 @@ public class DeleteFromCartServlet extends AbstractController {
         Car car = getCarService().getCarById(Integer.parseInt(request.getParameter("id")));
         ShoppingCart shoppingCart = (ShoppingCart) request.getSession().getAttribute(Constants.CURRENT_SHOPPING_CART);
         shoppingCart.removeCar(car.getId());
+        shoppingCart.getCars().clear();
+        forwardToPage(Constants.MAIN_PAGE, request, response);
     }
 }
