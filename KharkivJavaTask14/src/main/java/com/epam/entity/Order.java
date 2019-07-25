@@ -1,22 +1,30 @@
 package com.epam.entity;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.util.List;
 
-public class Order {
+public class Order implements Serializable {
 
+    private static final long serialVersionUID = 2272568621136182687L;
     private int id;
     private int idAccount;
-    private List<OrderItemEntity> items;
+    private List<OrderItem> items;
+    private String status;
+
+    private String statusDescription;
+
     private Timestamp created;
 
     public Order() {
     }
 
-    public Order(Integer id, Integer idAccount, Timestamp created) {
+    public Order(int id, int idAccount, String status, String statusDescription, Timestamp created) {
         this.id = id;
         this.idAccount = idAccount;
+        this.status = status;
+        this.statusDescription = statusDescription;
         this.created = created;
     }
 
@@ -32,15 +40,35 @@ public class Order {
         return idAccount;
     }
 
+    public void setIdAccount(int idAccount) {
+        this.idAccount = idAccount;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getStatusDescription() {
+        return statusDescription;
+    }
+
+    public void setStatusDescription(String statusDescription) {
+        this.statusDescription = statusDescription;
+    }
+
     public void setIdAccount(Integer idAccount) {
         this.idAccount = idAccount;
     }
 
-    public List<OrderItemEntity> getItems() {
+    public List<OrderItem> getItems() {
         return items;
     }
 
-    public void setItems(List<OrderItemEntity> items) {
+    public void setItems(List<OrderItem> items) {
         this.items = items;
     }
 
@@ -55,7 +83,7 @@ public class Order {
     public BigDecimal getTotalCost() {
         BigDecimal cost = BigDecimal.ZERO;
         if (items != null) {
-            for (OrderItemEntity item : items) {
+            for (OrderItem item : items) {
                 cost = cost.add(BigDecimal.valueOf(item.getCar().getCost()).multiply(BigDecimal.valueOf(item.getDays())));
             }
         }

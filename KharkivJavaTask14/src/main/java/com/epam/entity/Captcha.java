@@ -3,10 +3,12 @@ package com.epam.entity;
 import com.epam.constans.CaptchaConstants;
 import com.epam.utils.IdGenerator;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Captcha {
+public class Captcha implements Serializable {
 
+    private static final long serialVersionUID = -6639136251148057053L;
     private final int id;
     private final String numbers;
     private final long expirationTime;

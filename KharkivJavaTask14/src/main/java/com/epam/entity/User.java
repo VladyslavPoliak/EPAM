@@ -1,7 +1,10 @@
 package com.epam.entity;
 
-public class User {
+import java.io.Serializable;
 
+public class User implements Serializable {
+
+    private static final long serialVersionUID = -704339391151912099L;
     private int id;
     private String name;
     private String surname;
@@ -17,6 +20,10 @@ public class User {
         this.password = builder.password;
         this.email = builder.email;
         this.imageUrl = builder.imageUrl;
+    }
+
+    public static UserBuilder builder() {
+        return new UserBuilder();
     }
 
     public int getId() {

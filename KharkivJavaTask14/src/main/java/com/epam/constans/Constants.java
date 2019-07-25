@@ -24,33 +24,10 @@ public final class Constants {
     public static final String MARKS_LIST = "MARKS_LIST";
 
     public static final int MAX_CARS_FOR_ONE_USER = 20;
-    public static final String SUCCESS_REDIRECT_URL_AFTER_SIGN_IN = "SUCCESS_REDIRECT_URL_AFTER_SIGN_IN";
-    public static final String CURRENT_REQUEST_URL = "CURRENT_REQUEST_URL";
     public static final String ORDER_SERVICE = "ORDER_SERVICE";
     public static final String CURRENT_SHOPPING_CART = "CURRENT_SHOPPING_CART";
 
 
     private Constants() {
-    }
-
-    public enum Cookie {
-        //1 year ttl
-        SHOPPING_CART("iSCC", 60 * 60 * 24 * 365);
-
-        private final String name;
-        private final int ttl;
-
-        Cookie(String name, int ttl) {
-            this.name = name;
-            this.ttl = ttl;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public int getTtl() {
-            return ttl;
-        }
     }
 }

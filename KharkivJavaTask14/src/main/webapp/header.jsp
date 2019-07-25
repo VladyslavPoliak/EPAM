@@ -11,8 +11,12 @@
     <a class="navbar-brand" href="${pageContext.request.contextPath}/cars">Home</a>
 
     <div class="collapse navbar-collapse" id="navbarToggler">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0"></ul>
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
+            <li class="nav-item" ${CURRENT_SHOPPING_CART.size==0 ?'hidden':''}>
+                <a class="nav-link" href="${pageContext.request.contextPath}/shopping-cart"> Shopping cart</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right ">
             <pref:login/>
         </ul>
     </div>

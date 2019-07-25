@@ -41,9 +41,6 @@ create table order_item (
   days     integer not null
 );
 
-INSERT INTO user
-VALUES (default, "admin", "admin","admin@gmail.com","123123123","");
-
 insert into car
 values (default, 'Santa Fe Special', 'HYUNDAI', 'J', 700, '/img/cars/1.jpg');
 insert into car

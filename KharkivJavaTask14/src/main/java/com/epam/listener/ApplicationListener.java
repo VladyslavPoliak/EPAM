@@ -100,7 +100,7 @@ public class ApplicationListener implements ServletContextListener {
     private void initRepositories() {
         userRepository = new UserRepositoryImpl(dataBaseManager);
         carRepository = new CarRepositoryImpl(dataBaseManager);
-        orderRepository=new OrderRepositoryImpl(dataBaseManager);
+        orderRepository = new OrderRepositoryImpl(dataBaseManager);
     }
 
     private void initDataBaseManager() {
@@ -133,7 +133,7 @@ public class ApplicationListener implements ServletContextListener {
         context.setAttribute(Constants.USER_SERVICE, userService);
         context.setAttribute(Constants.CAPTCHA_SERVICE, captchaService);
         context.setAttribute(Constants.CAR_SERVICE, carService);
-        context.setAttribute(Constants.ORDER_SERVICE,orderService);
+        context.setAttribute(Constants.ORDER_SERVICE, orderService);
 
         context.setAttribute(Constants.CAPTCHA_PRESERVER, handler);
         context.setAttribute(Constants.IMAGE_CREATOR, imageCreator);
@@ -148,7 +148,7 @@ public class ApplicationListener implements ServletContextListener {
         userService = new UserServiceImpl(userRepository);
         captchaService = new CaptchaServiceImpl(captchaContainer);
         carService = new CarServiceImpl(carRepository);
-        orderService=new OrderServiceImpl(orderRepository);
+        orderService = new OrderServiceImpl(orderRepository);
     }
 
     private void loadApplicationProperties() {

@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="button-group">
-                <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"> <span
+                <button  type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"> <span
                         class="glyphicon glyphicon-cog"> Display</span></button>
                 <ul class="dropdown-menu">
                     <li><input type="radio" value="6" name="count" checked/>6 cars</li>

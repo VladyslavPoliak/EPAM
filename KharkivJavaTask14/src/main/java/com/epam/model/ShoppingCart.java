@@ -2,6 +2,7 @@ package com.epam.model;
 
 import com.epam.constans.Constants;
 import com.epam.entity.Car;
+import com.epam.entity.OrderItem;
 import com.epam.exception.ValidationException;
 import org.apache.log4j.Logger;
 
@@ -29,14 +30,15 @@ public class ShoppingCart implements Serializable {
         refreshStatistics();
     }
 
-    public void removeCar(Integer idCar, int count) {
+    public int update(int id, int days) {
+        OrderItem orderItem = cars.get(id);
+        return orderItem.getCar().getCost() * days;
+    }
+
+    public void removeCar(int idCar) {
         OrderItem orderItem = cars.get(idCar);
         if (orderItem != null) {
-            if (orderItem.getDays() > count) {
-                orderItem.setDays(orderItem.getDays() - count);
-            } else {
                 cars.remove(idCar);
-            }
             refreshStatistics();
         }
     }
@@ -63,6 +65,10 @@ public class ShoppingCart implements Serializable {
 
     public Collection<OrderItem> getCars() {
         return cars.values();
+    }
+
+    public int getSize() {
+        return cars.values().size();
     }
 
     public BigDecimal getTotalCost() {

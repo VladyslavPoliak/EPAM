@@ -14,16 +14,16 @@
 
     <context-param>
         <param-name>storageFolderPath</param-name>
-        <param-value>D:\GitHub\Test\KharkivJavaTask12\src\main\webapp\img\avatars</param-value>
+        <param-value>C:\Users\Vladyslav_Poliak\IdeaProjects\Test\KharkivJavaTask14\src\main\webapp\img\avatars</param-value>
     </context-param>
 
     <context-param>
         <param-name>defaultAvatarPath</param-name>
-        <param-value>D:\GitHub\Test\KharkivJavaTask12\src\main\resources\default.jpg</param-value>
+        <param-value>C:\Users\Vladyslav_Poliak\IdeaProjects\Test\KharkivJavaTask14\src\main\resources\default.jpg</param-value>
     </context-param>
 
     <filter-mapping>
-        <filter-name>CartFilter</filter-name>
+        <filter-name>ShoppingCartFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 

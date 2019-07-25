@@ -1,6 +1,6 @@
 package com.epam.repository.impl;
 
-import com.epam.constans.AllRequestDB;
+import com.epam.constans.SqlQueries;
 import com.epam.database.DataBaseManager;
 import com.epam.database.ResultSetHandler;
 import com.epam.database.ResultSetHandlerFactory;
@@ -14,8 +14,7 @@ import java.util.List;
 
 public class UserRepositoryImpl implements UserRepository {
 
-    private DataBaseManager dataBaseManager;
-    private final ResultSetHandler<User> USER_RESULT_SET_HANDLER = rs -> new User.UserBuilder()
+    private final ResultSetHandler<User> USER_RESULT_SET_HANDLER = rs -> User.builder()
             .setId(rs.getInt("id"))
             .setName(rs.getString("name"))
             .setSurname(rs.getString("sur_name"))
@@ -23,6 +22,7 @@ public class UserRepositoryImpl implements UserRepository {
             .setPassword(rs.getString("password"))
             .setImageUrl(rs.getString("image_url"))
             .build();
+    private DataBaseManager dataBaseManager;
 
     public UserRepositoryImpl(DataBaseManager dataBaseManager) {
         this.dataBaseManager = dataBaseManager;
@@ -31,7 +31,7 @@ public class UserRepositoryImpl implements UserRepository {
     @Override
     public List<User> getAllUsers() {
         try {
-            return dataBaseManager.select(AllRequestDB.SELECT_ALL_USERS,
+            return dataBaseManager.select(SqlQueries.SELECT_ALL_USERS,
                     ResultSetHandlerFactory.getListResultSetHandler(USER_RESULT_SET_HANDLER));
         } catch (SQLException e) {
             throw new InternalServerErrorException("Cant't execute SQL query: " + e.getMessage(), e);
@@ -41,7 +41,7 @@ public class UserRepositoryImpl implements UserRepository {
     @Override
     public void addNewUser(User user) {
         try {
-            dataBaseManager.insert(AllRequestDB.INSERT_NEW_USER, user.getName(),
+            dataBaseManager.insert(SqlQueries.INSERT_NEW_USER, user.getName(),
                     user.getSurname(), user.getEmail(), HashPassword.hashMd5(user.getPassword()), user.getImageUrl());
         } catch (SQLException e) {
             throw new InternalServerErrorException("Cant't execute SQL query: " + e.getMessage(), e);
@@ -51,7 +51,7 @@ public class UserRepositoryImpl implements UserRepository {
     @Override
     public User getUserByEmailAndPass(String login, String pass) {
         try {
-            return dataBaseManager.select(AllRequestDB.SELECT_USER_BY_EMAIL_AND_PASS,
+            return dataBaseManager.select(SqlQueries.SELECT_USER_BY_EMAIL_AND_PASS,
                     ResultSetHandlerFactory.getSingleResultSetHandler(USER_RESULT_SET_HANDLER), login, HashPassword.hashMd5(pass));
         } catch (SQLException e) {
             throw new InternalServerErrorException("Cant't execute SQL query: " + e.getMessage(), e);

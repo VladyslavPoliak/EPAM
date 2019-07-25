@@ -1,7 +1,10 @@
 package com.epam.entity;
 
-public class Car {
+import java.io.Serializable;
 
+public class Car implements Serializable {
+
+    private static final long serialVersionUID = -222914954748531110L;
     private int id;
     private String name;
     private String mark;
@@ -16,6 +19,10 @@ public class Car {
         this.classCar = builder.classCar;
         this.cost = builder.cost;
         this.imageURL = builder.imageURL;
+    }
+
+    public static CarBuilder builder() {
+        return new CarBuilder();
     }
 
     public int getId() {

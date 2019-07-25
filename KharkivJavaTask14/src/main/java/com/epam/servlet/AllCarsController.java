@@ -13,6 +13,8 @@ import java.util.List;
 @WebServlet("/cars")
 public class AllCarsController extends AbstractController {
 
+    private static final long serialVersionUID = 5938254532040802476L;
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int offset = getOffset(request);
 

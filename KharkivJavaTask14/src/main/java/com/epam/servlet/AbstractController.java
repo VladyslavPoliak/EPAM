@@ -9,6 +9,7 @@ import com.epam.service.CarService;
 import com.epam.service.OrderService;
 import com.epam.service.UserService;
 import org.apache.log4j.Logger;
+import org.json.JSONObject;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -19,6 +20,7 @@ import java.io.IOException;
 
 public abstract class AbstractController extends HttpServlet {
 
+    private static final long serialVersionUID = -8500388645920950957L;
     final Logger LOGGER = Logger.getLogger(getClass());
     final int DEFAULT_CAR_PER_PAGE = 6;
 
@@ -31,6 +33,18 @@ public abstract class AbstractController extends HttpServlet {
     private CaptchaHandler captchaHandler;
 
     private ImageCreator imageCreator;
+
+
+     static void forwardToPage(String jspPage, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.setAttribute("currentPage", jspPage);
+        req.getRequestDispatcher("page-template.jsp").forward(req, resp);
+    }
+
+     static void sendJSON(JSONObject object, HttpServletResponse resp) throws IOException {
+        resp.setContentType("application/json");
+        resp.getWriter().println(object.toString());
+        resp.getWriter().close();
+    }
 
     @Override
     public void init() throws ServletException {
@@ -65,19 +79,6 @@ public abstract class AbstractController extends HttpServlet {
 
     CarService getCarService() {
         return carService;
-    }
-
-    public static void forwardToFragment(String jspFragment, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/WEB-INF/JSP/fragment/" + jspFragment).forward(req, resp);
-    }
-
-    public static void forwardToPage(String jspPage, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("currentPage", jspPage);
-        req.getRequestDispatcher("page-template.jsp").forward(req, resp);
-    }
-
-    public static void redirect(String url, HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        resp.sendRedirect(url);
     }
 
     final SearchForm createSearchForm(HttpServletRequest request) {

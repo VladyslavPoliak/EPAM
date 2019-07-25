@@ -1,6 +1,6 @@
 package com.epam.repository.impl;
 
-import com.epam.constans.AllRequestDB;
+import com.epam.constans.SqlQueries;
 import com.epam.database.DataBaseManager;
 import com.epam.database.ResultSetHandler;
 import com.epam.database.ResultSetHandlerFactory;
@@ -16,7 +16,7 @@ import java.util.List;
 
 public class CarRepositoryImpl implements CarRepository {
 
-    private final ResultSetHandler<Car> CAR_RESULT_SET_HANDLER = rs -> new Car.CarBuilder()
+    private final ResultSetHandler<Car> CAR_RESULT_SET_HANDLER = rs -> Car.builder()
             .setId(rs.getInt("id_car"))
             .setName(rs.getString("name"))
             .setMark(rs.getString("mark"))
@@ -24,10 +24,10 @@ public class CarRepositoryImpl implements CarRepository {
             .setCost(rs.getInt("cost"))
             .setImageURL(rs.getString("image"))
             .build();
-    private final ResultSetHandler<Car> CLASSES_RESULT_SET_HANDLER = rs -> new Car.CarBuilder()
+    private final ResultSetHandler<Car> CLASSES_RESULT_SET_HANDLER = rs -> Car.builder()
             .setClassCar(rs.getString("class"))
             .build();
-    private final ResultSetHandler<Car> MARKS_RESULT_SET_HANDLER = rs -> new Car.CarBuilder()
+    private final ResultSetHandler<Car> MARKS_RESULT_SET_HANDLER = rs -> Car.builder()
             .setMark(rs.getString("mark"))
             .build();
     private DataBaseManager dataBaseManager;
@@ -39,7 +39,7 @@ public class CarRepositoryImpl implements CarRepository {
     @Override
     public List<Car> getAllCars(int offset, int limit) {
         try {
-            return dataBaseManager.select(AllRequestDB.SELECT_ALL_CARS,
+            return dataBaseManager.select(SqlQueries.SELECT_ALL_CARS,
                     ResultSetHandlerFactory.getListResultSetHandler(CAR_RESULT_SET_HANDLER), limit, offset);
         } catch (SQLException e) {
             throw new InternalServerErrorException("Cant't execute SQL query: " + e.getMessage(), e);
@@ -49,7 +49,7 @@ public class CarRepositoryImpl implements CarRepository {
     @Override
     public int countAllCars() {
         try {
-            return dataBaseManager.select(AllRequestDB.SELECT_ALL_CARS_COUNT,
+            return dataBaseManager.select(SqlQueries.SELECT_ALL_CARS_COUNT,
                     ResultSetHandlerFactory.getCountResultSetHandler());
         } catch (SQLException e) {
             throw new InternalServerErrorException("Cant't execute SQL query: " + e.getMessage(), e);
@@ -59,7 +59,7 @@ public class CarRepositoryImpl implements CarRepository {
     @Override
     public Car getCarById(int id) {
         try {
-            return dataBaseManager.select(AllRequestDB.SELECT_CAR_BY_ID,
+            return dataBaseManager.select(SqlQueries.SELECT_CAR_BY_ID,
                     ResultSetHandlerFactory.getSingleResultSetHandler(CAR_RESULT_SET_HANDLER), id);
         } catch (SQLException e) {
             throw new InternalServerErrorException("Cant't execute SQL query: " + e.getMessage(), e);
@@ -69,7 +69,7 @@ public class CarRepositoryImpl implements CarRepository {
     @Override
     public List<Car> getAllClasses() {
         try {
-            return dataBaseManager.select(AllRequestDB.SELECT_ALL_CLASSES,
+            return dataBaseManager.select(SqlQueries.SELECT_ALL_CLASSES,
                     ResultSetHandlerFactory.getListResultSetHandler(CLASSES_RESULT_SET_HANDLER));
         } catch (SQLException e) {
             throw new InternalServerErrorException("Cant't execute SQL query: " + e.getMessage(), e);
@@ -79,7 +79,7 @@ public class CarRepositoryImpl implements CarRepository {
     @Override
     public List<Car> getAllMarks() {
         try {
-            return dataBaseManager.select(AllRequestDB.SELECT_ALL_MARKS,
+            return dataBaseManager.select(SqlQueries.SELECT_ALL_MARKS,
                     ResultSetHandlerFactory.getListResultSetHandler(MARKS_RESULT_SET_HANDLER));
         } catch (SQLException e) {
             throw new InternalServerErrorException("Cant't execute SQL query: " + e.getMessage(), e);
@@ -89,7 +89,7 @@ public class CarRepositoryImpl implements CarRepository {
     @Override
     public List<Car> listCarsByClass(String className) {
         try {
-            return dataBaseManager.select(AllRequestDB.SELECT_CARS_BY_CLASS,
+            return dataBaseManager.select(SqlQueries.SELECT_CARS_BY_CLASS,
                     ResultSetHandlerFactory.getListResultSetHandler(CLASSES_RESULT_SET_HANDLER), className);
         } catch (SQLException e) {
             throw new InternalServerErrorException("Cant't execute SQL query: " + e.getMessage(), e);
