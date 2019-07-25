@@ -14,14 +14,21 @@ import java.util.List;
 
 public class UserRepositoryImpl implements UserRepository {
 
-    private final ResultSetHandler<User> USER_RESULT_SET_HANDLER = rs -> User.builder()
-            .setId(rs.getInt("id"))
-            .setName(rs.getString("name"))
-            .setSurname(rs.getString("sur_name"))
-            .setEmail(rs.getString("login"))
-            .setPassword(rs.getString("password"))
-            .setImageUrl(rs.getString("image_url"))
-            .build();
+
+    private final ResultSetHandler<User> USER_RESULT_SET_HANDLER = rs -> {
+        if (rs.getMetaData().getColumnCount() == 1) {
+            return User.builder().setId(rs.getInt(1)).build();
+        } else {
+            return User.builder()
+                    .setId(rs.getInt("id"))
+                    .setName(rs.getString("name"))
+                    .setSurname(rs.getString("sur_name"))
+                    .setEmail(rs.getString("login"))
+                    .setPassword(rs.getString("password"))
+                    .setImageUrl(rs.getString("image_url"))
+                    .build();
+        }
+    };
     private DataBaseManager dataBaseManager;
 
     public UserRepositoryImpl(DataBaseManager dataBaseManager) {
@@ -41,8 +48,9 @@ public class UserRepositoryImpl implements UserRepository {
     @Override
     public void addNewUser(User user) {
         try {
-            dataBaseManager.insert(SqlQueries.INSERT_NEW_USER, user.getName(),
-                    user.getSurname(), user.getEmail(), HashPassword.hashMd5(user.getPassword()), user.getImageUrl());
+            dataBaseManager.insert(SqlQueries.INSERT_NEW_USER, ResultSetHandlerFactory.getSingleResultSetHandler(USER_RESULT_SET_HANDLER),
+                    user.getName(), user.getSurname(), user.getEmail(),
+                    HashPassword.hashMd5(user.getPassword()), user.getImageUrl());
         } catch (SQLException e) {
             throw new InternalServerErrorException("Cant't execute SQL query: " + e.getMessage(), e);
         }

@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Arrays;
 import java.util.List;
 
 public class DataBaseManager {
@@ -22,7 +23,7 @@ public class DataBaseManager {
         }
     }
 
-    public boolean insert(String sql, Object... parameters) throws SQLException {
+    public <T> T insert(String sql, ResultSetHandler<T> resultSetHandler, Object... parameters) throws SQLException {
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS)) {
             populatePreparedStatement(preparedStatement, parameters);
             int result = preparedStatement.executeUpdate();
@@ -31,7 +32,19 @@ public class DataBaseManager {
                 throw new SQLException("Can't insert row to database. Result=" + result);
             }
             connection.commit();
-            return true;
+            ResultSet resultSet = preparedStatement.getGeneratedKeys();
+            return resultSetHandler.handle(resultSet);
+        }
+    }
+
+    public void insertBatch(String sql, List<Object[]> paramList) throws SQLException {
+        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+            for (Object[] param : paramList) {
+                populatePreparedStatement(statement, param);
+                statement.addBatch();
+            }
+            statement.executeBatch();
+            connection.commit();
         }
     }
 

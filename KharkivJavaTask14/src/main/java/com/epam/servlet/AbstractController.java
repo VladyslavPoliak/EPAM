@@ -27,7 +27,6 @@ public abstract class AbstractController extends HttpServlet {
     private UserService userService;
     private CaptchaService captchaService;
     private CarService carService;
-
     private OrderService orderService;
 
     private CaptchaHandler captchaHandler;

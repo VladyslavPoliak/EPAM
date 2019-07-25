@@ -27,7 +27,9 @@ create table `order` (
   id_account integer                    NOT NULL references users (id_user)
     ON UPDATE RESTRICT
     ON DELETE CASCADE,
-  created    timestamp(0) default now() NOT NULL
+  created    timestamp(0) default now() NOT NULL,
+  order_status varchar(25) NOT null,
+  status_description varchar(45) NOT null
 );
 
 create table order_item (

@@ -12,6 +12,10 @@ public final class SqlQueries {
     public static final String SELECT_ALL_CARS_COUNT = "SELECT COUNT(*) FROM car";
     public static final String SELECT_CAR_BY_ID = "SELECT * FROM car WHERE id_car=?";
 
+    public static final String CREATE_NEW_ORDER = "INSERT INTO `order`(id_account,created,order_status,status_description) values (?,?,?,?)";
+    public static final String GET_DATA_NEW_ORDER = "SELECT * FROM `order` where id=?";
+    public static final String CREATE_NEW_ORDER_ITEM = "INSERT INTO order_item(id_order,id_car,days) values (?,?,?)";
+
     private SqlQueries() {
     }
 
