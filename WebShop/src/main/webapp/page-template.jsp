@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -47,8 +48,8 @@
 
     function buyItem(event) {
         let carId = $(event.target).attr('id');
-        $.post('./addToCart', { 'id': carId }).done(function(data) {
-             window.location.reload();
+        $.post('./addToCart', {'id': carId}).done(function (data) {
+            window.location.reload();
         });
     }
 
@@ -56,17 +57,18 @@
 </script>
 
 <script type="text/javascript">
-        const $editItemQuantityInputs = $("[name='editItemQuantityInput']");
-        const $totalCost = $('#totalCost');
-        $editItemQuantityInputs.change(changeItemQuantity);
-        function changeItemQuantity(event) {
-            let id = $(event.target).attr('id');
-            let count = $(event.target).val();
-            $.post("./shopping-cart", { id: id, count: count }).done(function(data) {
-                $(event.target).parent().prev().text(data.itemPrice );
-                $totalCost.text(data.totalPrice );
-            });
-        }
+    const $editItemQuantityInputs = $("[name='editItemQuantityInput']");
+    const $totalCost = $('#totalCost');
+    $editItemQuantityInputs.change(changeItemQuantity);
+
+    function changeItemQuantity(event) {
+        let id = $(event.target).attr('id');
+        let count = $(event.target).val();
+        $.post("./shopping-cart", {id: id, count: count}).done(function (data) {
+            $(event.target).parent().prev().text(data.itemPrice);
+            $totalCost.text(data.totalPrice);
+        });
+    }
 
 </script>
 
@@ -74,10 +76,10 @@
     const deleteButton = $("[name='deleteItem']");
     deleteButton.click(deleteItem);
 
-      function deleteItem(event) {
+    function deleteItem(event) {
         let Id = $(event.target).attr('data-id-product');
-        $.post('./deleteFromCart', { 'id': Id }).done(function(data) {
-           window.location.reload();
+        $.post('./deleteFromCart', {'id': Id}).done(function (data) {
+            window.location.reload();
         });
     }
 

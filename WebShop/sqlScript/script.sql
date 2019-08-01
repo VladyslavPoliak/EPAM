@@ -10,7 +10,8 @@ CREATE TABLE user (
     sur_name VARCHAR(25)  NOT NULL,
     login VARCHAR(45) UNIQUE NOT NULL,
     password VARCHAR(45) NOT NULL,
-    image_url VARCHAR(45) UNIQUE
+    image_url VARCHAR(45) UNIQUE,
+    `role`  VARCHAR(45) NOT NULL default 'USER'
 );
 
 CREATE TABLE car (
@@ -24,7 +25,7 @@ CREATE TABLE car (
 
 create table `order` (
   id         bigint                     NOT NULL AUTO_INCREMENT primary key,
-  id_account integer                    NOT NULL references users (id_user)
+  id_account integer                    NOT NULL references user (id)
     ON UPDATE RESTRICT
     ON DELETE CASCADE,
   created    timestamp(0) default now() NOT NULL,
@@ -42,6 +43,9 @@ create table order_item (
     ON DELETE CASCADE,
   days     integer not null
 );
+
+insert into user values(
+default,'admin','admin','admin@gmail.com','96e79218965eb72c92a549dd5a330112','','ADMIN');
 
 insert into car
 values (default, 'Santa Fe Special', 'HYUNDAI', 'J', 700, '/img/cars/1.jpg');

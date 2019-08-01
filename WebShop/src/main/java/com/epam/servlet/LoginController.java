@@ -20,7 +20,7 @@ public class LoginController extends AbstractController {
         Optional<User> optionalUser = getUserService().getUserByEmailAndPass(login, pass);
         if (optionalUser.isPresent()) {
             LOGGER.info("user " + optionalUser.get().getDescription() + " logged in");
-            getServletContext().setAttribute(Constants.CURRENT_ACCOUNT, optionalUser.get());
+            req.getSession().setAttribute(Constants.CURRENT_ACCOUNT, optionalUser.get());
             resp.sendRedirect(Constants.MAIN_PAGE);
         } else {
             req.getRequestDispatcher(Constants.REGISTRATION_JSP).forward(req, resp);

@@ -37,7 +37,7 @@ public class RegistrationController extends AbstractController {
         getImageCreator().loadAndSaveImage(req.getPart(Constants.IMAGE_PARAMETER_NAME), user.getEmail());
         user.setImageUrl(getImageCreator().getFileNameForSpecificUser());
         getUserService().addNewUser(user);
-        getServletContext().setAttribute(Constants.CURRENT_ACCOUNT, user);
+        req.getSession().setAttribute(Constants.CURRENT_ACCOUNT, user);
     }
 
     private void saveInfo(HttpServletRequest req) {

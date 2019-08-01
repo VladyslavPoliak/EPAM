@@ -1,6 +1,7 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib tagdir="/WEB-INF/tags" prefix="info" %>
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
 
 <head>
     <!-- Required meta tags -->
@@ -11,16 +12,16 @@
     <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
 
-    <title>Sign Up</title>
+    <title><fmt:message key="signUp.jsp.SignUp"/></title>
 </head>
 <html>
 <body>
 <div class="container">
-    <h1 class="text-center display-4">SIGN UP</h1>
+    <h1 class="text-center display-4"><fmt:message key="signUp.jsp.SignUp"/></h1>
     <form action="${pageContext.request.contextPath}/registration" enctype="multipart/form-data" id="registration-form"
           method="post">
         <div class="form-group">
-            <label for="user-name">First Name</label>
+            <label for="user-name"><fmt:message key="signUp.jsp.name"/></label>
             <input class="form-control" id="user-name" name="userName" placeholder="First Name" type="text"
                    value="${name}">
             <div class="valid-feedback">
@@ -32,7 +33,7 @@
         </div>
 
         <div class="form-group">
-            <label for="user-surname">Second Name</label>
+            <label for="user-surname"><fmt:message key="signUp.jsp.name2"/></label>
             <input class="form-control" id="user-surname" name="userSurname" placeholder="Second Name" type="text"
                    value="${surName}">
             <div class="valid-feedback">
@@ -45,7 +46,7 @@
 
 
         <div class="form-group">
-            <label for="user-email">Email address</label>
+            <label for="user-email"><fmt:message key="login.jsp.email"/></label>
             <input class="form-control" id="user-email" name="userEmail" placeholder="Please, enter your email"
                    type="email"
                    value="${login}">
@@ -61,7 +62,7 @@
         </div>
 
         <div class="form-group">
-            <label for="user-pass">Password</label>
+            <label for="user-pass"><fmt:message key="login.jsp.password"/></label>
             <input class="form-control" id="user-pass" name="userPassword" placeholder="Please, enter your password"
                    type="password">
             <div class="valid-feedback">
@@ -73,7 +74,7 @@
         </div>
 
         <div class="form-group">
-            <label for="confirmation-pass">Confirm your password</label>
+            <label for="confirmation-pass"><fmt:message key="signUp.jsp.pass"/></label>
             <input class="form-control" id="confirmation-pass" name="confirmationPassword"
                    placeholder="Please, confirm your password"
                    type="password">
@@ -86,7 +87,7 @@
         </div>
 
         <div class="form-group">
-            <label for="file">Set your avatar (optional)</label>
+            <label for="file"><fmt:message key="signUp.jsp.avatar"/></label>
             <input accept="image/x-png,image/gif,image/jpeg" class="form-control" id="file"
                    name="file" type="file">
 
@@ -95,7 +96,7 @@
         <info:captcha captchaId="${captchaId}"/>
         <label for="captcha"> </label><input id="captcha" name="captcha" placeholder="Numbers from picture" type="text">
 
-        <button class="btn btn-primary " type="submit">Submit</button>
+        <button class="btn btn-primary " type="submit"><fmt:message key="login.jsp.submit"/></button>
     </form>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>

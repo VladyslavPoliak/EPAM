@@ -6,6 +6,12 @@ import com.epam.container.CaptchaContainer;
 import com.epam.container.CaptchaHandlerContainer;
 import com.epam.creator.ImageCreator;
 import com.epam.database.DataBaseManager;
+import com.epam.locale.LocaleStrategy;
+import com.epam.locale.LocaleStrategyContainer;
+import com.epam.parser.PermissionEvaluator;
+import com.epam.parser.PermissionEvaluatorImpl;
+import com.epam.parser.SecurityProperties;
+import com.epam.parser.XMLParser;
 import com.epam.repository.CarRepository;
 import com.epam.repository.OrderRepository;
 import com.epam.repository.UserRepository;
@@ -27,9 +33,12 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.SQLException;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Properties;
 
 @WebListener
@@ -74,6 +83,25 @@ public class ApplicationListener implements ServletContextListener {
 
         handler = new CaptchaHandlerContainer().getCaptchaHandler(handlerName);
         setAttributeInServletContext(context);
+
+
+        LocaleStrategyContainer localeStrategyContainer = new LocaleStrategyContainer();
+        String localeStrategy = context.getInitParameter("localeStrategy");
+        LocaleStrategy localeStrategy1 = localeStrategyContainer.get(localeStrategy);
+        context.setAttribute("localeStrategy", localeStrategy1);
+
+        String s = context.getInitParameter("supportedLocales");
+        List<String> supportedLocales = Arrays.asList(s.split(" "));
+        context.setAttribute("supportedLocales", supportedLocales);
+
+        File file = new File(context.getRealPath("WEB-INF/security.xml"));
+
+        XMLParser parser = new XMLParser();
+        SecurityProperties properties = parser.parse(file);
+        PermissionEvaluator permissionEvaluator = new PermissionEvaluatorImpl(properties);
+        context.setAttribute("permissionEvaluator", permissionEvaluator);
+
+
     }
 
     @Override
@@ -103,26 +131,11 @@ public class ApplicationListener implements ServletContextListener {
         orderRepository = new OrderRepositoryImpl(dataBaseManager);
     }
 
-    private void initDataBaseManager() {
-        try {
-            dataBaseManager = new DataBaseManager(dataSource.getConnection());
-        } catch (SQLException e) {
-            LOGGER.error("Connection was not open " + e);
-        }
-    }
-
-    private BasicDataSource initDataSource() {
-        BasicDataSource dataSource = new BasicDataSource();
-        dataSource.setDefaultAutoCommit(false);
-        dataSource.setRollbackOnReturn(true);
-        dataSource.setDriverClassName(getApplicationProperty("db.driver"));
-        dataSource.setUrl(getApplicationProperty("db.url"));
-        dataSource.setUsername(getApplicationProperty("db.username"));
-        dataSource.setPassword(getApplicationProperty("db.password"));
-        dataSource.setInitialSize(Integer.parseInt(getApplicationProperty("db.pool.initSize")));
-        dataSource.setMaxTotal(Integer.parseInt(getApplicationProperty("db.pool.maxSize")));
-        LOGGER.info("dataSource created");
-        return dataSource;
+    private void initServices() {
+        userService = new UserServiceImpl(userRepository);
+        captchaService = new CaptchaServiceImpl(captchaContainer);
+        carService = new CarServiceImpl(carRepository);
+        orderService = new OrderServiceImpl(orderRepository);
     }
 
     private String getApplicationProperty(String key) {
@@ -144,13 +157,6 @@ public class ApplicationListener implements ServletContextListener {
         context.setAttribute(Constants.MARKS_LIST, carService.getAllMarks());
     }
 
-    private void initServices() {
-        userService = new UserServiceImpl(userRepository);
-        captchaService = new CaptchaServiceImpl(captchaContainer);
-        carService = new CarServiceImpl(carRepository);
-        orderService = new OrderServiceImpl(orderRepository);
-    }
-
     private void loadApplicationProperties() {
         try (InputStream in = ApplicationListener.class.getClassLoader().
                 getResourceAsStream(Constants.APPLICATION_PROPERTIES)) {
@@ -158,5 +164,27 @@ public class ApplicationListener implements ServletContextListener {
         } catch (IOException e) {
             LOGGER.error("properties was not load " + e);
         }
+    }
+
+    private void initDataBaseManager() {
+        try {
+            dataBaseManager = new DataBaseManager(dataSource.getConnection());
+        } catch (SQLException e) {
+            LOGGER.error("Connection was not open " + e);
+        }
+    }
+
+    private BasicDataSource initDataSource() {
+        BasicDataSource dataSource = new BasicDataSource();
+        dataSource.setDefaultAutoCommit(false);
+        dataSource.setRollbackOnReturn(true);
+        dataSource.setDriverClassName(getApplicationProperty("db.driver"));
+        dataSource.setUrl(getApplicationProperty("db.url"));
+        dataSource.setUsername(getApplicationProperty("db.username"));
+        dataSource.setPassword(getApplicationProperty("db.password"));
+        dataSource.setInitialSize(Integer.parseInt(getApplicationProperty("db.pool.initSize")));
+        dataSource.setMaxTotal(Integer.parseInt(getApplicationProperty("db.pool.maxSize")));
+        LOGGER.info("dataSource created");
+        return dataSource;
     }
 }

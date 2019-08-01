@@ -40,11 +40,11 @@ public class Order implements Serializable {
         return idAccount;
     }
 
-    public void setIdAccount(int idAccount) {
+    public void setIdAccount(Integer idAccount) {
         this.idAccount = idAccount;
     }
 
-    public void setIdAccount(Integer idAccount) {
+    public void setIdAccount(int idAccount) {
         this.idAccount = idAccount;
     }
 

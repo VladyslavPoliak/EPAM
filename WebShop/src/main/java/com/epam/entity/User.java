@@ -12,6 +12,7 @@ public class User implements Serializable {
     private String password;
 
     private String imageUrl;
+    private String  role;
 
     private User(UserBuilder builder) {
         this.id = builder.id;
@@ -20,6 +21,7 @@ public class User implements Serializable {
         this.password = builder.password;
         this.email = builder.email;
         this.imageUrl = builder.imageUrl;
+        this.role=builder.role;
     }
 
     public static UserBuilder builder() {
@@ -58,6 +60,10 @@ public class User implements Serializable {
         this.imageUrl = imageUrl;
     }
 
+    public String  getRole() {
+        return role;
+    }
+
     public static class UserBuilder {
 
         private int id;
@@ -67,6 +73,7 @@ public class User implements Serializable {
         private String email;
 
         private String imageUrl;
+        private String role;
 
         public UserBuilder setId(int id) {
             this.id = id;
@@ -95,6 +102,10 @@ public class User implements Serializable {
 
         public UserBuilder setImageUrl(String imageUrl) {
             this.imageUrl = imageUrl;
+            return this;
+        }
+        public UserBuilder setRole(String role){
+            this.role=role;
             return this;
         }
 

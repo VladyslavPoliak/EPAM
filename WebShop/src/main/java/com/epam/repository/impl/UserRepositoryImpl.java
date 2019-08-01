@@ -26,6 +26,7 @@ public class UserRepositoryImpl implements UserRepository {
                     .setEmail(rs.getString("login"))
                     .setPassword(rs.getString("password"))
                     .setImageUrl(rs.getString("image_url"))
+                    .setRole(rs.getString("role"))
                     .build();
         }
     };
