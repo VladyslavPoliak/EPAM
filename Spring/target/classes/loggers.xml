@@ -25,4 +25,15 @@
         <constructor-arg value="10"/>
     </bean>
 
+    <bean id="combined" class="spring.CombinedEventLogger">
+        <constructor-arg>
+            <list>
+                <ref bean="eventLogger"/>
+                <ref bean="fileLogger"/>
+            </list>
+        </constructor-arg>
+
+
+    </bean>
+
 </beans>

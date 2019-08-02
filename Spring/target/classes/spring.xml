@@ -7,6 +7,7 @@
 
     <import resource="loggers.xml"/>
     <bean id="client" class="spring.Client">
+        <property name="greeting" value="Hello"/>
         <constructor-arg value="1"/>
         <constructor-arg value="Vlad "/>
     </bean>
@@ -15,7 +16,12 @@
     <bean id="app" class="spring.App">
         <constructor-arg ref="client"/>
         <constructor-arg ref="eventLogger"/>
-        <constructor-arg ref="event"/>
+        <constructor-arg>
+            <map>
+                <entry key="INFO" value-ref="eventLogger"/>
+                <entry key="ERROR" value-ref="combined"/>
+            </map>
+        </constructor-arg>
     </bean>
 
 </beans>
