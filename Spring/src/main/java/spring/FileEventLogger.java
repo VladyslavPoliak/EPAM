@@ -24,6 +24,6 @@ public class FileEventLogger implements EventLogger {
 
     @Override
     public void logEvent(Event event) throws IOException {
-        FileUtils.writeStringToFile(file, event.toString(), Charset.defaultCharset());
+        FileUtils.writeStringToFile(file, event.toString() + System.lineSeparator(), Charset.defaultCharset(), true);
     }
 }

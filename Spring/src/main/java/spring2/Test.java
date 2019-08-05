@@ -6,8 +6,15 @@ public class Test {
 
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spr.xml");
-        Computer computer = context.getBean("computer", Computer.class);
-        System.out.println(computer);
+
+        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
+
+        System.out.println(musicPlayer.getVolume() + " " + musicPlayer.getName());
+
+        ClassicalMusic classicalMusic = context.getBean("classicalMusic", ClassicalMusic.class);
+
+        MusicPlayer musicPlayer2 = context.getBean("musicPlayer", MusicPlayer.class);
+        System.out.println(musicPlayer==musicPlayer2);
         context.close();
     }
 

@@ -1,0 +1,19 @@
+Event{id=27, msg='ERROR', date=Aug 5, 2019 3:32:14 PM}
+Event{id=48, msg='ERROR', date=Aug 5, 2019 3:32:18 PM}
+Event{id=22, msg='ERROR Vlad ', date=Aug 5, 2019 3:49:37 PM}
+Event{id=27, msg='INFO Vlad ', date=Aug 5, 2019 3:58:07 PM}
+Event{id=27, msg='INFO Vlad ', date=Aug 5, 2019 3:58:07 PM}
+Event{id=10, msg='INFO Vlad ', date=Aug 5, 2019 3:59:28 PM}
+Event{id=10, msg='INFO Vlad ', date=Aug 5, 2019 3:59:28 PM}
+Event{id=21, msg='INFO Vlad ', date=Aug 5, 2019 4:01:05 PM}
+Event{id=21, msg='INFO Vlad ', date=Aug 5, 2019 4:01:05 PM}
+Event{id=44, msg='INFO Vlad ', date=Aug 5, 2019 4:02:36 PM}
+Event{id=44, msg='INFO Vlad ', date=Aug 5, 2019 4:02:36 PM}
+Event{id=26, msg='INFO Vlad ', date=Aug 5, 2019 4:03:04 PM}
+Event{id=26, msg='INFO Vlad ', date=Aug 5, 2019 4:03:04 PM}
+Event{id=42, msg='INFO Vlad ', date=Aug 5, 2019 4:03:35 PM}
+Event{id=42, msg='INFO Vlad ', date=Aug 5, 2019 4:03:35 PM}
+Event{id=4, msg='INFO Vlad ', date=Aug 5, 2019 4:04:55 PM}
+Event{id=4, msg='INFO Vlad ', date=Aug 5, 2019 4:04:55 PM}
+Event{id=21, msg='INFO Vlad ', date=Aug 5, 2019 4:09:34 PM}
+Event{id=21, msg='INFO Vlad ', date=Aug 5, 2019 4:09:34 PM}
