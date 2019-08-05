@@ -23,11 +23,11 @@ public class App {
 
 
     private void logEvent(EventType type, String msg) throws IOException {
-        logger = loggerMap.get("dswd");
+        logger = loggerMap.get(type);
         if (logger == null) {
             logger = defaultLogger;
         }
-        event.setMsg(msg.replaceAll(client.getId(), client.getName()));
+        event.setMsg(msg.replaceAll(client.getId(), client.getName()) + " " + client.getGreeting());
         logger.logEvent(event);
     }
 

@@ -15,7 +15,7 @@
         </constructor-arg>
     </bean>
 
-    <bean id="eventLogger" class="spring.ConsoleEventLogger"/>
+    <bean id="consoleEventLogger" class="spring.ConsoleEventLogger"/>
 
     <bean id="fileLogger" class="spring.FileEventLogger" init-method="init">
         <constructor-arg value="test.txt"/>
@@ -28,7 +28,7 @@
     <bean id="combined" class="spring.CombinedEventLogger">
         <constructor-arg>
             <list>
-                <ref bean="eventLogger"/>
+                <ref bean="consoleEventLogger"/>
                 <ref bean="fileLogger"/>
             </list>
         </constructor-arg>

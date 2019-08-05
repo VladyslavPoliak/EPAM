@@ -1,19 +1,15 @@
-Event{id=27, msg='ERROR', date=Aug 5, 2019 3:32:14 PM}
-Event{id=48, msg='ERROR', date=Aug 5, 2019 3:32:18 PM}
-Event{id=22, msg='ERROR Vlad ', date=Aug 5, 2019 3:49:37 PM}
-Event{id=27, msg='INFO Vlad ', date=Aug 5, 2019 3:58:07 PM}
-Event{id=27, msg='INFO Vlad ', date=Aug 5, 2019 3:58:07 PM}
-Event{id=10, msg='INFO Vlad ', date=Aug 5, 2019 3:59:28 PM}
-Event{id=10, msg='INFO Vlad ', date=Aug 5, 2019 3:59:28 PM}
-Event{id=21, msg='INFO Vlad ', date=Aug 5, 2019 4:01:05 PM}
-Event{id=21, msg='INFO Vlad ', date=Aug 5, 2019 4:01:05 PM}
-Event{id=44, msg='INFO Vlad ', date=Aug 5, 2019 4:02:36 PM}
-Event{id=44, msg='INFO Vlad ', date=Aug 5, 2019 4:02:36 PM}
-Event{id=26, msg='INFO Vlad ', date=Aug 5, 2019 4:03:04 PM}
-Event{id=26, msg='INFO Vlad ', date=Aug 5, 2019 4:03:04 PM}
-Event{id=42, msg='INFO Vlad ', date=Aug 5, 2019 4:03:35 PM}
-Event{id=42, msg='INFO Vlad ', date=Aug 5, 2019 4:03:35 PM}
-Event{id=4, msg='INFO Vlad ', date=Aug 5, 2019 4:04:55 PM}
-Event{id=4, msg='INFO Vlad ', date=Aug 5, 2019 4:04:55 PM}
-Event{id=21, msg='INFO Vlad ', date=Aug 5, 2019 4:09:34 PM}
-Event{id=21, msg='INFO Vlad ', date=Aug 5, 2019 4:09:34 PM}
+Event{id=2, msg='ERROR Vlad Hello', date=Aug 5, 2019 4:22:26 PM}
+Event{id=38, msg='ERROR Vlad Hello', date=Aug 5, 2019 4:27:43 PM}
+Event{id=48, msg='ERROR Vlad Hello', date=Aug 5, 2019 4:28:28 PM}
+Event{id=26, msg='ERROR Vlad Hello', date=Aug 5, 2019 4:44:01 PM}
+Event{id=35, msg='ERROR Vlad Hello', date=Aug 5, 2019 4:48:27 PM}
+Event{id=44, msg='ERROR Vlad Hello2', date=Aug 5, 2019 4:48:37 PM}
+Event{id=10, msg='ERROR Vlad Hello2', date=Aug 5, 2019 4:51:24 PM}
+Event{id=17, msg='ERROR Vlad Hello2', date=Aug 5, 2019 4:52:31 PM}
+Event{id=35, msg='ERROR Vlad Hello2', date=Aug 5, 2019 4:54:25 PM}
+Event{id=49, msg='ERROR Vlad Hello2', date=Aug 5, 2019 4:55:00 PM}
+Event{id=3, msg='ERROR Vlad Hello2', date=Aug 5, 2019 5:02:06 PM}
+Event{id=16, msg='INFO Vlad Hello2', date=Aug 5, 2019 5:02:15 PM}
+Event{id=16, msg='INFO Vlad Hello2', date=Aug 5, 2019 5:02:15 PM}
+Event{id=16, msg='INFO Vlad Hello2', date=Aug 5, 2019 5:12:59 PM}
+Event{id=16, msg='INFO Vlad Hello2', date=Aug 5, 2019 5:12:59 PM}
