@@ -14,13 +14,13 @@ public class App {
     private Event event;
     private EventLogger defaultLogger;
 
-    public App(Client client, EventLogger logger, Map<EventType, EventLogger> loggerMap, Event event) {
+    public App(Client client, EventLogger logger, Map<EventType, EventLogger> loggerMap, Event event, EventLogger defaultLogger) {
         this.client = client;
         this.logger = logger;
         this.loggerMap = loggerMap;
         this.event = event;
+        this.defaultLogger = defaultLogger;
     }
-
 
     private void logEvent(EventType type, String msg) throws IOException {
         logger = loggerMap.get(type);
@@ -35,7 +35,6 @@ public class App {
         ConfigurableApplicationContext context =
                 new ClassPathXmlApplicationContext("spring.xml");
         App app = (App) context.getBean("app");
-        app.defaultLogger = context.getBean("cache", EventLogger.class);
         app.logEvent(EventType.ERROR, "ERROR 1");
         app.logEvent(EventType.INFO, "INFO 1");
 

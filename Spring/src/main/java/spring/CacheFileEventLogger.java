@@ -30,10 +30,9 @@ public class CacheFileEventLogger extends FileEventLogger {
     }
 
     private void writeEventsFromCache() throws IOException {
-        for (int i = 0; i < cache.size(); i++) {
-            super.logEvent(cache.get(i));
+        for (Event event : cache) {
+            super.logEvent(event);
         }
         cache.clear();
-        System.out.println("CacheFileEventLogger");
     }
 }

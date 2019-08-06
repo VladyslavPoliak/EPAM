@@ -1,6 +1,7 @@
 package spring;
 
 import java.text.DateFormat;
+import java.time.LocalTime;
 import java.util.Date;
 import java.util.Random;
 
@@ -34,6 +35,12 @@ public class Event {
 
     public int getId() {
         return id;
+    }
+
+    public static boolean isDay() {
+        LocalTime time = LocalTime.of(8, 0);
+        LocalTime time2 = LocalTime.of(17, 0);
+        return LocalTime.now().isAfter(time) && LocalTime.now().isBefore(time2);
     }
 
     @Override
