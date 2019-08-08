@@ -1,4 +1,4 @@
-package entity;
+package project.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,6 +14,24 @@ public class Message {
 
     private String text;
 
+    private String tag;
+
+    public Message() {
+    }
+
+    public Message(String text, String tag) {
+        this.text = text;
+        this.tag = tag;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     public String getText() {
         return text;
     }
@@ -22,14 +40,11 @@ public class Message {
         this.text = text;
     }
 
-    public String getTags() {
-        return tags;
+    public String getTag() {
+        return tag;
     }
 
-    public void setTags(String tags) {
-        this.tags = tags;
+    public void setTag(String tag) {
+        this.tag = tag;
     }
-
-    private String tags;
-
 }
