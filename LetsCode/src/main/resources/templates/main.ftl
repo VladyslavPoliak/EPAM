@@ -2,7 +2,7 @@
 <#import "parts/login.ftl" as l>
 <@c.page>
 <div>
-    <@l.logout />
+    <@l.logout /><span> <a href="/user">User List</a> </span>
 </div>
 
 <div>
