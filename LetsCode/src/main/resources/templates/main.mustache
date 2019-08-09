@@ -1,10 +1,10 @@
 <html>
 <body>
 <div>
-<form action="/logout" method="post">
-    <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
-    <input type="submit" value="Sign Out"/>
-</form>
+    <form action="/logout" method="post">
+        <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+        <input type="submit" value="Sign Out"/>
+    </form>
 </div>
 
 <div>
@@ -19,7 +19,7 @@
 
 <div> Список</div>
 <form action="filter" method="post">
-<input type="text" name="filter">
+    <input type="text" name="filter">
     <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
     <button type="submit"> Send</button>
 </form>
@@ -28,6 +28,7 @@
         <b>{{id}}</b>
         <span>{{text}}</span>
         <i>{{tag}}</i>
+        <strong>{{authorName}}</strong>
     </div>
 {{/messages}}
 </body>

@@ -14,7 +14,8 @@ public class Test {
         ClassicalMusic classicalMusic = context.getBean("classicalMusic", ClassicalMusic.class);
 
         MusicPlayer musicPlayer2 = context.getBean("musicPlayer", MusicPlayer.class);
-        System.out.println(musicPlayer==musicPlayer2);
+        System.out.println(musicPlayer == musicPlayer2);
+
         context.close();
     }
 
