@@ -8,7 +8,7 @@ List of users
     <tr>
         <th>Name</th>
         <th>Role</th>
-        <th></th>
+        <th>Action</th>
     </tr>
     </thead>
 <tbody>
