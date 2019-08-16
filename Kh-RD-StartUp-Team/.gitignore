@@ -1,0 +1,13 @@
+.idea
+*.iml
+*.ipr
+*.iws
+
+.settings/
+.project
+.classpath
+
+target/
+
+node_modules/
+webpack.generated.js
