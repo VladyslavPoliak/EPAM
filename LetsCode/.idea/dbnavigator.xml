@@ -25,7 +25,7 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="0c272872-6c4a-4b61-a427-18c129e379f6">
-        <schema name="task12db" object-types="table, view" />
+        <schema name="task12db" object-types="view, table" />
       </connection>
     </loaded-nodes>
   </component>

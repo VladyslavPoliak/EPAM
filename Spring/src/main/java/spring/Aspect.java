@@ -17,8 +17,7 @@ public class Aspect {
 
     @Before("allLoEventMethods()")
     public void logDefore(JoinPoint joinPoint) {
-        System.out.println("before " + joinPoint.getTarget().getClass().getSimpleName()
-                + " " + joinPoint.getSignature().getName());
+        System.out.println("before22 " + joinPoint.getTarget().getClass().getSimpleName());
     }
 
 
