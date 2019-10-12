@@ -1,5 +1,9 @@
 package com.spring.entity;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,8 +17,11 @@ public class Car {
     private String name;
     private String mark;
     private String classCar;
-    private int cost;
+    private Long cost;
     private String status;
+
+    public Car() {
+    }
 
     private Car(CarBuilder builder) {
         this.name = builder.name;
@@ -27,7 +34,6 @@ public class Car {
     public static CarBuilder build() {
         return new CarBuilder();
     }
-
 
     public Long getId() {
         return id;
@@ -45,7 +51,7 @@ public class Car {
         return classCar;
     }
 
-    public int getCost() {
+    public Long getCost() {
         return cost;
     }
 
@@ -53,18 +59,55 @@ public class Car {
         return status;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Car car = (Car) o;
+        return new EqualsBuilder()
+                .append(cost, car.cost)
+                .append(id, car.id)
+                .append(name, car.name)
+                .append(mark, car.mark)
+                .append(classCar, car.classCar)
+                .append(status, car.status)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+                .append(id)
+                .append(name)
+                .append(mark)
+                .append(classCar)
+                .append(cost)
+                .append(status)
+                .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this)
+                .append("id", id)
+                .append("name", name)
+                .append("mark", mark)
+                .append("classCar", classCar)
+                .append("cost", cost)
+                .append("status", status)
+                .toString();
+    }
+
     private static final class CarBuilder {
-        private Long id;
         private String name;
         private String mark;
         private String classCar;
-        private int cost;
+        private Long cost;
         private String status;
-
-        public CarBuilder setId(Long id) {
-            this.id = id;
-            return this;
-        }
 
         public CarBuilder setName(String name) {
             this.name = name;
@@ -81,7 +124,7 @@ public class Car {
             return this;
         }
 
-        public CarBuilder setCost(int cost) {
+        public CarBuilder setCost(Long cost) {
             this.cost = cost;
             return this;
         }
@@ -94,6 +137,5 @@ public class Car {
         public Car build() {
             return new Car(this);
         }
-
     }
 }
