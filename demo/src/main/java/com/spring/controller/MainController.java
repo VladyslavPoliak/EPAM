@@ -8,7 +8,6 @@ public class MainController {
 
     @GetMapping("/")
     public String greeting() {
-
-        return "main";
+        return "redirect:/main";
     }
 }

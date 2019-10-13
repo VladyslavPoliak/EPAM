@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="eu" xmlns:th="http://www.thymeleaf.org">
 <head>
     <link href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -21,10 +21,10 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav-item">
-                    <a class=" nav-link" style="color: chartreuse">SignUp</a>
+                    <a class=" nav-link" style="color: chartreuse" th:href="@{/login}">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" style="color: chartreuse">SignIn</a>
+                    <a class="nav-link" style="color: chartreuse">Logout</a>
                 </li>
             </ul>
         </div>

@@ -156,9 +156,11 @@ public class User implements UserDetails {
         return new ToStringBuilder(this)
                 .append("id", id)
                 .append("password", password)
-                .append("userName", username)
+                .append("username", username)
+                .append("login", login)
                 .append("registrationDate", registrationDate)
                 .append("car", car)
+                .append("roles", roles)
                 .toString();
     }
 
