@@ -20,6 +20,7 @@ public class User implements UserDetails {
     private Long id;
     private String password;
     private String username;
+    private String login;
     @Temporal(TemporalType.TIMESTAMP)
     @CreationTimestamp
     private Date registrationDate;
@@ -36,22 +37,11 @@ public class User implements UserDetails {
     }
 
     private User(UserBuilder builder) {
+        this.login = builder.login;
         this.password = builder.password;
         this.username = builder.userName;
         this.registrationDate = builder.registrationDate;
         this.car = builder.car;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     @Override
@@ -61,8 +51,7 @@ public class User implements UserDetails {
 
     @Override
     public String getUsername() {
-        System.err.println("dfedf");
-        return username;
+        return login;
     }
 
     @Override
@@ -83,6 +72,22 @@ public class User implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getLogin() {
+        return login;
     }
 
     public void setUsername(String username) {
@@ -107,6 +112,10 @@ public class User implements UserDetails {
 
     public Set<Role> getRoles() {
         return roles;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
     }
 
     public void setRoles(Set<Role> roles) {
@@ -154,10 +163,16 @@ public class User implements UserDetails {
     }
 
     private static final class UserBuilder {
+        private String login;
         private String password;
         private String userName;
         private Date registrationDate;
         private Car car;
+
+        public UserBuilder setLogin(String login) {
+            this.login = login;
+            return this;
+        }
 
         public UserBuilder setPassword(String password) {
             this.password = password;

@@ -22,12 +22,17 @@ public class UserServiceImpl implements IUserService {
     }
 
     @Override
+    public User findByLogin(String login) {
+        return userRepository.findByLogin(login);
+    }
+
+    @Override
     public void save(User user) {
         userRepository.save(user);
     }
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return userRepository.findByUsername(username);
+    public UserDetails loadUserByUsername(String login) throws UsernameNotFoundException {
+        return userRepository.findByLogin(login);
     }
 }
