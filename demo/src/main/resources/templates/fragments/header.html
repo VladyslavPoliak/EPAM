@@ -25,6 +25,15 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav-item">
+                    <form action="/search" class="form-inline">
+                        <div class="form-group mx-sm-3">
+                            <input class="form-control" id="query" name="query" placeholder="Search" type="text">
+                        </div>
+                        <button class="btn btn-primary" type="submit">Search</button>
+                    </form>
+                </li>
+
+                <li class="nav-item">
                     <a class=" nav-link " th:href="@{/login}">Login</a>
                 </li>
                 <li class="nav-item">

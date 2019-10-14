@@ -40,4 +40,11 @@ public class CarServiceImpl implements ICarService {
     public List<Car> getCarsByClass(String className) {
         return carRepository.findAllByClassCar(className);
     }
+
+    @Override
+    public List<Car> getCarsBySearchQuery(String query) {
+        System.err.println(carRepository.getCarsBySearchQuery(query));
+        System.err.println(carRepository.findAllByNameContainingOrMarkContaining(query, query));
+        return carRepository.getCarsBySearchQuery(query);
+    }
 }

@@ -15,4 +15,6 @@ public interface ICarService {
     List<Car> getCarsByMark(String mark);
 
     List<Car> getCarsByClass(String className);
+
+    List<Car> getCarsBySearchQuery(String query);
 }

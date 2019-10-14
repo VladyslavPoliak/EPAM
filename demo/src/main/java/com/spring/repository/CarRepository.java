@@ -19,4 +19,9 @@ public interface CarRepository extends JpaRepository<Car, Long> {
     List<String> getAllClasses();
 
     List<Car> findAllByClassCar(String className);
+
+    @Query("SELECT c FROM Car c where c.name like %?1% or c.mark like %?1%")
+    List<Car> getCarsBySearchQuery(String query);
+
+    List<Car> findAllByNameContainingOrMarkContaining(String query, String s);
 }

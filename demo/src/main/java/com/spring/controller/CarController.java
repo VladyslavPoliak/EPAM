@@ -36,4 +36,10 @@ public class CarController {
         model.addAttribute("cars", carService.getCarsByClass(className));
         return "main";
     }
+
+    @GetMapping("/search/**")
+    public String showCarsBySearchQuery(Model model, @RequestParam(name = "query") String query) {
+        model.addAttribute("cars", carService.getCarsBySearchQuery(query));
+        return "main";
+    }
 }
