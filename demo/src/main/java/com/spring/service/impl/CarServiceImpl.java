@@ -20,4 +20,19 @@ public class CarServiceImpl implements ICarService {
     public List<Car> getAllCars() {
         return carRepository.findAll();
     }
+
+    @Override
+    public List<String> getAllMarks() {
+        return carRepository.hh();
+    }
+
+    @Override
+    public List<Car> getAllClasses() {
+        return null;
+    }
+
+    @Override
+    public List<Car> getCarsByMark(String mark) {
+        return carRepository.findAllByMark(mark);
+    }
 }

@@ -7,18 +7,12 @@ nav .navbar-nav li a {
     color: chartreuse !important;
 }
 
-.content {
-    padding: 16px;
+.aside-width {
+    width: 180px;
 }
 
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%
-}
-
-.sticky + .content {
-    padding-top: 102px;
+.aside-menu {
+    width: 140px;
 }
 
 .msg-user-exists {

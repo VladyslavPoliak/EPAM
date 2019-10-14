@@ -1,57 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="eu" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <link href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-
-<div class="container">
+<div class="container-fluid" th:fragment="aside">
     <div class="row">
         <div class="col-sm-12 col-md-3 ">
-            <form action="${pageContext.request.contextPath}/search" class="sticky-top p-2">
-                <h3>Producers</h3>
-                <div class="form-group form-check">
-                    <c:forEach items="${producers}" var="producer">
-                        <input ${searchForm.producers.contains(producer.mark) ? class="form-check-input"
-                               id="exampleCheck1"
-                               name="producers"
-                               type="checkbox" value="${producer.mark}" 'checked' : '' }>
-                        <label class="form-check-label" for="exampleCheck1">${producer.mark}</label>
-                    </c:forEach>
+            <!--/*@thymesVar id="producers" type="java.util.List<java.lang.String>"*/-->
+            <div th:each="pr : ${producers}">
+                <a class="list-group-item aside-menu " th:href="@{'/mark/'+'?mark='+${pr}}">
+                    <span class="badge" th:text="${pr}"> </span> </a>
+
+                <div class="panel panel-success collapse" id="productCatalog">
+                    <div class="panel-heading">catalogClasses</div>
+                    <div class="list-group" th:each="cl : ${classes}">
+                        <a class="list-group-item ${selectedCategoryUrl==classes.classCar ? 'active' : ''}"
+                           href="/classes/${cl.classCar}">
+                            <span class="badge"> </span> ${classes.classCar}
+                        </a>
+                    </div>
                 </div>
-
-                <h3>Classes</h3>
-                <div class="form-group form-check">
-                    <c:forEach items="${cl}" var="classes">
-                        <input ${searchForm.carClasses.contains(classes.classCar) ? class="form-check-input"
-                               id="exampleCheck1"
-                               name="classes"
-                               type="checkbox" value="${classes.classCar}" 'checked' : '' }>
-
-                        <label class="form-check-label" for="exampleCheck1">${classes.classCar}</label>
-                    </c:forEach>
-                </div>
-
-                <div class="form-group display">
-                    <label>Price: </label>
-                    <input class="input-number" name="minPrice" type="number">
-                    <input class="input-number" name="maxPrice" type="number">
-                </div>
-
-                <div class="form-group ">
-                    <label for="search">Name</label>
-                    <input class="input-number2" id="search" name="searchByName" type="text"
-                           value="${searchForm.query}">
-                </div>
-
-                <button class="btn btn-primary" type="submit">Search</button>
-            </form>
-
+            </div>
         </div>
     </div>
 </div>
-
-
 </body>
 </html>

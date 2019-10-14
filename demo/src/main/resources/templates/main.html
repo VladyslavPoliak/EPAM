@@ -15,8 +15,11 @@
 <div th:replace="fragments/header :: header"></div>
 <div class="container-fluid">
     <div class="row">
-        <aside class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+
+        <aside class="aside-width">
+            <div th:include="fragments/aside :: aside " th:with="classes = ${classes} , producers = ${producers}"></div>
         </aside>
+
         <main class="col-xs-12 col-sm-8 col-md-9 col-lg-10">
             <div class="row">
                 <div class="card col-sm-4" th:each="c : ${cars}">
