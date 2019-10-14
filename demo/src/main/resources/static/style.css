@@ -1,0 +1,26 @@
+.header {
+    background-color: #000000;
+    height: 50px;
+}
+
+nav .navbar-nav li a {
+    color: chartreuse !important;
+}
+
+.content {
+    padding: 16px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+.sticky + .content {
+    padding-top: 102px;
+}
+
+.msg-user-exists {
+    color: #ff2e1b;
+}

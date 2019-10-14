@@ -6,6 +6,7 @@
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+    <link href="/static/style.css" rel="stylesheet" type="text/css"/>
     <title>Login</title>
 </head>
 <body>
@@ -15,6 +16,7 @@
 <div class="container">
     <h3><a th:href="@{/login}" th:text="LOGIN"></a></h3>
     <h1 class="text-center display-4"> REGISTRATION</h1>
+    <h4 class="msg-user-exists" th:text="${message!=null} ? ${message} : ''"></h4>
     <form method="post" th:action="@{/registration}">
         <div class="form-group">
             <label for="login">E-mail</label>

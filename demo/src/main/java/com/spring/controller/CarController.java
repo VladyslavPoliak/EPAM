@@ -15,7 +15,7 @@ public class CarController {
     }
 
     @GetMapping("/main")
-    public String showAllCars(Model model) {
+    public String showMainPage(Model model) {
         model.addAttribute("cars", carService.getAllCars());
         return "main";
     }

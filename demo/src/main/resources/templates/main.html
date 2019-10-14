@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="/static/style.css" rel="stylesheet" type="text/css"/>
+
     <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">
     <title>Rent car</title>
@@ -11,7 +13,6 @@
 <body>
 
 <div th:replace="fragments/header :: header"></div>
-
 <div class="container-fluid">
     <div class="row">
         <aside class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
@@ -19,9 +20,8 @@
         <main class="col-xs-12 col-sm-8 col-md-9 col-lg-10">
             <div class="row">
                 <div class="card col-sm-4" th:each="c : ${cars}">
-                    <img alt="${c.name} ${c.mark}"
-                         class="card-img-top"
-                         src="https://avatars.mds.yandex.net/get-pdb/199965/eb6d1afa-fba9-46a5-85be-5a9675a52960/s1200">
+                    <img class="card-img-top"
+                         src="/media/1.jpg">
                     <div class="card-body">
                         <h5 class="card-title text-truncate" data-placement="top" data-toggle="tooltip"
                             th:text="${c.name}+'  '+${c.mark}">

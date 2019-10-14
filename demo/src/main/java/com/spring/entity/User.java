@@ -54,6 +54,10 @@ public class User implements UserDetails {
         return login;
     }
 
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
     @Override
     public boolean isAccountNonExpired() {
         return true;
@@ -90,8 +94,8 @@ public class User implements UserDetails {
         return login;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setLogin(String login) {
+        this.login = login;
     }
 
     public Date getRegistrationDate() {
@@ -112,10 +116,6 @@ public class User implements UserDetails {
 
     public Set<Role> getRoles() {
         return roles;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
     }
 
     public void setRoles(Set<Role> roles) {
