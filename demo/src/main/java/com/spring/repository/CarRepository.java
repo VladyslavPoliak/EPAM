@@ -11,8 +11,12 @@ import java.util.List;
 public interface CarRepository extends JpaRepository<Car, Long> {
 
     @Query("SELECT distinct c.mark  FROM Car c order by c.mark")
-    List<String> hh();
+    List<String> getAllMarks();
 
     List<Car> findAllByMark(String mark);
 
+    @Query("SELECT distinct c.classCar  FROM Car c order by c.classCar")
+    List<String> getAllClasses();
+
+    List<Car> findAllByClassCar(String className);
 }

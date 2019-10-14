@@ -8,23 +8,22 @@
 <div class="container-fluid" th:fragment="aside">
     <div class="row">
         <div class="col-sm-12 col-md-3 ">
+            <h5 class="aside-menu-name">PRODUCERS:</h5>
             <!--/*@thymesVar id="producers" type="java.util.List<java.lang.String>"*/-->
             <div th:each="pr : ${producers}">
-                <a class="list-group-item aside-menu " th:href="@{'/mark/'+'?mark='+${pr}}">
+                <a class="list-group-item aside-menu-item  " th:href="@{'/mark/'+'?mark='+${pr}}">
                     <span class="badge" th:text="${pr}"> </span> </a>
+            </div>
 
-                <div class="panel panel-success collapse" id="productCatalog">
-                    <div class="panel-heading">catalogClasses</div>
-                    <div class="list-group" th:each="cl : ${classes}">
-                        <a class="list-group-item ${selectedCategoryUrl==classes.classCar ? 'active' : ''}"
-                           href="/classes/${cl.classCar}">
-                            <span class="badge"> </span> ${classes.classCar}
-                        </a>
-                    </div>
-                </div>
+            <h5 class="aside-menu-name">CLASSES:</h5>
+            <!--/*@thymesVar id="classes" type="java.util.List<java.lang.String>"*/-->
+            <div th:each="cl : ${classes}">
+                <a class="list-group-item aside-menu-item  " th:href="@{'/clas/'+'?clas='+${cl}}">
+                    <span class="badge" th:text="${cl}"> </span> </a>
             </div>
         </div>
     </div>
 </div>
 </body>
 </html>
+<!--${selectedCategoryUrl==classes.classCar ? 'active' : ''}-->

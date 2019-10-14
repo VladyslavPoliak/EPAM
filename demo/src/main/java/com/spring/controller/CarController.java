@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 @Controller
-@SessionAttributes("producers")
+@SessionAttributes(names = {"producers", "classes"})
 public class CarController {
 
     private final ICarService carService;
@@ -26,8 +26,14 @@ public class CarController {
     }
 
     @GetMapping("/mark/**")
-    public String showMark(Model model, @RequestParam(name = "mark") String mark) {
+    public String showCarsByMark(Model model, @RequestParam(name = "mark") String mark) {
         model.addAttribute("cars", carService.getCarsByMark(mark));
+        return "main";
+    }
+
+    @GetMapping("/clas/**")
+    public String showCarsByClass(Model model, @RequestParam(name = "clas") String className) {
+        model.addAttribute("cars", carService.getCarsByClass(className));
         return "main";
     }
 }

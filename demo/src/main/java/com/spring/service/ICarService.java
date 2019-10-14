@@ -10,7 +10,9 @@ public interface ICarService {
 
     List<String> getAllMarks();
 
-    List<Car> getAllClasses();
+    List<String> getAllClasses();
 
     List<Car> getCarsByMark(String mark);
+
+    List<Car> getCarsByClass(String className);
 }

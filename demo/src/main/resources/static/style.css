@@ -11,7 +11,13 @@ nav .navbar-nav li a {
     width: 180px;
 }
 
-.aside-menu {
+.aside-menu-name {
+    width: 150px;
+    margin: 20px;
+}
+
+.aside-menu-item {
+    text-align: center;
     width: 140px;
 }
 

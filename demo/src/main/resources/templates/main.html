@@ -23,12 +23,10 @@
         <main class="col-xs-12 col-sm-8 col-md-9 col-lg-10">
             <div class="row">
                 <div class="card col-sm-4" th:each="c : ${cars}">
-                    <img class="card-img-top"
-                         src="/media/1.jpg">
+                    <img class="card-img-top" src="/media/1.jpg">
                     <div class="card-body">
                         <h5 class="card-title text-truncate" data-placement="top" data-toggle="tooltip"
-                            th:text="${c.name}+'  '+${c.mark}">
-                        </h5>
+                            th:text="${c.name}+'  '+${c.mark}"></h5>
                         <p class="card-text" th:text="'Class: ' + ${c.classCar}"></p>
                         <h5 th:text="'Price: ' + ${c.cost}"></h5>
                         <button class="btn btn-primary" id="${c.id}" name="buyItem">Buy</button>
